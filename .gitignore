@@ -1,0 +1,66 @@
+﻿# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+*.designer.cs
+*.assemblyinfo.cs
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+# NuGet Packages folder
+packages/
+# Uncomment if necessary
+# !packages/build/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Backup & reports
+*.bak
+*.backup
+*.log
+*.dmp
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Others
+*.tmp
+*.temp
+*.DS_Store
+*.vsidx

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.Login"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login"
+    Background="Black">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image
+                Margin="0,150,0,40"
+                HeightRequest="176"
+                Source="logo.png"
+                WidthRequest="148" />
+            <Label
+                Padding="0,10,0,50"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Fazer Login"
+                TextColor="AliceBlue" 
+                FontFamily="OpenSansSemibold"/>
+            <Label
+                FontSize="15"
+                HorizontalOptions="Center"
+                Text="Email"
+                TextColor="White" />
+
+            <Label
+                FontSize="15"
+                HorizontalOptions="Center"
+                Text="Senha"
+                TextColor="White" />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10" Padding="80, 3, 0, 50">
+                <Label
+                    FontSize="14"
+                    Text="Não tem Cadastro?"
+                    TextColor="White" />
+                <Label
+                    FontSize="14"
+                    Text="Cadastrar"
+                    TextColor="Green">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapCadastrar"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+
+
+            <Button
+                BackgroundColor="#01C853"
+                Clicked="ValidarLogin"
+                Padding="130,10"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Entrar" 
+                TextColor="Black"
+                FontFamily="OpenSansSemibold"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

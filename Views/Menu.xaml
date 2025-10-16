@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.Menu"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Menu"
+    Padding="10"
+    Background="#0F2216">
+    <VerticalStackLayout>
+        
+        <Label
+            Margin="25"
+            FontFamily="OpenSansSemibold"
+            FontSize="20"
+            HorizontalOptions="Center"
+            Text="Menu"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Label Padding="10" Text="Inicio" TextColor="White" >
+            
+        </Label>
+        <Label Padding="10" Text="Meus Treinos" TextColor="White"/>
+        <Label Padding="10" Text="Alimentação" TextColor="White"/>
+        <Label Padding="10" Text="Upload" TextColor="White"/>
+        <Label Padding="10" Text="Comunidade" TextColor="White"/>
+        <Label Padding="10" Text="Perfil" TextColor="White"/>
+        <Label Padding="10,30,10,10" Text="Configurações" TextColor="White"/>
+        <Label Padding="10" Text="Suporte" TextColor="White"/>
+        <Label Padding="10" Text="Sair" TextColor="White"/>
+
+        <VerticalStackLayout x:Name="MenuContainer" Margin="20" />
+
+    </VerticalStackLayout>
+</ContentPage>
