@@ -14,7 +14,7 @@ public partial class Login : ContentPage
         {
             List<Usuario> lista_usuarios = new List<Usuario>()
             {
-                new Usuario(1, "Bruno", "bruno@gmail.com", "123456"),
+                new Usuario(1, "B", "b@gmail.com", "123456"),
                 new Usuario(2, "A", "a@gmail.com", "abcde"),
             };
             Usuario dados_digitados = new Usuario(0, txt_usuario.Text, "", txt_senha.Text);
@@ -27,7 +27,7 @@ public partial class Login : ContentPage
             }
             else
             {
-                throw new Exception("Usu·rio ou senha inv·lidos!");
+                throw new Exception("Usu√°rio ou senha inv√°lidos!");
             }
 
             
