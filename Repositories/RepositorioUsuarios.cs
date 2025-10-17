@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Repositories
 {
-    internal class UsersRepository
+    internal class RepositorioUsuarios
     {
-        public List<User> Usuarios { get; set; }
-        public List<User> GetUsers()
+        public List<Usuario> Usuarios { get; set; }
+        public List<Usuario> GetUsers()
         {
-            List<User> users = new List<User>();
-            users.Add(new User(1, "João Silva", "boa@gmail", "123456", DateTime.Now));
+            List<Usuario> users = new List<Usuario>();
+            users.Add(new Usuario(1, "João Silva", "boa@gmail", "123456"));
             return users;
         }
     }

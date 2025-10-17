@@ -8,10 +8,25 @@ public partial class Menu : ContentPage
 	{
 		InitializeComponent();
 
+		string? usuario_logado = null;
 
-	
-
+		Task.Run(async () =>
+		{
+			usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
+        });
 
     }
+	private async void OnTapSair(object sender, TappedEventArgs e)
+	{
+        var label = (Label)sender;
+        label.IsEnabled = false;
 
+        bool confirmacao = await DisplayAlert("Confirmação", "Deseja realmente sair da sua conta?", "Sim", "Não");
+        if (confirmacao)
+		{
+            SecureStorage.Default.Remove("usuario_logado");
+			App.Current.MainPage = new Login();
+        }
+		label.IsEnabled = true;
+    }
 }

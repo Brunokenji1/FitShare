@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    internal class User
+    internal class Usuario
     {
-        public int Id { get; }
+        public int Id { get; set;  }
         public string Username { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
@@ -20,13 +20,12 @@ namespace AppFitShare.Models
         public string Metabolismo { get; private set; }
         public string Status { get; set; }
 
-        public User(int id, string nome, string email, string senha, DateTime dataCadastro)
+        public Usuario(int id, string nome, string email, string senha)
         {
             Id = id;
             Nome = nome;
             Email = email;
             Senha = senha;
-            DataCadastro = dataCadastro;
             Status = "Incompleto";
         }
         public void CadastroCompleto(int idade, double peso, double altura, string metabolismo)
