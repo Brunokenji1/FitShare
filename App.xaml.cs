@@ -6,11 +6,24 @@ namespace AppFitShare
         public App()
         {
             InitializeComponent();
-            //Task.Run(async () =>
-            //{
-            //    usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
-            //});
-            MainPage = new NavigationPage( new Login());
+
+            string? usuario_logado = null;
+
+            Task.Run(async () =>
+            {
+                usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
+
+                if(usuario_logado == null)
+                {
+                    MainPage = new NavigationPage(new Login());
+                }
+                else
+                {
+                    MainPage = new FlyoutPageMenu();
+                }
+            });
+            MainPage = new NavigationPage(new Login());
+
         }
         protected override Window CreateWindow(IActivationState activationState)
         {
