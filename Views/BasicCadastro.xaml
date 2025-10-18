@@ -3,27 +3,31 @@
     x:Class="AppFitShare.Views.BasicCadastro"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="BasicCadastro">
+    Title="BasicCadastro"
+    Background="Black">
     <ScrollView>
 
         <VerticalStackLayout Padding="10" Spacing="10">
+            <Label Text="Crie sua conta para começar" 
+                   FontSize="20" 
+                   VerticalOptions="Center"
+                   TextColor="White"/>
             <Label
                 FontSize="15"
-                HorizontalOptions="Center"
+                TextColor="White"
                 Text="Nome"
                 VerticalOptions="Center" />
-            <Entry x:Name="txt_nome" />
-            <Label FontSize="15" Text="Email" />
-            <Entry x:Name="txt_email" />
-            <Label Text="Senha" />
-            <Entry x:Name="txt_senha" IsPassword="True" />
-            <Label Text="Confirmar Senha" />
-            <Entry x:Name="txt_confirmarSenha" />
+            <Entry x:Name="txt_nome" BackgroundColor="White"/>
+            <Label FontSize="15" Text="Email" TextColor="White" />
+            <Entry x:Name="txt_email" BackgroundColor="White" />
+            <Label Text="Senha" TextColor="White" />
+            <Entry x:Name="txt_senha" IsPassword="True" BackgroundColor="White"/>
+            <Label Text="Confirmar Senha" TextColor="White" />
+            <Entry x:Name="txt_confirmarSenha" BackgroundColor="White" IsPassword="True"/>
             <Button
-                Padding="130,10"
+                Padding="113.3, 10"
                 BackgroundColor="#01C853"
                 Clicked="Button_Clicked"
-                FontFamily="OpenSansSemibold"
                 FontSize="20"
                 HorizontalOptions="Center"
                 Text="Cadastrar"

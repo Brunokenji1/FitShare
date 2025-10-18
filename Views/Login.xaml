@@ -7,8 +7,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="1,0" EndPoint="1,2">
-                <GradientStop Color="#0D0F1A" Offset="0.0"/>
-                <GradientStop Color="#00b140" Offset="1.0"/>
+                <GradientStop Offset="0.0" Color="#0D0F1A" />
+                <GradientStop Offset="1.9" Color="#00b140" />
             </LinearGradientBrush>
         </Grid.Background>
 
@@ -30,15 +30,15 @@
                     Text="Fazer Login"
                     TextColor="AliceBlue" />
                 <Label
+                    FontFamily="OpenSansSemibold"
                     FontSize="15"
-                    HorizontalOptions="Center"
-                    Text="Email"
+                    Text="Email ou usuario"
                     TextColor="White" />
                 <Entry x:Name="txt_usuario" Background="White" />
 
                 <Label
+                    FontFamily="OpenSansSemibold"
                     FontSize="15"
-                    HorizontalOptions="Center"
                     Text="Senha"
                     TextColor="White" />
                 <Entry
@@ -46,27 +46,8 @@
                     BackgroundColor="White"
                     IsPassword="True" />
 
-                <HorizontalStackLayout
-                    Padding="80,3,0,50"
-                    HorizontalOptions="Center"
-                    Spacing="10">
-                    <Label
-                        FontSize="14"
-                        Text="Não tem Cadastro?"
-                        TextColor="White" />
-                    <Label
-                        FontSize="14"
-                        Text="Cadastrar"
-                        TextColor="Green">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTapCadastrar" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                </HorizontalStackLayout>
-
-
-
                 <Button
+                    Margin="0,45,0,0"
                     Padding="130,10"
                     BackgroundColor="#01C853"
                     Clicked="ValidarLogin"
@@ -75,6 +56,26 @@
                     HorizontalOptions="Center"
                     Text="Entrar"
                     TextColor="Black" />
+
+                <HorizontalStackLayout
+                    Margin="0,4"
+                    HorizontalOptions="Center"
+                    Spacing="10">
+                    <Label
+                        FontSize="15"
+                        Text="Não tem Cadastro?"
+                        TextColor="White" />
+                    <Label
+                        FontFamily="OpenSansSemibold"
+                        FontSize="15"
+                        Text="Cadastrar"
+                        TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapCadastrar" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
             </VerticalStackLayout>
 
         </ScrollView>
