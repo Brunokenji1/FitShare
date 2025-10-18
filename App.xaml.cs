@@ -6,24 +6,22 @@ namespace AppFitShare
         public App()
         {
             InitializeComponent();
+            MainPage = new ContentPage();
+            _ = VerificasLogin();
+        }
+        private async Task VerificasLogin() { 
 
-            string? usuario_logado = null;
+            var usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
 
-            Task.Run(async () =>
+            if(string.IsNullOrEmpty(usuario_logado))
             {
-                usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
-
-                if(usuario_logado == null)
-                {
-                    MainPage = new NavigationPage(new Login());
-                }
-                else
-                {
-                    MainPage = new FlyoutPageMenu();
-                }
-            });
-            MainPage = new NavigationPage(new Login());
-
+                MainPage = new NavigationPage(new Login());
+            }
+            else
+            {
+                MainPage = new FlyoutPageMenu();
+            }
+            
         }
         protected override Window CreateWindow(IActivationState activationState)
         {
