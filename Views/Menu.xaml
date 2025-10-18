@@ -6,34 +6,37 @@
     Title="Menu"
     Padding="10"
     Background="#0F2216">
-    <VerticalStackLayout>
+    <ScrollView>
         
-        <Label
-            Margin="25"
-            FontFamily="OpenSansSemibold"
-            FontSize="20"
-            HorizontalOptions="Center"
-            Text="Menu"
-            TextColor="White"
-            VerticalOptions="Center" />
-        <Label Padding="10" Text="Inicio" TextColor="White" >
+        <VerticalStackLayout>
+        
+            <Label
+                Margin="25"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Menu"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label Padding="10" Text="Inicio" TextColor="White" >
             
-        </Label>
-        <Label Padding="10" Text="Meus Treinos" TextColor="White"/>
-        <Label Padding="10" Text="Alimentação" TextColor="White"/>
-        <Label Padding="10" Text="Upload" TextColor="White"/>
-        <Label Padding="10" Text="Comunidade" TextColor="White"/>
-        <Label Padding="10" Text="Perfil" TextColor="White"/>
-        <Label Padding="10,30,10,10" Text="Configurações" TextColor="White"/>
-        <Label Padding="10" Text="Suporte" TextColor="White"/>
+            </Label>
+            <Label Padding="10" Text="Meus Treinos" TextColor="White"/>
+            <Label Padding="10" Text="Alimentação" TextColor="White"/>
+            <Label Padding="10" Text="Upload" TextColor="White"/>
+            <Label Padding="10" Text="Comunidade" TextColor="White"/>
+            <Label Padding="10" Text="Perfil" TextColor="White"/>
+            <Label Padding="10,30,10,10" Text="Configurações" TextColor="White"/>
+            <Label Padding="10" Text="Suporte" TextColor="White"/>
         
-        <Label Padding="10" Text="Sair" TextColor="White" >
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnTapSair" />
-            </Label.GestureRecognizers>
-        </Label>
+            <Label Padding="10" Text="Sair" TextColor="White" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapSair" />
+                </Label.GestureRecognizers>
+            </Label>
 
-        <VerticalStackLayout x:Name="MenuContainer" Margin="20" />
+            <VerticalStackLayout x:Name="MenuContainer" Margin="20" />
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
