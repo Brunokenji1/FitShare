@@ -4,10 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="BasicCadastro">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Label
+                FontSize="15"
+                HorizontalOptions="Center"
+                Text="Nome"
+                VerticalOptions="Center" />
+            <Entry x:Name="txt_nome" />
+            <Label FontSize="15" Text="Email" />
+            <Entry x:Name="txt_email" />
+            <Label Text="Senha" />
+            <Entry x:Name="txt_senha" IsPassword="True" />
+            <Label Text="Confirmar Senha" />
+            <Entry x:Name="txt_confirmarSenha" />
+            <Button
+                Padding="130,10"
+                BackgroundColor="#01C853"
+                Clicked="Button_Clicked"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Cadastrar"
+                TextColor="Black" />
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>
