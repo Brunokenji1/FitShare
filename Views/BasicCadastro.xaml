@@ -7,31 +7,61 @@
     Background="Black">
     <ScrollView>
 
-        <VerticalStackLayout Padding="10" Spacing="10">
-            <Label Text="Crie sua conta para começar" 
-                   FontSize="20" 
-                   VerticalOptions="Center"
-                   TextColor="White"/>
+        <VerticalStackLayout Padding="10" Spacing="15">
             <Label
+                Margin="45"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="Crie sua conta para começar"
+                TextColor="White" />
+            <Label
+                FontFamily="OpenSansSemibold"
                 FontSize="15"
-                TextColor="White"
                 Text="Nome"
+                TextColor="White"
                 VerticalOptions="Center" />
-            <Entry x:Name="txt_nome" BackgroundColor="White"/>
-            <Label FontSize="15" Text="Email" TextColor="White" />
+            <Entry x:Name="txt_nome" BackgroundColor="White" />
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="15"
+                Text="Email"
+                TextColor="White" />
             <Entry x:Name="txt_email" BackgroundColor="White" />
-            <Label Text="Senha" TextColor="White" />
-            <Entry x:Name="txt_senha" IsPassword="True" BackgroundColor="White"/>
-            <Label Text="Confirmar Senha" TextColor="White" />
-            <Entry x:Name="txt_confirmarSenha" BackgroundColor="White" IsPassword="True"/>
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="15"
+                Text="Senha"
+                TextColor="White" />
+            <Entry
+                x:Name="txt_senha"
+                BackgroundColor="White"
+                IsPassword="True" />
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="15"
+                Text="Confirmar Senha"
+                TextColor="White" />
+            <Entry
+                x:Name="txt_confirmarSenha"
+                BackgroundColor="White"
+                IsPassword="True" />
+            <Label
+                Padding="5"
+                FontSize="14"
+                HorizontalOptions="Center"
+                Text=" Mínimo 8 Caracteres"
+                TextColor="White" />
             <Button
-                Padding="113.3, 10"
+                Margin="0,50"
                 BackgroundColor="#01C853"
                 Clicked="Button_Clicked"
                 FontSize="20"
+                HeightRequest="50"
                 HorizontalOptions="Center"
                 Text="Cadastrar"
-                TextColor="Black" />
+                TextColor="Black"
+                WidthRequest="330" />
         </VerticalStackLayout>
 
     </ScrollView>

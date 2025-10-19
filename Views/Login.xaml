@@ -47,8 +47,10 @@
                     IsPassword="True" />
 
                 <Button
+                    HeightRequest="50"
+                    WidthRequest="330"
                     Margin="0,45,0,0"
-                    Padding="130,10"
+                    
                     BackgroundColor="#01C853"
                     Clicked="ValidarLogin"
                     FontFamily="OpenSansSemibold"
