@@ -9,13 +9,14 @@
     <FlyoutPage.Flyout>
         <!--  Página de Manu  -->
         <pages:Menu />
+
+
     </FlyoutPage.Flyout>
     <FlyoutPage.Detail>
         <!--  Página de conteúdo central  -->
         <NavigationPage>
             <x:Arguments>
                 <pages:MainPage />
-
             </x:Arguments>
         </NavigationPage>
 

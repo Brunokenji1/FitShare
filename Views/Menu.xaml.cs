@@ -29,4 +29,8 @@ public partial class Menu : ContentPage
         }
 		label.IsEnabled = true;
     }
+	private void OnTapMeusTreinos(object sender, TappedEventArgs e)
+	{
+        App.Current.MainPage=new MeusTreinos();
+    }
 }

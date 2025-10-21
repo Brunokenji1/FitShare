@@ -34,7 +34,7 @@
                     FontSize="15"
                     Text="Email ou usuario"
                     TextColor="White" />
-                <Entry x:Name="txt_usuario" Background="White" />
+                <Entry x:Name="txt_usuario" Background="White" TextColor="Black"/>
 
                 <Label
                     FontFamily="OpenSansSemibold"
@@ -44,7 +44,8 @@
                 <Entry
                     x:Name="txt_senha"
                     BackgroundColor="White"
-                    IsPassword="True" />
+                    IsPassword="True"
+                    TextColor="Black"/>
 
                 <Button
                     HeightRequest="50"
