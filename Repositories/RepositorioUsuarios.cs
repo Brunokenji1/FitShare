@@ -7,58 +7,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 
-namespace AppFitShare.Repositories
+namespace AppFitShare.Repositories;
+
+public class RepositorioUsuarios
 {
-    public class RepositorioUsuarios
+    private static List<Usuario> listaUsuarios = new List<Usuario>();
+    public static void Cadastrar(Usuario usuario)
     {
-        private static string path = Path.Combine(FileSystem.AppDataDirectory, "usuarios.json");
-        private static List<Usuario> listaUsuarios = new List<Usuario>();
-        static RepositorioUsuarios()
-        {
-            CarregarUsuarios();
-        }
-        public static void Cadastrar(Usuario usuario)
-        {
-            listaUsuarios.Add(usuario);
-            SalvarUsuarios();
-        }
-        public static Usuario? ObterPorNome(string nome)
-        {
-            return listaUsuarios.FirstOrDefault(u => u.Nome.Equals(nome));
-        }
-        public static Usuario? ObterPorEmail(string email)
-        {
-            return listaUsuarios.FirstOrDefault(u => u.Email.Equals(email));
-        }
-        public static List<Usuario> ListarTodos()
-        {
-            return listaUsuarios;
-        }
-        public static void Atualizar(Usuario usuario)
-        {
-            var index = listaUsuarios.FindIndex(u => u.Email == usuario.Email);
+        listaUsuarios.Add(usuario);
+    }
+    public static Usuario? ObterPorNome(string nome)
+    {
+        return listaUsuarios.FirstOrDefault(u => u.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+    }
+    public static Usuario? ObterPorEmail(string email)
+    {
+        return listaUsuarios.FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+    }
+    public static Usuario? ObterPorUsername(string username)
+    {
+        return listaUsuarios.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+    }
 
-            if (index >= 0)
-            {
-                listaUsuarios[index] = usuario;
-                SalvarUsuarios();
-            }
-        }
-        private static void SalvarUsuarios()
-        {
-            string json = JsonSerializer.Serialize(listaUsuarios);
-            File.WriteAllText(path, json);
-        }
+    public static List<Usuario> ListarTodos()
+    {
+        return listaUsuarios;
+    }
+    public static void Atualizar(Usuario usuario)
+    {
+        var index = listaUsuarios.FindIndex(u => u.Email == usuario.Email);
 
-        private static void CarregarUsuarios()
+        if (index >= 0)
         {
-            if (File.Exists(path))
-            {
-                string json = File.ReadAllText(path);
-                listaUsuarios = JsonSerializer.Deserialize<List<Usuario>>(json) ?? new List<Usuario>();
-            }
+            listaUsuarios[index] = usuario;
         }
-
-    
     }
 }

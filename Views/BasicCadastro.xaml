@@ -25,6 +25,12 @@
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
+                Text="Username"
+                TextColor="White" />
+            <Entry x:Name="txt_username" BackgroundColor="White" />
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="15"
                 Text="Email"
                 TextColor="White" />
             <Entry x:Name="txt_email" BackgroundColor="White" />

@@ -21,7 +21,11 @@
             <Label
                 Padding="10"
                 Text="Inicio"
-                TextColor="White" />
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapHome" />
+                </Label.GestureRecognizers>
+            </Label>
             <Label
                 Padding="10"
                 Text="Meus Treinos"
@@ -33,27 +37,35 @@
             <Label
                 Padding="10"
                 Text="Alimentação"
-                TextColor="White" />
-            <Label
-                Padding="10"
-                Text="Upload"
-                TextColor="White" />
-            <Label
-                Padding="10"
-                Text="Comunidade"
-                TextColor="White" />
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapAlimentacao" />
+                </Label.GestureRecognizers>
+            </Label>
             <Label
                 Padding="10"
                 Text="Perfil"
-                TextColor="White" />
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapPerfil" />
+                </Label.GestureRecognizers>
+            </Label>
             <Label
                 Padding="10,30,10,10"
                 Text="Configurações"
-                TextColor="White" />
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapConfiguracao" />
+                </Label.GestureRecognizers>
+            </Label>
             <Label
                 Padding="10"
                 Text="Suporte"
-                TextColor="White" />
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapSuporte" />
+                </Label.GestureRecognizers>
+            </Label>
 
             <Label
                 Padding="10"

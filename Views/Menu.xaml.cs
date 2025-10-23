@@ -29,8 +29,52 @@ public partial class Menu : ContentPage
         }
 		label.IsEnabled = true;
     }
-	private void OnTapMeusTreinos(object sender, TappedEventArgs e)
+    private void OnTapHome(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Home());
+            flyoutpage.IsPresented = false;
+        }
+    }
+    private void OnTapMeusTreinos(object sender, TappedEventArgs e)
 	{
-        App.Current.MainPage=new MeusTreinos();
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+		{
+			flyoutpage.Detail = new NavigationPage(new MeusTreinos());
+			flyoutpage.IsPresented = false;
+        }
+    }
+    private void OnTapAlimentacao(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Alimentacao());
+            flyoutpage.IsPresented = false;
+        }
+    }
+    private void OnTapConfiguracao(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Configuracao());
+            flyoutpage.IsPresented = false;
+        }
+    }
+    private void OnTapSuporte(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Suporte());
+            flyoutpage.IsPresented = false;
+        }
+    }
+    private void OnTapPerfil(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Perfil());
+            flyoutpage.IsPresented = false;
+        }
     }
 }
