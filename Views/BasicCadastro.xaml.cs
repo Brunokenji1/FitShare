@@ -14,21 +14,31 @@ public partial class BasicCadastro : ContentPage
     {
         try
         {
-            var usuario = new Usuario(01, txt_nome.Text, txt_email.Text, txt_senha.Text);
-            usuarioService.SalvarUsuario(usuario);
-            RepositorioUsuarios usuarios = new RepositorioUsuarios();
-            Usuario dados_digitados = new Usuario(01, txt_nome.Text, txt_email.Text, txt_senha.Text);
-            
-            if (usuarios.Whele)
+            if(string.IsNullOrWhiteSpace(txt_nome.Text) ||
+               string.IsNullOrWhiteSpace(txt_email.Text) ||
+               string.IsNullOrWhiteSpace(txt_senha.Text) || 
+               string.IsNullOrWhiteSpace(txt_confirmarSenha.Text)) 
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", dados_digitados.Nome);
-                App.Current.MainPage = new FlyoutPageMenu();
+                throw new Exception("Preencha todos os campos!");
             }
-            else
+            if(txt_confirmarSenha.Text.Length < 8)
             {
-                throw new Exception("Usuário ou senha inválidos!");
+                throw new Exception("A senha precisa ter no mínimo 8 caracteres!");
             }
-
+            if(txt_confirmarSenha.Text != txt_senha.Text)
+            {
+                throw new Exception("As senhas não coincidem!");
+            }
+            var usuarioExistente = RepositorioUsuarios.ObterPorEmail(txt_email.Text);
+            if (usuarioExistente != null)
+            {
+                throw new Exception("Já existe um usuário cadastrado com este e-mail!");
+            }
+           
+            var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count+1, txt_nome.Text, txt_email.Text, txt_senha.Text);
+            RepositorioUsuarios.Cadastrar(novoUsuario);
+            await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
+            App.Current.MainPage = new Login();
 
         }
         catch (Exception ex)

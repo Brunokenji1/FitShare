@@ -1,5 +1,5 @@
 using AppFitShare.Models;
-
+using AppFitShare.Repositories;
 namespace AppFitShare.Views;
 
 public partial class Login : ContentPage
@@ -12,38 +12,22 @@ public partial class Login : ContentPage
     {
         try
         {
-
-            List<Usuario> lista_usuarios = new List<Usuario>()
-            {
-                new Usuario(1, "B", "b@gmail.com", "123456"),
-                new Usuario(2, "A", "a@gmail.com", "abcde"),
-            };
+            var usuario = RepositorioUsuarios.ObterPorEmail(txt_usuario.Text);
             Usuario dados_digitados = new Usuario(0, txt_usuario.Text, "", txt_senha.Text);
-
-
-            if (lista_usuarios.Any(usuario => (dados_digitados.Nome == usuario.Nome && dados_digitados.Senha == usuario.Senha)))
+            if(usuario!= null && usuario.Senha == txt_senha.Text)
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", dados_digitados.Nome);
+                await SecureStorage.Default.SetAsync("usuario_logado", usuario.Nome);
                 App.Current.MainPage = new FlyoutPageMenu();
             }
             else
             {
                 throw new Exception("Usuário ou senha inválidos!");
             }
-
-            
         }
         catch (Exception ex)
         {
             await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
-
-
-    }
-
-    private void OnButtonClickedCadastroBasico(object sender, EventArgs e)
-    {
-
     }
 
     private void OnTapCadastrar(object sender, TappedEventArgs e)
