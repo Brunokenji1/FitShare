@@ -12,41 +12,41 @@ namespace AppFitShare.Repositories
     public class RepositorioUsuarios
     {
         private static string path = Path.Combine(FileSystem.AppDataDirectory, "usuarios.json");
-        private static List<Usuario> usuarios = new List<Usuario>();
+        private static List<Usuario> listaUsuarios = new List<Usuario>();
         static RepositorioUsuarios()
         {
             CarregarUsuarios();
         }
         public static void Cadastrar(Usuario usuario)
         {
-            usuarios.Add(usuario);
+            listaUsuarios.Add(usuario);
             SalvarUsuarios();
         }
         public static Usuario? ObterPorNome(string nome)
         {
-            return usuarios.FirstOrDefault(u => u.Nome.Equals(nome));
+            return listaUsuarios.FirstOrDefault(u => u.Nome.Equals(nome));
         }
         public static Usuario? ObterPorEmail(string email)
         {
-            return usuarios.FirstOrDefault(u => u.Email.Equals(email));
+            return listaUsuarios.FirstOrDefault(u => u.Email.Equals(email));
         }
         public static List<Usuario> ListarTodos()
         {
-            return usuarios;
+            return listaUsuarios;
         }
         public static void Atualizar(Usuario usuario)
         {
-            var index = usuarios.FindIndex(u => u.Email == usuario.Email);
+            var index = listaUsuarios.FindIndex(u => u.Email == usuario.Email);
 
             if (index >= 0)
             {
-                usuarios[index] = usuario;
+                listaUsuarios[index] = usuario;
                 SalvarUsuarios();
             }
         }
         private static void SalvarUsuarios()
         {
-            string json = JsonSerializer.Serialize(usuarios);
+            string json = JsonSerializer.Serialize(listaUsuarios);
             File.WriteAllText(path, json);
         }
 
@@ -55,7 +55,7 @@ namespace AppFitShare.Repositories
             if (File.Exists(path))
             {
                 string json = File.ReadAllText(path);
-                usuarios = JsonSerializer.Deserialize<List<Usuario>>(json) ?? new List<Usuario>();
+                listaUsuarios = JsonSerializer.Deserialize<List<Usuario>>(json) ?? new List<Usuario>();
             }
         }
 
