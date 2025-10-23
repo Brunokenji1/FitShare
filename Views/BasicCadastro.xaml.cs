@@ -21,6 +21,9 @@ public partial class BasicCadastro : ContentPage
             {
                 throw new Exception("Preencha todos os campos!");
             }
+            if (!txt_email.Text.Contains("@")){
+                throw new Exception("E-mail inválido!");
+            }
             if(txt_confirmarSenha.Text.Length < 8)
             {
                 throw new Exception("A senha precisa ter no mínimo 8 caracteres!");

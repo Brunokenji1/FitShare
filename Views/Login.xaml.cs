@@ -12,11 +12,21 @@ public partial class Login : ContentPage
     {
         try
         {
-            var usuario = RepositorioUsuarios.ObterPorEmail(txt_usuario.Text);
-            Usuario dados_digitados = new Usuario(0, txt_usuario.Text, "", txt_senha.Text);
-            if(usuario!= null && usuario.Senha == txt_senha.Text)
+            var usuariosCadastrados = RepositorioUsuarios.ListarTodos();
+
+            string identificador = txt_usuario.Text?.Trim();
+            string senha = txt_senha.Text?.Trim();
+
+            if(string.IsNullOrWhiteSpace(identificador) || string.IsNullOrWhiteSpace(senha))
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", usuario.Nome);
+                throw new Exception("Preencha todos os campos!");
+            }
+            var usuarioEncontrado = usuariosCadastrados.FirstOrDefault(usuario =>
+            (usuario.Username?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true ||
+            usuario.Email.Equals(identificador, StringComparison.OrdinalIgnoreCase)) && usuario.Senha == senha);
+            if(usuarioEncontrado != null)
+            {
+                await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
                 App.Current.MainPage = new FlyoutPageMenu();
             }
             else

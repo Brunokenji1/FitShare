@@ -25,7 +25,7 @@ public partial class Menu : ContentPage
         if (confirmacao)
 		{
             SecureStorage.Default.Remove("usuario_logado");
-			App.Current.MainPage = new Login();
+			App.Current.MainPage = new NavigationPage(new Login());
         }
 		label.IsEnabled = true;
     }
