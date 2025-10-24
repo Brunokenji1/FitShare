@@ -47,10 +47,10 @@ public partial class BasicCadastro : ContentPage
                 throw new Exception("As senhas não coincidem!");
             }
             
-            var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count+1, txt_nome.Text, txt_email.Text, txt_senha.Text);
+            var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count+1, txt_nome.Text, txt_username.Text, txt_email.Text, txt_senha.Text);
             RepositorioUsuarios.Cadastrar(novoUsuario);
             await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
-            App.Current.MainPage = new Login();
+            App.Current.MainPage = new NavigationPage(new Login());
 
         }
         catch (Exception ex)

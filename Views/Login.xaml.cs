@@ -22,9 +22,11 @@ public partial class Login : ContentPage
                 throw new Exception("Preencha todos os campos!");
             }
             var usuarioEncontrado = usuariosCadastrados.FirstOrDefault(usuario =>
-            (usuario.Username?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true ||
-            usuario.Email.Equals(identificador, StringComparison.OrdinalIgnoreCase)) && usuario.Senha == senha);
-            if(usuarioEncontrado != null)
+                ((usuario.Username?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true) ||
+                (usuario.Email?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true ))
+                && usuario.Senha == senha);
+
+            if (usuarioEncontrado != null)
             {
                 await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
                 App.Current.MainPage = new FlyoutPageMenu();

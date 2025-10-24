@@ -20,10 +20,11 @@ namespace AppFitShare.Models
         public string Metabolismo { get; private set; }
         public string Status { get; set; }
 
-        public Usuario(int id, string nome, string email, string senha)
+        public Usuario(int id, string nome, string username, string email, string senha)
         {
             Id = id;
             Nome = nome;
+            Username = username;
             Email = email;
             Senha = senha;
             Status = "Incompleto";
