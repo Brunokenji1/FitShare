@@ -106,6 +106,9 @@
 	  <MauiXaml Update="Views\BasicCadastro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CadastroCompleto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Configuracao.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

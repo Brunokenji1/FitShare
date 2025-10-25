@@ -16,7 +16,7 @@
         <!--  Página de conteúdo central  -->
         <NavigationPage>
             <x:Arguments>
-                <pages:MainPage />
+                <pages:Home />
             </x:Arguments>
         </NavigationPage>
 
