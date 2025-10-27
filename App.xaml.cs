@@ -15,7 +15,7 @@ namespace AppFitShare
 
             if(string.IsNullOrEmpty(usuario_logado))
             {
-                MainPage = new NavigationPage(new Login());
+                MainPage = new TabbedPageMenu();
             }
             else
             {
