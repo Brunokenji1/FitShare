@@ -53,6 +53,14 @@ public partial class Menu : ContentPage
             flyoutpage.IsPresented = false;
         }
     }
+    private void OnTapPesquisar(object sender, TappedEventArgs e)
+    {
+        if (Application.Current.MainPage is FlyoutPage flyoutpage)
+        {
+            flyoutpage.Detail = new NavigationPage(new Pesquisar());
+            flyoutpage.IsPresented = false;
+        }
+    }
     private void OnTapConfiguracao(object sender, TappedEventArgs e)
     {
         if (Application.Current.MainPage is FlyoutPage flyoutpage)

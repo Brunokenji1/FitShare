@@ -19,8 +19,7 @@ namespace AppFitShare.Models
         public double Altura { get; private set; }
         public string Metabolismo { get; private set; }
         public string Status { get; set; }
-
-        public Usuario(int id, string nome, string username, string email, string senha)
+        public Usuario(int id, string nome, string username, string email, string senha, DateTime DataCdastro)
         {
             Id = id;
             Nome = nome;
@@ -28,6 +27,7 @@ namespace AppFitShare.Models
             Email = email;
             Senha = senha;
             Status = "Incompleto";
+            DataCadastro = DataCdastro;
         }
         public void CadastroCompleto(int idade, double peso, double altura, string metabolismo)
         {

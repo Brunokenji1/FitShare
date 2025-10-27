@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppFitShare.Models
+namespace AppFitShare.Repositories
 {
-    internal class Refeicao
+    class RepositorioReceitas
     {
     }
 }

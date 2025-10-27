@@ -42,8 +42,18 @@ public partial class Login : ContentPage
         }
     }
 
-    private void OnTapCadastrar(object sender, TappedEventArgs e)
+    private async void OnTapCadastrar(object sender, TappedEventArgs e)
     {
-        Navigation.PushAsync(new BasicCadastro());
+        await Navigation.PushAsync(new BasicCadastro());
+    }
+
+    private async void OnTapRecuperarSenha(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new RecuperarSenha());
+    }
+
+    private void Button_Pressed(object sender, EventArgs e)
+    {
+
     }
 }

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppFitShare.Models
+namespace AppFitShare.Repositories
 {
-    internal class Treino
+    class RepositorioExercicios
     {
-        public List<Exercicio> listaDeExercicios { get; set; }
-        }
+    }
 }

@@ -44,12 +44,23 @@
             </Label>
             <Label
                 Padding="10"
+                Text="Pesquisar"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapPesquisar" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Padding="10"
                 Text="Perfil"
                 TextColor="White">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTapPerfil" />
                 </Label.GestureRecognizers>
             </Label>
+            
+                
+            
             <Label
                 Padding="10,30,10,10"
                 Text="Configurações"
@@ -76,7 +87,6 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <VerticalStackLayout x:Name="MenuContainer" Margin="20" />
 
         </VerticalStackLayout>
     </ScrollView>

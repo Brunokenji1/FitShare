@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    internal class Treino
+    class Exercicio
     {
-        public List<Exercicio> listaDeExercicios { get; set; }
-        }
+    }
 }

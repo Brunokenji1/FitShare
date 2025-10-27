@@ -25,16 +25,16 @@
                 <Label
                     Padding="0,10,0,50"
                     FontFamily="OpenSansSemibold"
-                    FontSize="18"
+                    FontSize="Title"
                     HorizontalOptions="Center"
                     Text="Fazer Login"
                     TextColor="AliceBlue" />
                 <Label
                     FontFamily="OpenSansSemibold"
                     FontSize="15"
-                    Text="Email ou usuario"
+                    Text="Username ou E-mail"
                     TextColor="White" />
-                <Entry x:Name="txt_usuario" Background="White" TextColor="Black"/>
+                <Entry x:Name="txt_usuario" Placeholder="Digite seu Username ou E-mail" Background="White" TextColor="Black"/>
 
                 <Label
                     FontFamily="OpenSansSemibold"
@@ -43,15 +43,20 @@
                     TextColor="White" />
                 <Entry
                     x:Name="txt_senha"
+                    Placeholder="Digite sua Senha"
                     BackgroundColor="White"
                     IsPassword="True"
                     TextColor="Black"/>
-
+                <Label Text="Recupera senha" FontSize="14">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnTapRecuperarSenha"/>
+                    </Label.GestureRecognizers>
+                </Label>
                 <Button
                     HeightRequest="50"
                     WidthRequest="330"
                     Margin="0,45,0,0"
-                    
+                    Pressed="Button_Pressed"
                     BackgroundColor="#01C853"
                     Clicked="ValidarLogin"
                     FontFamily="OpenSansSemibold"
@@ -72,7 +77,8 @@
                         FontFamily="OpenSansSemibold"
                         FontSize="15"
                         Text="Cadastrar"
-                        TextColor="White">
+                        TextColor="White"
+                        TextDecorations="Underline">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnTapCadastrar" />
                         </Label.GestureRecognizers>

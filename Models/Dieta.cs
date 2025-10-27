@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    internal class Comunidade
+    class Dieta
     {
     }
 }

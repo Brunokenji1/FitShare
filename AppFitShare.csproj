@@ -133,6 +133,12 @@
 	  <MauiXaml Update="Views\Perfil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Pesquisar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RecuperarSenha.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Suporte.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

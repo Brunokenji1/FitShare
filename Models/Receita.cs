@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    internal class Category
+    internal class Receita
     {
-        public string Name { get; set; }
-        public List<Component> Components { get; set; }
     }
 }
