@@ -21,19 +21,19 @@
                 Text="Nome"
                 TextColor="White"
                 VerticalOptions="Center" />
-            <Entry x:Name="txt_nome" BackgroundColor="White" />
+            <Entry x:Name="txt_nome" TextColor="Black" Placeholder="Digite seu nome" BackgroundColor="White" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Username"
                 TextColor="White" />
-            <Entry x:Name="txt_username" BackgroundColor="White" />
+            <Entry x:Name="txt_username" TextColor="Black" Placeholder="Digite seu Username" BackgroundColor="White" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Email"
                 TextColor="White" />
-            <Entry x:Name="txt_email" BackgroundColor="White" />
+            <Entry x:Name="txt_email" TextColor="Black" Placeholder="Digite seu E-mail" BackgroundColor="White" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
@@ -42,7 +42,9 @@
             <Entry
                 x:Name="txt_senha"
                 BackgroundColor="White"
-                IsPassword="True" />
+                IsPassword="True"
+                TextColor="Black"
+                Placeholder="Digite sua senha"/>
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
@@ -51,7 +53,9 @@
             <Entry
                 x:Name="txt_confirmarSenha"
                 BackgroundColor="White"
-                IsPassword="True" />
+                IsPassword="True" 
+                TextColor="Black"
+                Placeholder="Digite novamente sua senha"/>
             <Label
                 Padding="5"
                 FontSize="14"

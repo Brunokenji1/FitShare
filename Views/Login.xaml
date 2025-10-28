@@ -15,7 +15,7 @@
         <ScrollView>
             <VerticalStackLayout
                 Padding="15"
-                Spacing="15"
+                Spacing="10"
                 VerticalOptions="Center">
                 <Image
                     Margin="0,13,0,40"
@@ -23,7 +23,7 @@
                     Source="logo.png"
                     WidthRequest="118" />
                 <Label
-                    Padding="0,10,0,50"
+                    Padding="0,0,0,30"
                     FontFamily="OpenSansSemibold"
                     FontSize="Title"
                     HorizontalOptions="Center"
