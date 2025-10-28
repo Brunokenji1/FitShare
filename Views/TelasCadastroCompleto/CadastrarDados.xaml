@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastrarDados"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CadastrarDados">
+    <VerticalStackLayout>
+        <Label
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Completar Cadastro"
+            VerticalOptions="Center" />
+        <Entry
+            x:Name="txt_idade"
+            Background="White"
+            Placeholder="Idade"
+            TextColor="Black" />
+        <HorizontalStackLayout x:Name="OpcoesBiotipo">
+            <Button
+                x:Name="OnEctomorfo"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="OnBiotipoClicked"
+                Text="Ectomorfo" />
+            <Button
+                x:Name="OnMesomorfo"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="OnBiotipoClicked"
+                Text="Mesomorfo" />
+            <Button
+                x:Name="OnEndomorfo"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="OnBiotipoClicked"
+                Text="Endomorfo" />
+        </HorizontalStackLayout>
+        <Entry
+            x:Name="txt_peso"
+            Background="White"
+            Placeholder="Peso em Kg"
+            TextColor="Black" />
+        <Entry
+            x:Name="txt_altura"
+            Background="White"
+            Placeholder="Altura em cm"
+            TextColor="Black" />
+        <Entry
+            x:Name="txt_telefone"
+            Background="White"
+            Placeholder="Telefone"
+            TextColor="Black" />
+        <Button
+            Margin="0,45,0,0"
+            BackgroundColor="#01C853"
+            Clicked="OnCadastroDadosClicked"
+            FontFamily="OpenSansSemibold"
+            FontSize="20"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Pressed="Button_Pressed"
+            Text="Entrar"
+            TextColor="Black"
+            WidthRequest="330" />
+
+    </VerticalStackLayout>
+</ContentPage>
