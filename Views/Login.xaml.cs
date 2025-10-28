@@ -29,7 +29,7 @@ public partial class Login : ContentPage
             if (usuarioEncontrado != null)
             {
                 await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
-                App.Current.MainPage = new FlyoutPageMenu();
+                App.Current.MainPage = new TabbedPageMenu();
             }
             else
             {

@@ -1,4 +1,4 @@
-namespace AppFitShare.Views;
+namespace AppFitShare;
 
 public partial class TabbedPageMenu : TabbedPage
 {

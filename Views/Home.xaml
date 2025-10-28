@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppFitShare.Views.Home"
              Title="Início" 
+             Background="#0c1420"
              IconImageSource="inicio.png">
     <VerticalStackLayout>
         
