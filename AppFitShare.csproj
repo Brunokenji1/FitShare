@@ -151,6 +151,9 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroObjetivo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroObjetivo2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

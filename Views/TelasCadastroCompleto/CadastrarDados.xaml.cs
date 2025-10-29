@@ -8,11 +8,10 @@ public partial class CadastrarDados : ContentPage
 		InitializeComponent();
 	}
     private string _biotiposelecionado = null;
-    private void OnCadastroDadosClicked(object sender, EventArgs e)
+    private async void OnCadastroDadosClicked(object sender, EventArgs e)
     {
-		App.Current.MainPage = new NavigationPage(new CadastroObjetivo());
+        await Navigation.PushAsync(new CadastroObjetivo());
     }
-
     private void OnBiotipoClicked(object sender, EventArgs e)
     {
         foreach(var view in OpcoesBiotipo.Children)

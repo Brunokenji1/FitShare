@@ -8,7 +8,7 @@ public partial class Perfil : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void OnTapSair(object sender, TappedEventArgs e)
+    private async void OnTapSair(object sender, EventArgs e)
     {
         var label = (Label)sender;
         label.IsEnabled = false;
@@ -17,8 +17,12 @@ public partial class Perfil : ContentPage
         if (confirmacao)
         {
             SecureStorage.Default.Remove("usuario_logado");
-            App.Current.MainPage = new NavigationPage(new CadastrarDados());
+            App.Current.MainPage = new NavigationPage(new Login());
         }
         label.IsEnabled = true;
+    }
+    private async void OnCadastrarDados(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new NavigationPage(new CadastrarDados());
     }
 }

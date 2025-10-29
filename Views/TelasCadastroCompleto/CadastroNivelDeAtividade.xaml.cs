@@ -7,8 +7,8 @@ public partial class CadastroNivelDeAtividade : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void CadastroNivelAtividadeClicked(object sender, EventArgs e)
     {
-
+		App.Current.MainPage = new TabbedPageMenu();
     }
 }

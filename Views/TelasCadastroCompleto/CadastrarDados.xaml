@@ -61,7 +61,7 @@
             FontSize="20"
             HeightRequest="50"
             HorizontalOptions="Center"
-            Text="Entrar"
+            Text="Continuar"
             TextColor="Black"
             WidthRequest="330" />
 
