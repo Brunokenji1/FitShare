@@ -1,3 +1,5 @@
+using AppFitShare.Views.TelasCadastroCompleto;
+
 namespace AppFitShare.Views;
 
 public partial class Perfil : ContentPage
@@ -15,7 +17,7 @@ public partial class Perfil : ContentPage
         if (confirmacao)
         {
             SecureStorage.Default.Remove("usuario_logado");
-            App.Current.MainPage = new NavigationPage(new Login());
+            App.Current.MainPage = new NavigationPage(new CadastrarDados());
         }
         label.IsEnabled = true;
     }

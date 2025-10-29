@@ -23,7 +23,7 @@
             Background="Transparent"
             Clicked="BotaoIniciarTreinoClicked"
             />
-        <Button x:Name="BotaoAddTreino"
+        <Button x:Name="AddBotaoAddTreino"
             Text=""
             BorderColor="White"
             BorderWidth="2"
