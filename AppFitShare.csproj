@@ -97,6 +97,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ExerciciosTreinos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="FlyoutPageMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

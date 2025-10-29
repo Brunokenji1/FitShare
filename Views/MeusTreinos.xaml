@@ -7,30 +7,54 @@
     Background="#0c1420"
     IconImageSource="treino.png">
     <ScrollView>
-        
-    <VerticalStackLayout>
-        <Label
-            BackgroundColor="Black"
-            Text="Treinos de hoje "
-            TextColor="White"
-            VerticalOptions="Start"
-            Padding="30,10"/>
-        <Button x:Name="BotaoAddTreino"
-            Text="Treino A"
-            BorderColor="White"
-            BorderWidth="2"
-            CornerRadius="20"
-            Background="Transparent"
-            Clicked="BotaoIniciarTreinoClicked"
-            />
-        <Button x:Name="AddBotaoAddTreino"
-            Text=""
-            BorderColor="White"
-            BorderWidth="2"
-            CornerRadius="20"
-            Background="Transparent"
-            Clicked="BotaoIniciarTreinoClicked"
-            />
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Padding="20,15,1000,15"
+                    Background="#003918"
+                    BackgroundColor="Black"
+                    Text="Treino"
+                    TextColor="White"
+                    VerticalOptions="Start" />
+            </HorizontalStackLayout>
+            <Label
+                Padding="20,15,0,0"
+                FontSize="18"
+                Text="Treinos de hoje!"
+                TextColor="White" />
+            <Button
+                x:Name="BotaoAddTreino"
+                Margin="30,20,30,0"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="2"
+                Clicked="BotaoIniciarTreinoClicked"
+                CornerRadius="20"
+                HeightRequest="80"
+                Text="Treino A"
+                TextColor="White" />
+            <Button
+                x:Name="AddBotaoAddTreino"
+                Margin="30,40,30,0"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="2"
+                Clicked="BotaoIniciarTreinoClicked2"
+                CornerRadius="20"
+                HeightRequest="80"
+                Text="Treino B"
+                TextColor="White" />
+            <ImageButton
+                Margin="18,20"
+                Padding="5,5,5,5"
+                BackgroundColor="#003918"
+                Clicked="AddTreinoPersonalizado"
+                CornerRadius="100"
+                HeightRequest="32"
+                HorizontalOptions="End"
+                Source="vetor.png"
+                VerticalOptions="End"
+                WidthRequest="32" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
