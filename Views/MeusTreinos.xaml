@@ -6,10 +6,31 @@
     Title="Treinos"
     Background="#0c1420"
     IconImageSource="treino.png">
+    <ScrollView>
+        
     <VerticalStackLayout>
         <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+            BackgroundColor="Black"
+            Text="Treinos de hoje "
+            TextColor="White"
+            VerticalOptions="Start"
+            Padding="30,10"/>
+        <Button x:Name="BotaoAddTreino"
+            Text="Treino A"
+            BorderColor="White"
+            BorderWidth="2"
+            CornerRadius="20"
+            Background="Transparent"
+            Clicked="BotaoIniciarTreinoClicked"
+            />
+        <Button x:Name="BotaoAddTreino"
+            Text=""
+            BorderColor="White"
+            BorderWidth="2"
+            CornerRadius="20"
+            Background="Transparent"
+            Clicked="BotaoIniciarTreinoClicked"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

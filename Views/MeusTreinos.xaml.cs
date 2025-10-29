@@ -6,4 +6,9 @@ public partial class MeusTreinos : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void BotaoIniciarTreinoClicked(object sender, EventArgs e)
+    {
+
+    }
 }

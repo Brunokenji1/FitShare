@@ -15,5 +15,6 @@
                 <TapGestureRecognizer Tapped="OnTapSair" />
             </Label.GestureRecognizers>
         </Label>
+        <Button Text="Cadastrar Completo"/>
     </VerticalStackLayout>
 </ContentPage>
