@@ -4,23 +4,23 @@ namespace AppFitShare.Views;
 
 public partial class MeusTreinos : ContentPage
 {
-	public MeusTreinos()
-	{
-		InitializeComponent();
-	}
-
-    private void BotaoIniciarTreinoClicked(object sender, EventArgs e)
+    public MeusTreinos()
     {
-        App.Current.MainPage = new NavigationPage(new ExerciciosTreinos());
+        InitializeComponent();
+    }
+
+    private async void BotaoIniciarTreinoClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ExerciciosTreinos());
     }
 
     private void AddTreinoPersonalizado(object sender, EventArgs e)
     {
-
+        // futuro código
     }
 
     private void BotaoIniciarTreinoClicked2(object sender, EventArgs e)
     {
-
+        // futuro código
     }
 }

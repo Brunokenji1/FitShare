@@ -6,30 +6,33 @@ public partial class Home : ContentPage
 	{
 		InitializeComponent();
 	}
-
     private void OnVerTreino(object sender, EventArgs e)
     {
-        var tabbedPage = Application.Current.MainPage as TabbedPage;
-        if (tabbedPage != null)
+        if (Application.Current.MainPage is NavigationPage navigationPage)
         {
-            var paginaMeusTreino = tabbedPage.Children.FirstOrDefault(p => p is MeusTreinos);
-            if (paginaMeusTreino != null)
+            if (navigationPage.CurrentPage is TabbedPage tabbedPage)
             {
-                tabbedPage.CurrentPage = paginaMeusTreino;
+                var paginaMeusTreino = tabbedPage.Children.FirstOrDefault(p => p is MeusTreinos);
+                if (paginaMeusTreino != null)
+                {
+                    tabbedPage.CurrentPage = paginaMeusTreino;
+                }
+            }
+        }
+    }
+    private void OnVerPlanoAlimentar(object sender, EventArgs e)
+    {
+        if (Application.Current.MainPage is NavigationPage navigationPage)
+        {
+            if (navigationPage.CurrentPage is TabbedPage tabbedPage)
+            {
+                var paginaPlanoAlimentacao = tabbedPage.Children.FirstOrDefault(p => p is PlanoAlimentacao);
+                if (paginaPlanoAlimentacao != null)
+                {
+                    tabbedPage.CurrentPage = paginaPlanoAlimentacao;
+                }
             }
         }
     }
 
-    private void OnVerPlanoAlimentar(object sender, EventArgs e)
-    {
-        var tabbedPage = Application.Current.MainPage as TabbedPage;
-        if (tabbedPage != null)
-        {
-            var paginaPlanoAlimentacao = tabbedPage.Children.FirstOrDefault(p => p is PlanoAlimentacao);
-            if(paginaPlanoAlimentacao != null)
-            {
-                tabbedPage.CurrentPage = paginaPlanoAlimentacao;
-            }
-        }
-    }
 }
