@@ -17,7 +17,6 @@
             TextColor="White" />
         <Entry
             BackgroundColor="White"
-            IsPassword="True"
             Placeholder="Pesquisar"
             TextColor="Black" />
     </VerticalStackLayout>
