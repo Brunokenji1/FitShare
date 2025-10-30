@@ -7,15 +7,6 @@
     Background="#0c1420"
     IconImageSource="perfil.png">
     <VerticalStackLayout Spacing="30">
-
-        <Button
-            Padding="20,10"
-            Clicked="OnCadastrarDados"
-            CornerRadius="20"
-            FontSize="18"
-            Text="Cadastrar Completo"
-            TextColor="Black"
-            WidthRequest="365" />
         <Label
             Padding="10"
             Text="Sair"
@@ -24,5 +15,13 @@
                 <TapGestureRecognizer Tapped="OnTapSair" />
             </Label.GestureRecognizers>
         </Label>
+        <Button
+            Padding="20,10"
+            Clicked="OnCadastrarDados"
+            CornerRadius="20"
+            FontSize="18"
+            Text="Cadastrar Completo"
+            TextColor="Black"
+            WidthRequest="365" />
     </VerticalStackLayout>
 </ContentPage>
