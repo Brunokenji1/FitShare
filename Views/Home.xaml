@@ -11,9 +11,9 @@
         <HorizontalStackLayout>
             <Label
                 Padding="10,15"
+                x:Name="lbl_boasvindas"
                 BackgroundColor="#003918"
                 FontSize="25"
-                Text="Olá, nome!"
                 TextColor="#01c853" />
             <Label
                 Padding="50,25"
@@ -22,6 +22,7 @@
                 Text="pronto(a) para treinar hoje?"
                 TextColor="White"
                 VerticalOptions="Start" />
+           
         </HorizontalStackLayout>
 
         <Label
