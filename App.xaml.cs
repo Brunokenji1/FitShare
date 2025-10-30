@@ -15,8 +15,8 @@ public partial class App : Application
         var window = new Window
         {
             Title = "App Fit Share",
-            Width = 800,
-            Height = 850
+            Width = 412,
+            Height = 915
         };
         var usuario_logado = SecureStorage.Default.GetAsync("usuario_logado").GetAwaiter().GetResult();
         if (string.IsNullOrEmpty(usuario_logado))

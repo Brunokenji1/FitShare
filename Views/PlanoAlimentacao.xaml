@@ -19,7 +19,7 @@
             Background="Transparent"
             BorderColor="White"
             BorderWidth="1"
-            Clicked="Button_Clicked"
+            Clicked="BotaoPlanoAlimentar"
             CornerRadius="20"
             Text="Plano A"
             TextColor="White"

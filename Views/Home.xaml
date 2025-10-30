@@ -37,12 +37,14 @@
                 Clicked="OnVerTreino"
                 CornerRadius="15"
                 Text="Ver Treino"
-                TextColor="Black" />
+                TextColor="Black"
+                Background="#01C853"/>
             <Button
                 Clicked="OnVerPlanoAlimentar"
                 CornerRadius="15"
                 Text="Ver Plano Alimentar"
-                TextColor="Black" />
+                TextColor="Black" 
+                Background="#01C853"/>
 
 
         </HorizontalStackLayout>
