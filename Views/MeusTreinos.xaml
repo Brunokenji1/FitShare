@@ -4,28 +4,32 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Treinos"
-    Background="#0c1420"
-    IconImageSource="treino.png">
+    BackgroundColor="#0c1420"
+    IconImageSource="treino.png"
+    NavigationPage.HasNavigationBar="False">
+
     <ScrollView>
         <VerticalStackLayout>
+
             <HorizontalStackLayout>
                 <Label
                     Padding="20,15,1000,15"
-                    Background="#003918"
-                    BackgroundColor="Black"
+                    BackgroundColor="#003918"
                     Text="Treino"
                     TextColor="White"
                     VerticalOptions="Start" />
             </HorizontalStackLayout>
+
             <Label
                 Padding="20,15,0,0"
                 FontSize="18"
                 Text="Treinos de hoje!"
                 TextColor="White" />
+
             <Button
                 x:Name="BotaoAddTreino"
                 Margin="30,20,30,0"
-                Background="Transparent"
+                BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
                 Clicked="BotaoIniciarTreinoClicked"
@@ -33,10 +37,11 @@
                 HeightRequest="80"
                 Text="Treino A"
                 TextColor="White" />
+
             <Button
                 x:Name="AddBotaoAddTreino"
                 Margin="30,40,30,0"
-                Background="Transparent"
+                BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
                 Clicked="BotaoIniciarTreinoClicked2"
@@ -44,9 +49,10 @@
                 HeightRequest="80"
                 Text="Treino B"
                 TextColor="White" />
+
             <ImageButton
                 Margin="18,20"
-                Padding="5,5,5,5"
+                Padding="5"
                 BackgroundColor="#003918"
                 Clicked="AddTreinoPersonalizado"
                 CornerRadius="100"
@@ -55,6 +61,7 @@
                 Source="vetor.png"
                 VerticalOptions="End"
                 WidthRequest="32" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

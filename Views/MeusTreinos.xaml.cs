@@ -16,11 +16,9 @@ public partial class MeusTreinos : ContentPage
 
     private void AddTreinoPersonalizado(object sender, EventArgs e)
     {
-        // futuro código
     }
 
     private void BotaoIniciarTreinoClicked2(object sender, EventArgs e)
     {
-        // futuro código
     }
 }

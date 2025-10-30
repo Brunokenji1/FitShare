@@ -3,11 +3,16 @@
     x:Class="AppFitShare.ExerciciosTreinos"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="ExerciciosTreinos">
-    <VerticalStackLayout BackgroundColor="#0C1420">
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    Title="ExerciciosTreinos"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+
+        <VerticalStackLayout BackgroundColor="#0C1420">
+            <Label
+                HorizontalOptions="Center"
+                Text="Welcome to .NET MAUI!"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
