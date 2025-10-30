@@ -6,4 +6,9 @@ public partial class ExerciciosTreinos : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Voltar(object sender, EventArgs e)
+    {
+		Navigation.PopAsync();
+    }
 }

@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Plano Alimentação"
     Background="#0c1420"
-    IconImageSource="alimentacao.png">
+    IconImageSource="alimentacao.png"
+    NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
         <Label
             Padding="15,10"
@@ -18,7 +19,7 @@
             Background="Transparent"
             BorderColor="White"
             BorderWidth="1"
-            Clicked="Button_Clicked"
+            Clicked="BotaoPlanoAlimentar"
             CornerRadius="20"
             Text="Plano A"
             TextColor="White"

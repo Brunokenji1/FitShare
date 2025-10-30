@@ -5,12 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Pesquisa"
     Background="#0c1420"
-    IconImageSource="pesquisa.png">
-    <VerticalStackLayout
-        Padding="15"
-        Spacing="10">
+    IconImageSource="pesquisa.png"
+    NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout Padding="15" Spacing="10">
         <Label
-        
             FontSize="18"
             HorizontalOptions="Start"
             Text="Pesquisa"

@@ -5,23 +5,56 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Início"
     Background="#0c1420"
-    IconImageSource="inicio.png">
+    IconImageSource="inicio.png"
+    NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label
+                Padding="10,15"
+                x:Name="lbl_boasvindas"
+                BackgroundColor="#003918"
+                FontSize="25"
+                TextColor="#01c853" />
+            <Label
+                Padding="50,25"
+                BackgroundColor="#003918"
+                FontSize="15"
+                Text="pronto(a) para treinar hoje?"
+                TextColor="White"
+                VerticalOptions="Start" />
+           
+        </HorizontalStackLayout>
 
         <Label
+            Margin="5,10,0,10"
             Padding="15,10"
+            FontAttributes="Bold"
             FontSize="18"
             HorizontalOptions="Start"
             Text="Resumo do Dia"
-            FontAttributes="Bold"
-            TextColor="White"
-            Margin="5, 30, 0, 10"/>
+            TextColor="White" />
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="39">
-            <Button Text="Ver Treino" TextColor="Black" CornerRadius="15" Clicked="OnVerTreino"/>
-            <Button Text="Ver Plano Alimentar" TextColor="Black" CornerRadius="15" Clicked="OnVerPlanoAlimentar"/>
+            <Button
+                Clicked="OnVerTreino"
+                CornerRadius="15"
+                Text="Ver Treino"
+                TextColor="Black"
+                Background="#01C853"/>
+            <Button
+                Clicked="OnVerPlanoAlimentar"
+                CornerRadius="15"
+                Text="Ver Plano Alimentar"
+                TextColor="Black" 
+                Background="#01C853"/>
 
 
         </HorizontalStackLayout>
-        <Label Text="Progresso" TextColor="White" FontAttributes="Bold" Padding="15,10" FontSize="18" Margin="5, 30, 0, 10"/>
+        <Label
+            Margin="5,30,0,10"
+            Padding="15,10"
+            FontAttributes="Bold"
+            FontSize="18"
+            Text="Progresso"
+            TextColor="White" />
     </VerticalStackLayout>
 </ContentPage>

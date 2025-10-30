@@ -1,37 +1,32 @@
 ﻿using AppFitShare.Views;
-namespace AppFitShare
+using Microsoft.Maui.Storage;
+
+namespace AppFitShare;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
+        InitializeComponent();
+    }
+
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        var window = new Window
         {
-            InitializeComponent();
-            MainPage = new ContentPage();
-            _ = VerificasLogin();
-        }
-        private async Task VerificasLogin() { 
-
-            var usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
-
-            if(string.IsNullOrEmpty(usuario_logado))
-            {
-                MainPage = new NavigationPage(new Login());
-            }
-            else
-            {
-                MainPage = new TabbedPageMenu();
-            }
-            
-        }
-        protected override Window CreateWindow(IActivationState activationState)
+            Title = "App Fit Share",
+            Width = 412,
+            Height = 915
+        };
+        var usuario_logado = SecureStorage.Default.GetAsync("usuario_logado").GetAwaiter().GetResult();
+        if (string.IsNullOrEmpty(usuario_logado))
         {
-            var window = base.CreateWindow(activationState);
-            window.Title = "App Fit Share";
-            window.Width = 400;
-            window.Height = 850;
-            return window;
-
+            window.Page = new NavigationPage(new Login());
         }
-
+        else
+        {
+            window.Page = new NavigationPage(new TabbedPageMenu());
+        }
+        return window;
     }
 }

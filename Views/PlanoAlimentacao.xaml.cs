@@ -7,8 +7,8 @@ public partial class PlanoAlimentacao : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void BotaoPlanoAlimentar(object sender, EventArgs e)
     {
-
+		await Navigation.PushAsync(new MinhasDietas());
     }
 }
