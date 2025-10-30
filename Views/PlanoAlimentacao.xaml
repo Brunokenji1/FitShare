@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.PlanoAlimentacao"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Plano Alimentação"
+    Background="#0c1420"
+    IconImageSource="alimentacao.png">
+    <VerticalStackLayout>
+        <Label
+            Padding="15,10"
+            FontSize="18"
+            HorizontalOptions="Start"
+            Text="Meus Planos"
+            TextColor="White" />
+        <Button
+            Padding="20,30"
+            Background="Transparent"
+            BorderColor="White"
+            BorderWidth="1"
+            Clicked="Button_Clicked"
+            CornerRadius="20"
+            Text="Plano A"
+            TextColor="White"
+            WidthRequest="365" />
+        <ImageButton
+            Margin="18,20"
+            Padding="5,5,5,5"
+            BackgroundColor="#003918"
+            CornerRadius="100"
+            HeightRequest="32"
+            HorizontalOptions="End"
+            Source="vetor.png"
+            VerticalOptions="End"
+            WidthRequest="32" />
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

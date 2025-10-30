@@ -49,7 +49,7 @@ public partial class Menu : ContentPage
     {
         if (Application.Current.MainPage is FlyoutPage flyoutpage)
         {
-            flyoutpage.Detail = new NavigationPage(new Alimentacao());
+            flyoutpage.Detail = new NavigationPage(new PlanoAlimentacao());
             flyoutpage.IsPresented = false;
         }
     }

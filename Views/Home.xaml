@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppFitShare.Views.Home"
-             Title="Início" 
-             Background="#0c1420"
-             IconImageSource="inicio.png">
+<ContentPage
+    x:Class="AppFitShare.Views.Home"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Início"
+    Background="#0c1420"
+    IconImageSource="inicio.png">
     <VerticalStackLayout>
-        
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label
+            Padding="15,10"
+            FontSize="18"
+            HorizontalOptions="Start"
+            Text="Resumo do Dia"
+            FontAttributes="Bold"
+            TextColor="White"
+            Margin="5, 30, 0, 10"/>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="39">
+            <Button Text="Ver Treino" TextColor="Black" CornerRadius="15" Clicked="OnVerTreino"/>
+            <Button Text="Ver Plano Alimentar" TextColor="Black" CornerRadius="15" Clicked="OnVerPlanoAlimentar"/>
+
+
+        </HorizontalStackLayout>
+        <Label Text="Progresso" TextColor="White" FontAttributes="Bold" Padding="15,10" FontSize="18" Margin="5, 30, 0, 10"/>
     </VerticalStackLayout>
 </ContentPage>

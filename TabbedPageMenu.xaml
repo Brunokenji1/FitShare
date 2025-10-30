@@ -12,6 +12,6 @@
     <pages:Home />
     <pages:Pesquisar />
     <pages:MeusTreinos />
-    <pages:Alimentacao />
+    <pages:PlanoAlimentacao />
     <pages:Perfil />
 </TabbedPage>
