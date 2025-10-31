@@ -61,7 +61,7 @@
                 Text="Senha"
                 TextColor="White" />
             
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
 
                 <Entry
                     Grid.Column="0"
@@ -70,11 +70,13 @@
                     ClearButtonVisibility="WhileEditing"
                     IsPassword="True"
                     Placeholder="Digite sua senha"
+                    
                     TextColor="Black"
                     />
                 <ImageButton
                     Grid.Column="1"
-                    Background="Transparent"
+                    Background="White"
+                   
                     Clicked="IbtnSenhaVisibilidade"
                     HorizontalOptions="End"
                     Source="eye_closed.png" />
@@ -86,7 +88,7 @@
                 Text="Confirmar Senha"
                 TextColor="White" />
 
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
 
                 <Entry
                     x:Name="txt_confirmarSenha"
@@ -94,12 +96,12 @@
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
                     IsPassword="True"
-                    Keyboard="Password"
                     Placeholder="Digite novamente sua senha"
                     TextColor="Black" />
                 <ImageButton
                     Grid.Column="1"
-                    Background="Transparent"
+                    Background="White"
+                    
                     Clicked="IbtnConfirmarSenhaVisibilidade"
                     HorizontalOptions="End"
                     Source="eye_closed.png" />

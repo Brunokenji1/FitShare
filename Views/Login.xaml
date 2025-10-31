@@ -47,18 +47,21 @@
                 TextColor="White" />
             <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
                 <Entry
-                    x:Name="txt_senha"
+                    x:Name="txt_senhalogin"
+                    Grid.Column="0"
                     BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
                     IsPassword="True"
-                    Keyboard="Password"
                     Placeholder="Digite sua Senha"
                     TextColor="Black" />
                 <ImageButton
                     Grid.Column="1"
                     Background="White"
                     Clicked="IbtnSenhaVisibilidade"
+                    HeightRequest="46"
                     HorizontalOptions="End"
-                    Source="eye_closed.png" />
+                    Source="eye_closed.png"
+                    WidthRequest="10" />
             </Grid>
             <Label
                 FontSize="14"

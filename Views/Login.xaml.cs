@@ -16,7 +16,7 @@ public partial class Login : ContentPage
             var usuariosCadastrados = RepositorioUsuarios.ListarTodos();
 
             string identificador = txt_usuario.Text?.Trim();
-            string senha = txt_senha.Text?.Trim();
+            string senha = txt_senhalogin.Text?.Trim();
 
             if (string.IsNullOrWhiteSpace(identificador) || string.IsNullOrWhiteSpace(senha))
             {
@@ -61,9 +61,9 @@ public partial class Login : ContentPage
 
     private void IbtnSenhaVisibilidade(object sender, EventArgs e)
     {
-        txt_senha.IsPassword = !txt_senha.IsPassword;
+        txt_senhalogin.IsPassword = !txt_senhalogin.IsPassword;
         var imagebButton = (ImageButton)sender;
-        if (txt_senha.IsPassword)
+        if (txt_senhalogin.IsPassword)
         {
             imagebButton.Source = "eye_closed.png";
         }
