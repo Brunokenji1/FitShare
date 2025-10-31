@@ -19,7 +19,7 @@
             <Label
                 x:Name="lbl_boasvindas"
                 Grid.Row="0"
-                Grid.Column="1"
+                Grid.Column="0"
                 Padding="10,3,0,0"
                 FontSize="20"
                 TextColor="#01c853" />

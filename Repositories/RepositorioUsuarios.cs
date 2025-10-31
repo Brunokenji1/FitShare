@@ -19,7 +19,10 @@ public class RepositorioUsuarios
         new Usuario(1, "Pedro Chaves", "Chaves", "pdr@gmail.com", "12345678", DateTime.Now)
 
     };
+    public static void LogarUsuario(Usuario usuario)
+    {
 
+    }
 
     public static void Cadastrar(Usuario usuario)
     {
