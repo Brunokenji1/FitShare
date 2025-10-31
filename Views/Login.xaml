@@ -45,24 +45,26 @@
                 FontSize="15"
                 Text="Senha"
                 TextColor="White" />
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
                 <Entry
                     x:Name="txt_senha"
-                    Grid.Column="0"
                     BackgroundColor="White"
-                    ClearButtonVisibility="WhileEditing"
                     IsPassword="True"
+                    Keyboard="Password"
                     Placeholder="Digite sua Senha"
-                    TextColor="Black" 
-                    Keyboard="Password"/>
+                    TextColor="Black" />
                 <ImageButton
                     Grid.Column="1"
-                    Background="Transparent"
+                    Background="White"
                     Clicked="IbtnSenhaVisibilidade"
                     HorizontalOptions="End"
                     Source="eye_closed.png" />
             </Grid>
-            <Label FontSize="14" Text="Recupera senha">
+            <Label
+                FontSize="14"
+                Text="Recupera senha"
+                TextColor="White">
+
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTapRecuperarSenha" />
                 </Label.GestureRecognizers>
