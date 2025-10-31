@@ -8,6 +8,7 @@ public partial class CadastrarDados : ContentPage
 		InitializeComponent();
 	}
     private string _biotiposelecionado = null;
+
     private async void OnCadastroDadosClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroObjetivo());
@@ -18,7 +19,7 @@ public partial class CadastrarDados : ContentPage
         {
             if(view is Button btn)
             {
-                btn.BackgroundColor = Colors.Transparent;
+                btn.BackgroundColor = Colors.Green;
                 btn.BorderColor = Colors.White;
                 btn.TextColor = Colors.White;
             }
@@ -28,5 +29,10 @@ public partial class CadastrarDados : ContentPage
         botaoClicado.BorderColor = Colors.White;
         botaoClicado.TextColor = Colors.Black;
         _biotiposelecionado = botaoClicado.Text;
+    }
+
+    private void txt_telefone_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        
     }
 }

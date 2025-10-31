@@ -56,5 +56,32 @@ public partial class BasicCadastro : ContentPage
         {
             await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
+
+    }
+    private void IbtnSenhaVisibilidade(object sender, EventArgs e)
+    {
+        txt_senha.IsPassword = !txt_senha.IsPassword;
+        var imagebButton = (ImageButton)sender;
+        if (txt_senha.IsPassword)
+        {
+            imagebButton.Source = "eye_closed.png";
+        }
+        else
+        {
+            imagebButton.Source = "eye_open.png";
+        }
+    }
+    private void IbtnConfirmarSenhaVisibilidade(object sender, EventArgs e)
+    {
+        txt_confirmarSenha.IsPassword = !txt_confirmarSenha.IsPassword;
+        var imagebButton = (ImageButton)sender;
+        if (txt_confirmarSenha.IsPassword)
+        {
+            imagebButton.Source = "eye_closed.png";
+        }
+        else
+        {
+            imagebButton.Source = "eye_open.png";
+        }
     }
 }

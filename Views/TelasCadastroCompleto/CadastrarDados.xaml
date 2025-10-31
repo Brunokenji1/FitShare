@@ -13,8 +13,11 @@
         <Entry
             x:Name="txt_idade"
             Background="White"
+            ClearButtonVisibility="WhileEditing"
             Placeholder="Idade"
-            TextColor="Black" />
+            TextColor="Black"
+            Keyboard="Numeric"
+            MaxLength="3"/>
         <HorizontalStackLayout x:Name="OpcoesBiotipo">
             <Button
                 x:Name="OnEctomorfo"
@@ -41,18 +44,29 @@
         <Entry
             x:Name="txt_peso"
             Background="White"
+            ClearButtonVisibility="WhileEditing"
             Placeholder="Peso em Kg"
-            TextColor="Black" />
+            TextColor="Black" 
+            Keyboard="Numeric"
+            MaxLength="3"/>
         <Entry
             x:Name="txt_altura"
             Background="White"
+            ClearButtonVisibility="WhileEditing"
             Placeholder="Altura em cm"
-            TextColor="Black" />
+            TextColor="Black"
+            Keyboard="Numeric"
+            MaxLength="3"/>
         <Entry
             x:Name="txt_telefone"
             Background="White"
-            Placeholder="Telefone"
-            TextColor="Black" />
+            ClearButtonVisibility="WhileEditing"
+            Placeholder="00 00000-0000"
+            TextColor="Black"
+            Keyboard="Telephone"
+            MaxLength="11"
+            TextChanged="txt_telefone_TextChanged"/>
+
         <Button
             Margin="0,45,0,0"
             BackgroundColor="#01C853"
@@ -64,6 +78,8 @@
             Text="Continuar"
             TextColor="Black"
             WidthRequest="330" />
+
+
 
     </VerticalStackLayout>
 </ContentPage>

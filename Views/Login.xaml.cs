@@ -4,6 +4,7 @@ namespace AppFitShare.Views;
 
 public partial class Login : ContentPage
 {
+
     public Login()
     {
         InitializeComponent();
@@ -28,7 +29,8 @@ public partial class Login : ContentPage
 
             if (usuarioEncontrado != null)
             {
-                await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
+                //await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
+                RepositorioUsuarios.usuario_logado = usuarioEncontrado;
                 App.Current.MainPage = new NavigationPage(new TabbedPageMenu());
             }
             else
@@ -55,5 +57,19 @@ public partial class Login : ContentPage
     private void Button_Pressed(object sender, EventArgs e)
     {
 
+    }
+
+    private void IbtnSenhaVisibilidade(object sender, EventArgs e)
+    {
+        txt_senha.IsPassword = !txt_senha.IsPassword;
+        var imagebButton = (ImageButton)sender;
+        if(txt_senha.IsPassword)
+        {
+            imagebButton.Source = "eye_closed.png";
+        }
+        else
+        {
+            imagebButton.Source = "eye_open.png";
+        }
     }
 }

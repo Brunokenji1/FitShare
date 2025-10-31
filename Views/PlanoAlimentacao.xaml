@@ -23,7 +23,9 @@
             CornerRadius="20"
             Text="Plano A"
             TextColor="White"
-            WidthRequest="365" />
+            WidthRequest="365" >
+            
+        </Button>
         <ImageButton
             Margin="18,20"
             Padding="5,5,5,5"

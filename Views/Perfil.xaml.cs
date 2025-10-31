@@ -1,3 +1,4 @@
+using AppFitShare.Repositories;
 using AppFitShare.Views.TelasCadastroCompleto;
 
 namespace AppFitShare.Views;
@@ -16,7 +17,7 @@ public partial class Perfil : ContentPage
         bool confirmacao = await DisplayAlert("Confirmação", "Deseja realmente sair da sua conta?", "Sim", "Não");
         if (confirmacao)
         {
-            SecureStorage.Default.Remove("usuario_logado");
+            RepositorioUsuarios.usuario_logado = null;
             App.Current.MainPage = new NavigationPage(new Login());
         }
         label.IsEnabled = true;

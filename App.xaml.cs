@@ -1,4 +1,5 @@
-﻿using AppFitShare.Views;
+﻿using AppFitShare.Repositories;
+using AppFitShare.Views;
 using Microsoft.Maui.Storage;
 
 namespace AppFitShare;
@@ -18,8 +19,8 @@ public partial class App : Application
             Width = 412,
             Height = 915
         };
-        var usuario_logado = SecureStorage.Default.GetAsync("usuario_logado").GetAwaiter().GetResult();
-        if (string.IsNullOrEmpty(usuario_logado))
+        var usuario_logado = RepositorioUsuarios.usuario_logado;
+        if (usuario_logado==null)
         {
             window.Page = new NavigationPage(new Login());
         }

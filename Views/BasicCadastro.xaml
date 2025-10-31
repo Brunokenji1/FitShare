@@ -3,8 +3,13 @@
     x:Class="AppFitShare.Views.BasicCadastro"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="BasicCadastro"
-    Background="Black">
+    Title="BasicCadastro">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ScrollView>
 
         <VerticalStackLayout Padding="10" Spacing="15">
@@ -21,47 +26,92 @@
                 Text="Nome"
                 TextColor="White"
                 VerticalOptions="Center" />
-            <Entry x:Name="txt_nome" TextColor="Black" Placeholder="Digite seu nome" BackgroundColor="White" />
+            <Entry
+                x:Name="txt_nome"
+                BackgroundColor="White"
+                ClearButtonVisibility="WhileEditing"
+                Placeholder="Digite seu nome"
+                TextColor="Black" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Username"
                 TextColor="White" />
-            <Entry x:Name="txt_username" TextColor="Black" Placeholder="Digite seu Username" BackgroundColor="White" />
+            <Entry
+                x:Name="txt_username"
+                BackgroundColor="White"
+                ClearButtonVisibility="WhileEditing"
+                Placeholder="Digite seu Username"
+                TextColor="Black" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Email"
                 TextColor="White" />
-            <Entry x:Name="txt_email" TextColor="Black" Placeholder="Digite seu E-mail" BackgroundColor="White" />
+            <Entry
+                x:Name="txt_email"
+                BackgroundColor="White"
+                ClearButtonVisibility="WhileEditing"
+                Keyboard="Email"
+                Placeholder="Digite seu E-mail"
+                TextColor="Black" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Senha"
                 TextColor="White" />
-            <Entry
-                x:Name="txt_senha"
-                BackgroundColor="White"
-                IsPassword="True"
-                TextColor="Black"
-                Placeholder="Digite sua senha"/>
+            
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+
+                <Entry
+                    Grid.Column="0"
+                    x:Name="txt_senha"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    IsPassword="True"
+                    Placeholder="Digite sua senha"
+                    TextColor="Black"
+                    />
+                <ImageButton
+                    Grid.Column="1"
+                    Background="Transparent"
+                    Clicked="IbtnSenhaVisibilidade"
+                    HorizontalOptions="End"
+                    Source="eye_closed.png" />
+            </Grid>
+            
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="15"
                 Text="Confirmar Senha"
                 TextColor="White" />
-            <Entry
-                x:Name="txt_confirmarSenha"
-                BackgroundColor="White"
-                IsPassword="True" 
-                TextColor="Black"
-                Placeholder="Digite novamente sua senha"/>
+
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
+
+                <Entry
+                    x:Name="txt_confirmarSenha"
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    IsPassword="True"
+                    Keyboard="Password"
+                    Placeholder="Digite novamente sua senha"
+                    TextColor="Black" />
+                <ImageButton
+                    Grid.Column="1"
+                    Background="Transparent"
+                    Clicked="IbtnConfirmarSenhaVisibilidade"
+                    HorizontalOptions="End"
+                    Source="eye_closed.png" />
+            </Grid>
+
             <Label
                 Padding="5"
                 FontSize="14"
                 HorizontalOptions="Center"
                 Text=" Mínimo 8 Caracteres"
                 TextColor="White" />
+
             <Button
                 Margin="0,50"
                 BackgroundColor="#01C853"

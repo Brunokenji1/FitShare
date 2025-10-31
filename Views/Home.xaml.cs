@@ -1,3 +1,5 @@
+using AppFitShare.Repositories;
+
 namespace AppFitShare.Views;
 
 public partial class Home : ContentPage
@@ -5,12 +7,11 @@ public partial class Home : ContentPage
 	public Home()
 	{
 		InitializeComponent();
-        string? usuario_logado = null;
-        Task.Run(async () =>
+        var usuario_logado = RepositorioUsuarios.usuario_logado?.Nome;
+        if (usuario_logado != null)
         {
-            usuario_logado = await SecureStorage.Default.GetAsync("usuario_logado");
             lbl_boasvindas.Text = $"Olá, {usuario_logado}!";
-        });
+        }
     }
     private void OnVerTreino(object sender, EventArgs e)
     {

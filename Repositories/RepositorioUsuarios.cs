@@ -9,9 +9,18 @@ using System.Text.Json;
 
 namespace AppFitShare.Repositories;
 
-public class RepositorioUsuarios
+public class RepositorioUsuarios 
 {
-    private static List<Usuario> listaUsuarios = new List<Usuario>();
+    public static Usuario usuario_logado { get; set; }
+    private static List<Usuario> listaUsuarios = new List<Usuario>()
+    {
+        new Usuario(0, "Bruno", "bruno", "bruno@gmail.com", "12345678", DateTime.Now),
+        
+        new Usuario(1, "Pedro Chaves", "Chaves", "pdr@gmail.com", "12345678", DateTime.Now)
+
+    };
+
+
     public static void Cadastrar(Usuario usuario)
     {
         listaUsuarios.Add(usuario);

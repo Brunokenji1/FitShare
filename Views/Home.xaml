@@ -8,22 +8,32 @@
     IconImageSource="inicio.png"
     NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
-        <HorizontalStackLayout>
+        <Grid BackgroundColor="#003918">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
             <Label
-                Padding="10,15"
                 x:Name="lbl_boasvindas"
-                BackgroundColor="#003918"
-                FontSize="25"
+                Grid.Row="0"
+                Grid.Column="1"
+                Padding="10,3,0,0"
+                FontSize="20"
                 TextColor="#01c853" />
             <Label
-                Padding="50,25"
-                BackgroundColor="#003918"
-                FontSize="15"
-                Text="pronto(a) para treinar hoje?"
-                TextColor="White"
-                VerticalOptions="Start" />
-           
-        </HorizontalStackLayout>
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Padding="10,0,0,8"
+                FontAttributes="Bold"
+                FontSize="14"
+                Text="Pronto(a) para treinar hoje?"
+                TextColor="White" />
+        </Grid>
+
 
         <Label
             Margin="5,10,0,10"
@@ -33,19 +43,20 @@
             HorizontalOptions="Start"
             Text="Resumo do Dia"
             TextColor="White" />
+
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="39">
             <Button
+                Background="#01C853"
                 Clicked="OnVerTreino"
                 CornerRadius="15"
                 Text="Ver Treino"
-                TextColor="Black"
-                Background="#01C853"/>
+                TextColor="Black" />
             <Button
+                Background="#01C853"
                 Clicked="OnVerPlanoAlimentar"
                 CornerRadius="15"
                 Text="Ver Plano Alimentar"
-                TextColor="Black" 
-                Background="#01C853"/>
+                TextColor="Black" />
 
 
         </HorizontalStackLayout>
