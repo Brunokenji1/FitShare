@@ -27,7 +27,6 @@
                 FontSize="18"
                 Text="Treinos de hoje!"
                 TextColor="White" />
-
             <Button
                 x:Name="BotaoAddTreino"
                 Margin="30,30,30,10"
