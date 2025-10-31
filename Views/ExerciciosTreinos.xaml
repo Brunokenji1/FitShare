@@ -9,30 +9,51 @@
 
         <VerticalStackLayout BackgroundColor="#0C1420">
             <HorizontalStackLayout Padding="5,15,0,50" BackgroundColor="#003918">
-                <ImageButton
-                    Clicked="Voltar"
-                    HorizontalOptions="Start"
-                    Source="back.png" />
-                <HorizontalStackLayout Spacing="110">
-                    <Label
-                        FontSize="18"
-                        Text="Treino A"
-                        TextColor="White"
-                        VerticalOptions="Start" />
-                    <Label
-                        FontSize="15"
-                        HorizontalOptions="End"
-                        Text="1/3 treinos concluídos"
-                        TextColor="White" />
+                <HorizontalStackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35" />
+                            <ColumnDefinition Width="135" />
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ImageButton
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Clicked="Voltar"
+                            HorizontalOptions="Start"
+                            Source="back.png" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="18"
+                            Text="Treino A"
+                            TextColor="White"
+                            VerticalOptions="Start" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            FontSize="15"
+                            HorizontalOptions="Start"
+                            Text="1/3 treinos concluídos "
+                            TextColor="White" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="0,20,0,0"
+                            BackgroundColor="White"
+                            Text="Iniciar treino"
+                            TextColor="Black"
+                            VerticalOptions="Center"
+                            WidthRequest="200" />
+                    </Grid>
                 </HorizontalStackLayout>
             </HorizontalStackLayout>
-            <Button
-                Margin="0,15,0,15"
-                BackgroundColor="White"
-                Text="Iniciar treino"
-                TextColor="Black"
-                VerticalOptions="Center"
-                WidthRequest="200" />
             <Label
                 Padding="15,20"
                 FontSize="18"
