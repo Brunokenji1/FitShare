@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    class Exercicio
+    public class Exercicio
     {
+        public string Nome { get; set; }
+        public int Series { get; set; }
+        public int Repeticoes { get; set; }
     }
 }

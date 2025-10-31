@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    internal class Receita
+    public class Refeicao
     {
-        public int ID { get; set; }
-        public string Nome { get; set; }
-        public List<Receita> Dieta { get; set; } = new();
+        public string Horario {  get; set; }
+        public string Descricao { get; set;}
     }
 }

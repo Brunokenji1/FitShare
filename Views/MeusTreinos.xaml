@@ -13,8 +13,10 @@
 
             <HorizontalStackLayout>
                 <Label
-                    Padding="20,15,1000,15"
+                    Padding="30,15,1000,20"
                     BackgroundColor="#003918"
+                    FontFamily="Poppins"
+                    FontSize="20"
                     Text="Treino"
                     TextColor="White"
                     VerticalOptions="Start" />
@@ -28,7 +30,7 @@
 
             <Button
                 x:Name="BotaoAddTreino"
-                Margin="30,20,30,0"
+                Margin="30,30,30,10"
                 BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
@@ -37,10 +39,14 @@
                 HeightRequest="80"
                 Text="Treino A"
                 TextColor="White" />
-
+            <Label
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="-----------------------------------------------"
+                TextColor="White" />
             <Button
                 x:Name="AddBotaoAddTreino"
-                Margin="30,40,30,0"
+                Margin="30,30,30,10"
                 BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
@@ -49,9 +55,13 @@
                 HeightRequest="80"
                 Text="Treino B"
                 TextColor="White" />
-
+            <Label
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="-----------------------------------------------"
+                TextColor="White" />
             <ImageButton
-                Margin="18,20"
+                Margin="18,300"
                 Padding="5"
                 BackgroundColor="#003918"
                 Clicked="AddTreinoPersonalizado"

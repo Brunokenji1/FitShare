@@ -8,6 +8,11 @@ namespace AppFitShare.Models
 {
     internal class Treino
     {
-        public List<Exercicio> listaDeExercicios { get; set; }
-        }
+        public int ID {  get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public List<Exercicio> Exercicios { get; set; } = new();
+
+
+    }
 }

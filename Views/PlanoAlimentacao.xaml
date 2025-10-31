@@ -7,38 +7,59 @@
     Background="#0c1420"
     IconImageSource="alimentacao.png"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Label
-            Padding="15,10"
-            FontSize="18"
-            HorizontalOptions="Start"
-            Text="Meus Planos"
-            TextColor="White" />
-        <Button
-            Padding="20,30"
-            Background="Transparent"
-            BorderColor="White"
-            BorderWidth="1"
-            Clicked="BotaoPlanoAlimentar"
-            CornerRadius="20"
-            Text="Plano A"
-            TextColor="White"
-            WidthRequest="365" >
-            
-        </Button>
-        <ImageButton
-            Margin="18,20"
-            Padding="5,5,5,5"
-            BackgroundColor="#003918"
-            CornerRadius="100"
-            HeightRequest="32"
-            HorizontalOptions="End"
-            Source="vetor.png"
-            VerticalOptions="End"
-            WidthRequest="32" />
 
+    <ScrollView>
 
-
-
-    </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                Padding="30,15,100,20"
+                BackgroundColor="#003918"
+                FontSize="20"
+                Text="Plano Alimentar"
+                TextColor="White" />
+            <Label
+                Padding="20,15,0,0"
+                FontSize="18"
+                HorizontalOptions="Start"
+                Text="Meus Planos"
+                TextColor="White" />
+            <Button
+                Margin="30,30,30,10"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="BotaoPlanoAlimentar"
+                CornerRadius="20"
+                HeightRequest="80"
+                Text="Plano A"
+                TextColor="White"
+                WidthRequest="365" />
+            <Label
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="-----------------------------------------------"
+                TextColor="White" />
+            <Button
+                Margin="30,30,30,10"
+                Background="Transparent"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="BotaoPlanoAlimentar"
+                CornerRadius="20"
+                HeightRequest="80"
+                Text="Plano B"
+                TextColor="White"
+                WidthRequest="365" />
+            <ImageButton
+                Margin="18,20"
+                Padding="5,5,5,5"
+                BackgroundColor="#003918"
+                CornerRadius="100"
+                HeightRequest="32"
+                HorizontalOptions="End"
+                Source="vetor.png"
+                VerticalOptions="End"
+                WidthRequest="32" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

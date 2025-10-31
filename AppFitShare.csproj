@@ -159,4 +159,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Resources\Data\" />
+	</ItemGroup>
+
 </Project>
