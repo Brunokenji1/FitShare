@@ -7,10 +7,10 @@ public partial class Home : ContentPage
 	public Home()
 	{
 		InitializeComponent();
-        var usuario_logado = RepositorioUsuarios.usuario_logado?.Nome;
+        var usuario_logado = RepositorioUsuarios.ObterUsuarioLogado();
         if (usuario_logado != null)
         {
-            lbl_boasvindas.Text = $"Olá, {usuario_logado}!";
+            lbl_boasvindas.Text = $"Olá, {usuario_logado.Nome}!";
         }
     }
     private void OnVerTreino(object sender, EventArgs e)

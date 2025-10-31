@@ -17,7 +17,7 @@ public partial class Perfil : ContentPage
         bool confirmacao = await DisplayAlert("Confirmação", "Deseja realmente sair da sua conta?", "Sim", "Não");
         if (confirmacao)
         {
-            RepositorioUsuarios.usuario_logado = null;
+            RepositorioUsuarios.DeslogarUsuario();
             App.Current.MainPage = new NavigationPage(new Login());
         }
         label.IsEnabled = true;

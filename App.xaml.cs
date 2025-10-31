@@ -19,7 +19,8 @@ public partial class App : Application
             Width = 412,
             Height = 915
         };
-        var usuario_logado = RepositorioUsuarios.usuario_logado;
+        var usuario_logado = RepositorioUsuarios.ObterUsuarioLogado();
+
         if (usuario_logado==null)
         {
             window.Page = new NavigationPage(new Login());

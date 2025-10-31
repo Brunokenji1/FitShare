@@ -30,7 +30,7 @@ public partial class Login : ContentPage
             if (usuarioEncontrado != null)
             {
                 //await SecureStorage.Default.SetAsync("usuario_logado", usuarioEncontrado.Nome);
-                RepositorioUsuarios.usuario_logado = usuarioEncontrado;
+                RepositorioUsuarios.LogarUsuario(usuarioEncontrado);
                 App.Current.MainPage = new NavigationPage(new TabbedPageMenu());
             }
             else

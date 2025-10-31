@@ -11,7 +11,7 @@ namespace AppFitShare.Repositories;
 
 public class RepositorioUsuarios 
 {
-    public static Usuario usuario_logado { get; set; }
+    private static Usuario usuario_logado { get; set; }
     private static List<Usuario> listaUsuarios = new List<Usuario>()
     {
         new Usuario(0, "Bruno", "bruno", "bruno@gmail.com", "12345678", DateTime.Now),
@@ -21,7 +21,15 @@ public class RepositorioUsuarios
     };
     public static void LogarUsuario(Usuario usuario)
     {
-
+        usuario_logado = usuario;
+    }
+    public static void DeslogarUsuario()
+    {
+        usuario_logado = null;
+    }
+    public static Usuario ObterUsuarioLogado()
+    {
+        return usuario_logado;
     }
 
     public static void Cadastrar(Usuario usuario)
