@@ -46,18 +46,32 @@
             TextColor="White" />
 
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="39">
-            <Button
-                Background="#01C853"
-                Clicked="OnVerTreino"
-                CornerRadius="15"
-                Text="Ver Treino"
-                TextColor="Black" />
-            <Button
-                Background="#01C853"
-                Clicked="OnVerPlanoAlimentar"
-                CornerRadius="15"
-                Text="Ver Plano Alimentar"
-                TextColor="Black" />
+            <Border
+                Padding="10,60,10,20"
+                Stroke="Green"
+                StrokeDashOffset="1000"
+                StrokeShape="RoundRectangle 10">
+
+                <Button
+                    Background="#01C853"
+                    Clicked="OnVerTreino"
+                    CornerRadius="15"
+                    Text="Ver Treino"
+                    TextColor="Black" />
+            </Border>
+            <Border
+                Padding="10,60,10,20"
+                Stroke="Green"
+                StrokeDashOffset="1000"
+                StrokeShape="RoundRectangle 10">
+
+                <Button
+                    Background="#01C853"
+                    Clicked="OnVerPlanoAlimentar"
+                    CornerRadius="15"
+                    Text="Ver Plano Alimentar"
+                    TextColor="Black" />
+            </Border>
 
 
         </HorizontalStackLayout>

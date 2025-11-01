@@ -92,6 +92,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Resources\Data\**" />
+	  <Compile Remove="Resources\Data\**" />
+	  <EmbeddedResource Remove="Resources\Data\**" />
+	  <MauiCss Remove="Resources\Data\**" />
+	  <MauiXaml Remove="Resources\Data\**" />
+	  <None Remove="Resources\Data\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
 	</ItemGroup>
@@ -157,10 +166,6 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroObjetivo2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Data\" />
 	</ItemGroup>
 
 </Project>
