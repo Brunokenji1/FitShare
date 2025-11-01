@@ -61,14 +61,13 @@
                         <AbsoluteLayout>
                             <Label
                                 AbsoluteLayout.LayoutBounds="60,80"
-                                FontAttributes="Bold"
                                 Text="30 - 40 min"
                                 TextColor="White" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <ImageButton
                                 AbsoluteLayout.LayoutBounds="150,60"
-                                Source="kilogram.png"
+                                Source="fire.png"
                                 WidthRequest="10" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
@@ -81,7 +80,6 @@
                         <AbsoluteLayout>
                             <Label
                                 AbsoluteLayout.LayoutBounds="200,80"
-                                FontAttributes="Bold"
                                 Text="165 kcal"
                                 TextColor="White" />
                         </AbsoluteLayout>
@@ -97,7 +95,7 @@
                                 WidthRequest="200" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
-                            <ImageButton AbsoluteLayout.LayoutBounds="265,60" Source="fire.png" />
+                            <ImageButton AbsoluteLayout.LayoutBounds="265,60" Source="kilogram.png" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <Label
@@ -109,7 +107,6 @@
                         <AbsoluteLayout>
                             <Label
                                 AbsoluteLayout.LayoutBounds="310,80"
-                                FontAttributes="Bold"
                                 Text="Médio"
                                 TextColor="White" />
                         </AbsoluteLayout>
@@ -121,6 +118,7 @@
                 FontSize="18"
                 Text="Lista de Exercícios"
                 TextColor="White" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
