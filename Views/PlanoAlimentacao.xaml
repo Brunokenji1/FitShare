@@ -24,7 +24,7 @@
                 Text="Meus Planos"
                 TextColor="White" />
             <Button
-                Margin="30,30,30,10"
+                Margin="30,25,30,25"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
@@ -35,12 +35,13 @@
                 TextColor="White"
                 WidthRequest="365" />
             <Label
+                BackgroundColor="White"
                 FontSize="25"
-                HorizontalOptions="Center"
-                Text="-----------------------------------------------"
-                TextColor="White" />
+                HeightRequest="1.5"
+                TextColor="White"
+                WidthRequest="350" />
             <Button
-                Margin="30,30,30,10"
+                Margin="30,25,30,25"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"

@@ -29,7 +29,7 @@
                 TextColor="White" />
             <Button
                 x:Name="BotaoAddTreino"
-                Margin="30,30,30,10"
+                Margin="30,25,30,25"
                 BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
@@ -39,13 +39,14 @@
                 Text="Treino A"
                 TextColor="White" />
             <Label
+                BackgroundColor="White"
                 FontSize="25"
-                HorizontalOptions="Center"
-                Text="-----------------------------------------------"
-                TextColor="White" />
+                HeightRequest="1.5"
+                TextColor="White"
+                WidthRequest="350" />
             <Button
                 x:Name="AddBotaoAddTreino"
-                Margin="30,30,30,10"
+                Margin="30,25,30,25"
                 BackgroundColor="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
@@ -55,21 +56,25 @@
                 Text="Treino B"
                 TextColor="White" />
             <Label
+                Background="White"
                 FontSize="25"
+                HeightRequest="1.5"
                 HorizontalOptions="Center"
-                Text="-----------------------------------------------"
-                TextColor="White" />
-            <ImageButton
-                Margin="18,300"
-                Padding="5"
-                BackgroundColor="#003918"
-                Clicked="AddTreinoPersonalizado"
-                CornerRadius="100"
-                HeightRequest="32"
-                HorizontalOptions="End"
-                Source="vetor.png"
-                VerticalOptions="End"
-                WidthRequest="32" />
+                TextColor="White"
+                WidthRequest="350" />
+            <AbsoluteLayout>
+
+                <ImageButton
+                    Margin="18,300"
+                    Padding="5"
+                    AbsoluteLayout.LayoutFlags="YProportional"
+                    BackgroundColor="#003918"
+                    Clicked="AddTreinoPersonalizado"
+                    CornerRadius="100"
+                    HeightRequest="32"
+                    Source="vetor.png"
+                    WidthRequest="32" />
+            </AbsoluteLayout>
 
         </VerticalStackLayout>
     </ScrollView>
