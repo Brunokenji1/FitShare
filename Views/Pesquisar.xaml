@@ -13,6 +13,9 @@
             HorizontalOptions="Start"
             Text="Pesquisa"
             TextColor="White" />
+        <SearchBar 
+            TextColor="Black"
+            Background="White" SearchButtonPressed="SearchBar_SearchButtonPressed" />
         <Entry
             BackgroundColor="White"
             Placeholder="Pesquisar"

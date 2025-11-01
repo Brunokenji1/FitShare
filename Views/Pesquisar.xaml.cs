@@ -6,4 +6,9 @@ public partial class Pesquisar : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+    {
+		var pesquisa = ((SearchBar)sender).Text;
+    }
 }

@@ -10,14 +10,22 @@
             HorizontalOptions="Center"
             Text="Completar Cadastro"
             VerticalOptions="Center" />
+        <DatePicker
+            Format="dd/MM/yyyy"
+            MaximumDate="2015/01/01"
+            MinimumDate="1925/01/01" 
+            DateSelected="DatePicker_DateSelected"/>
+
+
         <Entry
             x:Name="txt_idade"
             Background="White"
             ClearButtonVisibility="WhileEditing"
-            Placeholder="Idade"
-            TextColor="Black"
             Keyboard="Numeric"
-            MaxLength="3"/>
+            MaxLength="3"
+            Placeholder="Idade"
+            TextColor="Black" />
+        
         <HorizontalStackLayout x:Name="OpcoesBiotipo">
             <Button
                 x:Name="OnEctomorfo"
@@ -45,27 +53,27 @@
             x:Name="txt_peso"
             Background="White"
             ClearButtonVisibility="WhileEditing"
-            Placeholder="Peso em Kg"
-            TextColor="Black" 
             Keyboard="Numeric"
-            MaxLength="3"/>
+            MaxLength="3"
+            Placeholder="Peso em Kg"
+            TextColor="Black" />
         <Entry
             x:Name="txt_altura"
             Background="White"
             ClearButtonVisibility="WhileEditing"
-            Placeholder="Altura em cm"
-            TextColor="Black"
             Keyboard="Numeric"
-            MaxLength="3"/>
+            MaxLength="3"
+            Placeholder="Altura em cm"
+            TextColor="Black" />
         <Entry
             x:Name="txt_telefone"
             Background="White"
             ClearButtonVisibility="WhileEditing"
-            Placeholder="00 00000-0000"
-            TextColor="Black"
             Keyboard="Telephone"
             MaxLength="11"
-            TextChanged="txt_telefone_TextChanged"/>
+            Placeholder="00 00000-0000"
+            TextChanged="txt_telefone_TextChanged"
+            TextColor="Black" />
 
         <Button
             Margin="0,45,0,0"
