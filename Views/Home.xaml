@@ -45,35 +45,64 @@
             Text="Resumo do Dia"
             TextColor="White" />
 
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="39">
-            <Border
-                Padding="10,60,10,20"
-                Stroke="Green"
-                StrokeDashOffset="1000"
-                StrokeShape="RoundRectangle 10">
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+            <AbsoluteLayout>
+                <Frame
+                    Padding="0"
+                    AbsoluteLayout.LayoutBounds="10,11"
+                    CornerRadius="13"
+                    HasShadow="False"
+                    HeightRequest="125"
+                    IsClippedToBounds="True"
+                    WidthRequest="150">
+                    <ImageButton BackgroundColor="#0c1420" Source="gym.png" />
+                </Frame>
+                <Border
+                    Margin="10,10"
+                    Padding="10,60,10,20"
+                    Stroke="Green"
+                    StrokeDashOffset="1000"
+                    StrokeShape="RoundRectangle 10">
 
-                <Button
-                    Background="#01C853"
-                    Clicked="OnVerTreino"
-                    CornerRadius="15"
-                    Text="Ver Treino"
-                    TextColor="Black" />
-            </Border>
-            <Border
-                Padding="10,60,10,20"
-                Stroke="Green"
-                StrokeDashOffset="1000"
-                StrokeShape="RoundRectangle 10">
+                    <Button
+                        Background="#01C853"
+                        Clicked="OnVerTreino"
+                        CornerRadius="15"
+                        Text="Ver Treino"
+                        TextColor="Black" />
+                </Border>
+            </AbsoluteLayout>
+            <AbsoluteLayout>
+                <Frame
+                    Padding="0"
+                    AbsoluteLayout.LayoutBounds="4,11"
+                    BackgroundColor="#0c1420"
+                    CornerRadius="17"
+                    HasShadow="False"
+                    HeightRequest="130"
+                    IsClippedToBounds="True"
+                    WidthRequest="185">
+                    <ImageButton BackgroundColor="#0c1420" Source="frutas.png" />
+                </Frame>
 
-                <Button
-                    Background="#01C853"
-                    Clicked="OnVerPlanoAlimentar"
-                    CornerRadius="15"
-                    Text="Ver Plano Alimentar"
-                    TextColor="Black" />
-            </Border>
+                <Border
+                    Margin="10,10"
+                    Padding="10,60,10,20"
+                    Stroke="Green"
+                    StrokeDashOffset="1000"
+                    StrokeShape="RoundRectangle 10">
 
 
+                    <Button
+                        Background="#01C853"
+                        Clicked="OnVerPlanoAlimentar"
+                        CornerRadius="15"
+                        Text="Ver Refeições"
+                        TextColor="Black" />
+                </Border>
+
+
+            </AbsoluteLayout>
         </HorizontalStackLayout>
         <Label
             Margin="5,30,0,10"
