@@ -24,6 +24,6 @@ public partial class Perfil : ContentPage
     }
     private async void OnCadastrarDados(object sender, EventArgs e)
     {
-        App.Current.MainPage = new NavigationPage(new CadastrarDados());
+        await Navigation.PushAsync(new CadastrarDados());
     }
 }
