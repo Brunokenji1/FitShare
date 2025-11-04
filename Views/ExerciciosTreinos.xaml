@@ -72,14 +72,14 @@
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <Label
-                                AbsoluteLayout.LayoutBounds="200,65"
+                                AbsoluteLayout.LayoutBounds="195,65"
                                 FontAttributes="Bold"
                                 Text="Calorias:"
                                 TextColor="White" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <Label
-                                AbsoluteLayout.LayoutBounds="200,80"
+                                AbsoluteLayout.LayoutBounds="195,80"
                                 Text="165 kcal"
                                 TextColor="White" />
                         </AbsoluteLayout>
@@ -99,14 +99,14 @@
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <Label
-                                AbsoluteLayout.LayoutBounds="309,65"
+                                AbsoluteLayout.LayoutBounds="312,65"
                                 FontAttributes="Bold"
                                 Text="Dificuldade:"
                                 TextColor="White" />
                         </AbsoluteLayout>
                         <AbsoluteLayout>
                             <Label
-                                AbsoluteLayout.LayoutBounds="310,80"
+                                AbsoluteLayout.LayoutBounds="312,80"
                                 Text="Médio"
                                 TextColor="White" />
                         </AbsoluteLayout>
@@ -115,8 +115,9 @@
             </HorizontalStackLayout>
             <Label
                 Padding="15,20"
+                FontAttributes="Bold"
                 FontSize="18"
-                Text="Lista de Exercícios"
+                Text="Lista de exercícios"
                 TextColor="White" />
 
         </VerticalStackLayout>
