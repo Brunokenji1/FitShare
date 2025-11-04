@@ -19,6 +19,18 @@ public class RepositorioUsuarios
         new Usuario(1, "Pedro Chaves", "Chaves", "pdr@gmail.com", "12345678", DateTime.Now)
 
     };
+    public static Usuario BuscarUsuario(int index)
+    {
+        try
+        {
+            var usuario = listaUsuarios.FirstOrDefault(u => u.Id == index);
+            return usuario;
+        }
+        catch (Exception)
+        {
+            throw new Exception("Problema na busca de usuario!");
+        }
+    }
     public static void LogarUsuario(Usuario usuario)
     {
         usuario_logado = usuario;

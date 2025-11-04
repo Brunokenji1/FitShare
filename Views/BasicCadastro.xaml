@@ -12,101 +12,181 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout Padding="10" Spacing="15">
+        <VerticalStackLayout Margin="15" Spacing="10">
             <Label
-                Margin="45"
+                Margin="10"
                 FontFamily="OpenSansSemibold"
                 FontSize="20"
                 HorizontalOptions="Center"
                 Text="Crie sua conta para começar"
                 TextColor="White" />
+
             <Label
                 FontFamily="OpenSansSemibold"
-                FontSize="15"
-                Text="Nome"
+                FontSize="16"
+                Text="Nome*"
                 TextColor="White"
                 VerticalOptions="Center" />
-            <Entry
-                x:Name="txt_nome"
-                BackgroundColor="White"
-                ClearButtonVisibility="WhileEditing"
-                Placeholder="Digite seu nome"
-                TextColor="Black" />
-            <Label
-                FontFamily="OpenSansSemibold"
-                FontSize="15"
-                Text="Username"
-                TextColor="White" />
-            <Entry
-                x:Name="txt_username"
-                BackgroundColor="White"
-                ClearButtonVisibility="WhileEditing"
-                Placeholder="Digite seu Username"
-                TextColor="Black" />
-            <Label
-                FontFamily="OpenSansSemibold"
-                FontSize="15"
-                Text="Email"
-                TextColor="White" />
-            <Entry
-                x:Name="txt_email"
-                BackgroundColor="White"
-                ClearButtonVisibility="WhileEditing"
-                Keyboard="Email"
-                Placeholder="Digite seu E-mail"
-                TextColor="Black" />
-            <Label
-                FontFamily="OpenSansSemibold"
-                FontSize="15"
-                Text="Senha"
-                TextColor="White" />
-            
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
 
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
                 <Entry
-                    Grid.Column="0"
-                    x:Name="txt_senha"
+                    x:Name="txt_nome"
                     BackgroundColor="White"
                     ClearButtonVisibility="WhileEditing"
-                    IsPassword="True"
-                    Placeholder="Digite sua senha"
-                    
-                    TextColor="Black"
-                    />
-                <ImageButton
-                    Grid.Column="1"
-                    Background="White"
-                   
-                    Clicked="IbtnSenhaVisibilidade"
-                    HorizontalOptions="End"
-                    Source="eye_closed.png" />
-            </Grid>
-            
-            <Label
-                FontFamily="OpenSansSemibold"
-                FontSize="15"
-                Text="Confirmar Senha"
-                TextColor="White" />
-
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
-
-                <Entry
-                    x:Name="txt_confirmarSenha"
-                    Grid.Column="0"
-                    BackgroundColor="White"
-                    ClearButtonVisibility="WhileEditing"
-                    IsPassword="True"
-                    Placeholder="Digite novamente sua senha"
+                    FontSize="15"
+                    Placeholder="Digite seu nome"
                     TextColor="Black" />
-                <ImageButton
-                    Grid.Column="1"
-                    Background="White"
-                    
-                    Clicked="IbtnConfirmarSenhaVisibilidade"
-                    HorizontalOptions="End"
-                    Source="eye_closed.png" />
-            </Grid>
+            </Border>
 
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                Text="Username*"
+                TextColor="White" />
+
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Entry
+                    x:Name="txt_username"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
+                    Placeholder="Digite seu Username"
+                    TextColor="Black" />
+            </Border>
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                Text="Email*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Entry
+                    x:Name="txt_email"
+                    BackgroundColor="White"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
+                    Keyboard="Email"
+                    Placeholder="Digite seu E-mail"
+                    TextColor="Black" />
+            </Border>
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                Text="Senha*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                    <Entry
+                        x:Name="txt_senha"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="15"
+                        IsPassword="True"
+                        Placeholder="Digite sua senha"
+                        TextColor="Black" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Background="White"
+                        Clicked="IbtnSenhaVisibilidade"
+                        HorizontalOptions="End"
+                        Source="eye_closed.png" />
+                </Grid>
+            </Border>
+            <Label
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                Text="Confirmar Senha*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                    <Entry
+                        x:Name="txt_confirmarSenha"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="15"
+                        IsPassword="True"
+                        Placeholder="Digite novamente sua senha"
+                        TextColor="Black" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Background="White"
+                        Clicked="IbtnConfirmarSenhaVisibilidade"
+                        HorizontalOptions="End"
+                        Source="eye_closed.png" />
+                </Grid>
+            </Border>
             <Label
                 Padding="5"
                 FontSize="14"
@@ -115,7 +195,7 @@
                 TextColor="White" />
 
             <Button
-                Margin="0,50"
+                Margin="0,25"
                 BackgroundColor="#01C853"
                 Clicked="Button_Clicked"
                 FontSize="20"

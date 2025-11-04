@@ -14,7 +14,7 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="15"
+            Margin="15"
             Spacing="10"
             VerticalOptions="Center">
             <Image
@@ -32,39 +32,73 @@
 
             <Label
                 FontFamily="OpenSansSemibold"
-                FontSize="15"
+                FontSize="16"
                 Text="Username ou E-mail"
                 TextColor="White" />
-            <Entry
-                x:Name="txt_usuario"
+            <Border
+                Padding="8"
                 Background="White"
-                ClearButtonVisibility="WhileEditing"
-                Placeholder="Digite seu Username ou E-mail"
-                TextColor="Black" />
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
 
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Entry
+                    FontSize="15"
+                    x:Name="txt_usuario"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Placeholder="Digite seu Username ou E-mail"
+                    TextColor="Black" />
+
+            </Border>
             <Label
                 FontFamily="OpenSansSemibold"
-                FontSize="15"
+                FontSize="16"
                 Text="Senha"
                 TextColor="White" />
-            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
-                <Entry
-                    x:Name="txt_senhalogin"
-                    Grid.Column="0"
-                    BackgroundColor="White"
-                    ClearButtonVisibility="WhileEditing"
-                    IsPassword="True"
-                    Placeholder="Digite sua Senha"
-                    TextColor="Black" />
-                <ImageButton
-                    Grid.Column="1"
-                    Background="White"
-                    Clicked="IbtnSenhaVisibilidade"
-                    HeightRequest="46"
-                    HorizontalOptions="End"
-                    Source="eye_closed.png"
-                    WidthRequest="10" />
-            </Grid>
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.3"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+                <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+                    <Entry
+                        FontSize="15"
+                        x:Name="txt_senhalogin"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        ClearButtonVisibility="WhileEditing"
+                        IsPassword="True"
+                        Placeholder="Digite sua Senha"
+                        TextColor="Black" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Background="White"
+                        Clicked="IbtnSenhaVisibilidade"
+                        HeightRequest="46"
+                        HorizontalOptions="End"
+                        Source="eye_closed.png"
+                        WidthRequest="10" />
+                </Grid>
+            </Border>
             <Label
                 FontSize="14"
                 Text="Recupera senha"

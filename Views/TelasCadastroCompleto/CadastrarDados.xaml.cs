@@ -1,3 +1,6 @@
+using AppFitShare.Models;
+using AppFitShare.Repositories;
+
 namespace AppFitShare.Views.TelasCadastroCompleto;
 
 public partial class CadastrarDados : ContentPage
@@ -7,37 +10,64 @@ public partial class CadastrarDados : ContentPage
 	{
 		InitializeComponent();
 	}
-    private string _biotiposelecionado = null;
+	private async void OnContinuar(object sender, EventArgs e)
+	{
+		var dados = new UsuarioCompleto()
+		{
+			Idade = int.Parse(txt_idade.Text),
+			Peso = double.Parse(txt_peso.Text),
+			Altura = double.Parse(txt_altura.Text),
+			Telefone = txt_telefone.Text
+		};
+		CadastroTemp.AtualizarDados(dados);
 
-    private async void OnCadastroDadosClicked(object sender, EventArgs e)
-    {
         await Navigation.PushAsync(new CadastroObjetivo());
     }
-    private void OnBiotipoClicked(object sender, EventArgs e)
+
+    private void OnTelefoneTextChanged(object sender, TextChangedEventArgs e)
     {
-        foreach(var view in OpcoesBiotipo.Children)
-        {
-            if(view is Button btn)
-            {
-                btn.BackgroundColor = Colors.Green;
-                btn.BorderColor = Colors.White;
-                btn.TextColor = Colors.White;
+		try { 
+			var entry = (Entry)sender;
+			if(string.IsNullOrEmpty(e.NewTextValue))
+			{
+				return;
             }
-        }
-        var botaoClicado = (Button)sender;
-        botaoClicado.BackgroundColor = Colors.Green;
-        botaoClicado.BorderColor = Colors.White;
-        botaoClicado.TextColor = Colors.Black;
-        _biotiposelecionado = botaoClicado.Text;
-    }
+            string texto = new string(e.NewTextValue.Where(char.IsDigit).ToArray());
+			if(texto.Length > 11)
+			{
+				texto = texto.Substring(0, 11);
+			}
 
-    private void txt_telefone_TextChanged(object sender, TextChangedEventArgs e)
-    {
+
+			string formatado = texto;
+            if (texto.Length <= 2)
+            {
+                formatado = $"({texto}";
+            }
+            else if (texto.Length <= 6)
+            {
+                formatado = $"({texto.Substring(0, 2)}) {texto.Substring(2)}";
+            }
+            else if (texto.Length <= 10)
+            {
+                formatado = $"({texto.Substring(0, 2)}) {texto.Substring(2, 4)}-{texto.Substring(6)}";
+            }
+            else
+            {
+                formatado = $"({texto.Substring(0, 2)}) {texto.Substring(2, 5)}-{texto.Substring(7)}";
+            }
+
+            if (entry.Text != formatado)
+            {
+                entry.Text = formatado;
+                entry.CursorPosition = formatado.Length;
+            }
         
-    }
 
-    private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
-    {
-
+        }
+		catch 
+		{
+            System.Diagnostics.Debug.WriteLine("Erro ao formatar telefone.");
+        }
     }
 }

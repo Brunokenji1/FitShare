@@ -3,20 +3,27 @@
     x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastrarDados"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="CadastrarDados">
-    <VerticalStackLayout>
+    xmlns:vm="clr-namespace:AppFitShare.ViewModels"
+    Title="CadastrarDados"
+    Background="#0c1420">
+
+    <VerticalStackLayout Margin="15">
+
         <Label
             FontSize="Title"
             HorizontalOptions="Center"
             Text="Completar Cadastro"
             VerticalOptions="Center" />
+        <Label Text="Data de nascimento*" TextColor="White" />
+
         <DatePicker
+            Background="White"
             Format="dd/MM/yyyy"
             MaximumDate="2015/01/01"
-            MinimumDate="1925/01/01" 
-            DateSelected="DatePicker_DateSelected"/>
+            MinimumDate="1925/01/01"
+            TextColor="Black" />
 
-
+        <Label Text="Idade*" TextColor="White" />
         <Entry
             x:Name="txt_idade"
             Background="White"
@@ -25,60 +32,89 @@
             MaxLength="3"
             Placeholder="Idade"
             TextColor="Black" />
-        
-        <HorizontalStackLayout x:Name="OpcoesBiotipo">
+        <Label Text="Opções de Biotipo*" TextColor="White" />
+        <Grid ColumnDefinitions="*, *, Auto" ColumnSpacing="6" HorizontalOptions="Center">
             <Button
                 x:Name="OnEctomorfo"
+                Grid.Column="0"
+                FontSize="10"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
-                Clicked="OnBiotipoClicked"
-                Text="Ectomorfo" />
+                Text="Ectomorfo"/>
             <Button
                 x:Name="OnMesomorfo"
+                FontSize="10"
+                Grid.Column="1"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
-                Clicked="OnBiotipoClicked"
                 Text="Mesomorfo" />
             <Button
+                FontSize="10"
+                Grid.Column="2"
                 x:Name="OnEndomorfo"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
-                Clicked="OnBiotipoClicked"
                 Text="Endomorfo" />
-        </HorizontalStackLayout>
-        <Entry
-            x:Name="txt_peso"
-            Background="White"
-            ClearButtonVisibility="WhileEditing"
-            Keyboard="Numeric"
-            MaxLength="3"
-            Placeholder="Peso em Kg"
-            TextColor="Black" />
-        <Entry
-            x:Name="txt_altura"
-            Background="White"
-            ClearButtonVisibility="WhileEditing"
-            Keyboard="Numeric"
-            MaxLength="3"
-            Placeholder="Altura em cm"
-            TextColor="Black" />
+        </Grid>
+        <Label Text="Peso*" TextColor="White" />
+        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+            <Entry
+                x:Name="txt_peso"
+                Grid.Column="0"
+                Background="White"
+                ClearButtonVisibility="WhileEditing"
+                Keyboard="Numeric"
+                MaxLength="3"
+                Placeholder="Peso em Kg"
+                TextColor="Black" />
+            <Label
+                Grid.Column="1"
+                Padding="5,13"
+                Background="white"
+                FontAttributes="Bold"
+                FontSize="15"
+                Text="kg"
+                VerticalOptions="Center" />
+        </Grid>
+        <Label Text="Altura*" TextColor="White" />
+        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+            <Entry
+                x:Name="txt_altura"
+                Background="White"
+                Grid.Column="0"
+                ClearButtonVisibility="WhileEditing"
+                Keyboard="Numeric"
+                MaxLength="3"
+                Placeholder="Altura em cm"
+                TextColor="Black" />
+            <Label
+                Grid.Column="1"
+                Padding="5,13"
+                Background="white"
+                FontAttributes="Bold"
+                FontSize="15"
+                Text="cm"
+                VerticalOptions="Center" />
+        </Grid>
+        <Label Text="Telefone*" TextColor="White" />
         <Entry
             x:Name="txt_telefone"
             Background="White"
             ClearButtonVisibility="WhileEditing"
             Keyboard="Telephone"
-            MaxLength="11"
-            Placeholder="00 00000-0000"
-            TextChanged="txt_telefone_TextChanged"
+            MaxLength="15"
+            Placeholder="(XX) XXXXX-XXXX"
+            TextChanged="OnTelefoneTextChanged"
             TextColor="Black" />
 
         <Button
             Margin="0,45,0,0"
             BackgroundColor="#01C853"
-            Clicked="OnCadastroDadosClicked"
             FontFamily="OpenSansSemibold"
             FontSize="20"
             HeightRequest="50"
