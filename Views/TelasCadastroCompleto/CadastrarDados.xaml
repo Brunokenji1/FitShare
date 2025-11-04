@@ -7,113 +7,203 @@
     Title="CadastrarDados"
     Background="#0c1420">
 
-    <VerticalStackLayout Margin="15">
+    <VerticalStackLayout Margin="15" Spacing="10">
 
         <Label
             FontSize="Title"
             HorizontalOptions="Center"
             Text="Completar Cadastro"
+            TextColor="White"
             VerticalOptions="Center" />
-        <Label Text="Data de nascimento*" TextColor="White" />
 
-        <DatePicker
+        <Label Text="Data de nascimento*" TextColor="White" FontSize="16" />
+        <Border
+            Padding="8"
             Background="White"
-            Format="dd/MM/yyyy"
-            MaximumDate="2015/01/01"
-            MinimumDate="1925/01/01"
-            TextColor="Black" />
+            StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
 
-        <Label Text="Idade*" TextColor="White" />
-        <Entry
-            x:Name="txt_idade"
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="5,5" />
+            </Border.Shadow>
+            <DatePicker
+                FontSize="15"
+                Background="White"
+                Format="dd/MM/yyyy"
+                MaximumDate="2015/01/01"
+                MinimumDate="1925/01/01"
+                TextColor="Black" />
+        </Border>
+
+        <Label Text="Idade*" TextColor="White" FontSize="16" />
+        <Border
+            Padding="8"
             Background="White"
-            ClearButtonVisibility="WhileEditing"
-            Keyboard="Numeric"
-            MaxLength="3"
-            Placeholder="Idade"
-            TextColor="Black" />
-        <Label Text="Opções de Biotipo*" TextColor="White" />
-        <Grid ColumnDefinitions="*, *, Auto" ColumnSpacing="6" HorizontalOptions="Center">
+            StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="5,5" />
+            </Border.Shadow>
+            <Entry
+                x:Name="txt_idade"
+                FontSize="15"
+                Background="White"
+                ClearButtonVisibility="WhileEditing"
+                Keyboard="Numeric"
+                MaxLength="3"
+                Placeholder="Idade"
+                TextColor="Black" />
+        </Border>
+        <Label Text="Opções de Biotipo*" TextColor="White" FontSize="16" />
+        <Grid
+            ColumnDefinitions="*, *, Auto"
+            ColumnSpacing="6"
+            HorizontalOptions="Center">
             <Button
                 x:Name="OnEctomorfo"
                 Grid.Column="0"
-                FontSize="10"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
-                Text="Ectomorfo"/>
+                FontSize="10"
+                Text="Ectomorfo" />
             <Button
                 x:Name="OnMesomorfo"
-                FontSize="10"
                 Grid.Column="1"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
+                FontSize="10"
                 Text="Mesomorfo" />
             <Button
-                FontSize="10"
-                Grid.Column="2"
                 x:Name="OnEndomorfo"
+                Grid.Column="2"
                 Background="Transparent"
                 BorderColor="White"
                 BorderWidth="1"
+                FontSize="10"
                 Text="Endomorfo" />
         </Grid>
-        <Label Text="Peso*" TextColor="White" />
-        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
-
-            <Entry
-                x:Name="txt_peso"
-                Grid.Column="0"
-                Background="White"
-                ClearButtonVisibility="WhileEditing"
-                Keyboard="Numeric"
-                MaxLength="3"
-                Placeholder="Peso em Kg"
-                TextColor="Black" />
-            <Label
-                Grid.Column="1"
-                Padding="5,13"
-                Background="white"
-                FontAttributes="Bold"
-                FontSize="15"
-                Text="kg"
-                VerticalOptions="Center" />
-        </Grid>
-        <Label Text="Altura*" TextColor="White" />
-        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
-
-            <Entry
-                x:Name="txt_altura"
-                Background="White"
-                Grid.Column="0"
-                ClearButtonVisibility="WhileEditing"
-                Keyboard="Numeric"
-                MaxLength="3"
-                Placeholder="Altura em cm"
-                TextColor="Black" />
-            <Label
-                Grid.Column="1"
-                Padding="5,13"
-                Background="white"
-                FontAttributes="Bold"
-                FontSize="15"
-                Text="cm"
-                VerticalOptions="Center" />
-        </Grid>
-        <Label Text="Telefone*" TextColor="White" />
-        <Entry
-            x:Name="txt_telefone"
+        <Label Text="Peso*" TextColor="White" FontSize="16" />
+        <Border
+            Padding="8"
             Background="White"
-            ClearButtonVisibility="WhileEditing"
-            Keyboard="Telephone"
-            MaxLength="15"
-            Placeholder="(XX) XXXXX-XXXX"
-            TextChanged="OnTelefoneTextChanged"
-            TextColor="Black" />
+            StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
 
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="5,5" />
+            </Border.Shadow>
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                <Entry
+                    x:Name="txt_peso"
+                    Grid.Column="0"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    Placeholder="Peso em Kg"
+                    TextColor="Black"
+                    FontSize="15"/>
+
+                <Label
+                    Grid.Column="1"
+                    Padding="5,13"
+                    Background="white"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    Text="kg"
+                    VerticalOptions="Center" />
+            </Grid>
+        </Border>
+        <Label Text="Altura*" TextColor="White" FontSize="16" />
+        <Border
+            Padding="8"
+            Background="White"
+            StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="5,5" />
+            </Border.Shadow>
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                <Entry
+                    FontSize="15"
+                    x:Name="txt_altura"
+                    Grid.Column="0"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    Placeholder="Altura em cm"
+                    TextColor="Black" />
+
+                <Label
+                    Grid.Column="1"
+                    Padding="5,13"
+                    Background="white"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    Text="cm"
+                    VerticalOptions="Center" />
+            </Grid>
+        </Border>
+        <Label Text="Telefone*" TextColor="White" FontSize="16" />
+        <Border
+            Padding="8"
+            Background="White"
+            StrokeThickness="1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+
+            <Border.Shadow>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="5,5" />
+            </Border.Shadow>
+            <Entry
+                x:Name="txt_telefone"
+                Background="White"
+                ClearButtonVisibility="WhileEditing"
+                Keyboard="Telephone"
+                MaxLength="15"
+                FontSize="15"
+                Placeholder="(XX) XXXXX-XXXX"
+                TextChanged="OnTelefoneTextChanged"
+                TextColor="Black" />
+        </Border>
         <Button
-            Margin="0,45,0,0"
+            Margin="0,15,0,0"
             BackgroundColor="#01C853"
             FontFamily="OpenSansSemibold"
             FontSize="20"
