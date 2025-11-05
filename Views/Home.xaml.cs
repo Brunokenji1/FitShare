@@ -1,16 +1,16 @@
-using AppFitShare.Repositories;
+﻿using AppFitShare.Repositories;
 
 namespace AppFitShare.Views;
 
 public partial class Home : ContentPage
 {
-	public Home()
-	{
-		InitializeComponent();
+    public Home()
+    {
+        InitializeComponent();
         var usuario_logado = RepositorioUsuarios.ObterUsuarioLogado();
         if (usuario_logado != null)
         {
-            lbl_boasvindas.Text = $"Ol�, {usuario_logado.Nome}!";
+            lbl_boasvindas.Text = $"Olá, {usuario_logado.Nome}!";
         }
     }
     private void OnVerTreino(object sender, EventArgs e)
