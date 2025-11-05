@@ -16,13 +16,6 @@
         <SearchBar 
             TextColor="Black"
             Background="White" SearchButtonPressed="SearchBar_SearchButtonPressed" />
-        <Entry
-            BackgroundColor="White"
-            Placeholder="Pesquisar"
-            TextColor="Black"
-            ClearButtonVisibility="WhileEditing"
-            IsSpellCheckEnabled="True"
-            IsTextPredictionEnabled="True"
-            ReturnType="Search"/>
+        
     </VerticalStackLayout>
 </ContentPage>

@@ -5,8 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:AppFitShare.ViewModels"
     Title="CadastrarDados"
+    NavigationPage.HasNavigationBar="False"
     Background="#0c1420">
-
+    <ScrollView>
+        
     <VerticalStackLayout Margin="15" Spacing="10">
 
         <Label
@@ -17,21 +19,7 @@
             VerticalOptions="Center" />
 
         <Label Text="Data de nascimento*" TextColor="White" FontSize="16" />
-        <Border
-            Padding="8"
-            Background="White"
-            StrokeThickness="1">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="20" />
-            </Border.StrokeShape>
-
-            <Border.Shadow>
-                <Shadow
-                    Brush="Black"
-                    Opacity="0.3"
-                    Radius="10"
-                    Offset="5,5" />
-            </Border.Shadow>
+        
             <DatePicker
                 FontSize="15"
                 Background="White"
@@ -39,7 +27,7 @@
                 MaximumDate="2015/01/01"
                 MinimumDate="1925/01/01"
                 TextColor="Black" />
-        </Border>
+        
 
         <Label Text="Idade*" TextColor="White" FontSize="16" />
         <Border
@@ -216,4 +204,5 @@
 
 
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

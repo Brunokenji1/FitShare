@@ -19,11 +19,11 @@ public class RepositorioUsuarios
         new Usuario(1, "Pedro Chaves", "Chaves", "pdr@gmail.com", "12345678", DateTime.Now)
 
     };
-    public static Usuario BuscarUsuario(int index)
+    public static Usuario BuscarUsuario(int id)
     {
         try
         {
-            var usuario = listaUsuarios.FirstOrDefault(u => u.Id == index);
+            var usuario = listaUsuarios.FirstOrDefault(u => u.Id == id);
             return usuario;
         }
         catch (Exception)

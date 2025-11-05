@@ -23,16 +23,16 @@ public partial class CadastroObjetivo : ContentPage
             border.BackgroundColor = Color.FromArgb("#01b853");
             border.Stroke = Colors.Transparent;
 
-            lblTitulo.TextColor = Colors.Black;
-            lblDescricao.TextColor = Colors.Black;
+            lblTitulo1.TextColor = Colors.Black;
+            lblDescricao1.TextColor = Colors.Black;
         }
         else
         {
             border.BackgroundColor = Color.FromArgb("#0d1117");
             border.Stroke = Color.FromArgb("#01c853");
 
-            lblTitulo.TextColor = Colors.White;
-            lblDescricao.TextColor = Color.FromArgb("#a0a0a0");
+            lblTitulo1.TextColor = Colors.White;
+            lblDescricao1.TextColor = Color.FromArgb("#a0a0a0");
         }
     }
     private async void OnContinuar(object sender, EventArgs e)

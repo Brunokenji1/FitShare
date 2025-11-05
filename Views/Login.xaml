@@ -53,7 +53,7 @@
                 <Entry
                     FontSize="15"
                     x:Name="txt_usuario"
-                    Background="White"
+                    Background="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     Placeholder="Digite seu Username ou E-mail"
                     TextColor="Black" />
@@ -84,7 +84,7 @@
                         FontSize="15"
                         x:Name="txt_senhalogin"
                         Grid.Column="0"
-                        BackgroundColor="White"
+                        BackgroundColor="Transparent"
                         ClearButtonVisibility="WhileEditing"
                         IsPassword="True"
                         Placeholder="Digite sua Senha"

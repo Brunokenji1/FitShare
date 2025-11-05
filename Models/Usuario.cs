@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppFitShare.Models
 {
-    public class Usuario : INotifyPropertyChanged
+    public class Usuario
     {
         //Dados cadastro basico usuario
         public int Id { get; }
@@ -18,25 +18,11 @@ namespace AppFitShare.Models
         public DateTime DataCadastro { get; set; }
 
         //Dados cadastro completo usuario
-        public int _idade;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged(string prop)
-        {
-            if(PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-            }
-        }
-
-        public int Idade
-        {
-            get { return _idade; }
-            set { _idade = value; OnPropertyChanged(nameof(Idade)); }
-        }
-        public double Peso { get; private set; }
-        public double Altura { get; private set; }
-        public string Metabolismo { get; private set; }
+        public int Idade { get; set; }
+        public double Peso { get; set; }
+        public double Altura { get; set; }
+        public string Metabolismo { get; set; }
         public string Status { get; set; }
         public string Telefone { get; set; }
         public UsuarioCompleto? CadastroCompleto { get; set; }

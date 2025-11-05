@@ -3,7 +3,8 @@
     x:Class="AppFitShare.Views.BasicCadastro"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="BasicCadastro">
+    Title="BasicCadastro"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Offset="0.8" Color="#0D0F1A" />
@@ -44,7 +45,7 @@
                 </Border.Shadow>
                 <Entry
                     x:Name="txt_nome"
-                    BackgroundColor="White"
+                    BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
                     Placeholder="Digite seu nome"
@@ -74,7 +75,7 @@
                 </Border.Shadow>
                 <Entry
                     x:Name="txt_username"
-                    BackgroundColor="White"
+                    BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
                     Placeholder="Digite seu Username"
@@ -102,7 +103,7 @@
                 </Border.Shadow>
                 <Entry
                     x:Name="txt_email"
-                    BackgroundColor="White"
+                    BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
                     Keyboard="Email"
@@ -134,7 +135,7 @@
                     <Entry
                         x:Name="txt_senha"
                         Grid.Column="0"
-                        BackgroundColor="White"
+                        BackgroundColor="Transparent"
                         ClearButtonVisibility="WhileEditing"
                         FontSize="15"
                         IsPassword="True"
@@ -173,7 +174,7 @@
                     <Entry
                         x:Name="txt_confirmarSenha"
                         Grid.Column="0"
-                        BackgroundColor="White"
+                        BackgroundColor="Transparent"
                         ClearButtonVisibility="WhileEditing"
                         FontSize="15"
                         IsPassword="True"

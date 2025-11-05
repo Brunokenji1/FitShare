@@ -4,15 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="CadastroObjetivo"
-    Background="#0d1117">
+    Background="#0d1117"
+    NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
         <Label
             HorizontalOptions="Center"
             Text="Qual o seu Objetivo?"
             VerticalOptions="Center" />
-        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
-            <Button BackgroundColor="Transparent" BorderColor="#01C853" />
-        </Grid>
+
         <Border
             x:Name="btnGanharMassa"
             Margin="10"
@@ -32,18 +31,54 @@
                     WidthRequest="40" />
                 <VerticalStackLayout WidthRequest="300">
                     <Label
-                        x:Name="lblTitulo"
+                        x:Name="lblTitulo1"
                         FontAttributes="Bold"
                         FontSize="16"
                         Text="Ganhar Massa Muscular (Hipertrofia)"
                         TextColor="White" />
                     <Label
-                        x:Name="lblDescricao"
+                        x:Name="lblDescricao1"
                         FontSize="15"
                         Text="Para quem quer aumentar força, volume muscular e melhorar a performance."
                         TextColor="White" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
+
+        </Border>
+
+        <Border
+            x:Name="btnPerderGordura"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnObjetivo1" />
+            </Border.GestureRecognizers>
+            <HorizontalStackLayout Spacing="10">
+                
+                <Image
+                HeightRequest="40"
+                Source="treino.png"
+                VerticalOptions="Center"
+                WidthRequest="40" />
+                <VerticalStackLayout WidthRequest="300">
+                    <Label
+                    x:Name="lblTitulo2"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Perder Gordura"
+                    TextColor="White" />
+                    <Label
+                    x:Name="lblDescricao2"
+                    FontSize="15"
+                    Text="Para quem deseja emagrecer reduzir percentual de gordura e definir o corpo."
+                    TextColor="White" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
 
         </Border>
         <Button
