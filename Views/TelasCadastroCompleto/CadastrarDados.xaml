@@ -199,11 +199,11 @@
                 MaxLength="15"
                 FontSize="15"
                 Placeholder="(XX) XXXXX-XXXX"
-                TextChanged="OnTelefoneTextChanged"
                 TextColor="Black" />
         </Border>
         <Button
             Margin="0,15,0,0"
+            Clicked="OnContinuar"
             BackgroundColor="#01C853"
             FontFamily="OpenSansSemibold"
             FontSize="20"

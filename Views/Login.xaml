@@ -116,7 +116,6 @@
                 FontSize="20"
                 HeightRequest="50"
                 HorizontalOptions="Center"
-                Pressed="Button_Pressed"
                 Text="Entrar"
                 TextColor="Black"
                 WidthRequest="330" />

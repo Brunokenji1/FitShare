@@ -3,15 +3,59 @@
     x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastroObjetivo"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="CadastroObjetivo">
+    Title="CadastroObjetivo"
+    Background="#0d1117">
     <VerticalStackLayout>
         <Label
             HorizontalOptions="Center"
             Text="Qual o seu Objetivo?"
             VerticalOptions="Center" />
         <Grid ColumnDefinitions="*, Auto" ColumnSpacing="5">
-            <Button BackgroundColor="Transparent" 
-                    BorderColor="#01C853" />
+            <Button BackgroundColor="Transparent" BorderColor="#01C853" />
         </Grid>
+        <Border
+            x:Name="btnGanharMassa"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnObjetivo1" />
+            </Border.GestureRecognizers>
+            <HorizontalStackLayout Spacing="10">
+                <Image
+                    HeightRequest="40"
+                    Source="treino.png"
+                    VerticalOptions="Center"
+                    WidthRequest="40" />
+                <VerticalStackLayout WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Ganhar Massa Muscular (Hipertrofia)"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblDescricao"
+                        FontSize="15"
+                        Text="Para quem quer aumentar força, volume muscular e melhorar a performance."
+                        TextColor="White" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+        </Border>
+        <Button
+            Margin="0,15,0,0"
+            BackgroundColor="#01C853"
+            Clicked="OnContinuar"
+            FontFamily="OpenSansSemibold"
+            FontSize="20"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Continuar"
+            TextColor="Black"
+            WidthRequest="330" />
     </VerticalStackLayout>
 </ContentPage>

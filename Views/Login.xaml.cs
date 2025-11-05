@@ -53,12 +53,6 @@ public partial class Login : ContentPage
     {
         await Navigation.PushAsync(new RecuperarSenha());
     }
-
-    private void Button_Pressed(object sender, EventArgs e)
-    {
-
-    }
-
     private void IbtnSenhaVisibilidade(object sender, EventArgs e)
     {
         txt_senhalogin.IsPassword = !txt_senhalogin.IsPassword;
