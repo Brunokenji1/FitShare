@@ -17,7 +17,9 @@ namespace AppFitShare.Models
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
 
+
         //Dados cadastro completo usuario
+        public string FotoPath { get; set; }
 
         public int Idade { get; set; }
         public double Peso { get; set; }

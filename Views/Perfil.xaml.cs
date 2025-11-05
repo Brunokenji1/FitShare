@@ -26,4 +26,14 @@ public partial class Perfil : ContentPage
     {
         await Navigation.PushAsync(new CadastrarDados());
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        var fotoPath = Preferences.Get("FotoPerfil", string.Empty);
+        if(!string.IsNullOrEmpty(fotoPath) && File.Exists(fotoPath))
+        {
+            imgPerfil.Source = ImageSource.FromFile(fotoPath);
+        }
+ 
+    }
 }

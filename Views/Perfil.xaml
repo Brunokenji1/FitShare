@@ -7,7 +7,18 @@
     Background="#0c1420"
     IconImageSource="perfil.png"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout Spacing="30">
+    <VerticalStackLayout Margin="10" Spacing="30">
+        
+        <TableView>
+            <TableSection Title="perfil">
+                <ViewCell>
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Image x:Name="imgPerfil" />
+                        <Label Grid.Column="0" Text="oiiii" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableView>
         <Label
             Padding="10"
             Text="Sair"

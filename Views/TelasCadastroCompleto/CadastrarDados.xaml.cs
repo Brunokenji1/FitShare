@@ -1,5 +1,6 @@
 using AppFitShare.Models;
 using AppFitShare.Repositories;
+using System.Threading.Tasks;
 
 namespace AppFitShare.Views.TelasCadastroCompleto;
 
@@ -23,5 +24,20 @@ public partial class CadastrarDados : ContentPage
         await Navigation.PushAsync(new CadastroObjetivo());
     }
 
-
+    private async void btnSelecionarFoto(object sender, EventArgs e)
+    {
+		try
+		{
+			var foto = await MediaPicker.PickPhotoAsync();
+			if (foto != null)
+			{
+				using var stream = await foto.OpenReadAsync();
+				imgPerfil.Source = ImageSource.FromStream(()=>stream);
+            }
+        }
+		catch (Exception ex)
+		{
+			await DisplayAlert("Erro", ex.Message, "OK");
+		}
+    }
 }
