@@ -3,113 +3,157 @@
     x:Class="AppFitShare.Views.Home"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:AppFitShare.Views"
     Title="Início"
     Background="#0c1420"
     IconImageSource="inicio.png"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Grid BackgroundColor="#003918">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Border
+                BackgroundColor="#003918"
+                Stroke="#003918"
+                StrokeLineCap="Round"
+                StrokeLineJoin="Round"
+                StrokeThickness="10">
+                <Grid BackgroundColor="#003918">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        x:Name="lbl_boasvindas"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="4,3,0,0"
+                        FontSize="20"
+                        TextColor="#01c853" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Padding="4,0,0,8"
+                        FontAttributes="Bold"
+                        FontFamily="Poppins"
+                        FontSize="14"
+                        Text="Pronto(a) para treinar hoje?"
+                        TextColor="White" />
+                </Grid>
+            </Border>
             <Label
-                x:Name="lbl_boasvindas"
-                Grid.Row="0"
-                Grid.Column="0"
-                Padding="10,3,0,0"
-                FontSize="20"
-                TextColor="#01c853" />
-            <Label
-                Grid.Row="1"
-                Grid.Column="0"
-                Grid.ColumnSpan="2"
-                Padding="10,0,0,8"
+                Margin="5,10,0,10"
+                Padding="15,10"
                 FontAttributes="Bold"
-                FontSize="14"
-                Text="Pronto(a) para treinar hoje?"
+                FontFamily="Poppins"
+                FontSize="20"
+                HorizontalOptions="Start"
+                Text="Resumo do Dia"
                 TextColor="White" />
-        </Grid>
+            <Grid>
+                <HorizontalStackLayout Padding="10,0" Spacing="20">
+                    <Border
+                        HeightRequest="120"
+                        Stroke="#01c853"
+                        StrokeLineJoin="Round"
+                        StrokeShape="RoundRectangle 10"
+                        WidthRequest="180">
+                        <HorizontalStackLayout>
+                            <Grid RowDefinitions="*,*">
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="180"
+                                    Source="gym1.png"
+                                    WidthRequest="180" />
 
+                                <Label
+                                    Grid.Row="0"
+                                    FontAttributes="Bold"
+                                    FontFamily="Poppins"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    Text="Treinos"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                                <Button
+                                    Grid.Row="1"
+                                    BackgroundColor="#01C853"
+                                    Clicked="OnVerTreino"
+                                    HeightRequest="1"
+                                    Text="Ver Treino"
+                                    TextColor="Black"
+                                    WidthRequest="90" />
+                            </Grid>
+                        </HorizontalStackLayout>
+                    </Border>
+                    <Border
+                        Grid.Column="1"
+                        Padding="0"
+                        HeightRequest="120"
+                        Stroke="#01c853"
+                        StrokeLineJoin="Round"
+                        StrokeShape="RoundRectangle 10"
+                        WidthRequest="180">
+                        <HorizontalStackLayout Spacing="10">
+                            <Grid RowDefinitions="*,*">
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="180"
+                                    Source="frutas.png"
+                                    WidthRequest="180" />
 
-        <Label
-            Margin="5,10,0,10"
-            Padding="15,10"
-            FontAttributes="Bold"
-            FontSize="18"
-            HorizontalOptions="Start"
-            Text="Resumo do Dia"
-            TextColor="White" />
-
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
-            <AbsoluteLayout>
-                <Frame
-                    Padding="0"
-                    AbsoluteLayout.LayoutBounds="10,11"
-                    CornerRadius="13"
-                    HasShadow="False"
-                    HeightRequest="125"
-                    IsClippedToBounds="True"
-                    WidthRequest="150">
-                    <ImageButton BackgroundColor="#0c1420" Source="gym.png" />
-                </Frame>
-                <Border
-                    Margin="10,10"
-                    Padding="10,60,10,20"
-                    Stroke="Green"
-                    StrokeDashOffset="1000"
-                    StrokeShape="RoundRectangle 10">
-
-                    <Button
-                        Background="#01C853"
-                        Clicked="OnVerTreino"
-                        CornerRadius="15"
-                        Text="Ver Treino"
-                        TextColor="Black" />
-                </Border>
-            </AbsoluteLayout>
-            <AbsoluteLayout>
-                <Frame
-                    Padding="0"
-                    AbsoluteLayout.LayoutBounds="4,11"
-                    BackgroundColor="#0c1420"
-                    CornerRadius="17"
-                    HasShadow="False"
-                    HeightRequest="130"
-                    IsClippedToBounds="True"
-                    WidthRequest="185">
-                    <ImageButton BackgroundColor="#0c1420" Source="frutas.png" />
-                </Frame>
-
-                <Border
-                    Margin="10,10"
-                    Padding="10,60,10,20"
-                    Stroke="Green"
-                    StrokeDashOffset="1000"
-                    StrokeShape="RoundRectangle 10">
-
-
-                    <Button
-                        Background="#01C853"
-                        Clicked="OnVerPlanoAlimentar"
-                        CornerRadius="15"
-                        Text="Ver Refeições"
-                        TextColor="Black" />
-                </Border>
-
-
-            </AbsoluteLayout>
-        </HorizontalStackLayout>
-        <Label
-            Margin="5,30,0,10"
-            Padding="15,10"
-            FontAttributes="Bold"
-            FontSize="18"
-            Text="Progresso"
-            TextColor="White" />
-    </VerticalStackLayout>
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="Poppins"
+                                    FontSize="18"
+                                    HorizontalOptions="Center"
+                                    Text="Plano alimentar"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                                <Button
+                                    Grid.Row="1"
+                                    BackgroundColor="#01C853"
+                                    Clicked="OnVerPlanoAlimentar"
+                                    HeightRequest="1"
+                                    Text="Ver Treino"
+                                    TextColor="Black"
+                                    WidthRequest="90" />
+                            </Grid>
+                        </HorizontalStackLayout>
+                    </Border>
+                </HorizontalStackLayout>
+            </Grid>
+            <Label
+                Margin="5,30,0,10"
+                Padding="15,10"
+                FontAttributes="Bold"
+                FontFamily="Poppins"
+                FontSize="20"
+                Text="Progresso"
+                TextColor="White" />
+            <Border
+                Margin="15,0"
+                Stroke="Gray"
+                StrokeLineJoin="Round"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*">
+                            <Label
+                                Padding="5"
+                                FontAttributes="Bold"
+                                FontFamily="Poppins"
+                                FontSize="16"
+                                Text="Nesta semana"
+                                TextColor="White" />
+                        </Grid>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
