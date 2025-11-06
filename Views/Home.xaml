@@ -16,6 +16,7 @@
                 Stroke="#003918"
                 StrokeLineCap="Round"
                 StrokeLineJoin="Round"
+                StrokeShape="RoundRectangle 0,0,15,15"
                 StrokeThickness="10">
                 <Grid BackgroundColor="#003918">
                     <Grid.ColumnDefinitions>
@@ -134,7 +135,7 @@
                 StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <HorizontalStackLayout>
-                        <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*,*,*,*">
+                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*,*">
                             <Label
                                 Grid.Row="0"
                                 Margin="5,0,0,0"
@@ -157,16 +158,17 @@
                                 BackgroundColor="#01C853"
                                 HeightRequest="15"
                                 HorizontalOptions="Start"
-                                WidthRequest="175" />
+                                WidthRequest="115" />
                             <Label
                                 Grid.Row="2"
-                                Margin="15,0"
+                                Margin="125,0"
                                 BackgroundColor="white"
-                                HeightRequest="18"
+                                HeightRequest="20"
+                                HorizontalOptions="Start"
                                 WidthRequest="5" />
                             <Label
                                 Grid.Row="3"
-                                Margin="20.0"
+                                Margin="90,0,0,0"
                                 FontAttributes="Bold"
                                 FontFamily="Poppins"
                                 FontSize="25"
@@ -174,12 +176,22 @@
                                 TextColor="#01c853" />
                             <Label
                                 Grid.Row="3"
-                                Margin="20.0"
+                                Grid.Column="0"
+                                Margin="155,8,0,0"
                                 FontAttributes="Bold"
                                 FontFamily="Poppins"
                                 FontSize="15"
                                 Text="kcal"
                                 TextColor="White" />
+                            <Label
+                                Grid.Row="3"
+                                Margin="9,5,0,0"
+                                FontAttributes="Bold"
+                                FontFamily="Poppins"
+                                FontSize="20"
+                                HorizontalOptions="End"
+                                Text="2.500 kcal"
+                                TextColor="#01c853" />
                             <Label
                                 Grid.Row="5"
                                 Padding="10"
@@ -188,7 +200,15 @@
                                 FontSize="16"
                                 Text="Nesta semana"
                                 TextColor="White" />
-
+                            <Grid ColumnDefinitions="*,*,*,*,*,*,*" />
+                            <Border
+                                Grid.Row="4"
+                                Margin="10,40"
+                                BackgroundColor="#1a2737"
+                                Stroke="Gray"
+                                StrokeShape="RoundRectangle 5">
+                                <Label />
+                            </Border>
                         </Grid>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
