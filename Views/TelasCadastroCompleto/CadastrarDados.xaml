@@ -5,13 +5,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:AppFitShare.ViewModels"
     Title="CadastrarDados"
-    Background="#0c1420"
     NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ScrollView>
 
         <VerticalStackLayout Margin="15" Spacing="10">
 
             <Label
+                Margin="10"
                 FontSize="Title"
                 HorizontalOptions="Center"
                 Text="Completar Cadastro"
@@ -22,9 +28,21 @@
                 x:Name="imgPerfil"
                 Aspect="AspectFill"
                 HeightRequest="100"
+                IsVisible="False"
                 WidthRequest="100" />
-            <Button Clicked="btnSelecionarFoto" Text="Selecionar foto" />
 
+            <Button
+                Margin="0,15,0,0"
+                BackgroundColor="White"
+                Clicked="btnSelecionarFoto"
+                FontAttributes="Bold"
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Selecionar foto de perfil"
+                TextColor="Black"
+                WidthRequest="330" />
 
             <Label
                 FontSize="16"
@@ -128,47 +146,24 @@
                         Keyboard="Numeric"
                         MaxLength="3"
                         Placeholder="Altura em cm"
-                        TextColor="Black" />
+                        TextColor="Black"
+                        IsEnabled="False"/>
 
-                    <Label
+                    <Picker
+                        Title="metrica"
                         Grid.Column="1"
-                        Padding="5,13"
-                        Background="white"
-                        FontAttributes="Bold"
-                        FontSize="15"
-                        Text="cm"
-                        VerticalOptions="Center" />
+                        HorizontalOptions="Center"
+                        SelectedIndexChanged="Picker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>cm</x:String>
+                                <x:String>m</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
                 </Grid>
             </Border>
-            <Label
-                FontSize="16"
-                Text="Telefone*"
-                TextColor="White" />
-            <Border
-                Padding="8"
-                Background="White"
-                StrokeThickness="1">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20" />
-                </Border.StrokeShape>
 
-                <Border.Shadow>
-                    <Shadow
-                        Brush="Black"
-                        Opacity="0.3"
-                        Radius="10"
-                        Offset="5,5" />
-                </Border.Shadow>
-                <Entry
-                    x:Name="txt_telefone"
-                    Background="White"
-                    ClearButtonVisibility="WhileEditing"
-                    FontSize="15"
-                    Keyboard="Telephone"
-                    MaxLength="15"
-                    Placeholder="(XX) XXXXX-XXXX"
-                    TextColor="Black" />
-            </Border>
             <Button
                 Margin="0,15,0,0"
                 BackgroundColor="#01C853"

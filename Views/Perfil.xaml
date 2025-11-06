@@ -8,12 +8,28 @@
     IconImageSource="perfil.png"
     NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout Margin="10" Spacing="30">
-        
+        <Border
+            Stroke="Green"
+            StrokeLineJoin="Round"
+            StrokeThickness="1"
+            HeightRequest="100"
+            WidthRequest="100"
+            Background="#01b853"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            >
+            <Image
+                x:Name="imgPerfil"
+                
+                
+                Source="perfil.png"
+                />
+        </Border>
         <TableView>
             <TableSection Title="perfil">
                 <ViewCell>
                     <Grid ColumnDefinitions="*, Auto">
-                        <Image x:Name="imgPerfil" />
+
                         <Label Grid.Column="0" Text="oiiii" />
                     </Grid>
                 </ViewCell>

@@ -19,7 +19,7 @@ namespace AppFitShare.Models
 
 
         //Dados cadastro completo usuario
-        public string FotoPath { get; set; }
+        public ImageSource FotoPerfil { get; set; }
 
         public int Idade { get; set; }
         public double Peso { get; set; }
