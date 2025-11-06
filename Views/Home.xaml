@@ -135,11 +135,11 @@
                 StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <HorizontalStackLayout>
-                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*,*">
+                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*,*,*">
                             <Label
                                 Grid.Row="0"
-                                Margin="5,0,0,0"
-                                Padding="15,10"
+                                Margin="5,10,0,0"
+                                Padding="15,0,0,0"
                                 FontAttributes="Bold"
                                 FontFamily="Poppins"
                                 FontSize="20"
@@ -184,11 +184,11 @@
                                 Text="kcal"
                                 TextColor="White" />
                             <Label
-                                Grid.Row="3"
-                                Margin="9,5,0,0"
+                                Grid.Row="0"
+                                Margin="9,30,0,5"
                                 FontAttributes="Bold"
                                 FontFamily="Poppins"
-                                FontSize="20"
+                                FontSize="17"
                                 HorizontalOptions="End"
                                 Text="2.500 kcal"
                                 TextColor="#01c853" />
@@ -200,15 +200,20 @@
                                 FontSize="16"
                                 Text="Nesta semana"
                                 TextColor="White" />
-                            <Grid ColumnDefinitions="*,*,*,*,*,*,*" />
                             <Border
-                                Grid.Row="4"
+                                Grid.Row="5"
                                 Margin="10,40"
                                 BackgroundColor="#1a2737"
                                 Stroke="Gray"
                                 StrokeShape="RoundRectangle 5">
-                                <Label />
+                                <Label BackgroundColor="#4f6079" />
                             </Border>
+                            <Image
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                Source="checkoff.png"
+                                WidthRequest="40" />
+
                         </Grid>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
