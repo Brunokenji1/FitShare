@@ -12,10 +12,8 @@ namespace AppFitShare.Models
         public double Peso { get; set; }
         public double Altura { get; set; }
         public string Telefone { get; set; }
-        public string Biotipo { get; set; }
         public string Objetivo { get; set; }
 
-        public int UsuarioID { get; set; }
-
+       
     }
 }

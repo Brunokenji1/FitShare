@@ -65,13 +65,20 @@ public class RepositorioUsuarios
     {
         return listaUsuarios;
     }
-    public static void Atualizar(Usuario usuario)
+    public static void Atualizar(Usuario usuarioAtualizar)
     {
-        var index = listaUsuarios.FindIndex(u => u.Email == usuario.Email);
+        
+        var index = listaUsuarios.FindIndex(u => u.Id == usuario_logado.Id);
 
         if (index >= 0)
         {
-            listaUsuarios[index] = usuario;
+            listaUsuarios[index] = usuarioAtualizar;
         }
+    }
+    
+    public static void RecuperarSenha(string telefone)
+    {
+        var index = listaUsuarios.FindIndex(u => u.Telefone == telefone);
+     
     }
 }

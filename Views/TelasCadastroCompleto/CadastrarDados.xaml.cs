@@ -12,7 +12,7 @@ public partial class CadastrarDados : ContentPage
 	{
 		InitializeComponent();
 	}
-	private async void OnContinuar(object sender, EventArgs e)
+	private async void btnContinuar(object sender, EventArgs e)
 	{
 		try
 		{
@@ -22,6 +22,8 @@ public partial class CadastrarDados : ContentPage
             {
                 throw new Exception("Preencha todos os campos!");
             }
+
+
             await Navigation.PushAsync(new CadastroObjetivo());
 		}
 		catch (Exception ex)

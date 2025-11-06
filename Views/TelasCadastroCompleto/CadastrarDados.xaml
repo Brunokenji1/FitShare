@@ -167,7 +167,7 @@
             <Button
                 Margin="0,15,0,0"
                 BackgroundColor="#01C853"
-                Clicked="OnContinuar"
+                Clicked="btnContinuar"
                 FontFamily="OpenSansSemibold"
                 FontSize="20"
                 HeightRequest="50"
@@ -175,6 +175,7 @@
                 Text="Continuar"
                 TextColor="Black"
                 WidthRequest="330" />
+            
 
 
 

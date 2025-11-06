@@ -5,11 +5,18 @@
              Title="CadastroObjetivo2"
              NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout>
+       
         <Button
+            Margin="0,45,0,0"
+            BackgroundColor="#01C853"
+            Clicked="CadastroObjetivo2Clicked"
+            FontFamily="OpenSansSemibold"
+            FontSize="20"
+            HeightRequest="50"
+            HorizontalOptions="Center"
             Text="Continuar"
-            Background="#01C853"
-            CornerRadius="20"
-            Clicked="CadastroObjetivo2Clicked"/>
+            TextColor="Black"
+            WidthRequest="330" />
         
     </VerticalStackLayout>
 </ContentPage>

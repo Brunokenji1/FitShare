@@ -10,10 +10,17 @@
             HorizontalOptions="Center"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" />
+        
         <Button
-            Background="#01C853"
-            CornerRadius="20"
-            Text="Continuar"
-            Clicked="CadastroNivelAtividadeClicked"/>
+            Margin="0,45,0,0"
+            BackgroundColor="#01C853"
+            Clicked="CadastroNivelAtividadeClicked"
+            FontFamily="OpenSansSemibold"
+            FontSize="20"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Cadastrar dados"
+            TextColor="Black"
+            WidthRequest="330" />
     </VerticalStackLayout>
 </ContentPage>
