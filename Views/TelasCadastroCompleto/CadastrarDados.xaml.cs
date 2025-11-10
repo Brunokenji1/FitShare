@@ -2,6 +2,7 @@ using AppFitShare.Models;
 using AppFitShare.Repositories;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using static Microsoft.Maui.ApplicationModel.Permissions;
 
 namespace AppFitShare.Views.TelasCadastroCompleto;
 
@@ -16,13 +17,24 @@ public partial class CadastrarDados : ContentPage
 	{
 		try
 		{
+
+			RepositorioUsuarios.IniciarUsuarioTemp();
+            var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
+			
+
             if (string.IsNullOrWhiteSpace(txt_idade.Text) ||
                string.IsNullOrWhiteSpace(txt_peso.Text) ||
+			   PickerSexo.SelectedIndex == -1 ||
                string.IsNullOrWhiteSpace(txt_altura.Text))
             {
                 throw new Exception("Preencha todos os campos!");
             }
-
+			string sexoSelecionado = (string)PickerSexo.SelectedItem;
+			usuarioTemp.Sexo = sexoSelecionado;
+            usuarioTemp.Altura = double.Parse(txt_altura.Text);
+            usuarioTemp.Idade = int.Parse(txt_idade.Text);
+			usuarioTemp.Peso = double.Parse(txt_peso.Text);
+			RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
 
             await Navigation.PushAsync(new CadastroObjetivo());
 		}
@@ -64,5 +76,10 @@ public partial class CadastrarDados : ContentPage
 		txt_altura.Text = null;
 	
 	}
-		
+
+    private void PickerSexo_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        var sexo = ((Picker)sender);
+        String unidadeSelecionada = (String)sexo.SelectedItem;
+    }
 }

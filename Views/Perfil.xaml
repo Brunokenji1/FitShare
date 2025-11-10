@@ -9,28 +9,41 @@
     NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout Margin="10" Spacing="30">
         <Border
+            Background="#01b853"
+            HeightRequest="100"
+            HorizontalOptions="Center"
             Stroke="Green"
             StrokeLineJoin="Round"
             StrokeThickness="1"
-            HeightRequest="100"
-            WidthRequest="100"
-            Background="#01b853"
-            HorizontalOptions="Center"
             VerticalOptions="Center"
-            >
-            <Image
-                x:Name="imgPerfil"
-                
-                
-                Source="perfil.png"
-                />
+            WidthRequest="100">
+            <Image x:Name="imgPerfil" Source="perfil.png" />
         </Border>
         <TableView>
             <TableSection Title="perfil">
                 <ViewCell>
-                    <Grid ColumnDefinitions="*, Auto">
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="*,*,*,Auto">
 
-                        <Label Grid.Column="0" Text="oiiii" />
+                        <Label x:Name="lbl_nome" Grid.Column="0" />
+                        <Label x:Name="lbl_idade" Grid.Column="1" />
+
+                        <Label
+                            x:Name="lbl_altura"
+                            Grid.Row="1"
+                            Grid.Column="0" />
+                        <Label
+                            x:Name="lbl_peso"
+                            Grid.Row="0"
+                            Grid.Column="1" />
+
+                        <Label
+                            x:Name="lbl_nivelAtividade"
+                            Grid.Row="1"
+                            Grid.Column="1" />
+                        <Label
+                            x:Name="lbl_objetivo"
+                            Grid.Row="2"
+                            Grid.Column="0" />
                     </Grid>
                 </ViewCell>
             </TableSection>
@@ -40,12 +53,12 @@
             Text="Sair"
             TextColor="White">
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnTapSair" />
+                <TapGestureRecognizer Tapped="btnTapSair" />
             </Label.GestureRecognizers>
         </Label>
         <Button
             Padding="20,10"
-            Clicked="OnCadastrarDados"
+            Clicked="btnCadastrarDados"
             CornerRadius="20"
             FontSize="18"
             Text="Cadastrar Completo"

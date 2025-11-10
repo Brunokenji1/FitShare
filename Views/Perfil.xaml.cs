@@ -8,8 +8,8 @@ public partial class Perfil : ContentPage
 	public Perfil()
 	{
 		InitializeComponent();
-	}
-    private async void OnTapSair(object sender, EventArgs e)
+    }
+    private async void btnTapSair(object sender, EventArgs e)
     {
         var label = (Label)sender;
         label.IsEnabled = false;
@@ -23,7 +23,7 @@ public partial class Perfil : ContentPage
         label.IsEnabled = true;
     }
 
-    private async void OnCadastrarDados(object sender, EventArgs e)
+    private async void btnCadastrarDados(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastrarDados());
     }
@@ -31,7 +31,21 @@ public partial class Perfil : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
+
         var usuario = RepositorioUsuarios.ObterUsuarioLogado();
+        
+        lbl_nome.Text = usuario.Nome;
+        if(usuario.Peso != 0 && usuario.Altura != 0)
+        {
+            lbl_altura.Text = $"Altura: {usuario.Altura} m";
+            lbl_peso.Text = $"Peso: {usuario.Peso} kg";
+            lbl_nivelAtividade.Text = $"Nível de Atividade: {usuario.NivelAtividade}";
+            lbl_idade.Text = $"Idade: {usuario.Idade} anos";
+            lbl_objetivo.Text = $"Objetivo: {usuario.Objetivo1}";
+        }
+        
+        
+        
         imgPerfil.Source = usuario.FotoPerfil;
     }
 }

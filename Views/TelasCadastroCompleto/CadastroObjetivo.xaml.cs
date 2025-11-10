@@ -1,42 +1,78 @@
+using AppFitShare.Repositories;
+
 namespace AppFitShare.Views.TelasCadastroCompleto;
 
 public partial class CadastroObjetivo : ContentPage
 {
+
+    private string _objetivoSelecionado = null;
+    private Border _botaoSelecionado = null;
+
     public CadastroObjetivo()
     {
         InitializeComponent();
     }
-    private bool isSelecionado = false;
+    
     private async void CadastroObjetivo1Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastroNivelDeAtividade());
     }
 
-    private void OnObjetivo1(object sender, TappedEventArgs e)
+    private void btnObjetivo1(object sender, TappedEventArgs e)
     {
-        var border = (Border)sender;
 
-        isSelecionado = !isSelecionado;
+        if (sender is not Border botaoSelecionado) return;
 
-        if (isSelecionado)
+        if (_botaoSelecionado != null)
         {
-            border.BackgroundColor = Color.FromArgb("#01b853");
-            border.Stroke = Colors.Transparent;
-
-            lblTitulo1.TextColor = Colors.Black;
-            lblDescricao1.TextColor = Colors.Black;
+            ResetarBotao(_botaoSelecionado);
         }
-        else
+        if(_botaoSelecionado == botaoSelecionado)
         {
-            border.BackgroundColor = Color.FromArgb("#0d1117");
-            border.Stroke = Color.FromArgb("#01c853");
-
-            lblTitulo1.TextColor = Colors.White;
-            lblDescricao1.TextColor = Color.FromArgb("#a0a0a0");
+            _botaoSelecionado = null;
+            _objetivoSelecionado = "";
+            ResetarBotao(botaoSelecionado);
+            return;
         }
+
+        SelecionarBotao(botaoSelecionado);
+        _botaoSelecionado =  botaoSelecionado;
+        _objetivoSelecionado = botaoSelecionado.ClassId;
+
     }
-    private async void OnContinuar(object sender, EventArgs e)
+
+    private void ResetarBotao(Border border)
     {
-        await Navigation.PushAsync(new CadastroObjetivo2());
+        border.BackgroundColor = Colors.Transparent;
+
+    }
+    private void SelecionarBotao(Border border)
+    {
+        border.BackgroundColor = Color.FromArgb("#01b853");
+    }
+    private async void btnContinuar(object sender, EventArgs e)
+    {
+        try
+        {
+
+            var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
+            
+            if (string.IsNullOrEmpty(_objetivoSelecionado))
+            {
+                await DisplayAlert("Atenção", "Por favor, selecione um objetivo para continuar.", "OK");
+                return;
+            }
+
+            usuarioTemp.Objetivo1 = _objetivoSelecionado;
+            RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
+
+            await DisplayAlert("Objetivo Selecionado", $"Você selecionou: {_objetivoSelecionado}", "OK");
+            await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Ops...", ex.Message, "Fechar");
+        }
     }
 }

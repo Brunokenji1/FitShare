@@ -11,6 +11,7 @@ namespace AppFitShare.Repositories;
 
 public class RepositorioUsuarios 
 {
+    private static Usuario usuarioTemporario { get; set; }
     private static Usuario usuario_logado { get; set; }
     private static List<Usuario> listaUsuarios = new List<Usuario>()
     {
@@ -24,7 +25,14 @@ public class RepositorioUsuarios
         try
         {
             var usuario = listaUsuarios.FirstOrDefault(u => u.Id == id);
-            return usuario;
+            if (usuario != null)
+            {
+                return usuario;
+            }
+            else 
+            {
+                throw new Exception("Usuario nao encontrado!");
+            }
         }
         catch (Exception)
         {
@@ -42,6 +50,44 @@ public class RepositorioUsuarios
     public static Usuario ObterUsuarioLogado()
     {
         return usuario_logado;
+    }
+    public static void IniciarUsuarioTemp()
+    {
+        usuarioTemporario = new Usuario(
+            usuario_logado.Id,
+            usuario_logado.Nome,
+            usuario_logado.Username,
+            usuario_logado.Email,
+            usuario_logado.Senha,
+            usuario_logado.DataCadastro
+        );
+    }
+
+    public static Usuario ObterUsuarioTemp()
+    {
+        return usuarioTemporario;
+    }
+
+    public static void AtualizarUsuarioTemp(Usuario usuario)
+    {
+        usuarioTemporario = usuario;
+    }
+    public static void SalvarUsuarioTemp()
+    {
+        try 
+        { 
+            var usuario = listaUsuarios.FirstOrDefault(u => u.Id == usuario_logado.Id);
+            if(usuario != null)
+            {
+                var index = listaUsuarios.FindIndex(u => u.Id == usuario_logado.Id);
+                listaUsuarios[index] = usuarioTemporario;
+            }
+            usuario_logado = usuarioTemporario;
+        }
+        catch(Exception)
+        {
+            throw new Exception("Erro ao salvar informações do usuario!");
+        }
     }
 
     public static void Cadastrar(Usuario usuario)

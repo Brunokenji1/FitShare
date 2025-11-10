@@ -4,93 +4,141 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="CadastroObjetivo"
-    Background="#0d1117"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Qual o seu Objetivo?"
-            VerticalOptions="Center" />
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
 
-        <Border
-            x:Name="btnGanharMassa"
-            Margin="10"
-            Padding="10,20"
-            BackgroundColor="Transparent"
-            Stroke="#01b853"
-            StrokeShape="RoundRectangle 10"
-            StrokeThickness="2">
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnObjetivo1" />
-            </Border.GestureRecognizers>
-            <HorizontalStackLayout Spacing="10">
-                <Image
-                    HeightRequest="40"
-                    Source="treino.png"
-                    VerticalOptions="Center"
-                    WidthRequest="40" />
-                <VerticalStackLayout WidthRequest="300">
-                    <Label
-                        x:Name="lblTitulo1"
-                        FontAttributes="Bold"
-                        FontSize="16"
-                        Text="Ganhar Massa Muscular (Hipertrofia)"
-                        TextColor="White" />
-                    <Label
-                        x:Name="lblDescricao1"
-                        FontSize="15"
-                        Text="Para quem quer aumentar força, volume muscular e melhorar a performance."
-                        TextColor="White" />
-                </VerticalStackLayout>
-            </HorizontalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="OpenSansSemibold"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Qual o seu objetivo ?"
+                TextColor="White" />
+            <Border
+                x:Name="btnGanharMassaMuscular"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Ganhar Massa Muscular"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnObjetivo1" />
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout Spacing="10">
+                    <Image
+                        HeightRequest="40"
+                        Source="treino.png"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <VerticalStackLayout Spacing="5" WidthRequest="300">
+                        <Label
+                            x:Name="lblTitulo1"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Ganhar Massa Muscular (Hipertrofia)"
+                            TextColor="White" />
+                        <Label
+                            x:Name="lblDescricao1"
+                            FontSize="15"
+                            Text="Para quem quer aumentar força, volume muscular e melhorar a performance."
+                            TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
 
-        </Border>
+            </Border>
 
-        <Border
-            x:Name="btnPerderGordura"
-            Margin="10"
-            Padding="10,20"
-            BackgroundColor="Transparent"
-            Stroke="#01b853"
-            StrokeShape="RoundRectangle 10"
-            StrokeThickness="2">
-            <Border.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnObjetivo1" />
-            </Border.GestureRecognizers>
-            <HorizontalStackLayout Spacing="10">
-                
-                <Image
-                HeightRequest="40"
-                Source="treino.png"
-                VerticalOptions="Center"
-                WidthRequest="40" />
-                <VerticalStackLayout WidthRequest="300">
-                    <Label
-                    x:Name="lblTitulo2"
-                    FontAttributes="Bold"
-                    FontSize="16"
-                    Text="Perder Gordura"
-                    TextColor="White" />
-                    <Label
-                    x:Name="lblDescricao2"
-                    FontSize="15"
-                    Text="Para quem deseja emagrecer reduzir percentual de gordura e definir o corpo."
-                    TextColor="White" />
-                </VerticalStackLayout>
-            </HorizontalStackLayout>
+            <Border
+                x:Name="btnPerderGordura"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Perder Gordura"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnObjetivo1" />
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout Spacing="10">
+
+                    <Image
+                        HeightRequest="40"
+                        Source="treino.png"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <VerticalStackLayout Spacing="5" WidthRequest="300">
+                        <Label
+                            x:Name="lblTitulo2"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Perder Gordura"
+                            TextColor="White" />
+                        <Label
+                            x:Name="lblDescricao2"
+                            FontSize="15"
+                            Text="Para quem deseja emagrecer reduzir percentual de gordura e definir o corpo."
+                            TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
 
 
-        </Border>
-        <Button
-            Margin="0,15,0,0"
-            BackgroundColor="#01C853"
-            Clicked="OnContinuar"
-            FontFamily="OpenSansSemibold"
-            FontSize="20"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            Text="Continuar"
-            TextColor="Black"
-            WidthRequest="330" />
-    </VerticalStackLayout>
+            </Border>
+            <Border
+                x:Name="btnSaude"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Ficar Saudavel"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnObjetivo1" />
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout Spacing="10">
+
+                    <Image
+                        HeightRequest="40"
+                        Source="treino.png"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <VerticalStackLayout Spacing="5" WidthRequest="300">
+                        <Label
+                            x:Name="lblTitulo3"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Manter um estilo de Vida Saudável"
+                            TextColor="White" />
+                        <Label
+                            x:Name="lblDescricao3"
+                            FontSize="15"
+                            Text="Para quem busca equilíbrio entre treino e alimentação, mantendo saúde e bem-estar."
+                            TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+
+            </Border>
+            <Button
+                Margin="0,15,0,0"
+                BackgroundColor="#01C853"
+                Clicked="btnContinuar"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Continuar"
+                TextColor="Black"
+                WidthRequest="330" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

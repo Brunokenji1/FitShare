@@ -106,6 +106,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\TelasCadastroCompleto\CadastroNivelDeAtividade.xaml.cs">
+	    <DependentUpon>CadastroNivelDeAtividade.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\ExerciciosTreinos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -157,6 +163,9 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastrarDados.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroCondicoesMedicas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroNivelDeAtividade.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -164,6 +173,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroObjetivo2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroRestricaoFisica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroSaudeCondicionamento.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -5,22 +5,122 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="CadastroNivelDeAtividade"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-        
-        <Button
-            Margin="0,45,0,0"
-            BackgroundColor="#01C853"
-            Clicked="CadastroNivelAtividadeClicked"
-            FontFamily="OpenSansSemibold"
-            FontSize="20"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            Text="Cadastrar dados"
-            TextColor="Black"
-            WidthRequest="330" />
-    </VerticalStackLayout>
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Qual seu nível de atividade"
+                TextColor="White" />
+            <Border
+                x:Name="Iniciante"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Sedentario"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnNivelAtividade" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo1"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Sedentário"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblDescricao1"
+                        FontSize="15"
+                        Text="Você se movimenta pouco no dia a dia. Passa a maior parte do tempo sentado ou em casa, e não costuma fazer caminhadas ou exercícios com frequência."
+                        TextColor="White" />
+                </VerticalStackLayout>
+
+
+            </Border>
+
+            <Border
+                x:Name="btnIntermediario"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Moderado"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnNivelAtividade" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo2"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Moderado"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblDescricao2"
+                        FontSize="15"
+                        Text="Você se movimenta um pouco. Faz caminhadas leves, realiza atividades domésticas ou trabalha em pé, mas não pratica exercícios todos os dias."
+                        TextColor="White" />
+                </VerticalStackLayout>
+
+
+
+            </Border>
+            <Border
+                x:Name="btnAvancado"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Ativo"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnNivelAtividade" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo3"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Ativo"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblDescricao3"
+                        FontSize="15"
+                        Text="Você é bem ativo. Costuma caminhar bastante, fazer exercícios, trabalhos manuais ou atividades físicas regularmente."
+                        TextColor="White" />
+                </VerticalStackLayout>
+
+
+
+            </Border>
+            <Button
+                Margin="0,15,0,0"
+                BackgroundColor="#01C853"
+                Clicked="btnAtualizarDados"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Continuar"
+                TextColor="Black"
+                WidthRequest="330" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

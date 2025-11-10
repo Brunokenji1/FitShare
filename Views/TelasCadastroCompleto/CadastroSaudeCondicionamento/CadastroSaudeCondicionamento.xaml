@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastroSaudeCondicionamento"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CadastroSaudeCondicionamento">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Saúde e Condicionamento"
+                TextColor="White" />
+            <Border
+                x:Name="BCondicoesMedicas"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="CondicoesMedicas"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo1"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Dor lombar"
+                        TextColor="White" />
+                    
+                    <Button Text="Adicionar Condição Medica" Clicked="Button_Clicked" />
+                </VerticalStackLayout>
+
+
+            </Border>
+            <Button
+                Margin="0,15,0,0"
+                BackgroundColor="#01C853"
+                Clicked="btnContinuar"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Continuar"
+                TextColor="Black"
+                WidthRequest="330" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

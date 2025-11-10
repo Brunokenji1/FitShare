@@ -22,8 +22,8 @@ public partial class MeusTreinos : ContentPage
             {
                 new Treino
                 {
-                    ID = 1, Nome = "Treino A",
-                    Exercicios = new List<Exercicio>
+                    Id = 1, Nome = "Treino A",
+                    exercicios = new List<Exercicio>
                     {
                         new Exercicio{ Nome="Supino reto", Series=4, Repeticoes=10},
                         new Exercicio{ Nome="Crucifixo", Series=3, Repeticoes=12}

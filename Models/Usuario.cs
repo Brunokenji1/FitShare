@@ -24,10 +24,12 @@ namespace AppFitShare.Models
         public int Idade { get; set; }
         public double Peso { get; set; }
         public double Altura { get; set; }
-        public string Metabolismo { get; set; }
         public string Status { get; set; }
         public string Telefone { get; set; }
-        public UsuarioCompleto? CadastroCompleto { get; set; }
+        public string Objetivo1 { get; set; }
+        public string NivelAtividade { get; set; }
+        public string Sexo { get; set; }
+        
 
         public Usuario(int id, string nome, string username, string email, string senha, DateTime DataCdastro)
         {
