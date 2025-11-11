@@ -59,7 +59,7 @@
                 <HorizontalStackLayout Padding="10,0" Spacing="20">
                     <Border
                         HeightRequest="120"
-                        Stroke="#01c853"
+                        Stroke="Transparent"
                         StrokeLineJoin="Round"
                         StrokeShape="RoundRectangle 10"
                         WidthRequest="180">
@@ -95,7 +95,7 @@
                         Grid.Column="1"
                         Padding="0"
                         HeightRequest="120"
-                        Stroke="#01c853"
+                        Stroke="Transparent"
                         StrokeLineJoin="Round"
                         StrokeShape="RoundRectangle 10"
                         WidthRequest="180">
@@ -130,12 +130,13 @@
             </Grid>
             <Border
                 Margin="15,40"
+                Padding="0,10,0,20"
                 Stroke="Gray"
                 StrokeLineJoin="Round"
                 StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <HorizontalStackLayout>
-                        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*,*,*">
+                        <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto,auto" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto">
                             <Label
                                 Grid.Row="0"
                                 Margin="5,10,0,0"
@@ -200,20 +201,75 @@
                                 FontSize="16"
                                 Text="Nesta semana"
                                 TextColor="White" />
-                            <Border
-                                Grid.Row="5"
-                                Margin="10,40"
-                                BackgroundColor="#1a2737"
-                                Stroke="Gray"
-                                StrokeShape="RoundRectangle 5">
-                                <Label BackgroundColor="#4f6079" />
-                            </Border>
-                            <Image
+                            <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
-                                Source="checkoff.png"
-                                WidthRequest="40" />
-
+                                Padding="10,30,0,10"
+                                Text="Sequencia atual:"
+                                TextColor="White" />
+                            <Label
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                Padding="120,30,0,10"
+                                FontAttributes="Bold"
+                                Text="3 dias!"
+                                TextColor="#01C853" />
+                            <Border
+                                Grid.Row="6"
+                                Margin="10,0,0,0"
+                                BackgroundColor="#1a2737"
+                                HeightRequest="120"
+                                Stroke="Gray"
+                                StrokeShape="RoundRectangle 15" />
+                            <HorizontalStackLayout
+                                Grid.Row="6"
+                                Margin="20,0,0,0"
+                                Spacing="20">
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    Source="checkon.png"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    Source="checkon.png"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Source="checkon.png"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Source="checkoff.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Source="checkoff.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Source="checkoff.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Image
+                                    Grid.Row="6"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Source="checkoff.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                            </HorizontalStackLayout>
                         </Grid>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
