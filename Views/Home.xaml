@@ -223,48 +223,38 @@
                                 StrokeShape="RoundRectangle 15" />
                             <HorizontalStackLayout
                                 Grid.Row="6"
-                                Margin="20,0,0,0"
+                                Margin="0,0,0,0"
                                 Spacing="20">
-                                <Image
+                                <Image Source="checkon.png" WidthRequest="30" />
+                                <Label
                                     Grid.Row="6"
+                                    Grid.Column="0"
+                                    Text="D"
+                                    TextColor="White" />
+                                <Image
                                     Grid.Column="0"
                                     Source="checkon.png"
                                     WidthRequest="30" />
                                 <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
-                                    Source="checkon.png"
-                                    WidthRequest="30" />
-                                <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
                                     HorizontalOptions="Start"
                                     Source="checkon.png"
                                     WidthRequest="30" />
                                 <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
                                 <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
                                 <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
                                 <Image
-                                    Grid.Row="6"
-                                    Grid.Column="0"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
