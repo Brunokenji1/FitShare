@@ -221,18 +221,18 @@
                                 HeightRequest="120"
                                 Stroke="Gray"
                                 StrokeShape="RoundRectangle 15" />
+
+                            <HorizontalStackLayout>
+                                
+                            </HorizontalStackLayout>
                             <HorizontalStackLayout
+                                Padding="22,0,0,0"
                                 Grid.Row="6"
-                                Margin="0,0,0,0"
                                 Spacing="20">
-                                <Image Source="checkon.png" WidthRequest="30" />
-                                <Label
-                                    Grid.Row="6"
-                                    Grid.Column="0"
-                                    Text="D"
-                                    TextColor="White" />
                                 <Image
-                                    Grid.Column="0"
+                                    Source="checkon.png"
+                                    WidthRequest="30" />
+                                <Image
                                     Source="checkon.png"
                                     WidthRequest="30" />
                                 <Image
