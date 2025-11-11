@@ -12,23 +12,12 @@
                 <Border
                     Padding="0,10,0,0"
                     BackgroundColor="#003918"
-                    HeightRequest="190"
+                    HeightRequest="200"
                     Stroke="#003918"
                     StrokeShape="RoundRectangle 0,0,20,20"
                     WidthRequest="412">
                     <HorizontalStackLayout>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="35" />
-                                <ColumnDefinition Width="135" />
-                                <ColumnDefinition Width="70" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                        <Grid ColumnDefinitions="auto,auto,auto,auto" RowDefinitions="*,*,*,*">
                             <AbsoluteLayout>
                                 <ImageButton
                                     Grid.Row="0"
@@ -54,67 +43,82 @@
                                     Text="1/3 treinos concluídos "
                                     TextColor="White" />
                             </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <ImageButton AbsoluteLayout.LayoutBounds="10,60" Source="timer.png" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="60,65"
-                                    FontAttributes="Bold"
-                                    Text="Duração:"
-                                    TextColor="White" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="60,80"
-                                    Text="30 - 40 min"
-                                    TextColor="White" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <ImageButton
-                                    AbsoluteLayout.LayoutBounds="150,60"
-                                    Source="fire.png"
-                                    WidthRequest="10" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="195,65"
-                                    FontAttributes="Bold"
-                                    Text="Calorias:"
-                                    TextColor="White" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="195,80"
-                                    Text="165 kcal"
-                                    TextColor="White" />
-                            </AbsoluteLayout>
+                            <Grid
+                                Grid.Row="1"
+                                Margin="10,5,10,15"
+                                ColumnDefinitions="*, *, *"
+                                ColumnSpacing="10"
+                                RowDefinitions="Auto"
+                                VerticalOptions="Start">
+                                <VerticalStackLayout
+                                    Grid.Column="0"
+                                    HorizontalOptions="Center"
+                                    Spacing="1">
+                                    <Image
+                                        HeightRequest="30"
+                                        Source="timer.png"
+                                        WidthRequest="30" />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="Center"
+                                        Text="Duração:"
+                                        TextColor="White" />
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        Text="30-40min"
+                                        TextColor="White" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout
+                                    Grid.Column="1"
+                                    HorizontalOptions="Center"
+                                    Spacing="1">
+                                    <Image
+                                        HeightRequest="30"
+                                        Source="fire.png"
+                                        WidthRequest="30" />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="Center"
+                                        Text="Calorias:"
+                                        TextColor="White" />
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        Text="185 kcal"
+                                        TextColor="White" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout
+                                    Grid.Column="2"
+                                    HorizontalOptions="Center"
+                                    Spacing="1">
+                                    <Image
+                                        HeightRequest="30"
+                                        Source="kilogram.png"
+                                        WidthRequest="30" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        HorizontalOptions="Center"
+                                        Text="Dificuldade:"
+                                        TextColor="White" />
+
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        Text="150 kg"
+                                        TextColor="White" />
+                                </VerticalStackLayout>
+                            </Grid>
                             <AbsoluteLayout>
                                 <Button
                                     Grid.Row="1"
                                     Grid.Column="2"
-                                    Margin="0,20,0,0"
+                                    Margin="0,30,0,0"
                                     AbsoluteLayout.LayoutBounds="100,100"
                                     BackgroundColor="White"
                                     Text="Iniciar treino"
                                     TextColor="Black"
                                     WidthRequest="200" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <ImageButton AbsoluteLayout.LayoutBounds="265,60" Source="kilogram.png" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="312,65"
-                                    FontAttributes="Bold"
-                                    Text="Dificuldade:"
-                                    TextColor="White" />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <Label
-                                    AbsoluteLayout.LayoutBounds="312,80"
-                                    Text="Médio"
-                                    TextColor="White" />
                             </AbsoluteLayout>
                         </Grid>
                     </HorizontalStackLayout>
