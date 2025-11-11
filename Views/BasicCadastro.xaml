@@ -63,6 +63,7 @@
                 
                 <Entry
                     x:Name="txt_username"
+                    TextChanged="txtUsername_TxtChanged"
                     BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
@@ -70,9 +71,13 @@
                     TextColor="Black" />
             </Border>
             <Label
+                IsVisible="False"
+                x:Name="lblAviso"
+                TextColor="Red"/>
+            <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
-                Text="Email*"
+                Text="Telefone*"
                 TextColor="White" />
             <Border
                 Padding="8"
@@ -84,12 +89,12 @@
 
                 
                 <Entry
-                    x:Name="txt_email"
+                    x:Name="txt_telefone"
                     BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
-                    Keyboard="Email"
-                    Placeholder="Digite seu E-mail"
+                    Keyboard="Telephone"
+                    Placeholder="Digite seu Telefone"
                     TextColor="Black" />
             </Border>
             <Label

@@ -24,7 +24,7 @@ public partial class Login : ContentPage
             }
             var usuarioEncontrado = usuariosCadastrados.FirstOrDefault(usuario =>
                 ((usuario.Username?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true) ||
-                (usuario.Email?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true))
+                (usuario.Telefone?.Equals(identificador, StringComparison.OrdinalIgnoreCase) == true))
                 && usuario.Senha == senha);
 
             if (usuarioEncontrado != null)

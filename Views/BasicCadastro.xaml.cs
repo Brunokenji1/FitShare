@@ -9,6 +9,40 @@ public partial class BasicCadastro : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void txtUsername_TxtChanged(object sender, TextChangedEventArgs e)
+    {
+        
+        string username = txt_username.Text?.Trim() ?? "";
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            lblAviso.Text = "";
+            return;
+        }
+        if(!System.Text.RegularExpressions.Regex.IsMatch(username, "^[a-z0-9]+$"))
+        {
+            lblAviso.IsVisible = true;
+            lblAviso.TextColor = Colors.Red;
+            if (username.Any(char.IsUpper)) lblAviso.Text = "Use apenas letras minúsculas. ";
+            else lblAviso.Text = "Use só letras e números, sem acento ou símbolos.";
+        }
+        else
+        {
+            var usernameExistente = RepositorioUsuarios.ObterPorUsername(txt_username.Text);
+            if (usernameExistente != null)
+            {
+                lblAviso.IsVisible = true;
+                lblAviso.TextColor = Colors.Red;
+                lblAviso.Text = "Nome de usuario existente";
+            }
+
+            else
+            {
+                lblAviso.TextColor = Colors.Green;
+                lblAviso.Text = "Nome de usuário válido";
+                lblAviso.IsVisible = false;
+            }
+        }
+    }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
@@ -17,26 +51,31 @@ public partial class BasicCadastro : ContentPage
 
             if(string.IsNullOrWhiteSpace(txt_nome.Text) ||
                string.IsNullOrWhiteSpace(txt_username.Text) ||
-               string.IsNullOrWhiteSpace(txt_email.Text) ||
+               string.IsNullOrWhiteSpace(txt_telefone.Text) ||
                string.IsNullOrWhiteSpace(txt_senha.Text) || 
                string.IsNullOrWhiteSpace(txt_confirmarSenha.Text)) 
             {
                 throw new Exception("Preencha todos os campos!");
             }
-            var usernameExistente = RepositorioUsuarios.ObterPorUsername(txt_username.Text);
-            var emailExistente = RepositorioUsuarios.ObterPorEmail(txt_email.Text);
 
-            
-            if (!txt_email.Text.Contains("@")){
-                throw new Exception("E-mail inválido!");
+            var usernameExistente = RepositorioUsuarios.ObterPorUsername(txt_username.Text);
+            var telefoneExistente = RepositorioUsuarios.ObterPorTelefone(txt_telefone.Text);
+
+            if(lblAviso.Text != "Nome de usuário válido")
+            {
+                throw new Exception("Digite um username válido!");
+            }
+            if(txt_telefone.Text.Length < 11)
+            {
+                throw new Exception("Digite um telefone valido");
             }
             if (usernameExistente != null)
             {
                 throw new Exception("Já existe um usuário cadastrado com este Username!");
             }
-            if (emailExistente != null)
+            if (telefoneExistente != null)
             {
-                throw new Exception("Já existe um usuário cadastrado com este E-mail!");
+                throw new Exception("Já existe um usuário cadastrado com este Telefone!");
             }
             if (txt_senha.Text.Length < 8)
             {
@@ -46,28 +85,22 @@ public partial class BasicCadastro : ContentPage
             {
                 throw new Exception("As senhas não coincidem!");
             }
-            var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count+1, txt_nome.Text, txt_username.Text, txt_email.Text, txt_senha.Text, DateTime.Now);
             
-
             
-
             bool confirmacao = await DisplayAlert("Confirmação", "Criar Conta com esses dados?", "Sim", "Não");
             if (confirmacao)
             {
-
+                var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count + 1, txt_nome.Text, txt_username.Text, txt_telefone.Text, txt_senha.Text, DateTime.Now);
                 RepositorioUsuarios.Cadastrar(novoUsuario);
                 await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
                 
                 App.Current.MainPage = new NavigationPage(new Login());
             }
-            
-
         }
         catch (Exception ex)
         {
             await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
-
     }
     private void IbtnSenhaVisibilidade(object sender, EventArgs e)
     {

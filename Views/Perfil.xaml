@@ -24,26 +24,36 @@
                 <ViewCell>
                     <Grid ColumnDefinitions="*, Auto" RowDefinitions="*,*,*,Auto">
 
-                        <Label x:Name="lbl_nome" Grid.Column="0" />
-                        <Label x:Name="lbl_idade" Grid.Column="1" />
+                        <Label x:Name="lbl_nome" Grid.Column="0" TextColor="White"/>
+                        <Label x:Name="lbl_idade" Grid.Column="1" TextColor="White" />
 
                         <Label
                             x:Name="lbl_altura"
                             Grid.Row="1"
-                            Grid.Column="0" />
+                            Grid.Column="0" 
+                            TextColor="White"/>
                         <Label
                             x:Name="lbl_peso"
-                            Grid.Row="0"
-                            Grid.Column="1" />
+                            Grid.Row="1"
+                            Grid.Column="1" 
+                            TextColor="White"/>
 
                         <Label
                             x:Name="lbl_nivelAtividade"
-                            Grid.Row="1"
-                            Grid.Column="1" />
+                            Grid.Row="2"
+                            Grid.Column="1" 
+                            TextColor="White"/>
                         <Label
                             x:Name="lbl_objetivo"
                             Grid.Row="2"
+                            TextColor="White"
                             Grid.Column="0" />
+                        <Label 
+                            x:Name="lbl_telefone"
+                            TextColor="White"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            />
                     </Grid>
                 </ViewCell>
             </TableSection>

@@ -15,9 +15,9 @@ public class RepositorioUsuarios
     private static Usuario usuario_logado { get; set; }
     private static List<Usuario> listaUsuarios = new List<Usuario>()
     {
-        new Usuario(0, "Bruno", "bruno", "bruno@gmail.com", "12345678", DateTime.Now),
+        new Usuario(0, "Bruno", "bruno", "1", "12345678", DateTime.Now),
         
-        new Usuario(1, "Pedro Chaves", "Chaves", "pdr@gmail.com", "12345678", DateTime.Now)
+        new Usuario(1, "Pedro Chaves", "Chaves", "2", "12345678", DateTime.Now)
 
     };
     public static Usuario BuscarUsuario(int id)
@@ -57,7 +57,7 @@ public class RepositorioUsuarios
             usuario_logado.Id,
             usuario_logado.Nome,
             usuario_logado.Username,
-            usuario_logado.Email,
+            usuario_logado.Telefone,
             usuario_logado.Senha,
             usuario_logado.DataCadastro
         );
@@ -98,9 +98,9 @@ public class RepositorioUsuarios
     {
         return listaUsuarios.FirstOrDefault(u => u.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
     }
-    public static Usuario? ObterPorEmail(string email)
+    public static Usuario? ObterPorTelefone(string telefone)
     {
-        return listaUsuarios.FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+        return listaUsuarios.FirstOrDefault(u => u.Telefone.Equals(telefone, StringComparison.OrdinalIgnoreCase));
     }
     public static Usuario? ObterPorUsername(string username)
     {

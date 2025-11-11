@@ -42,6 +42,7 @@ public partial class Perfil : ContentPage
             lbl_nivelAtividade.Text = $"Nível de Atividade: {usuario.NivelAtividade}";
             lbl_idade.Text = $"Idade: {usuario.Idade} anos";
             lbl_objetivo.Text = $"Objetivo: {usuario.Objetivo1}";
+            lbl_telefone.Text = $"Telefone: {usuario.Telefone}";
         }
         
         

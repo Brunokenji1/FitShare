@@ -13,7 +13,7 @@ namespace AppFitShare.Models
         public int Id { get; }
         public string Username { get; set; }
         public string Nome { get; set; }
-        public string Email { get; set; }
+        //public string Email { get; set; }
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
 
@@ -31,12 +31,13 @@ namespace AppFitShare.Models
         public string Sexo { get; set; }
         
 
-        public Usuario(int id, string nome, string username, string email, string senha, DateTime DataCdastro)
+        public Usuario(int id, string nome, string username, string telefone, string senha, DateTime DataCdastro)
         {
             Id = id;
             Nome = nome;
             Username = username;
-            Email = email;
+            Telefone = telefone;
+            //Email = email;
             Senha = senha;
             Status = "Incompleto";
             DataCadastro = DataCdastro;

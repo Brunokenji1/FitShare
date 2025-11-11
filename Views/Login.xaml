@@ -33,7 +33,7 @@
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
-                Text="Username ou E-mail"
+                Text="Username ou Telefone"
                 TextColor="White" />
             <Border
                 Padding="8"

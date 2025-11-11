@@ -46,7 +46,7 @@
                         <Label
                             x:Name="lblTitulo1"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Doença Cardiovascular"
                             TextColor="White" />
 
@@ -80,7 +80,7 @@
                         <Label
                             x:Name="lblTitulo2"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Metabólicas"
                             TextColor="White" />
 
@@ -112,7 +112,7 @@
                         <Label
                             x:Name="lblTitulo3"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Osteoarticulares"
                             TextColor="White" />
 
@@ -144,7 +144,7 @@
                         <Label
                             x:Name="lblTitulo4"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Neurológicas"
                             TextColor="White" />
 
@@ -176,7 +176,7 @@
                         <Label
                             x:Name="lblTitulo5"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Sensorial"
                             TextColor="White" />
 
@@ -208,7 +208,7 @@
                         <Label
                             x:Name="lblTitulo6"
                             FontAttributes="Bold"
-                            FontSize="18"
+                            FontSize="15"
                             Text="Respiratórias"
                             TextColor="White" />
 

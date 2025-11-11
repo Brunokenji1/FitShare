@@ -30,4 +30,9 @@ public partial class CadastroSaudeCondicionamento : ContentPage
     {
         Navigation.PushAsync(new CadastroCondicoesMedicas());
     }
+
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new CadastroRestricaoFisica());
+    }
 }
