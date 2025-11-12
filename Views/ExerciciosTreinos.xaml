@@ -6,7 +6,6 @@
     Title="ExerciciosTreinos"
     NavigationPage.HasNavigationBar="False">
     <ScrollView>
-
         <VerticalStackLayout BackgroundColor="#0C1420">
             <HorizontalStackLayout>
                 <Border
@@ -130,6 +129,34 @@
                 FontSize="18"
                 Text="Lista de exercícios"
                 TextColor="White" />
+            <Grid ColumnDefinitions="auto,300,auto" RowDefinitions="auto,auto">
+
+                <VerticalStackLayout Margin="15,0,0,0" Spacing="0">
+                    <HorizontalStackLayout Spacing="10">
+                        <Border
+                            HeightRequest="100"
+                            Stroke="Red"
+                            StrokeShape="RoundRectangle 15"
+                            WidthRequest="110">
+
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="100"
+                                Source=""
+                                WidthRequest="100" />
+                        </Border>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            Text="EXERCICIO"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>
