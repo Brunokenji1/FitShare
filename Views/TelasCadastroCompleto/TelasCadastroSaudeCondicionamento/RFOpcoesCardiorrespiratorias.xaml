@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesCardiorrespiratorias"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RFOpcoesCardiorrespiratorias"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Restrição Físicas Cardiorrespiratórias"
+                TextColor="White" />
+
+            <Border
+                x:Name="btn_FaltaDeAr"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Falta de ar"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnFaltaDeAr" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo1"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Falta de ar fácil (DPOC, asma, etc.)"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+
+
+            </Border>
+
+            <Border
+                x:Name="btn_PressaoAlta"
+                Margin="10"
+                IsVisible="True"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Pressão alta"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnPressaoAlta" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo2"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Pressão alta"
+                        TextColor="White" />
+                </VerticalStackLayout>
+
+
+            </Border>
+
+            <Border
+                x:Name="btn_ProblemasCardiacos"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Problemas cardiacos"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnProblemaCardiaco" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo3"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Problemas cardíacos (arritimia, insuficiência, etc.)"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+
+
+            </Border>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

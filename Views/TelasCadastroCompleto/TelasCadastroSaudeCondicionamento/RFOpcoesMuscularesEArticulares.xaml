@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesMuscularesEArticulares"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RFOpcoesMuscularesEArticulares"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Restrição Físicas Musculares e Articulares"
+                TextColor="White" />
+            <Border
+                x:Name="btn_DoresCronicasNasCostas"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Dores crônicas nas costas"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnDoresCronicasNasCostas" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo1"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Dores crônicas nas costas"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+
+            </Border>
+
+            <Border
+                x:Name="btn_FraquezaMuscularLocalizada"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Fraqueza muscular localizada"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnFraquezaMuscularLocalizada" />
+                </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo2"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Fraqueza muscular localizada"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+
+
+            </Border>
+            <Border
+                x:Name="btnLesaoManguitoRotador"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Lesão de manguito rotador"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnLesaoManguitoRotador" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo3"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Lesão de manguito rotador"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+
+
+            </Border>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

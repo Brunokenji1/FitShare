@@ -129,16 +129,14 @@
                 FontSize="18"
                 Text="Lista de exercícios"
                 TextColor="White" />
-            <Grid ColumnDefinitions="auto,300,auto" RowDefinitions="auto,auto">
-
-                <VerticalStackLayout Margin="15,0,0,0" Spacing="0">
+            <Grid ColumnDefinitions="auto,300,auto" RowDefinitions="auto,auto,auto">
+                <VerticalStackLayout Margin="15,0,0,0" Spacing="10">
                     <HorizontalStackLayout Spacing="10">
                         <Border
                             HeightRequest="100"
                             Stroke="Red"
                             StrokeShape="RoundRectangle 15"
                             WidthRequest="110">
-
                             <Image
                                 Grid.Row="0"
                                 Grid.Column="0"
@@ -148,27 +146,13 @@
                         </Border>
                         <Label
                             Grid.Row="0"
-                            Grid.Column="1"
+                            Grid.Column="0"
                             HeightRequest="100"
                             Text="EXERCICIO"
                             TextColor="White" />
-                        <Border
-                            HeightRequest="100"
-                            Stroke="Red"
-                            StrokeShape="RoundRectangle 15"
-                            WidthRequest="110">
-                            <Image
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                HeightRequest="100"
-                                Source="gym.png"
-                                WidthRequest="100" />
-                        </Border>
-
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Grid>
-
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastroSaudeCondicionamento"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CadastroSaudeCondicionamento"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label
+                Margin="10"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Saúde e Condicionamento"
+                TextColor="White" />
+
+
+
+            <Border
+                x:Name="BCondicoesMedicas"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Condicao Medica"
+                Stroke="#a9a9a9"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="1">
+
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lbl"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Condição Medica"
+                        TextColor="White" />
+
+                    <Button Clicked="Button_Clicked" Text="Adicionar Condição Medica" />
+                </VerticalStackLayout>
+
+
+            </Border>
+
+
+
+
+
+            <Border
+                x:Name="BRestricaoFisica"
+                Margin="10"
+                Padding="1,20"
+                BackgroundColor="Transparent"
+                ClassId="Restricao fisica"
+                Stroke="#a9a9a9"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="1">
+
+
+                <VerticalStackLayout Spacing="10" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo2"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        Text="Restrição Física"
+                        TextColor="White" />
+
+
+                    <Border
+                        x:Name="artrose_quadril_ou_ombro"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Artrose no Quadril ou Ombro"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Artrose no quadril ou ombro"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="artrose_quadril_ou_ombro"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="cirurgia_recente"
+                        Padding="10,1"
+                        ClassId="Cirurgia Recente"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Cirurgia recente"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="cirurgia_recente"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="dificuldade_de_coordenacao_motora"
+                        Padding="10,1"
+                        ClassId="Dificuldade de Coordenação Motora"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Dificuldade de coordenação motora"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="dificuldade_de_coordenacao_motora"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="dores_cronicasNasCostas"
+                        Padding="10,1"
+                        ClassId="Dores Crônicas nas Costas"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Dores crônicas nas costas"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="dores_cronicasNasCostas"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="dor_lombar"
+                        Padding="10,1"
+                        ClassId="Dor Lombar"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Dor lombar"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="dor_lombar"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="problema_falta_de_ar"
+                        Padding="10,1"
+                        ClassId="Problema de Falta de Ar"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Falta de ar fácil"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="problema_falta_de_ar"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="falta_de_equilibrio"
+                        Padding="10,1"
+                        ClassId="Falta de Equilíbrio"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Falta de equilibrio"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="falta_de_equilibrio"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        ClassId="Fraqueza Muscular Localizada"
+                        x:Name="fraqueza_muscular_localizada"
+                        Padding="10,1"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Fraqueza muscular localizada"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="fraqueza_muscular_localizada"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="lesao_manguito_rotador"
+                        Padding="10,1"
+                        ClassId="Lesão no Manguito Rotador"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Lesão manguito rotador"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="lesao_manguito_rotador"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        ClassId="Pressão Alta"
+                        x:Name="pressao_alta"
+                        Padding="10,1"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Pressão alta"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="pressao_alta"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        ClassId="Problema Cardíaco"
+                        x:Name="problema_cardiaco"
+                        Padding="10,1"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Problemas cardíacos"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="problema_cardiaco"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+
+
+                    <Border
+                        x:Name="tonturas_frequentes"
+                        Padding="10,1"
+                        ClassId="Tonturas Frequentes"
+                        Background="Transparent"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Tonturas Frequentes"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="tonturas_frequentes"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+
+
+                    <Button
+                        Margin="0,10,0,12"
+                        Clicked="Button_Clicked_1"
+                        Text="Adicionar Restrição Física" />
+                </VerticalStackLayout>
+
+
+            </Border>
+
+
+            <Button
+                Margin="0,15,0,50"
+                BackgroundColor="#01C853"
+                Clicked="BtnContinuar"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Continuar"
+                TextColor="Black"
+                VerticalOptions="End"
+                WidthRequest="330" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

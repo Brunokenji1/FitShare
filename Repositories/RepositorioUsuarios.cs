@@ -9,14 +9,16 @@ using System.Text.Json;
 
 namespace AppFitShare.Repositories;
 
-public class RepositorioUsuarios 
+public class RepositorioUsuarios
 {
     private static Usuario usuarioTemporario { get; set; }
+    public static List<string> RestricoesFisicasEscolhidasTemp { get; set; } = new List<string>();
     private static Usuario usuario_logado { get; set; }
+
     private static List<Usuario> listaUsuarios = new List<Usuario>()
     {
         new Usuario(0, "Bruno", "bruno", "1", "12345678", DateTime.Now),
-        
+
         new Usuario(1, "Pedro Chaves", "Chaves", "2", "12345678", DateTime.Now)
 
     };
@@ -29,7 +31,7 @@ public class RepositorioUsuarios
             {
                 return usuario;
             }
-            else 
+            else
             {
                 throw new Exception("Usuario nao encontrado!");
             }
@@ -72,19 +74,23 @@ public class RepositorioUsuarios
     {
         usuarioTemporario = usuario;
     }
+    public static void AtualizarRestricoesFisicasTemp(List<string> restricoes)
+    {
+        usuarioTemporario.RestricoesFisicas = restricoes;
+    }
     public static void SalvarUsuarioTemp()
     {
-        try 
-        { 
+        try
+        {
             var usuario = listaUsuarios.FirstOrDefault(u => u.Id == usuario_logado.Id);
-            if(usuario != null)
+            if (usuario != null)
             {
                 var index = listaUsuarios.FindIndex(u => u.Id == usuario_logado.Id);
                 listaUsuarios[index] = usuarioTemporario;
             }
             usuario_logado = usuarioTemporario;
         }
-        catch(Exception)
+        catch (Exception)
         {
             throw new Exception("Erro ao salvar informações do usuario!");
         }
@@ -113,7 +119,7 @@ public class RepositorioUsuarios
     }
     public static void Atualizar(Usuario usuarioAtualizar)
     {
-        
+
         var index = listaUsuarios.FindIndex(u => u.Id == usuario_logado.Id);
 
         if (index >= 0)
@@ -121,10 +127,10 @@ public class RepositorioUsuarios
             listaUsuarios[index] = usuarioAtualizar;
         }
     }
-    
+
     public static void RecuperarSenha(string telefone)
     {
         var index = listaUsuarios.FindIndex(u => u.Telefone == telefone);
-     
+
     }
 }

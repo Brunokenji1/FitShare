@@ -29,7 +29,8 @@ namespace AppFitShare.Models
         public string Objetivo1 { get; set; }
         public string NivelAtividade { get; set; }
         public string Sexo { get; set; }
-        
+
+        public List<string> RestricoesFisicas { get; set; } = new List<string>();
 
         public Usuario(int id, string nome, string username, string telefone, string senha, DateTime DataCdastro)
         {

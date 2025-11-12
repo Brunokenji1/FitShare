@@ -163,9 +163,6 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastrarDados.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroCondicoesMedicas.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroNivelDeAtividade.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -175,10 +172,25 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroObjetivo2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroRestricaoFisica.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CadastroCondicoesMedicas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\CadastroSaudeCondicionamento\CadastroSaudeCondicionamento.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CadastroRestricaoFisica.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CadastroSaudeCondicionamento.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesCardiorrespiratorias.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesMuscularesEArticulares.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesNeurologicas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesOrtopedicas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
