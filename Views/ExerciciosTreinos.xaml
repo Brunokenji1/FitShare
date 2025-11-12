@@ -143,17 +143,28 @@
                                 Grid.Row="0"
                                 Grid.Column="0"
                                 HeightRequest="100"
-                                Source=""
+                                Source="gym.png"
                                 WidthRequest="100" />
                         </Border>
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
                             HeightRequest="100"
-                            HorizontalOptions="Center"
                             Text="EXERCICIO"
-                            TextColor="White"
-                            VerticalOptions="Center" />
+                            TextColor="White" />
+                        <Border
+                            HeightRequest="100"
+                            Stroke="Red"
+                            StrokeShape="RoundRectangle 15"
+                            WidthRequest="110">
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="100"
+                                Source="gym.png"
+                                WidthRequest="100" />
+                        </Border>
+
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Grid>
