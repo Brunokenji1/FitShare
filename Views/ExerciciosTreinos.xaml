@@ -134,7 +134,7 @@
                     <HorizontalStackLayout Spacing="10">
                         <Border
                             HeightRequest="100"
-                            Stroke="Red"
+                            Stroke="Transparent"
                             StrokeShape="RoundRectangle 15"
                             WidthRequest="110">
                             <Image
@@ -142,7 +142,73 @@
                                 Grid.Column="0"
                                 HeightRequest="100"
                                 Source="gym.png"
-                                WidthRequest="100" />
+                                WidthRequest="150" />
+                        </Border>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HeightRequest="100"
+                            Text="EXERCICIO"
+                            TextColor="White" />
+                        <Label
+                            Grid.Row="1"
+                            HorizontalOptions="Start"
+                            Text="X series"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Border
+                            HeightRequest="100"
+                            Stroke="Transparent"
+                            StrokeShape="RoundRectangle 15"
+                            WidthRequest="110">
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="100"
+                                Source="gym.png"
+                                WidthRequest="150" />
+                        </Border>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HeightRequest="100"
+                            Text="EXERCICIO"
+                            TextColor="White" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Border
+                            HeightRequest="100"
+                            Stroke="Transparent"
+                            StrokeShape="RoundRectangle 15"
+                            WidthRequest="110">
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="100"
+                                Source="gym.png"
+                                WidthRequest="150" />
+                        </Border>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HeightRequest="100"
+                            Text="EXERCICIO"
+                            TextColor="White" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="10">
+                        <Border
+                            HeightRequest="100"
+                            Stroke="Transparent"
+                            StrokeShape="RoundRectangle 15"
+                            WidthRequest="110">
+                            <Image
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                HeightRequest="100"
+                                Source="gym.png"
+                                WidthRequest="150" />
                         </Border>
                         <Label
                             Grid.Row="0"

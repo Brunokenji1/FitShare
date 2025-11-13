@@ -51,10 +51,17 @@
                 Text="Plano B"
                 TextColor="White"
                 WidthRequest="365" />
+            <Label
+                Background="White"
+                FontSize="25"
+                HeightRequest="1.5"
+                HorizontalOptions="Center"
+                TextColor="White"
+                WidthRequest="350" />
             <ImageButton
-                Margin="18,20"
-                Padding="5,5,5,5"
-                BackgroundColor="#003918"
+                Margin="30,30"
+                Padding="5"
+                BackgroundColor="#00b140"
                 CornerRadius="100"
                 HeightRequest="32"
                 HorizontalOptions="End"
