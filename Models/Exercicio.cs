@@ -13,5 +13,6 @@ namespace AppFitShare.Models
         public int Series { get; set; }
         public int DuracaoMinutos { get; set; }
         public string ImagemUrl { get; set; }
+        public int Repeticoes { get; set; }
     }
 }
