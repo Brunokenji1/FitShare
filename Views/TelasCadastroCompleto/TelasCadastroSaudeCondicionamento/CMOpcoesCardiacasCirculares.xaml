@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.CMOpcoesCardiacasCirculares"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CMOpcoesCardiacasCirculares"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <VerticalStackLayout Spacing="30">
+        <Label
+            Margin="0,70,0,20"
+            FontAttributes="Bold"
+            FontFamily="Poppins"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Cardíacas e Circulatórias"
+            TextColor="White" />
+
+        <Border
+            x:Name="btn_arritmia"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Arritmia"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnArritmia" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo1"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Arritmia"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Border
+            x:Name="btn_hipertensao"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Hipertensão"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnHipertensao" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo2"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Hipertensão (pressão alta)"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+        <Border
+            x:Name="btn_hipotensao"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Hipotensão"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnHipotensao" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo3"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Hipotensão (pressão baixa)"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Border
+            x:Name="btn_insuficiencia_cardiaca"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Insuficiência cardíaca"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnInsuficienciaCardiaca" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo4"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Insuficiência cardíaca"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

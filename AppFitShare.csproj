@@ -182,6 +182,21 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CadastroSaudeCondicionamento.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesCardiacasCirculares.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesMetabolicas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesNeurologicas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesOsteomusculares.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesRespiratorias.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesCardiorrespiratorias.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

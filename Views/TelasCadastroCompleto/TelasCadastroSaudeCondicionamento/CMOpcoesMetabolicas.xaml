@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.CMOpcoesMetabolicas"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CMOpcoesMetabolicas"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <VerticalStackLayout Spacing="30">
+        <Label
+            Margin="0,70,0,20"
+            FontAttributes="Bold"
+            FontFamily="Poppins"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Metabólicas"
+            TextColor="White" />
+
+        <Border
+            x:Name="btn_colesterol_alto"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Colesterol alto"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnColesterolAlto" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo1"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Colesterol alto"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Border
+            x:Name="btn_obesidade"
+            Margin="10"
+            Padding="10,20"
+            BackgroundColor="Transparent"
+            ClassId="Obesidade"
+            Stroke="#01b853"
+            StrokeShape="RoundRectangle 10"
+            StrokeThickness="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BtnObesidade" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout Spacing="5" WidthRequest="300">
+                <Label
+                    x:Name="lblTitulo2"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Obesidade"
+                    TextColor="White" />
+
+            </VerticalStackLayout>
+        </Border>
+
+
+    </VerticalStackLayout>
+</ContentPage>
