@@ -32,9 +32,4 @@ public partial class CadastroRestricaoFisica : ContentPage
         await Navigation.PushAsync(new CadastroSaudeCondicionamento());
     }
    
-    public async void BtnCadastroCondicoesMedicas(object sender, EventArgs e)
-    {
-
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
-    }
 }

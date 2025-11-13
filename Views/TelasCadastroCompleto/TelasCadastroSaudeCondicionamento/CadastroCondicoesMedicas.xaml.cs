@@ -1,3 +1,6 @@
+using AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento;
+using System.Threading.Tasks;
+
 namespace AppFitShare.Views.TelasCadastroCompleto;
 
 public partial class CadastroCondicoesMedicas : ContentPage
@@ -6,36 +9,29 @@ public partial class CadastroCondicoesMedicas : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void BtnDoencaCardiovascular(object sender, TappedEventArgs e)
+
+
+
+    private async void BtnCardiacasCirculatórias(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PushAsync(new CMOpcoesCardiacasCirculares());
     }
     private async void BtnMetabolicas(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
-    }
-
-    private async void BtnOsteoarticulares(object sender, TappedEventArgs e)
-    {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PushAsync(new CMOpcoesMetabolicas());
     }
     private async void BtnNeurologicas(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PushAsync(new CMOpcoesNeurologicas());
     }
-    private async void BtnSensorial(object sender, TappedEventArgs e)
+
+
+    private async void BtnOsteomusculares(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PushAsync(new CMOpcoesOsteomusculares());
     }
-    private async void BtnRespiratórias(object sender, TappedEventArgs e)
+    private async void BtnRespiratorias(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PushAsync(new CMOpcoesRespiratorias());
     }
-
-    public async void BtnCadastroCondicoesMedicas(object sender, EventArgs e)
-	{
-
-		await Navigation.PushAsync(new CadastroSaudeCondicionamento());
-    }
-
 }

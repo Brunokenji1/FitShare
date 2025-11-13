@@ -14,23 +14,30 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label
-                Margin="10"
+                FontAttributes="Bold"
+                Margin="0,85,0,110"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
-                Text="Qual tipo de problema de saúde você tem?"
-                TextColor="White" />
-            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,Auto">
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Text="Qual tipo de Restrição Física você tem?"
+                TextColor="White"
+                WidthRequest="345" />
+            <Grid
+                ColumnDefinitions="*,*"
+                RowDefinitions="*,*,Auto"
+                RowSpacing="20">
 
 
                 <Border
-                    x:Name="btnOrtopedia"
+                    x:Name="btn_membros_inferiores"
                     Grid.Row="0"
                     Grid.Column="0"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Ortopedia"
+                    ClassId="Membros Inferiores"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
@@ -50,7 +57,7 @@
                             x:Name="lblTitulo1"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Ortopédia"
+                            Text="Membros Inferiores"
                             TextColor="White" />
 
 
@@ -59,13 +66,13 @@
                 </Border>
 
                 <Border
-                    x:Name="btnMuscularesArticulares"
+                    x:Name="btn_membros_superiores"
                     Grid.Row="0"
                     Grid.Column="1"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Musculares Articulares"
+                    ClassId="Membros Superiores"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
@@ -87,20 +94,20 @@
                             x:Name="lblTitulo2"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Metabólicas"
+                            Text="Membros Superiores"
                             TextColor="White" />
 
                     </VerticalStackLayout>
 
                 </Border>
                 <Border
-                    x:Name="btnNeurologico"
+                    x:Name="btn_coluna_postura"
                     Grid.Row="1"
                     Grid.Column="0"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Neurologico"
+                    ClassId="Coluna e Postura"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
@@ -122,20 +129,20 @@
                             x:Name="lblTitulo3"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Neurológicas / de equilíbrio"
+                            Text="Coluna e Postura"
                             TextColor="White" />
 
                     </VerticalStackLayout>
 
                 </Border>
                 <Border
-                    x:Name="btnCardiorrespiratorio"
+                    x:Name="btn_equilibrio_mobilidade"
                     Grid.Row="1"
                     Grid.Column="1"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Cardiorrespiratorio"
+                    ClassId="Equilíbrio e Mobilidade"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
@@ -157,7 +164,7 @@
                             x:Name="lblTitulo4"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Cardiorrespiratórias"
+                            Text="Equilíbrio e Mobilidade"
                             TextColor="White" />
 
                     </VerticalStackLayout>
@@ -166,17 +173,7 @@
 
 
             </Grid>
-            <Button
-                Margin="0,15,0,0"
-                BackgroundColor="#01C853"
-                Clicked="BtnCadastroCondicoesMedicas"
-                FontFamily="OpenSansSemibold"
-                FontSize="20"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Continuar"
-                TextColor="Black"
-                WidthRequest="330" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -14,55 +14,67 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label
-                Margin="10"
+                Margin="0,75,0,40"
+                FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
-                Text="Qual tipo de problema de saúde você tem?"
-                TextColor="White" />
-            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,Auto">
-
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Text="Qual tipo de Condição Médica você tem?"
+                TextColor="White"
+                WidthRequest="345" />
+            <Grid
+                ColumnDefinitions="*,*,*,*"
+                RowDefinitions="*,*,*"
+                RowSpacing="20">
 
                 <Border
-                    x:Name="btnDoencaCardiovascular"
+                    x:Name="btn_cardiacas_circulatorias"
                     Grid.Row="0"
-                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Doença Cardiovascular"
+                    ClassId="Cardíacas e Circulatórias"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BtnDoencaCardiovascular" />
+                        <TapGestureRecognizer Tapped="BtnCardiacasCirculatórias" />
                     </Border.GestureRecognizers>
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
                             Source="treino.png"
+                            VerticalOptions="Center"
                             WidthRequest="40" />
-
                         <Label
                             x:Name="lblTitulo1"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Doença Cardiovascular"
+                            HorizontalTextAlignment="Center"
+                            Text="Cardíacas e Circulatórias"
                             TextColor="White" />
-
 
                     </VerticalStackLayout>
 
                 </Border>
 
                 <Border
-                    x:Name="btnMetabolicas"
+                    x:Name="btn_metabolicas"
                     Grid.Row="0"
-                    Grid.Column="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="4"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Metabolicas"
+                    ClassId="Metabólicas"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
@@ -71,7 +83,10 @@
                     </Border.GestureRecognizers>
 
 
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
                             Source="treino.png"
@@ -87,23 +102,31 @@
                     </VerticalStackLayout>
 
                 </Border>
+
+
+
+
                 <Border
-                    x:Name="btnOsteoarticulares"
+                    x:Name="btn_neurologicas"
                     Grid.Row="1"
                     Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Osteoarticulares"
+                    ClassId="Neurológicas"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BtnOsteoarticulares" />
+                        <TapGestureRecognizer Tapped="BtnNeurologicas" />
                     </Border.GestureRecognizers>
 
 
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
                             Source="treino.png"
@@ -113,29 +136,33 @@
                             x:Name="lblTitulo3"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Osteoarticulares"
+                            Text="Neurológicas"
                             TextColor="White" />
 
                     </VerticalStackLayout>
 
                 </Border>
                 <Border
-                    x:Name="btnNeurologicas"
+                    x:Name="btn_osteomusculares"
                     Grid.Row="1"
-                    Grid.Column="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
-                    ClassId="Neurologicas"
+                    ClassId="Equilíbrio e Mobilidade"
                     Stroke="#01b853"
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BtnNeurologicas" />
+                        <TapGestureRecognizer Tapped="BtnOsteomusculares" />
                     </Border.GestureRecognizers>
 
 
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
                             Source="treino.png"
@@ -145,48 +172,17 @@
                             x:Name="lblTitulo4"
                             FontAttributes="Bold"
                             FontSize="15"
-                            Text="Neurológicas"
+                            Text="Osteomusculares"
                             TextColor="White" />
 
                     </VerticalStackLayout>
 
                 </Border>
                 <Border
-                    x:Name="btnSensorial"
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Margin="10"
-                    Padding="10,20"
-                    BackgroundColor="Transparent"
-                    ClassId="Sensorial"
-                    Stroke="#01b853"
-                    StrokeShape="RoundRectangle 10"
-                    StrokeThickness="2">
-                    <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BtnSensorial" />
-                    </Border.GestureRecognizers>
-
-
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Image
-                            HeightRequest="40"
-                            Source="treino.png"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Label
-                            x:Name="lblTitulo5"
-                            FontAttributes="Bold"
-                            FontSize="15"
-                            Text="Sensorial"
-                            TextColor="White" />
-
-                    </VerticalStackLayout>
-
-                </Border>
-                <Border
-                    x:Name="btnRespiratórias"
+                    x:Name="btn_respiratorias"
                     Grid.Row="2"
                     Grid.Column="1"
+                    Grid.ColumnSpan="2"
                     Margin="10"
                     Padding="10,20"
                     BackgroundColor="Transparent"
@@ -195,38 +191,32 @@
                     StrokeShape="RoundRectangle 10"
                     StrokeThickness="2">
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="BtnRespiratórias" />
+                        <TapGestureRecognizer Tapped="BtnRespiratorias" />
                     </Border.GestureRecognizers>
-
-
-                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
                             Source="treino.png"
-                            VerticalOptions="Center"
                             WidthRequest="40" />
+
                         <Label
-                            x:Name="lblTitulo6"
+                            x:Name="lblTitulo5"
                             FontAttributes="Bold"
                             FontSize="15"
                             Text="Respiratórias"
                             TextColor="White" />
 
+
                     </VerticalStackLayout>
 
                 </Border>
+
+
             </Grid>
-            <Button
-                Margin="0,15,0,0"
-                BackgroundColor="#01C853"
-                Clicked="BtnCadastroCondicoesMedicas"
-                FontFamily="OpenSansSemibold"
-                FontSize="20"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Continuar"
-                TextColor="Black"
-                WidthRequest="330" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
