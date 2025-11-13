@@ -12,14 +12,17 @@
         <VerticalStackLayout>
 
             <HorizontalStackLayout>
-                <Label
-                    Padding="30,15,1000,20"
-                    BackgroundColor="#003918"
-                    FontFamily="Poppins"
-                    FontSize="20"
-                    Text="Treino"
-                    TextColor="White"
-                    VerticalOptions="Start" />
+                <Border Stroke="#003918" StrokeShape="RoundRectangle 0,0,15,15">
+
+                    <Label
+                        Padding="30,15,322,20"
+                        BackgroundColor="#003918"
+                        FontFamily="Poppins"
+                        FontSize="20"
+                        Text="Treino"
+                        TextColor="White"
+                        VerticalOptions="Start" />
+                </Border>
             </HorizontalStackLayout>
 
             <Label
@@ -62,19 +65,16 @@
                 HorizontalOptions="Center"
                 TextColor="White"
                 WidthRequest="350" />
-            <AbsoluteLayout>
-
-                <ImageButton
-                    Margin="18,300"
-                    Padding="5"
-                    AbsoluteLayout.LayoutFlags="YProportional"
-                    BackgroundColor="#003918"
-                    Clicked="AddTreinoPersonalizado"
-                    CornerRadius="100"
-                    HeightRequest="32"
-                    Source="vetor.png"
-                    WidthRequest="32" />
-            </AbsoluteLayout>
+            <ImageButton
+                Margin="30,30"
+                Padding="5"
+                BackgroundColor="#00b140"
+                Clicked="AddTreinoPersonalizado"
+                CornerRadius="100"
+                HeightRequest="32"
+                HorizontalOptions="End"
+                Source="vetor.png"
+                WidthRequest="32" />
 
         </VerticalStackLayout>
     </ScrollView>

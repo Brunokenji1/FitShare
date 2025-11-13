@@ -10,13 +10,10 @@ namespace AppFitShare.Models
     {
         public List<Exercicio> exercicios { get; set; } = new();
         public int Id { get; set; }
-        public int IdUsuario {  get; set; }
         public string Nome { get; set; }
-        public string Descricao { get; set; }
+        public string Duracao { get; set; }
+        public int Calorias { get; set; }
+        public string Dificuldade { get; set; }
         public DateTime DataCriacao { get; set; }
-        public int DuracaoTotalMinutos => exercicios.Sum(e => e.DuracaoMinutos);
-
-        
-
     }
 }
