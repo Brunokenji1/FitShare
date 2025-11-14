@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AppFitShare.ViewModels
 {
@@ -21,8 +21,9 @@ namespace AppFitShare.ViewModels
         {
             var treinoA = new Treino
             {
-                Nome = "Treino X",
-                Duracao = "X tempo",
+                Nome = "TREINO X",
+                Duracao = "X",
+                Series= 2,
                 Calorias = 1,
                 Dificuldade = "X",
                 ListaDeExercicios = new List<Exercicio>

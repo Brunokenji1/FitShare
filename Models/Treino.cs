@@ -11,6 +11,7 @@ namespace AppFitShare.Models
         public List<Exercicio> ListaDeExercicios { get; set; } = new();
         public int Id { get; set; }
         public string Nome { get; set; }
+        public int Series {  get; set; }    
         public string Duracao { get; set; }
         public int Calorias { get; set; }
         public string Dificuldade { get; set; }
