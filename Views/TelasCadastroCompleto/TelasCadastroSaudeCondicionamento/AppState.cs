@@ -8,24 +8,27 @@ namespace AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicioname
 {
     public static class AppState
     {
-        // Cardiorrespiratórias
-        public static bool ProblemaFaltaDeAr { get; set; } = false;
-        public static bool PressaoAlta { get; set; } = false;
-        public static bool ProblemaCardiaco { get; set; } = false;
+        // Membros inferiores
+        public static bool DificuldadeParaCaminhar { get; set; } = false;
+        public static bool ProblemasNoQuadril { get; set; } = false;
+        public static bool DorNoJoelho { get; set; } = false;
+        public static bool FraquezaNasPernas { get; set; } = false;
 
-        // Musculares e Articulares
-        public static bool LesaoManguitoRotador { get; set; } = false;
-        public static bool FraquezaMuscularLocalizada { get; set; } = false;
-        public static bool DoresCronicasNasCostas { get; set; } = false;
+        // Membros superiores
+        public static bool DificuldadeParaLevantarPeso { get; set; } = false;
+        public static bool DorNoCotovelo { get; set; } = false;
+        public static bool LimitacaoNoOmbro { get; set; } = false;
+        public static bool TendiniteNoBraco { get; set; } = false;
 
-        // Neurológicas
-        public static bool DificuldadeDeCoordenacaoMotora { get; set; } = false;
-        public static bool TonturasFrequentes { get; set; } = false;
-        public static bool FaltaDeEquilibrio { get; set; } = false;
+        // Equilíbrio e Mobilidade
+        public static bool DificuldadeParaFicarEmPe { get; set; } = false;
+        public static bool InstabilidadeAoAndar { get; set; } = false;
 
-        // Ortopédicas
-        public static bool ArtroseNoQuadrilOuOmbro { get; set; } = false;
-        public static bool CirurgiaRecente { get; set; } = false;
+        // Coluna e Postura
         public static bool DorLombar { get; set; } = false;
+        public static bool Escoliose { get; set; } = false;
+        public static bool HerniaDeDisco { get; set; } = false;
+        public static bool PosturaCurvada { get; set; } = false;
+        
     }
 }

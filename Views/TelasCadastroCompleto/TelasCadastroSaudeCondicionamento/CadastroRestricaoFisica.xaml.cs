@@ -11,20 +11,20 @@ public partial class CadastroRestricaoFisica : ContentPage
 	}
     private async void BtnOrtopedia(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new RFOpcoesOrtopedicas());
+        await Navigation.PushAsync(new RFOpcoesMembrosInferiores());
     }
     private async void BtnMuscularesArticulares(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new RFOpcoesMuscularesEArticulares());
+        await Navigation.PushAsync(new RFOpcoesMembrosSuperiores());
     }
     private async void BtnNeurologico(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new RFOpcoesNeurologicas());
+        await Navigation.PushAsync(new RFOpcoesColunaPostura());
     }
 
     private async void BtnCardiorrespiratorio(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new RFOpcoesCardiorrespiratorias());
+        await Navigation.PushAsync(new RFOpcoesEquilibrioEMobilidade());
     }
 
     private async void BtnOutrasRestricoes(object sender, TappedEventArgs e)

@@ -13,9 +13,9 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="30">
             <Label
-                Margin="10"
+                Margin="0,30,0,10"
                 FontFamily="OpenSansSemibold"
                 FontSize="Title"
                 HorizontalOptions="Center"

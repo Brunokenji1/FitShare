@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesMuscularesEArticulares"
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesEquilibrioEMobilidade"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="RFOpcoesMuscularesEArticulares"
+    Title="RFOpcoesEquilibrioEMobilidade"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -13,25 +13,29 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="30">
+
             <Label
-                Margin="10"
+                Margin="0,70,0,20"
+                FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
-                Text="Restrição Físicas Musculares e Articulares"
+                HorizontalTextAlignment="Center"
+                Text="⚖ Equilíbrio e Mobilidade"
                 TextColor="White" />
+
             <Border
-                x:Name="btn_DoresCronicasNasCostas"
+                x:Name="btn_dificuldade_para_ficar_em_pe"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Dores crônicas nas costas"
+                ClassId="Dificuldade para ficar em pé"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnDoresCronicasNasCostas" />
+                    <TapGestureRecognizer Tapped="BtnDificuldadeParaFicarEmPe" />
                 </Border.GestureRecognizers>
 
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
@@ -39,66 +43,38 @@
                         x:Name="lblTitulo1"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Dores crônicas nas costas"
+                        Text="Dificuldade para ficar em pé"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
-
             </Border>
 
             <Border
-                x:Name="btn_FraquezaMuscularLocalizada"
+                x:Name="btn_instabilidade_ao_andar"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Fraqueza muscular localizada"
+                ClassId="Instabilidade ao andar"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnFraquezaMuscularLocalizada" />
+                    <TapGestureRecognizer Tapped="BtnInstabilidadeAoAndar" />
                 </Border.GestureRecognizers>
-
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
                     <Label
                         x:Name="lblTitulo2"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Fraqueza muscular localizada"
+                        Text="Instabilidade ao andar"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
-
-
             </Border>
-            <Border
-                x:Name="btnLesaoManguitoRotador"
-                Margin="10"
-                Padding="10,20"
-                BackgroundColor="Transparent"
-                ClassId="Lesão de manguito rotador"
-                Stroke="#01b853"
-                StrokeShape="RoundRectangle 10"
-                StrokeThickness="2">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnLesaoManguitoRotador" />
-                </Border.GestureRecognizers>
-                <VerticalStackLayout Spacing="5" WidthRequest="300">
-                    <Label
-                        x:Name="lblTitulo3"
-                        FontAttributes="Bold"
-                        FontSize="18"
-                        Text="Lesão de manguito rotador"
-                        TextColor="White" />
-
-                </VerticalStackLayout>
 
 
-
-            </Border>
-            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

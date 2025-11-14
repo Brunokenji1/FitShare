@@ -113,6 +113,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Agenda.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ExerciciosTreinos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -197,16 +200,16 @@
 	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\CMOpcoesRespiratorias.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesCardiorrespiratorias.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesColunaPostura.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesMuscularesEArticulares.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesEquilibrioEMobilidade.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesNeurologicas.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesMembrosInferiores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesOrtopedicas.xaml">
+	  <MauiXaml Update="Views\TelasCadastroCompleto\TelasCadastroSaudeCondicionamento\RFOpcoesMembrosSuperiores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

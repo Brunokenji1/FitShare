@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesOrtopedicas"
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesColunaPostura"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="RFOpcoesOrtopedicas"
+    Title="RFOpcoesColunaPostura"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -13,68 +13,20 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="30">
+
             <Label
-                Margin="10"
+                Margin="0,70,0,20"
+                FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
-                Text="Restrição Físicas Ortopédicas"
+                HorizontalTextAlignment="Center"
+                Text="🦴 Coluna e Postura"
                 TextColor="White" />
-            <Border
-                x:Name="btn_ArtroseNoQuadrilOuOmbro"
-                Margin="10"
-                Padding="10,20"
-                BackgroundColor="Transparent"
-                ClassId="Sedentario"
-                Stroke="#01b853"
-                StrokeShape="RoundRectangle 10"
-                StrokeThickness="2">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnArtroseNoQuadrilOuOmbro" />
-                </Border.GestureRecognizers>
-
-                <VerticalStackLayout Spacing="5" WidthRequest="300">
-                    <Label
-                        x:Name="lblTitulo1"
-                        FontAttributes="Bold"
-                        FontSize="18"
-                        Text="Artrose no quadril ou ombro"
-                        TextColor="White" />
-
-                </VerticalStackLayout>
-
-
-            </Border>
 
             <Border
-                x:Name="btn_CirurgiaRecente"
-                Margin="10"
-                Padding="10,20"
-                BackgroundColor="Transparent"
-                ClassId="Cirurgia Recente"
-                Stroke="#01b853"
-                StrokeShape="RoundRectangle 10"
-                StrokeThickness="2">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnCirurgiaRecente" />
-                </Border.GestureRecognizers>
-
-                <VerticalStackLayout Spacing="5" WidthRequest="300">
-                    <Label
-                        x:Name="lblTitulo2"
-                        FontAttributes="Bold"
-                        FontSize="18"
-                        Text="Cirurgia recente (até 6 meses)"
-                        TextColor="White" />
-
-                </VerticalStackLayout>
-
-
-
-            </Border>
-            <Border
-                x:Name="btn_DorLombar"
+                x:Name="btn_dor_lombar"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
@@ -85,17 +37,89 @@
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BtnDorLombar" />
                 </Border.GestureRecognizers>
+
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo1"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Dor lombar"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                x:Name="btn_escoliose"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Escoliose"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnEscoliose" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo2"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Escoliose"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                x:Name="btn_hernia_de_disco"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Hérnia de disco"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnHerniaDeDisco" />
+                </Border.GestureRecognizers>
+
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
                     <Label
                         x:Name="lblTitulo3"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Dor lombar / hérnia de disco"
+                        Text="Hérnia de disco"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
+            </Border>
 
+            <Border
+                x:Name="btn_postura_curvada"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Postura curvada"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnPosturaCurvada" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo4"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Postura curvada"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
 
             </Border>
 

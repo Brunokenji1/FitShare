@@ -15,7 +15,7 @@
 
         <VerticalStackLayout>
             <Label
-                Margin="10"
+                Margin="0,10,0,20"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
@@ -74,10 +74,10 @@
 
 
                     <Border
-                        x:Name="artrose_quadril_ou_ombro"
+                        x:Name="opt_dificuldade_para_caminhar"
                         Padding="10,1"
                         Background="Transparent"
-                        ClassId="Artrose no Quadril ou Ombro"
+                        ClassId="Dificuldade para caminhar"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -89,13 +89,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Artrose no quadril ou ombro"
+                                Text="Dificuldade para caminhar"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="artrose_quadril_ou_ombro"
+                                ClassId="Dificuldade para caminhar"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -105,10 +105,10 @@
                     </Border>
 
                     <Border
-                        x:Name="cirurgia_recente"
+                        x:Name="opt_dificuldade_para_ficar_em_pe"
                         Padding="10,1"
-                        ClassId="Cirurgia Recente"
                         Background="Transparent"
+                        ClassId="Dificuldade para ficar em pé"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -120,13 +120,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Cirurgia recente"
+                                Text="Dificuldade para ficar em pé"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="cirurgia_recente"
+                                ClassId="Dificuldade para ficar em pé"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -136,10 +136,10 @@
                     </Border>
 
                     <Border
-                        x:Name="dificuldade_de_coordenacao_motora"
+                        x:Name="opt_dificuldade_para_levantar_peso"
                         Padding="10,1"
-                        ClassId="Dificuldade de Coordenação Motora"
                         Background="Transparent"
+                        ClassId="Dificuldade para levantar peso"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -151,13 +151,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Dificuldade de coordenação motora"
+                                Text="Dificuldade para levantar peso"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="dificuldade_de_coordenacao_motora"
+                                ClassId="Dificuldade para levantar peso"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -167,10 +167,10 @@
                     </Border>
 
                     <Border
-                        x:Name="dores_cronicasNasCostas"
+                        x:Name="opt_dor_no_cotovelo"
                         Padding="10,1"
-                        ClassId="Dores Crônicas nas Costas"
                         Background="Transparent"
+                        ClassId="Dor no cotovelo"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -182,13 +182,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Dores crônicas nas costas"
+                                Text="Dor no cotovelo"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="dores_cronicasNasCostas"
+                                ClassId="Dor no cotovelo"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -198,10 +198,41 @@
                     </Border>
 
                     <Border
-                        x:Name="dor_lombar"
+                        x:Name="opt_dor_no_joelho"
                         Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Dor no joelho"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Dor no joelho"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Dor no joelho"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_dor_lombar"
+                        Padding="10,1"
+                        Background="Transparent"
                         ClassId="Dor Lombar"
-                        Background="Transparent"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -219,7 +250,7 @@
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="dor_lombar"
+                                ClassId="Dor Lombar"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -229,10 +260,10 @@
                     </Border>
 
                     <Border
-                        x:Name="problema_falta_de_ar"
+                        x:Name="opt_escoliose"
                         Padding="10,1"
-                        ClassId="Problema de Falta de Ar"
                         Background="Transparent"
+                        ClassId="Escoliose"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -244,13 +275,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Falta de ar fácil"
+                                Text="Escoliose"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="problema_falta_de_ar"
+                                ClassId="Escoliose"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -260,10 +291,10 @@
                     </Border>
 
                     <Border
-                        x:Name="falta_de_equilibrio"
+                        x:Name="opt_fraqueza_nas_pernas"
                         Padding="10,1"
-                        ClassId="Falta de Equilíbrio"
                         Background="Transparent"
+                        ClassId="Fraqueza nas pernas"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -275,13 +306,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Falta de equilibrio"
+                                Text="Fraqueza nas pernas"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="falta_de_equilibrio"
+                                ClassId="Fraqueza nas pernas"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -291,10 +322,10 @@
                     </Border>
 
                     <Border
-                        ClassId="Fraqueza Muscular Localizada"
-                        x:Name="fraqueza_muscular_localizada"
+                        x:Name="opt_hernia_de_disco"
                         Padding="10,1"
                         Background="Transparent"
+                        ClassId="Hérnia de disco"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -306,13 +337,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Fraqueza muscular localizada"
+                                Text="Hérnia de disco"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="fraqueza_muscular_localizada"
+                                ClassId="Hérnia de disco"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -322,10 +353,10 @@
                     </Border>
 
                     <Border
-                        x:Name="lesao_manguito_rotador"
+                        x:Name="opt_instabilidade_ao_andar"
                         Padding="10,1"
-                        ClassId="Lesão no Manguito Rotador"
                         Background="Transparent"
+                        ClassId="Instabilidade ao andar"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -337,13 +368,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Lesão manguito rotador"
+                                Text="Instabilidade ao andar"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="lesao_manguito_rotador"
+                                ClassId="Instabilidade ao andar"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -353,10 +384,10 @@
                     </Border>
 
                     <Border
-                        ClassId="Pressão Alta"
-                        x:Name="pressao_alta"
+                        x:Name="opt_limitacao_no_ombro"
                         Padding="10,1"
                         Background="Transparent"
+                        ClassId="Limitação no ombro"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -368,13 +399,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Pressão alta"
+                                Text="Limitação no ombro"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="pressao_alta"
+                                ClassId="Limitação no ombro"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -383,11 +414,12 @@
                         </Grid>
                     </Border>
 
+
                     <Border
-                        ClassId="Problema Cardíaco"
-                        x:Name="problema_cardiaco"
+                        x:Name="opt_postura_curvada"
                         Padding="10,1"
                         Background="Transparent"
+                        ClassId="Postura curvada"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -399,13 +431,13 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Problemas cardíacos"
+                                Text="Postura curvada"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="problema_cardiaco"
+                                ClassId="Postura curvada"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -417,10 +449,10 @@
 
 
                     <Border
-                        x:Name="tonturas_frequentes"
+                        x:Name="opt_problemas_no_quadril"
                         Padding="10,1"
-                        ClassId="Tonturas Frequentes"
                         Background="Transparent"
+                        ClassId="Problemas no quadril"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -432,13 +464,44 @@
                             <Label
                                 Background="Transparent"
                                 FontSize="13"
-                                Text="Tonturas Frequentes"
+                                Text="Problemas no quadril"
                                 TextColor="White"
                                 VerticalOptions="Center" />
                             <ImageButton
                                 Grid.Column="1"
                                 Background="Transparent"
-                                ClassId="tonturas_frequentes"
+                                ClassId="Problemas no quadril"
+                                Clicked="ImageButton_Clicked"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_tendinite_no_braco"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Tendinite no braço"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Tendinite no braço"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Tendinite no braço"
                                 Clicked="ImageButton_Clicked"
                                 HeightRequest="30"
                                 HorizontalOptions="End"
@@ -460,7 +523,7 @@
 
 
             <Button
-                Margin="0,15,0,50"
+                Margin="0,20,0,50"
                 BackgroundColor="#01C853"
                 Clicked="BtnContinuar"
                 FontFamily="OpenSansSemibold"

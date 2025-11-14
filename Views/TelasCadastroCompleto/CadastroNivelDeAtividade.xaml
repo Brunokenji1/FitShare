@@ -13,7 +13,7 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="15">
             <Label
                 Margin="10"
                 FontFamily="Poppins"

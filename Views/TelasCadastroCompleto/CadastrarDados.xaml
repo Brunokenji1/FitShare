@@ -14,9 +14,9 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout Margin="15" Spacing="10">
+        <VerticalStackLayout Margin="15" Spacing="15">
             <Label
-                Margin="10"
+                Margin="0,10,0,20"
                 FontFamily="OpenSansSemibold"
                 FontSize="Title"
                 HorizontalOptions="Center"
@@ -172,7 +172,7 @@
             </Border>
 
             <Button
-                Margin="0,15,0,0"
+                Margin="0,25,0,0"
                 BackgroundColor="#01C853"
                 Clicked="btnContinuar"
                 FontFamily="OpenSansSemibold"

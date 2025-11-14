@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesNeurologicas"
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.TelasCadastroSaudeCondicionamento.RFOpcoesMembrosInferiores"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="RFOpcoesNeurologicas"
+    Title="RFOpcoesMembrosInferiores"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -13,25 +13,29 @@
     </ContentPage.Background>
     <ScrollView>
 
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="30">
+
             <Label
-                Margin="10"
+                Margin="0,70,0,20"
+                FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
-                Text="Restrição Físicas Neurológicas / de equilíbrio"
+                HorizontalTextAlignment="Center"
+                Text="🦵 Membros Inferiores"
                 TextColor="White" />
+
             <Border
-                x:Name="btn_CoordenacaoMotora"
+                x:Name="btn_dificuldade_para_caminhar"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Dificuldade de coordenação motora"
+                ClassId="Dificuldade para caminhar"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnDificuldadeDeCoordenacaoMotora" />
+                    <TapGestureRecognizer Tapped="BtnDificuldadeParaCaminhar" />
                 </Border.GestureRecognizers>
 
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
@@ -39,25 +43,26 @@
                         x:Name="lblTitulo1"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Dificuldade de coordenação motora"
+                        Text="Dificuldade para caminhar"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
-
             </Border>
 
+
+
             <Border
-                x:Name="btn_FaltaDeEquilibrio"
+                x:Name="btn_dor_no_joelho"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Falta de equilibrio"
+                ClassId="Dor no joelho"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnFaltaDeEquilibrio" />
+                    <TapGestureRecognizer Tapped="BtnDorNoJoelho" />
                 </Border.GestureRecognizers>
 
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
@@ -65,37 +70,61 @@
                         x:Name="lblTitulo2"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Falta de equilíbrio / risco de queda"
+                        Text="Dor no joelho"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
-
-
             </Border>
+
+
+
+
             <Border
-                x:Name="btn_TonturasFrequentes"
+                x:Name="btn_fraqueza_nas_pernas"
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Tonturas frequentes"
+                ClassId="Fraqueza nas pernas"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="BtnTonturasFrequentes" />
+                    <TapGestureRecognizer Tapped="BtnFraquezaNasPernas" />
                 </Border.GestureRecognizers>
                 <VerticalStackLayout Spacing="5" WidthRequest="300">
                     <Label
                         x:Name="lblTitulo3"
                         FontAttributes="Bold"
                         FontSize="18"
-                        Text="Tonturas frequentes"
+                        Text="Fraqueza nas pernas"
                         TextColor="White" />
 
                 </VerticalStackLayout>
 
+            </Border>
 
+            <Border
+                x:Name="btn_problemas_no_quadril"
+                Margin="10"
+                Padding="10,20"
+                BackgroundColor="Transparent"
+                ClassId="Problemas no quadril"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10"
+                StrokeThickness="2">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnProblemasNoQuadril" />
+                </Border.GestureRecognizers>
+                <VerticalStackLayout Spacing="5" WidthRequest="300">
+                    <Label
+                        x:Name="lblTitulo4"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Problemas no quadril"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
 
             </Border>
 

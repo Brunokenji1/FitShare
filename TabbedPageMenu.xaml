@@ -12,7 +12,7 @@
     SelectedTabColor="#01C853"
     UnselectedTabColor="#0C1420">
     <pages:Home />
-    <pages:Pesquisar />
+    <pages:Agenda />
     <pages:MeusTreinos />
     <pages:PlanoAlimentacao />
     <pages:Perfil />

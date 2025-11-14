@@ -12,60 +12,72 @@ public partial class CadastroSaudeCondicionamento : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        artrose_quadril_ou_ombro.IsVisible = false;
-        cirurgia_recente.IsVisible = false;
-        dificuldade_de_coordenacao_motora.IsVisible = false;
-        dores_cronicasNasCostas.IsVisible = false;
-        dor_lombar.IsVisible = false;
-        problema_falta_de_ar.IsVisible = false;
-        falta_de_equilibrio.IsVisible = false;
-        fraqueza_muscular_localizada.IsVisible = false;
-        lesao_manguito_rotador.IsVisible = false;
-        pressao_alta.IsVisible = false;
-        problema_cardiaco.IsVisible = false;
-        tonturas_frequentes.IsVisible = false;
+        opt_dificuldade_para_caminhar.IsVisible = false;
+        opt_dificuldade_para_ficar_em_pe.IsVisible = false;
+        opt_dificuldade_para_levantar_peso.IsVisible = false;
+        opt_dor_no_cotovelo.IsVisible = false;
+        opt_dor_no_joelho.IsVisible = false;
+        opt_dor_lombar.IsVisible = false;
+        opt_escoliose.IsVisible = false;
+
+        opt_fraqueza_nas_pernas.IsVisible = false;
+        opt_hernia_de_disco.IsVisible = false;
+        opt_instabilidade_ao_andar.IsVisible = false;
+        opt_limitacao_no_ombro.IsVisible = false;
+        opt_postura_curvada.IsVisible = false;
+        opt_problemas_no_quadril.IsVisible = false;
+        opt_tendinite_no_braco.IsVisible = false;
 
         foreach (var restricao in RepositorioUsuarios.RestricoesFisicasEscolhidasTemp)
         {
             switch (restricao)
             {
-                case "Artrose no Quadril ou Ombro":
-                    artrose_quadril_ou_ombro.IsVisible = true;
+                case "Dificuldade para caminhar":
+                    opt_dificuldade_para_caminhar.IsVisible = true;
                     break;
-                case "Cirurgia Recente":
-                    cirurgia_recente.IsVisible = true;
+                case "Dificuldade para ficar em pé":
+                    opt_dificuldade_para_ficar_em_pe.IsVisible = true;
                     break;
-                case "Dificuldade de Coordenação Motora":
-                    dificuldade_de_coordenacao_motora.IsVisible = true;
+                case "Dificuldade para levantar peso":
+                    opt_dificuldade_para_levantar_peso.IsVisible = true;
                     break;
-                case "Dores Crônicas nas Costas":
-                    dores_cronicasNasCostas.IsVisible = true;
+                case "Dor no cotovelo":
+                    opt_dor_no_cotovelo.IsVisible = true;
+                    break;
+                case "Dor no joelho":
+                    opt_dor_no_joelho.IsVisible = true;
                     break;
                 case "Dor Lombar":
-                    dor_lombar.IsVisible = true;
+                    opt_dor_lombar.IsVisible = true;
                     break;
-                case "Problema de Falta de Ar":
-                    problema_falta_de_ar.IsVisible = true;
+
+                case "Escoliose":
+                    opt_escoliose.IsVisible = true;
                     break;
-                case "Falta de Equilíbrio":
-                    falta_de_equilibrio.IsVisible = true;
+                case "Fraqueza nas pernas":
+                    opt_fraqueza_nas_pernas.IsVisible = true;
                     break;
-                case "Fraqueza Muscular Localizada":
-                    fraqueza_muscular_localizada.IsVisible = true;
+                case "Hérnia de disco":
+                    opt_hernia_de_disco.IsVisible = true;
                     break;
-                case "Lesão no Manguito Rotador":
-                    lesao_manguito_rotador.IsVisible = true;
+                case "Instabilidade ao andar":
+                    opt_instabilidade_ao_andar.IsVisible = true;
                     break;
-                case "Pressão Alta":
-                    pressao_alta.IsVisible = true;
+                case "Limitação no ombro":
+                    opt_limitacao_no_ombro.IsVisible = true;
                     break;
-                case "Problema Cardíaco":
-                    problema_cardiaco.IsVisible = true;
+                case "Postura curvada":
+                    opt_postura_curvada.IsVisible = true;
                     break;
-                case "Tonturas Frequentes":
-                    tonturas_frequentes.IsVisible = true;
+                case "Problemas no quadril":
+                    opt_problemas_no_quadril.IsVisible = true;
                     break;
-            }
+                case "Tendinite no braço":
+                    opt_tendinite_no_braco.IsVisible = true;
+                    break;
+
+
+            }       
         }
 
     }
