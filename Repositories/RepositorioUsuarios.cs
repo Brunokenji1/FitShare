@@ -22,6 +22,26 @@ public class RepositorioUsuarios
         new Usuario(1, "Pedro Chaves", "Chaves", "2", "12345678", DateTime.Now)
 
     };
+
+    public static List<string> ObterRestricoesFisicasTemp()
+    {
+        return RestricoesFisicasEscolhidasTemp;
+    }
+
+    public static void AdicionarRestricaoFisicaTemp(string restricao)
+    {
+        RestricoesFisicasEscolhidasTemp.Add(restricao);
+    }
+
+    public static void RemoverRestricaoFisicaTemp(string restricao)
+    {
+        RestricoesFisicasEscolhidasTemp.Remove(restricao);
+    }
+    public static bool BuscarRestricaoFisicaTemp(string restricao)
+    {
+        return RestricoesFisicasEscolhidasTemp.Contains(restricao);
+    }
+
     public static Usuario BuscarUsuario(int id)
     {
         try

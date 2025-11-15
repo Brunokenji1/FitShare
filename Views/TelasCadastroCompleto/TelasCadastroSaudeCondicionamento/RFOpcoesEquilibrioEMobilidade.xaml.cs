@@ -12,22 +12,33 @@ public partial class RFOpcoesEquilibrioEMobilidade : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        if (AppState.DificuldadeParaFicarEmPe) btn_dificuldade_para_ficar_em_pe.IsVisible = false;
-        if (AppState.InstabilidadeAoAndar) btn_instabilidade_ao_andar.IsVisible = false;
- 
+        foreach (var restricao in RepositorioSaudeCondicionamento.ObterRestricoesFisicasTemp())
+        {
+            switch (restricao)
+            {
+
+                case "Dificuldade para ficar em pé":
+                    btn_dificuldade_para_ficar_em_pe.IsVisible = false;
+                    break;
+
+                case "Instabilidade ao andar":
+                    btn_instabilidade_ao_andar.IsVisible = false;
+                    break;
+
+            }
+        }
+
     }
 
     private async void BtnDificuldadeParaFicarEmPe(object sender, TappedEventArgs e)
     {
-        AppState.DificuldadeParaFicarEmPe = true;
-        RepositorioUsuarios.RestricoesFisicasEscolhidasTemp.Add(btn_dificuldade_para_ficar_em_pe.ClassId);
+        RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_dificuldade_para_ficar_em_pe.ClassId);
         await Navigation.PushAsync(new CadastroSaudeCondicionamento());
     }
 
     private async void BtnInstabilidadeAoAndar(object sender, TappedEventArgs e)
     {
-        AppState.InstabilidadeAoAndar = true;
-        RepositorioUsuarios.RestricoesFisicasEscolhidasTemp.Add(btn_instabilidade_ao_andar.ClassId);
+        RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_instabilidade_ao_andar.ClassId);
         await Navigation.PushAsync(new CadastroSaudeCondicionamento());
     }
 }

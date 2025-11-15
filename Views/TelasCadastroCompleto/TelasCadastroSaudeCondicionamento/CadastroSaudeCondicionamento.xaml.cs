@@ -12,23 +12,64 @@ public partial class CadastroSaudeCondicionamento : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        opt_dificuldade_para_caminhar.IsVisible = false;
-        opt_dificuldade_para_ficar_em_pe.IsVisible = false;
-        opt_dificuldade_para_levantar_peso.IsVisible = false;
-        opt_dor_no_cotovelo.IsVisible = false;
-        opt_dor_no_joelho.IsVisible = false;
-        opt_dor_lombar.IsVisible = false;
-        opt_escoliose.IsVisible = false;
 
-        opt_fraqueza_nas_pernas.IsVisible = false;
-        opt_hernia_de_disco.IsVisible = false;
-        opt_instabilidade_ao_andar.IsVisible = false;
-        opt_limitacao_no_ombro.IsVisible = false;
-        opt_postura_curvada.IsVisible = false;
-        opt_problemas_no_quadril.IsVisible = false;
-        opt_tendinite_no_braco.IsVisible = false;
+        foreach( var condicaoMedic in RepositorioSaudeCondicionamento.ObterCondicoesMedicasTemp())
+        {
+            switch (condicaoMedic)
+            {
+                case "Alergias respiratórias":
+                    opt_alergias_respiratorias.IsVisible = true;
+                    break;
+                case "Asma":
+                    opt_asma.IsVisible = true;
+                    break;
+                case "Arritmia":
+                    opt_arritmia.IsVisible = true;
+                    break;
+                case "Artrite":
+                    opt_artrite.IsVisible = true;
+                    break;
+                case "Artrose":
+                    opt_artrose.IsVisible = true;
+                    break;
+                case "Bronquite crônica":
+                    opt_bronquite_cronica.IsVisible = true;
+                    break;
+                case "Colesterol alto":
+                    opt_colesterol_alto.IsVisible = true;
+                    break;
+                case "DPOC":
+                    opt_DPOC.IsVisible = true;
+                    break;
+                case "Hipertensão":
+                    opt_hipertensao.IsVisible = true;
+                    break;
+                case "Hipotensão":
+                    opt_hipotensao.IsVisible = true;
+                    break;
+                case "Insuficiência cardíaca":
+                    opt_insuficiencia_cardiaca.IsVisible = true;
+                    break;
+                case "Obesidade":
+                    opt_obesidade.IsVisible = true;
+                    break;
+                case "Osteoporose":
+                    opt_osteoporose.IsVisible = true;
+                    break;
+                case "Parkinson":
+                    opt_parkinson.IsVisible = true;
+                    break;
+                case "Tendinite":
+                    opt_tendinite.IsVisible = true;
+                    break;
+                case "Vertigem":
+                    opt_vertigem.IsVisible = true;
+                    break;
+            }
+        }
 
-        foreach (var restricao in RepositorioUsuarios.RestricoesFisicasEscolhidasTemp)
+
+        foreach (var restricao in RepositorioSaudeCondicionamento.ObterRestricoesFisicasTemp())
         {
             switch (restricao)
             {
@@ -125,7 +166,18 @@ public partial class CadastroSaudeCondicionamento : ContentPage
         {
             border.IsVisible = false;
             var nome = border.ClassId;
-            RepositorioUsuarios.RestricoesFisicasEscolhidasTemp.Remove(nome);
+            RepositorioSaudeCondicionamento.RemoverRestricaoFisicaTemp(nome);
+        }
+    }
+
+    private void BtnCancelarCondicaoFisica(object sender, EventArgs e)
+    {
+        var botao = sender as ImageButton;
+        if (botao?.Parent?.Parent is Border border)
+        {
+            border.IsVisible = false;
+            var nome = border.ClassId;
+            RepositorioSaudeCondicionamento.RemoverCondicaoMedicaTemp(nome);
         }
     }
 }

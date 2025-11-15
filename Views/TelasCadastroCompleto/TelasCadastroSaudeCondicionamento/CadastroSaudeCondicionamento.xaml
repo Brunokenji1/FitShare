@@ -43,6 +43,520 @@
                         Text="Condição Medica"
                         TextColor="White" />
 
+                    <Border
+                        x:Name="opt_alergias_respiratorias"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Alergias respiratórias"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Alergias respiratórias"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Alergias respiratórias"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_asma"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Asma"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Asma"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Asma"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_arritmia"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Arritmia"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Arritmia"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Arritmia"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_artrite"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Artrite"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Artrite"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Artrite"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_artrose"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Artrose"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Artrose"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Artrose"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_bronquite_cronica"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Bronquite crônica"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Bronquite crônica"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Bronquite crônica"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_colesterol_alto"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Colesterol alto"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Colesterol alto"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Colesterol alto"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_DPOC"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="DPOC"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="DPOC"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="DPOC"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_hipertensao"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Hipertensão"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Hipertensão"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Hipertensão"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_hipotensao"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Hipotensão"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Hipotensão"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Hipotensão"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_insuficiencia_cardiaca"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Insuficiência cardíaca"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Insuficiência cardíaca"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Insuficiência cardíaca"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_obesidade"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Obesidade"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Obesidade"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Obesidade"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_osteoporose"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Osteoporose"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Osteoporose"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Osteoporose"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_parkinson"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Parkinson"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Parkinson"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Parkinson"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_tendinite"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Tendinite"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Tendinite"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Tendinite"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+                    <Border
+                        x:Name="opt_vertigem"
+                        Padding="10,1"
+                        Background="Transparent"
+                        ClassId="Vertigem"
+                        IsVisible="False"
+                        StrokeThickness="1">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+
+
+                        <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                            <Label
+                                Background="Transparent"
+                                FontSize="13"
+                                Text="Vertigem"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <ImageButton
+                                Grid.Column="1"
+                                Background="Transparent"
+                                ClassId="Vertigem"
+                                Clicked="BtnCancelarCondicaoFisica"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                Source="close.png"
+                                WidthRequest="10" />
+                        </Grid>
+                    </Border>
+
+
+
                     <Button Clicked="Button_Clicked" Text="Adicionar Condição Medica" />
                 </VerticalStackLayout>
 
@@ -78,6 +592,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dificuldade para caminhar"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -109,6 +624,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dificuldade para ficar em pé"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -140,6 +656,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dificuldade para levantar peso"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -171,6 +688,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dor no cotovelo"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -202,6 +720,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dor no joelho"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -233,6 +752,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Dor Lombar"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -264,6 +784,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Escoliose"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -295,6 +816,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Fraqueza nas pernas"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -326,6 +848,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Hérnia de disco"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -357,6 +880,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Instabilidade ao andar"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -388,6 +912,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Limitação no ombro"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -420,6 +945,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Postura curvada"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -453,6 +979,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Problemas no quadril"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
@@ -484,6 +1011,7 @@
                         Padding="10,1"
                         Background="Transparent"
                         ClassId="Tendinite no braço"
+                        IsVisible="False"
                         StrokeThickness="1">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />

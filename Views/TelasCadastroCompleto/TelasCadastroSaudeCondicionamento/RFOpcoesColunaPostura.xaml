@@ -30,7 +30,7 @@
                 Margin="10"
                 Padding="10,20"
                 BackgroundColor="Transparent"
-                ClassId="Dor lombar"
+                ClassId="Dor Lombar"
                 Stroke="#01b853"
                 StrokeShape="RoundRectangle 10"
                 StrokeThickness="2">
