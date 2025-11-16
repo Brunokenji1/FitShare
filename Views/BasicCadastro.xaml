@@ -36,7 +36,7 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                
+
                 <Entry
                     x:Name="txt_nome"
                     BackgroundColor="Transparent"
@@ -49,7 +49,7 @@
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
-                Text="Username*"
+                Text="Nome de usuário*"
                 TextColor="White" />
 
             <Border
@@ -60,20 +60,20 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                
+
                 <Entry
                     x:Name="txt_username"
-                    TextChanged="txtUsername_TxtChanged"
                     BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
-                    Placeholder="Digite seu Username"
+                    Placeholder="Digite seu nome de usuário"
+                    TextChanged="txtUsername_TxtChanged"
                     TextColor="Black" />
             </Border>
             <Label
-                IsVisible="False"
                 x:Name="lblAviso"
-                TextColor="Red"/>
+                IsVisible="False"
+                TextColor="Red" />
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
@@ -87,7 +87,7 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                
+
                 <Entry
                     x:Name="txt_telefone"
                     BackgroundColor="Transparent"
@@ -110,7 +110,7 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                
+
                 <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
 
                     <Entry
@@ -131,6 +131,12 @@
                 </Grid>
             </Border>
             <Label
+                Padding="5"
+                FontSize="14"
+                HorizontalOptions="Center"
+                Text=" Mínimo 8 Caracteres"
+                TextColor="White" />
+            <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
                 Text="Confirmar Senha*"
@@ -143,7 +149,7 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-              
+
                 <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
 
                     <Entry

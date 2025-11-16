@@ -1,5 +1,6 @@
 using AppFitShare.Repositories;
 using AppFitShare.Views.TelasCadastroCompleto;
+using System.Threading.Tasks;
 
 namespace AppFitShare.Views;
 
@@ -23,7 +24,7 @@ public partial class Perfil : ContentPage
         label.IsEnabled = true;
     }
 
-    private async void btnCadastrarDados(object sender, EventArgs e)
+    private async void BtnCadastrarDados(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastrarDados());
     }
@@ -48,5 +49,10 @@ public partial class Perfil : ContentPage
         
         
         imgPerfil.Source = usuario.FotoPerfil;
+    }
+
+    private async void BtnEditarPerfil(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new EditarPerfil());
     }
 }

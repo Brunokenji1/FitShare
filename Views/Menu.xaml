@@ -61,14 +61,7 @@
             
                 
             
-            <Label
-                Padding="10,30,10,10"
-                Text="Configurações"
-                TextColor="White">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnTapConfiguracao" />
-                </Label.GestureRecognizers>
-            </Label>
+
             <Label
                 Padding="10"
                 Text="Suporte"

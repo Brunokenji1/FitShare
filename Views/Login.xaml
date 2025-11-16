@@ -90,7 +90,8 @@
             <Label
                 FontSize="14"
                 Text="Recupera senha"
-                TextColor="White">
+                TextColor="White"
+                HorizontalOptions="Center">
 
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTapRecuperarSenha" />

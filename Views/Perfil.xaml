@@ -9,7 +9,6 @@
     NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout Margin="10" Spacing="30">
         <Border
-            Background="#01b853"
             HeightRequest="100"
             HorizontalOptions="Center"
             Stroke="Green"
@@ -24,36 +23,41 @@
                 <ViewCell>
                     <Grid ColumnDefinitions="*, Auto" RowDefinitions="*,*,*,Auto">
 
-                        <Label x:Name="lbl_nome" Grid.Column="0" TextColor="White"/>
-                        <Label x:Name="lbl_idade" Grid.Column="1" TextColor="White" />
+                        <Label
+                            x:Name="lbl_nome"
+                            Grid.Column="0"
+                            TextColor="White" />
+                        <Label
+                            x:Name="lbl_idade"
+                            Grid.Column="1"
+                            TextColor="White" />
 
                         <Label
                             x:Name="lbl_altura"
                             Grid.Row="1"
-                            Grid.Column="0" 
-                            TextColor="White"/>
+                            Grid.Column="0"
+                            TextColor="White" />
                         <Label
                             x:Name="lbl_peso"
                             Grid.Row="1"
-                            Grid.Column="1" 
-                            TextColor="White"/>
+                            Grid.Column="1"
+                            TextColor="White" />
 
                         <Label
                             x:Name="lbl_nivelAtividade"
                             Grid.Row="2"
-                            Grid.Column="1" 
-                            TextColor="White"/>
+                            Grid.Column="1"
+                            TextColor="White" />
                         <Label
                             x:Name="lbl_objetivo"
                             Grid.Row="2"
-                            TextColor="White"
-                            Grid.Column="0" />
-                        <Label 
+                            Grid.Column="0"
+                            TextColor="White" />
+                        <Label
                             x:Name="lbl_telefone"
-                            TextColor="White"
                             Grid.Row="3"
                             Grid.Column="0"
-                            />
+                            TextColor="White" />
                     </Grid>
                 </ViewCell>
             </TableSection>
@@ -68,7 +72,16 @@
         </Label>
         <Button
             Padding="20,10"
-            Clicked="btnCadastrarDados"
+            Clicked="BtnEditarPerfil"
+            CornerRadius="20"
+            FontSize="18"
+            Text="Cadastrar Completo"
+            TextColor="Black"
+            WidthRequest="365" />
+        
+        <Button
+            Padding="20,10"
+            Clicked="BtnCadastrarDados"
             CornerRadius="20"
             FontSize="18"
             Text="Cadastrar Completo"

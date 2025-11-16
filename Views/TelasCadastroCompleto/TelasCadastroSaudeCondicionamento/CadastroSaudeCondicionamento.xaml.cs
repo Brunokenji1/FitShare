@@ -131,7 +131,8 @@ public partial class CadastroSaudeCondicionamento : ContentPage
             bool confirmacao = await DisplayAlert("Confirmação", "Cadastrar informações de saúde e condicionamento", "Sim", "Não");
             if (confirmacao)
             {
-                RepositorioUsuarios.AtualizarRestricoesFisicasTemp(RepositorioUsuarios.RestricoesFisicasEscolhidasTemp);
+                RepositorioUsuarios.AtualizarRestricoesFisicasTemp(RepositorioSaudeCondicionamento.ObterCondicoesMedicasTemp());
+                RepositorioUsuarios.AtualizarCondicoesMedicas(RepositorioSaudeCondicionamento.ObterRestricoesFisicasTemp());
                 await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
 
                 await Navigation.PushAsync(new CadastroNivelDeAtividade());

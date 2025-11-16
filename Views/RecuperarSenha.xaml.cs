@@ -1,15 +1,20 @@
+using Android.Content.Res;
+using AppFitShare.Models;
 using AppFitShare.Repositories;
+using System.Threading.Tasks;
 
 namespace AppFitShare.Views;
 
 public partial class RecuperarSenha : ContentPage
 {
-	public RecuperarSenha()
-	{
-		InitializeComponent();
-	}
+    public RecuperarSenha()
+    {
+        InitializeComponent();
+    }
 
-    private async void btnRecuperarSenha(object sender, EventArgs e)
+    public Usuario usuario_temp{ get; set; }
+
+    private async void BtnRecuperarSenha(object sender, EventArgs e)
     {
 		try
 		{
@@ -22,8 +27,11 @@ public partial class RecuperarSenha : ContentPage
 			var usuario = usuariosCadastrados.FirstOrDefault(u => u.Telefone == telefone);
 			if(usuario != null)
 			{
-				colocarTelefone.IsEnabled = false;
-                cadastrarnovasenha.IsVisible=true;
+                usuario_temp = usuario;
+                coloca_telefone.IsEnabled = false;
+                botao_telefone.IsVisible = false;
+                cadastrar_nova_senha.IsVisible=true;
+
             }
 			else
 			{
@@ -35,6 +43,36 @@ public partial class RecuperarSenha : ContentPage
 			await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
     }
+
+    private async void BtnCadastrarNovaSenha(object sender, EventArgs e)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(txt_novasenha.Text) ||
+                string.IsNullOrWhiteSpace(txt_novasenhaloginconfirmar.Text))
+            {
+                throw new Exception("Preencha todos os campos!");
+            }
+
+            if (txt_novasenha.Text.Length < 8)
+            {
+                throw new Exception("A senha precisa ter no mínimo 8 caracteres!");
+            }
+            if (txt_novasenhaloginconfirmar.Text != txt_novasenha.Text)
+            {
+                throw new Exception("As senhas não coincidem!");
+            }
+
+            usuario_temp.Senha = txt_novasenha.Text;
+            RepositorioUsuarios.TrocarSenha(usuario_temp);
+            App.Current.MainPage = new NavigationPage(new Login());
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Ops...", ex.Message, "Fechar");
+        }
+    }
+
     private void IbtnNovaSenhaVisibilidade(object sender, EventArgs e)
     {
         txt_novasenha.IsPassword = !txt_novasenha.IsPassword;
@@ -60,5 +98,10 @@ public partial class RecuperarSenha : ContentPage
         {
             imagebButton.Source = "eye_open.png";
         }
+    }
+
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

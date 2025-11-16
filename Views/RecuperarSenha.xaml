@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppFitShare.Views.RecuperarSenha"
-             Title="RecuperarSenha"
-             NavigationPage.HasNavigationBar="False">
+<ContentPage
+    x:Class="AppFitShare.Views.RecuperarSenha"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RecuperarSenha"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Offset="0.8" Color="#0D0F1A" />
@@ -11,54 +12,76 @@
         </LinearGradientBrush>
     </ContentPage.Background>
     <ScrollView>
-        
-        <VerticalStackLayout
-            Margin="15"
-            Spacing="10"
-            VerticalOptions="Center">
-            <Label 
-                Text="Recuperar senha através"
-                TextColor="White"
-                Margin="0,0,0,100"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                FontSize="Title"/>
+
+        <VerticalStackLayout Margin="15" Spacing="15">
+            <Grid ColumnDefinitions="Auto,*">
+                <ImageButton
+                    Grid.Column="0"
+                    Background="#01c853"
+                    Clicked="BtnVoltar"
+                    CornerRadius="100"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="black_back.png"
+                    WidthRequest="50" />
+                <Label
+                    Grid.Column="1"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Text="Recuperar senha"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+
             <Label
                 FontSize="16"
                 Text="Telefone*"
                 TextColor="White" />
+
             <Border
-                x:Name="colocarTelefone"
-                IsEnabled="True"
+                x:Name="coloca_telefone"
                 Padding="8"
                 Background="White"
+                IsEnabled="True"
                 StrokeThickness="1">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
-                <Border.Shadow>
-                    <Shadow
-                        Brush="Black"
-                        Opacity="0.3"
-                        Radius="10"
-                        Offset="5,5" />
-                </Border.Shadow>
+
                 <Entry
-                    FontSize="15"
                     x:Name="txt_telefone"
                     Background="Transparent"
                     ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
                     Placeholder="Digite seu numero de telefone"
                     TextColor="Black" />
 
             </Border>
-            <VerticalStackLayout x:Name="cadastrarnovasenha" Spacing="10" IsVisible="False">
+            <Button
+                x:Name="botao_telefone"
+                Margin="0,45,0,0"
+                BackgroundColor="#01C853"
+                Clicked="BtnRecuperarSenha"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Recuperar Senha"
+                TextColor="Black"
+                WidthRequest="330" />
+
+            <VerticalStackLayout
+                x:Name="cadastrar_nova_senha"
+                IsVisible="False"
+                Spacing="10">
                 <Label
+                    FontFamily="OpenSansSemibold"
                     FontSize="16"
                     Text="Senha"
-                    TextColor="White"
-                    FontFamily="OpenSansSemibold"/>
+                    TextColor="White" />
                 <Border
                     Padding="8"
                     Background="White"
@@ -67,20 +90,14 @@
                         <RoundRectangle CornerRadius="20" />
                     </Border.StrokeShape>
 
-                    <Border.Shadow>
-                        <Shadow
-                            Brush="Black"
-                            Opacity="0.3"
-                            Radius="10"
-                            Offset="5,5" />
-                    </Border.Shadow>
+
                     <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
                         <Entry
-                            FontSize="15"
                             x:Name="txt_novasenha"
                             Grid.Column="0"
                             BackgroundColor="Transparent"
                             ClearButtonVisibility="WhileEditing"
+                            FontSize="15"
                             IsPassword="True"
                             Placeholder="Digite sua Senha"
                             TextColor="Black" />
@@ -94,6 +111,17 @@
                             WidthRequest="10" />
                     </Grid>
                 </Border>
+                <Label
+                    Padding="5"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Text=" Mínimo 8 Caracteres"
+                    TextColor="White" />
+                <Label
+                    FontFamily="OpenSansSemibold"
+                    FontSize="16"
+                    Text="Confirmar senha"
+                    TextColor="White" />
                 <Border
                     Padding="8"
                     Background="White"
@@ -102,20 +130,13 @@
                         <RoundRectangle CornerRadius="20" />
                     </Border.StrokeShape>
 
-                    <Border.Shadow>
-                        <Shadow
-                            Brush="Black"
-                            Opacity="0.3"
-                            Radius="10"
-                            Offset="5,5" />
-                    </Border.Shadow>
                     <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
                         <Entry
-                            FontSize="15"
                             x:Name="txt_novasenhaloginconfirmar"
                             Grid.Column="0"
                             BackgroundColor="Transparent"
                             ClearButtonVisibility="WhileEditing"
+                            FontSize="15"
                             IsPassword="True"
                             Placeholder="Digite sua Senha"
                             TextColor="Black" />
@@ -129,19 +150,26 @@
                             WidthRequest="10" />
                     </Grid>
                 </Border>
+                <Label
+                    Padding="5"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Text=" Mínimo 8 Caracteres"
+                    TextColor="White" />
+                <Button
+                    Margin="0,45,0,0"
+                    BackgroundColor="#01C853"
+                    Clicked="BtnCadastrarNovaSenha"
+                    FontFamily="OpenSansSemibold"
+                    FontSize="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Recuperar Senha"
+                    TextColor="Black"
+                    WidthRequest="330" />
             </VerticalStackLayout>
-            
-            <Button
-                Margin="0,45,0,0"
-                BackgroundColor="#01C853"
-                Clicked="btnRecuperarSenha"
-                FontFamily="OpenSansSemibold"
-                FontSize="20"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Recuperar Senha"
-                TextColor="Black"
-                WidthRequest="330" />
+
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

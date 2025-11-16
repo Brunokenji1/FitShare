@@ -12,7 +12,6 @@ namespace AppFitShare.Repositories;
 public class RepositorioUsuarios
 {
     private static Usuario usuarioTemporario { get; set; }
-    public static List<string> RestricoesFisicasEscolhidasTemp { get; set; } = new List<string>();
     private static Usuario usuario_logado { get; set; }
 
     private static List<Usuario> listaUsuarios = new List<Usuario>()
@@ -23,24 +22,6 @@ public class RepositorioUsuarios
 
     };
 
-    public static List<string> ObterRestricoesFisicasTemp()
-    {
-        return RestricoesFisicasEscolhidasTemp;
-    }
-
-    public static void AdicionarRestricaoFisicaTemp(string restricao)
-    {
-        RestricoesFisicasEscolhidasTemp.Add(restricao);
-    }
-
-    public static void RemoverRestricaoFisicaTemp(string restricao)
-    {
-        RestricoesFisicasEscolhidasTemp.Remove(restricao);
-    }
-    public static bool BuscarRestricaoFisicaTemp(string restricao)
-    {
-        return RestricoesFisicasEscolhidasTemp.Contains(restricao);
-    }
 
     public static Usuario BuscarUsuario(int id)
     {
@@ -75,14 +56,7 @@ public class RepositorioUsuarios
     }
     public static void IniciarUsuarioTemp()
     {
-        usuarioTemporario = new Usuario(
-            usuario_logado.Id,
-            usuario_logado.Nome,
-            usuario_logado.Username,
-            usuario_logado.Telefone,
-            usuario_logado.Senha,
-            usuario_logado.DataCadastro
-        );
+        usuarioTemporario = usuario_logado;
     }
 
     public static Usuario ObterUsuarioTemp()
@@ -98,6 +72,12 @@ public class RepositorioUsuarios
     {
         usuarioTemporario.RestricoesFisicas = restricoes;
     }
+
+    public static void AtualizarCondicoesMedicas(List<string> CondicaoMedica)
+    {
+        usuarioTemporario.CondicoesMedicas = CondicaoMedica;
+    }
+
     public static void SalvarUsuarioTemp()
     {
         try
@@ -145,6 +125,16 @@ public class RepositorioUsuarios
         if (index >= 0)
         {
             listaUsuarios[index] = usuarioAtualizar;
+        }
+    }
+
+    public static void TrocarSenha(Usuario usuarioNovaSenha)
+    {
+        var index = listaUsuarios.FindIndex(u => u.Id == usuarioNovaSenha.Id);
+
+        if (index >= 0)
+        {
+            listaUsuarios[index] = usuarioNovaSenha;
         }
     }
 
