@@ -66,6 +66,7 @@
                     BackgroundColor="Transparent"
                     ClearButtonVisibility="WhileEditing"
                     FontSize="15"
+                    MaxLength="15"
                     Placeholder="Digite seu nome de usuário"
                     TextChanged="txtUsername_TxtChanged"
                     TextColor="Black" />

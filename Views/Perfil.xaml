@@ -7,7 +7,16 @@
     Background="#0c1420"
     IconImageSource="perfil.png"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout Margin="10" Spacing="30">
+    <VerticalStackLayout Margin="10" Spacing="20">
+
+        <Label
+            x:Name="lbl_username"
+            Margin="0,10,0,0"
+            FontAttributes="Bold"
+            FontSize="20"
+            HorizontalOptions="Center"
+            TextColor="White" />
+
         <Border
             HeightRequest="100"
             HorizontalOptions="Center"
@@ -18,72 +27,87 @@
             WidthRequest="100">
             <Image x:Name="imgPerfil" Source="perfil.png" />
         </Border>
-        <TableView>
-            <TableSection Title="perfil">
-                <ViewCell>
-                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="*,*,*,Auto">
 
-                        <Label
-                            x:Name="lbl_nome"
-                            Grid.Column="0"
-                            TextColor="White" />
-                        <Label
-                            x:Name="lbl_idade"
-                            Grid.Column="1"
-                            TextColor="White" />
+        <Grid
+            Margin="10"
+            ColumnDefinitions="*,*"
+            RowDefinitions="Auto,Auto,Auto">
+            <Label
+                x:Name="lbl_nome"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontAttributes="Bold"
+                FontSize="17"
+                HorizontalOptions="Start"
+                TextColor="White" />
+            <Label
+                x:Name="lbl_telefone"
+                IsVisible="False"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="15"
+                HorizontalOptions="Start"
+                TextColor="White" />
+            <Label
+                x:Name="lbl_idade"
+                IsVisible="False"
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="15"
+                HorizontalOptions="Start"
+                TextColor="White" />
+            <Label
+                x:Name="lbl_peso"
+                IsVisible="False"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="15"
+                HorizontalOptions="Start"
+                TextColor="White" />
+            <Label
+                x:Name="lbl_altura"
+                IsVisible="False"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="15"
+                HorizontalOptions="Start"
+                TextColor="White" />
 
-                        <Label
-                            x:Name="lbl_altura"
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            TextColor="White" />
-                        <Label
-                            x:Name="lbl_peso"
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            TextColor="White" />
+        </Grid>
 
-                        <Label
-                            x:Name="lbl_nivelAtividade"
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            TextColor="White" />
-                        <Label
-                            x:Name="lbl_objetivo"
-                            Grid.Row="2"
-                            Grid.Column="0"
-                            TextColor="White" />
-                        <Label
-                            x:Name="lbl_telefone"
-                            Grid.Row="3"
-                            Grid.Column="0"
-                            TextColor="White" />
-                    </Grid>
-                </ViewCell>
-            </TableSection>
-        </TableView>
-        <Label
-            Padding="10"
-            Text="Sair"
-            TextColor="White">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="btnTapSair" />
-            </Label.GestureRecognizers>
-        </Label>
-        <Button
-            Padding="20,10"
-            Clicked="BtnEditarPerfil"
-            CornerRadius="20"
-            FontSize="18"
-            Text="Cadastrar Completo"
-            TextColor="Black"
-            WidthRequest="365" />
-        
+
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="20" Margin="10,5">
+            <Button
+                Grid.Column="0"
+                Padding="20,10"
+                Clicked="BtnEditarPerfil"
+                CornerRadius="10"
+                FontSize="18"
+                Text="Editar perfil"
+                TextColor="Black" />
+            <Button
+                Grid.Column="1"
+                Padding="20,10"
+                Clicked="BtnSair"
+                CornerRadius="10"
+                FontSize="18"
+                Text="Sair"
+                TextColor="Black" />
+        </Grid>
+
+
+
+
+
+
+
         <Button
             Padding="20,10"
             Clicked="BtnCadastrarDados"
             CornerRadius="20"
             FontSize="18"
+            IsVisible="False"
             Text="Cadastrar Completo"
             TextColor="Black"
             WidthRequest="365" />

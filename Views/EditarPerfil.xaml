@@ -11,4 +11,139 @@
             <GradientStop Offset="1.1" Color="#00b140" />
         </LinearGradientBrush>
     </ContentPage.Background>
+    <ScrollView>
+
+        <VerticalStackLayout Margin="15" Spacing="15">
+            <Label
+                Margin="0,10,0,20"
+                FontFamily="OpenSansSemibold"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="Editar pefil"
+                TextColor="White" />
+
+
+            <Image
+                x:Name="imgPerfil"
+                Aspect="AspectFill"
+                HeightRequest="100"
+                IsVisible="False"
+                WidthRequest="100" />
+
+            <Button
+                Margin="0,15,0,0"
+                BackgroundColor="White"
+                Clicked="BtnSelecionarFoto"
+                FontAttributes="Bold"
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Selecionar foto de perfil"
+                TextColor="Black"
+                WidthRequest="330" />
+
+            <Label
+                FontSize="16"
+                Text="Idade*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+
+                <Entry
+                    x:Name="txt_idade"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    Placeholder="Idade"
+                    TextColor="Black" />
+            </Border>
+
+
+
+            <Label
+                FontSize="16"
+                Text="Peso*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto" ColumnSpacing="0">
+
+                    <Entry
+                        x:Name="txt_peso"
+                        Grid.Column="0"
+                        Background="White"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="15"
+                        Keyboard="Numeric"
+                        MaxLength="3"
+                        Placeholder="Peso em Kg"
+                        TextColor="Black" />
+
+                    <Label
+                        Grid.Column="1"
+                        Padding="5,13"
+                        Background="white"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Text="kg"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Border>
+            <Label
+                FontSize="16"
+                Text="Altura*"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="txt_altura"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
+                    Keyboard="Numeric"
+                    MaxLength="3"
+                    Placeholder="Altura em cm"
+                    TextColor="Black" />
+
+
+
+            </Border>
+
+            <Button
+                Margin="0,25,0,0"
+                BackgroundColor="#01C853"
+                Clicked="BtnContinuar"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Continuar"
+                TextColor="Black"
+                WidthRequest="330" />
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
 </ContentPage>
