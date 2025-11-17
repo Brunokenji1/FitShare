@@ -62,10 +62,14 @@ public partial class RecuperarSenha : ContentPage
             {
                 throw new Exception("As senhas não coincidem!");
             }
+            bool confirmacao = await DisplayAlert("Confirmação", "Cadastrar nova senha?", "Sim", "Não");
+            if (confirmacao)
+            {
+                usuario_temp.Senha = txt_novasenha.Text;
+                RepositorioUsuarios.TrocarSenha(usuario_temp);
+                App.Current.MainPage = new NavigationPage(new Login());
+            }
 
-            usuario_temp.Senha = txt_novasenha.Text;
-            RepositorioUsuarios.TrocarSenha(usuario_temp);
-            App.Current.MainPage = new NavigationPage(new Login());
         }
         catch (Exception ex)
         {
