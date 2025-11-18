@@ -33,20 +33,24 @@ public partial class CMOpcoesRespiratorias : ContentPage
     private async void BtnAsma(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_asma.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnBronquiteCronica(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_bronquite_cronica.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnDPOC(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_DPOC.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

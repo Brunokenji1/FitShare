@@ -11,9 +11,19 @@
             <GradientStop Offset="1.1" Color="#00b140" />
         </LinearGradientBrush>
     </ContentPage.Background>
-    <VerticalStackLayout Spacing="30">
+    <VerticalStackLayout Spacing="30" Margin="0,15">
+        <ImageButton
+            Grid.Column="0"
+            Margin="15,5"
+            Background="#01c853"
+            Clicked="BtnVoltar"
+            CornerRadius="100"
+            HeightRequest="20"
+            HorizontalOptions="Start"
+            Source="black_back.png"
+            WidthRequest="50" />
         <Label
-            Margin="0,70,0,20"
+            Margin="0,15,0,20"
             FontAttributes="Bold"
             FontFamily="Poppins"
             FontSize="Title"

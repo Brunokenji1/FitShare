@@ -14,15 +14,15 @@ public partial class EditarPerfil : ContentPage
         base.OnAppearing();
         var usuario = RepositorioUsuarios.ObterUsuarioTemp();
 
-        if (usuario.Idade != null)
+        if (usuario.Idade != null && usuario.Idade != 0)
         {
             txt_idade.Text = $"{usuario.Idade}";
         }
-        if (usuario.Altura != null)
+        if (usuario.Altura != null && usuario.Altura != 0)
         {
             txt_altura.Text = $"{usuario.Altura}";
         }
-        if (usuario.Peso != null)
+        if (usuario.Peso != null && usuario.Peso != 0)
         {
             txt_peso.Text = $"{usuario.Peso}";
         }
@@ -46,8 +46,8 @@ public partial class EditarPerfil : ContentPage
             usuarioTemp.Idade = int.Parse(txt_idade.Text);
             usuarioTemp.Peso = double.Parse(txt_peso.Text);
             RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
-            bool confirmacao = await DisplayAlert("Confirma a edição dos seguintes dados?", $"  Altura : {usuarioTemp.Altura}\n  Peso : {usuarioTemp.Peso}\n" +
-    $"  Idade : {usuarioTemp.Idade}  ", "Sim", "Não");
+            bool confirmacao = await DisplayAlert("Confirma a edição dos seguintes dados?", $"  Altura : {usuarioTemp.Altura}\n  Idade : {usuarioTemp.Idade} \n" +
+    $"Peso : {usuarioTemp.Peso}   ", "Sim", "Não");
             if (confirmacao)
             {
                 usuarioTemp.Status = "Ativo";
@@ -74,12 +74,14 @@ public partial class EditarPerfil : ContentPage
             if (foto == null) return;
 
             var stream = await foto.OpenReadAsync();
+
             var imgSource = ImageSource.FromStream(() => stream);
 
             imgPerfil.Source = imgSource;
             imgPerfil.IsVisible = true;
-            var usuario = RepositorioUsuarios.ObterUsuarioLogado();
+            var usuario = RepositorioUsuarios.ObterUsuarioTemp();
             usuario.FotoPerfil = imgSource;
+            RepositorioUsuarios.AtualizarUsuarioTemp(usuario);
         }
         catch (Exception ex)
         {

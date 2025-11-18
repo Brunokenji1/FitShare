@@ -23,22 +23,22 @@ public partial class Perfil : ContentPage
 
         lbl_username.Text = usuario.Username;
         lbl_nome.Text = usuario.Nome;
-        if(usuario.Idade != null)
+        if(usuario.Idade != null && usuario.Idade !=0)
         {
             lbl_idade.Text = $"Idade: {usuario.Idade}";
             lbl_idade.IsVisible = true;
         }
-        if(usuario.Telefone != null)
+        if(usuario.Telefone != null && usuario.Telefone == "0")
         {
             lbl_telefone.Text = $"Telefone: {usuario.Telefone}";
             lbl_telefone.IsVisible = true;
         }
-        if(usuario.Altura != null)
+        if(usuario.Altura != null && usuario.Altura != 0)
         {
             lbl_altura.Text = $"Altura: {usuario.Altura}cm";
             lbl_altura.IsVisible = true;
         }
-        if(usuario.Peso != null)
+        if(usuario.Peso != null && usuario.Peso != 0)
         {
             lbl_peso.Text = $"Peso: {usuario.Peso}kg";
             lbl_peso.IsVisible = true;

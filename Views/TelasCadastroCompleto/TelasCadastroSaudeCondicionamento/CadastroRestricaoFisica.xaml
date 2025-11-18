@@ -12,10 +12,21 @@
         </LinearGradientBrush>
     </ContentPage.Background>
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Margin="0,15" >
+            <ImageButton
+                Margin="15,5"
+                    Grid.Column="0"
+                    Background="#01c853"
+                    Clicked="BtnVoltar"
+                    CornerRadius="100"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="black_back.png"
+                    WidthRequest="50" />
+
             <Label
+                Margin="0,45,0,110"
                 FontAttributes="Bold"
-                Margin="0,85,0,110"
                 FontFamily="Poppins"
                 FontSize="Title"
                 HorizontalOptions="Center"
@@ -57,6 +68,7 @@
                             x:Name="lblTitulo1"
                             FontAttributes="Bold"
                             FontSize="15"
+                            HorizontalTextAlignment="Center"
                             Text="Membros Inferiores"
                             TextColor="White" />
 
@@ -94,6 +106,7 @@
                             x:Name="lblTitulo2"
                             FontAttributes="Bold"
                             FontSize="15"
+                            HorizontalTextAlignment="Center"
                             Text="Membros Superiores"
                             TextColor="White" />
 
@@ -129,6 +142,7 @@
                             x:Name="lblTitulo3"
                             FontAttributes="Bold"
                             FontSize="15"
+                            HorizontalTextAlignment="Center"
                             Text="Coluna e Postura"
                             TextColor="White" />
 
@@ -164,6 +178,7 @@
                             x:Name="lblTitulo4"
                             FontAttributes="Bold"
                             FontSize="15"
+                            HorizontalTextAlignment="Center"
                             Text="Equilíbrio e Mobilidade"
                             TextColor="White" />
 

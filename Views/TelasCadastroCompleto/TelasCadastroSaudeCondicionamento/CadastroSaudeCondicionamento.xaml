@@ -14,6 +14,16 @@
     <ScrollView>
 
         <VerticalStackLayout>
+            <ImageButton
+            Grid.Column="0"
+            Margin="15,15,0,0"
+            Background="#01c853"
+            Clicked="BtnVoltar"
+            CornerRadius="100"
+            HeightRequest="20"
+            HorizontalOptions="Start"
+            Source="black_back.png"
+            WidthRequest="50" />
             <Label
                 Margin="0,10,0,20"
                 FontFamily="Poppins"

@@ -33,12 +33,16 @@ public partial class RFOpcoesEquilibrioEMobilidade : ContentPage
     private async void BtnDificuldadeParaFicarEmPe(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_dificuldade_para_ficar_em_pe.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnInstabilidadeAoAndar(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_instabilidade_ao_andar.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

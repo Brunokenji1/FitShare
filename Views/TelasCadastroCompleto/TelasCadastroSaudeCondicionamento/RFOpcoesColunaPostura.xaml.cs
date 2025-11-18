@@ -35,25 +35,28 @@ public partial class RFOpcoesColunaPostura : ContentPage
     private async void BtnDorLombar(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_dor_lombar.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
-
+        await Navigation.PopAsync();
     }
 
     private async void BtnEscoliose(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_escoliose.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnHerniaDeDisco(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_hernia_de_disco.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnPosturaCurvada(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_postura_curvada.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

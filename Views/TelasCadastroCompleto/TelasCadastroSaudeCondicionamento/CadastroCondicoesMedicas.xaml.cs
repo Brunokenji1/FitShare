@@ -34,4 +34,8 @@ public partial class CadastroCondicoesMedicas : ContentPage
     {
         await Navigation.PushAsync(new CMOpcoesRespiratorias());
     }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

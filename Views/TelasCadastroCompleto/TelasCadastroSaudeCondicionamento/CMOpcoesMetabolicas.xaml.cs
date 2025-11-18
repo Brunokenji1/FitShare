@@ -31,14 +31,18 @@ public partial class CMOpcoesMetabolicas : ContentPage
     private async void BtnColesterolAlto(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_colesterol_alto.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnObesidade(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_obesidade.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

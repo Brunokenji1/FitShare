@@ -37,25 +37,29 @@ public partial class CMOpcoesOsteomusculares : ContentPage
     private async void BtnArtrite(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_artrite.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnArtrose(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_artrose.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnOsteoporose(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_osteoporose.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnTendinite(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_tendinite.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

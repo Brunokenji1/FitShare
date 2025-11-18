@@ -31,5 +31,8 @@ public partial class CadastroRestricaoFisica : ContentPage
     {
         await Navigation.PushAsync(new CadastroSaudeCondicionamento());
     }
-   
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

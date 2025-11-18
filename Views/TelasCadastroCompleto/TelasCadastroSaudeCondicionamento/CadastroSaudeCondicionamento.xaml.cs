@@ -181,4 +181,8 @@ public partial class CadastroSaudeCondicionamento : ContentPage
             RepositorioSaudeCondicionamento.RemoverCondicaoMedicaTemp(nome);
         }
     }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

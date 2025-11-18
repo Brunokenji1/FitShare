@@ -12,9 +12,19 @@
         </LinearGradientBrush>
     </ContentPage.Background>
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Margin="0,15">
+            <ImageButton
+                Margin="15,5"
+                    Grid.Column="0"
+                    Background="#01c853"
+                    Clicked="BtnVoltar"
+                    CornerRadius="100"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="black_back.png"
+                    WidthRequest="50" />
             <Label
-                Margin="0,75,0,40"
+                Margin="0,45,0,40"
                 FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"

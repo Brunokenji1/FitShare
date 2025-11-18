@@ -67,19 +67,14 @@ public partial class CadastrarDados : ContentPage
 		}
     }
 
-	private void Picker_SelectedIndexChanged(object sender, EventArgs e)
-	{
-		
-		txt_altura.IsEnabled = true;
-		var medida = ((Picker)sender);
-		String unidadeSelecionada = (String)medida.SelectedItem;
-		txt_altura.Text = null;
-	
-	}
 
     private void PickerSexo_SelectedIndexChanged(object sender, EventArgs e)
     {
         var sexo = ((Picker)sender);
         String unidadeSelecionada = (String)sexo.SelectedItem;
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

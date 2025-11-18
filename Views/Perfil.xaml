@@ -21,11 +21,12 @@
             HeightRequest="100"
             HorizontalOptions="Center"
             Stroke="Green"
+            StrokeShape="RoundRectangle 60"
             StrokeLineJoin="Round"
             StrokeThickness="1"
             VerticalOptions="Center"
             WidthRequest="100">
-            <Image x:Name="imgPerfil" Source="perfil.png" />
+            <Image x:Name="imgPerfil" Source="perfil.png" Aspect="AspectFill" />
         </Border>
 
         <Grid
@@ -107,7 +108,7 @@
             Clicked="BtnCadastrarDados"
             CornerRadius="20"
             FontSize="18"
-            IsVisible="False"
+            IsVisible="True"
             Text="Cadastrar Completo"
             TextColor="Black"
             WidthRequest="365" />

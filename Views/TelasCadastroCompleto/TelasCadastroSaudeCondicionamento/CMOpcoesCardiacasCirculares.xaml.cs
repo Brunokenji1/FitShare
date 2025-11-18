@@ -36,28 +36,32 @@ public partial class CMOpcoesCardiacasCirculares : ContentPage
     private async void BtnHipertensao(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_hipertensao.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnArritmia(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_arritmia.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnHipotensao(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_hipotensao.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
     }
 
     private async void BtnInsuficienciaCardiaca(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_insuficiencia_cardiaca.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
 
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

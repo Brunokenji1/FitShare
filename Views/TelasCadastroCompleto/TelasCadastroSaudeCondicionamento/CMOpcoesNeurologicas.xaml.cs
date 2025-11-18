@@ -31,12 +31,16 @@ public partial class CMOpcoesNeurologicas : ContentPage
     private async void BtnParkinson(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_parkinson.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnVertigem(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarCondicaoMedicaTemp(btn_vertigem.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

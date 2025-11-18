@@ -75,4 +75,8 @@ public partial class CadastroObjetivo : ContentPage
             await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
     }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

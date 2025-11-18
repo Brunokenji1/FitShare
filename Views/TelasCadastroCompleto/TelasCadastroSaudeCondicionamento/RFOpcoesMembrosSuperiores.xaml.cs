@@ -37,24 +37,28 @@ public partial class RFOpcoesMembrosSuperiores : ContentPage
     private async void BtnDificuldadeParaLevantarPeso(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_dificuldade_para_levantar_peso.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnDorNoCotovelo(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_dor_no_cotovelo.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnLimitacaoNoOmbro(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_limitacao_no_ombro.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
     }
 
     private async void BtnTendiniteNoBraco(object sender, TappedEventArgs e)
     {
         RepositorioSaudeCondicionamento.AdicionarRestricaoFisicaTemp(btn_tendinite_no_braco.ClassId);
-        await Navigation.PushAsync(new CadastroSaudeCondicionamento());
+        await Navigation.PopAsync();
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }
