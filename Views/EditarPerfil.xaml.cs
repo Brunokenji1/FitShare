@@ -14,6 +14,7 @@ public partial class EditarPerfil : ContentPage
         base.OnAppearing();
         var usuario = RepositorioUsuarios.ObterUsuarioTemp();
 
+        
         if (usuario.Idade != null && usuario.Idade != 0)
         {
             txt_idade.Text = $"{usuario.Idade}";
@@ -34,17 +35,28 @@ public partial class EditarPerfil : ContentPage
         try
         {
             var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
-
-
-            if (string.IsNullOrWhiteSpace(txt_idade.Text) ||
-               string.IsNullOrWhiteSpace(txt_peso.Text) ||
-               string.IsNullOrWhiteSpace(txt_altura.Text))
+            if (lblAviso.Text != "Nome de usuário válido")
             {
-                throw new Exception("Preencha todos os campos!");
+                throw new Exception("Digite um username válido!");
             }
-            usuarioTemp.Altura = double.Parse(txt_altura.Text);
-            usuarioTemp.Idade = int.Parse(txt_idade.Text);
-            usuarioTemp.Peso = double.Parse(txt_peso.Text);
+            if(txt_username.Text != null)
+            {
+                usuarioTemp.Username = txt_username.Text;
+            }
+            if (txt_altura.Text != null)
+            {
+                usuarioTemp.Altura = double.Parse(txt_altura.Text);
+            }
+            if(txt_idade.Text != null)
+            {
+                usuarioTemp.Idade = int.Parse(txt_idade.Text);
+
+            }
+            if(txt_peso.Text != null)
+            {
+                usuarioTemp.Peso = double.Parse(txt_peso.Text);
+
+            }
             RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
             bool confirmacao = await DisplayAlert("Confirma a edição dos seguintes dados?", $"  Altura : {usuarioTemp.Altura}\n  Idade : {usuarioTemp.Idade} \n" +
     $"Peso : {usuarioTemp.Peso}   ", "Sim", "Não");
@@ -86,6 +98,51 @@ public partial class EditarPerfil : ContentPage
         catch (Exception ex)
         {
             await DisplayAlert("Erro", ex.Message, "OK");
+        }
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
+    private void txtUsername_TxtChanged(object sender, TextChangedEventArgs e)
+    {
+
+        string username = txt_username.Text?.Trim() ?? "";
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            lblAviso.Text = "";
+            return;
+        }
+        if (!System.Text.RegularExpressions.Regex.IsMatch(username, "^[a-z0-9]+$"))
+        {
+            lblAviso.IsVisible = true;
+            lblAviso.TextColor = Colors.Red;
+            if (username.Any(char.IsUpper)) lblAviso.Text = "Use apenas letras minúsculas. ";
+            else lblAviso.Text = "Use só letras e números, sem acento ou símbolos.";
+        }
+        else
+        {
+            var usuariologado = RepositorioUsuarios.ObterUsuarioLogado();
+   
+            var usernameExistente = RepositorioUsuarios.ObterPorUsername(txt_username.Text);
+
+            if(txt_username.Text == usuariologado.Username)
+            {
+                lblAviso.Text = "Nome de usuário válido";
+                lblAviso.IsVisible = false;
+            }
+            else if (usernameExistente != null)
+            {
+                lblAviso.IsVisible = true;
+                lblAviso.TextColor = Colors.Red;
+                lblAviso.Text = "Nome de usuario existente";
+            }
+            else
+            {
+                lblAviso.TextColor = Colors.Green;
+                lblAviso.Text = "Nome de usuário válido";
+                lblAviso.IsVisible = false;
+            }
         }
     }
 }

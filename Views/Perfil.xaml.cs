@@ -35,7 +35,7 @@ public partial class Perfil : ContentPage
         }
         if(usuario.Altura != null && usuario.Altura != 0)
         {
-            lbl_altura.Text = $"Altura: {usuario.Altura}cm";
+            lbl_altura.Text = $"Altura: {usuario.Altura}m";
             lbl_altura.IsVisible = true;
         }
         if(usuario.Peso != null && usuario.Peso != 0)

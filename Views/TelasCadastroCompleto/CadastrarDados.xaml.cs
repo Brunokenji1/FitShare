@@ -31,9 +31,27 @@ public partial class CadastrarDados : ContentPage
             }
 			string sexoSelecionado = (string)PickerSexo.SelectedItem;
 			usuarioTemp.Sexo = sexoSelecionado;
-            usuarioTemp.Altura = double.Parse(txt_altura.Text);
+            
             usuarioTemp.Idade = int.Parse(txt_idade.Text);
-			usuarioTemp.Peso = double.Parse(txt_peso.Text);
+            if (txt_peso.Text.Contains(","))
+            {
+                usuarioTemp.Peso = double.Parse(txt_peso.Text);
+
+            }
+            else
+            {
+                throw new Exception("Preencha o seu peso usando Quilogramas nesse formato 000,00");
+            }
+            if (txt_altura.Text.Contains(","))
+			{
+                usuarioTemp.Altura = double.Parse(txt_altura.Text);
+            }
+			else
+			{
+				throw new Exception("Preencha a sua altura usando Metros nesse formato 0,00");
+
+            }
+
 			RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
 
             await Navigation.PushAsync(new CadastroObjetivo());

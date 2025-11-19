@@ -1,4 +1,4 @@
-using Android.Content.Res;
+
 using AppFitShare.Models;
 using AppFitShare.Repositories;
 using System.Threading.Tasks;

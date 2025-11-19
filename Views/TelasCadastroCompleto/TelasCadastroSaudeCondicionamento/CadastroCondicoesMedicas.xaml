@@ -61,7 +61,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="coracao.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -99,7 +99,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="metabolismo.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -139,7 +139,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="celebro.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -175,7 +175,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="osso.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -209,7 +209,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="pulmao.png"
                             WidthRequest="40" />
 
                         <Label

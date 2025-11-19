@@ -14,13 +14,28 @@
     <ScrollView>
 
         <VerticalStackLayout Margin="15" Spacing="10">
-            <Label
-                Margin="10"
-                FontFamily="OpenSansSemibold"
-                FontSize="20"
-                HorizontalOptions="Center"
-                Text="Crie sua conta para começar"
-                TextColor="White" />
+            <Grid ColumnDefinitions="Auto, *">
+                <ImageButton
+                    Grid.Column="0"
+                    Margin="5,0,0,0"
+                    Background="#01c853"
+                    Clicked="BtnVoltar"
+                    CornerRadius="100"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="black_back.png"
+                    WidthRequest="50" />
+                <Label
+                    Grid.Column="1"
+                    Margin="10"
+                    FontFamily="OpenSansSemibold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="Crie sua conta para começar"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+            </Grid>
 
             <Label
                 FontFamily="OpenSansSemibold"

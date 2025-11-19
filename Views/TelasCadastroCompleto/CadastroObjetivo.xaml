@@ -118,7 +118,7 @@
 
                     <Image
                         HeightRequest="40"
-                        Source="treino.png"
+                        Source="health.png"
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <VerticalStackLayout Spacing="5" WidthRequest="300">

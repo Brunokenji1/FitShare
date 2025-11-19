@@ -126,8 +126,8 @@
                         ClearButtonVisibility="WhileEditing"
                         FontSize="15"
                         Keyboard="Numeric"
-                        MaxLength="3"
-                        Placeholder="Peso em Kg"
+                        MaxLength="6"
+                        Placeholder="Peso em Kg 000.0"
                         TextColor="Black" />
 
                     <Label
@@ -161,8 +161,8 @@
                     FontSize="15"
                     IsEnabled="True"
                     Keyboard="Numeric"
-                    MaxLength="3"
-                    Placeholder="Altura em cm"
+                    MaxLength="4"
+                    Placeholder="Altura em m 0.00"
                     TextColor="Black" />
 
 

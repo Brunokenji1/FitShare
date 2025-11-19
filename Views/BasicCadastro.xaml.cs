@@ -128,4 +128,8 @@ public partial class BasicCadastro : ContentPage
             imagebButton.Source = "eye_open.png";
         }
     }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

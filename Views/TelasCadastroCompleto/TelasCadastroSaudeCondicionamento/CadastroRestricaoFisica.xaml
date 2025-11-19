@@ -25,7 +25,7 @@
                     WidthRequest="50" />
 
             <Label
-                Margin="0,45,0,110"
+                Margin="0,45,0,90"
                 FontAttributes="Bold"
                 FontFamily="Poppins"
                 FontSize="Title"
@@ -61,7 +61,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="leg.png"
                             WidthRequest="40" />
 
                         <Label
@@ -99,7 +99,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="arm.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -135,7 +135,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="coluna.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
@@ -171,7 +171,7 @@
                         VerticalOptions="Center">
                         <Image
                             HeightRequest="40"
-                            Source="treino.png"
+                            Source="equilibrio.png"
                             VerticalOptions="Center"
                             WidthRequest="40" />
                         <Label
