@@ -98,6 +98,18 @@
 	  <MauiCss Remove="Resources\Data\**" />
 	  <MauiXaml Remove="Resources\Data\**" />
 	  <None Remove="Resources\Data\**" />
+		
+		<!--
+		<EmbeddedResource Include="Models\TreinoPerna.Json"/>
+		<EmbeddedResource Include="Models\TreinoTronco.Json"/>
+		<EmbeddedResource Include="Models\TreinoBraco.json"/>
+		-->
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Models\TreinoBraco.json" />
+	  <None Remove="Models\TreinoPerna.json" />
+	  <None Remove="Models\TreinoTronco.json" />
 	</ItemGroup>
 
 	<ItemGroup>

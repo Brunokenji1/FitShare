@@ -1,47 +1,65 @@
-﻿using AppFitShare.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using AppFitShare.Models;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace AppFitShare.ViewModels
 {
     public partial class ExerciciosTreinosViewModel : ObservableObject
     {
         [ObservableProperty]
-        private Treino treinoSelecionado;
-        public ObservableCollection<Exercicio> Exercicios { get; set; } = new ObservableCollection<Exercicio>();
-        public ICommand IniciarTreinoCommand { get; }
+        private ObservableCollection<Exercicio> listaDeExercicios;
+
+        //cabecalho
+        [ObservableProperty]
+        private string nomeDoTreino = "Treino de Pernas"; 
+
+        [ObservableProperty]
+        private string totalDuracaoFormatada = "0min 0s";
+
+        [ObservableProperty]
+        private int totalCalorias;
+
+        [ObservableProperty]
+        private string dificuldadeNivel = "Intermediário";
+
         public ExerciciosTreinosViewModel()
         {
-            var treinoA = new Treino
+            listaDeExercicios = new ObservableCollection<Exercicio>();
+            CarregarExerciciosEmMemoria();
+        }
+
+        private void CarregarExerciciosEmMemoria()
+        {
+            List<Exercicio> dadosDoTreino = new List<Exercicio>
             {
-                Nome = "TREINO X",
-                Duracao = "X",
-                Series= 2,
-                Calorias = 1,
-                Dificuldade = "X",
-                ListaDeExercicios = new List<Exercicio>
-                {
-                    new Exercicio{ Nome="Agachamento", Series= 2, Repeticoes= 12},
-                    new Exercicio{Nome ="Supino", Series=3, Repeticoes=12 },
-                }
+                new Exercicio { Nome = "Agachamento", Calorias = 200, Dificuldade = 2, Duracao = 300, Imagem = "Images/agachamento.png", Series = 3 },
+                new Exercicio { Nome = "Leg Press", Calorias = 180, Dificuldade = 3, Duracao = 500, Imagem = "legpress.png", Series = 3 },
+                new Exercicio { Nome = "Extensora", Calorias = 100, Dificuldade = 1, Duracao = 240, Imagem = "extensora.png", Series = 4 },
+                new Exercicio { Nome = "Avanço", Calorias = 150, Dificuldade = 2, Duracao = 360, Imagem = "avanco.png", Series = 3 }
             };
-            IniciarTreinoCommand = new RelayCommand(IniciarTreino);
-            treinoSelecionado = treinoA;
-            foreach(var exercicio in treinoA.ListaDeExercicios)
+
+            if (dadosDoTreino.Any())
             {
-                Exercicios.Add(exercicio);
+                ListaDeExercicios.Clear();
+                foreach (var exercicio in dadosDoTreino)
+                {
+                    ListaDeExercicios.Add(exercicio);
+                }
+
+                CalcularMetricas(dadosDoTreino);
             }
         }
-        private void IniciarTreino()
-        {
 
+        private void CalcularMetricas(List<Exercicio> exercicios)
+        {
+            int totalSegundos = exercicios.Sum(e => e.Duracao);
+            int minutos = totalSegundos / 60;
+            int segundos = totalSegundos % 60;
+
+            TotalDuracaoFormatada = $"{minutos}min {segundos}s";
+            TotalCalorias = exercicios.Sum(e => e.Calorias);
         }
     }
 }

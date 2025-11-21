@@ -1,0 +1,16 @@
+﻿[
+  {
+    "Nome": "Agachamento",
+    "Calorias": 200,
+    "Dificuldade": 2,
+    "DuracaoMinutos": 300,
+    "Imagem": ""
+  },
+  {
+    "Nome": "Leg press",
+    "Calorias": 200,
+    "Dificuldade": 3,
+    "DuracaoMinutos": 10,
+    "ImagemUrl": ""
+  }
+]
