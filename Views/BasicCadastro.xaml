@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="BasicCadastro"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -111,7 +112,11 @@
                     FontSize="15"
                     Keyboard="Telephone"
                     Placeholder="Digite seu Telefone"
-                    TextColor="Black" />
+                    TextColor="Black" >
+                    <Entry.Behaviors>
+                        <toolkit:MaskedBehavior Mask="(XX) XXXXX-XXXX"/>
+                    </Entry.Behaviors>
+                </Entry>
             </Border>
             <Label
                 FontFamily="OpenSansSemibold"

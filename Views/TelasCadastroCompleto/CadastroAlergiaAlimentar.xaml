@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastroAlergiaAlimentar"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="CadastroAlergiaAlimentar"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0.8" Color="#0D0F1A" />
+            <GradientStop Offset="1.1" Color="#00b140" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <VerticalStackLayout Margin="0,15">
+            <ImageButton
+                Grid.Column="0"
+                Margin="15,5"
+                Background="#01c853"
+                Clicked="BtnVoltar"
+                CornerRadius="100"
+                HeightRequest="20"
+                HorizontalOptions="Start"
+                Source="black_back.png"
+                WidthRequest="50" />
+
+            <Label
+                Margin="0,5,0,5"
+                FontAttributes="Bold"
+                FontFamily="Poppins"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Text="Você possui alguma alergia alimentar ?"
+                TextColor="White"
+                WidthRequest="345" />
+            <Grid
+                ColumnDefinitions="*,*"
+                RowDefinitions="*,*,*,*,Auto"
+                RowSpacing="20">
+
+                <Border
+                    x:Name="btn_nao"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Não"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnNao" />
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="nao.png"
+                            WidthRequest="40" />
+
+                        <Label
+                            x:Name="lblTitulo1"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Não"
+                            TextColor="White" />
+
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <Border
+                    x:Name="btn_lactose"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Lactose"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnLactose" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="milk.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo2"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Lactose"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Border
+                    x:Name="btn_nozes"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Nozes"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnNozes" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="nozes.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo3"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Nozes"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Border
+                    x:Name="btn_soja"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Soja"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnSoja" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="soja.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo4"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Soja"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Border
+                    x:Name="btn_frutos_do_mar"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Frutos do mar"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnFrutosDoMar" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="lagosta.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo5"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Frutos do mar"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <Border
+                    x:Name="btn_amendoim"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Amendoim"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnAmendoim" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="amendoim.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo6"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Amendoim"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Border
+                    x:Name="btn_peixe"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Peixe"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnPeixe" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="fish.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo7"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Peixe"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Border
+                    x:Name="btn_ovo"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="10,10"
+                    BackgroundColor="Transparent"
+                    ClassId="Ovo"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnOvo" />
+                    </Border.GestureRecognizers>
+
+
+                    <VerticalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="5"
+                        VerticalOptions="Center">
+                        <Image
+                            HeightRequest="40"
+                            Source="egg.png"
+                            VerticalOptions="Center"
+                            WidthRequest="40" />
+                        <Label
+                            x:Name="lblTitulo8"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalTextAlignment="Center"
+                            Text="Ovo"
+                            TextColor="White" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,0"
+                    BackgroundColor="#01C853"
+                    Clicked="BtnContinuar"
+                    FontFamily="OpenSansSemibold"
+                    FontSize="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Continuar"
+                    TextColor="Black"
+                    WidthRequest="330" />
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

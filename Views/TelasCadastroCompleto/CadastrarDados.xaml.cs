@@ -33,7 +33,7 @@ public partial class CadastrarDados : ContentPage
 			usuarioTemp.Sexo = sexoSelecionado;
             
             usuarioTemp.Idade = int.Parse(txt_idade.Text);
-            if (txt_peso.Text.Contains(","))
+            if (txt_peso.Text.Contains(",") || txt_peso.Text.Contains("."))
             {
                 usuarioTemp.Peso = double.Parse(txt_peso.Text);
 
@@ -42,16 +42,8 @@ public partial class CadastrarDados : ContentPage
             {
                 throw new Exception("Preencha o seu peso usando Quilogramas nesse formato 000,00");
             }
-            if (txt_altura.Text.Contains(","))
-			{
-                usuarioTemp.Altura = double.Parse(txt_altura.Text);
-            }
-			else
-			{
-				throw new Exception("Preencha a sua altura usando Metros nesse formato 0,00");
-
-            }
-
+    
+            usuarioTemp.Altura = double.Parse(txt_altura.Text);
 			RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
 
             await Navigation.PushAsync(new CadastroObjetivo());

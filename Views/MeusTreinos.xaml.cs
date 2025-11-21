@@ -1,5 +1,8 @@
 using AppFitShare.Models;
+using AppFitShare.Repositories;
 using AppFitShare.Services;
+using AppFitShare.Views.TelasCadastroCompleto;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 
 namespace AppFitShare.Views;
 
@@ -11,6 +14,12 @@ public partial class MeusTreinos : ContentPage
     public MeusTreinos()
     {
         InitializeComponent();
+        var usuario = RepositorioUsuarios.ObterUsuarioLogado();
+        if (usuario.CadastroSaude)
+        {
+            cadastro_saude.IsVisible = false;
+            dados.IsVisible = true;
+        }
         _ = CarregarTreinosAsync();
     }
     private async Task CarregarTreinosAsync()
@@ -44,5 +53,10 @@ public partial class MeusTreinos : ContentPage
 
     private void BotaoIniciarTreinoClicked2(object sender, EventArgs e)
     {
+    }
+
+    private async void BtnCadastroSaude(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CadastrarDados());
     }
 }

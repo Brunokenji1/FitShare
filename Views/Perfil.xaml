@@ -108,7 +108,7 @@
             Clicked="BtnCadastrarDados"
             CornerRadius="20"
             FontSize="18"
-            IsVisible="True"
+            IsVisible="False"
             Text="Cadastrar Completo"
             TextColor="Black"
             WidthRequest="365" />

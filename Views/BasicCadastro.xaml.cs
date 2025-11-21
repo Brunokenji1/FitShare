@@ -59,7 +59,10 @@ public partial class BasicCadastro : ContentPage
             }
 
             var usernameExistente = RepositorioUsuarios.ObterPorUsername(txt_username.Text);
-            var telefoneExistente = RepositorioUsuarios.ObterPorTelefone(txt_telefone.Text);
+
+            var telefone = txt_telefone.Text.Replace("(", "").Replace(")", "").Replace(" ","").Replace("-", "");
+
+            var telefoneExistente = RepositorioUsuarios.ObterPorTelefone(telefone);
 
             if(lblAviso.Text != "Nome de usuário válido")
             {
@@ -87,10 +90,10 @@ public partial class BasicCadastro : ContentPage
             }
             
             
-            bool confirmacao = await DisplayAlert("Confirmação", "Criar Conta com esses dados?", "Sim", "Não");
+            bool confirmacao = await DisplayAlert("Confirmação", $"Criar Conta com esses dados?", "Sim", "Não");
             if (confirmacao)
             {
-                var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count + 1, txt_nome.Text, txt_username.Text, txt_telefone.Text, txt_senha.Text, DateTime.Now);
+                var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count + 1, txt_nome.Text, txt_username.Text, telefone, txt_senha.Text, DateTime.Now);
                 RepositorioUsuarios.Cadastrar(novoUsuario);
                 await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
                 

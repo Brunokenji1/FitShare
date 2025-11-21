@@ -30,6 +30,9 @@ namespace AppFitShare.Models
         public string NivelAtividade { get; set; }
         public string Sexo { get; set; }
 
+        public bool CadastradoAlimentacao { get; set; } = false;
+        public bool CadastroSaude { get; set; } = false;
+
         public List<string> RestricoesFisicas { get; set; } = new List<string>();
         public List<string> CondicoesMedicas { get; set; } = new List<string>();
 

@@ -3,6 +3,7 @@
     x:Class="AppFitShare.Views.TelasCadastroCompleto.CadastrarDados"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:vm="clr-namespace:AppFitShare.ViewModels"
     Title="CadastrarDados"
     NavigationPage.HasNavigationBar="False">
@@ -127,7 +128,7 @@
                         FontSize="15"
                         Keyboard="Numeric"
                         MaxLength="6"
-                        Placeholder="Peso em Kg 000.0"
+                        Placeholder="Peso em Kg 000,0"
                         TextColor="Black" />
 
                     <Label
@@ -152,19 +153,32 @@
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
 
+                <Grid ColumnDefinitions="*,Auto">
 
-                <Entry
-                    x:Name="txt_altura"
-                    Grid.Column="0"
-                    Background="White"
-                    ClearButtonVisibility="WhileEditing"
-                    FontSize="15"
-                    IsEnabled="True"
-                    Keyboard="Numeric"
-                    MaxLength="4"
-                    Placeholder="Altura em m 0.00"
-                    TextColor="Black" />
-
+                    <Entry
+                        x:Name="txt_altura"
+                        Grid.Column="0"
+                        Background="White"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="15"
+                        IsEnabled="True"
+                        Keyboard="Numeric"
+                        MaxLength="4"
+                        Placeholder="Altura em metros"
+                        TextColor="Black">
+                        <Entry.Behaviors>
+                            <toolkit:MaskedBehavior Mask="X,XX" />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label
+                        Grid.Column="1"
+                        Padding="5,13"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Text="m"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+                </Grid>
 
 
             </Border>

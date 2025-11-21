@@ -46,7 +46,7 @@
                 <HorizontalStackLayout Spacing="10">
                     <Image
                         HeightRequest="40"
-                        Source="treino.png"
+                        Source="arm.png"
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <VerticalStackLayout Spacing="5" WidthRequest="300">
@@ -82,7 +82,7 @@
 
                     <Image
                         HeightRequest="40"
-                        Source="treino.png"
+                        Source="lose_weight.png"
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <VerticalStackLayout Spacing="5" WidthRequest="300">

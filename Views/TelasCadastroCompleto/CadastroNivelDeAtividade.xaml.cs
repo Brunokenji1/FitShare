@@ -72,6 +72,7 @@ public partial class CadastroNivelDeAtividade : ContentPage
             if (confirmacao)
             {
                 usuarioTemp.Status = "Ativo";
+                usuarioTemp.CadastroSaude = true;
                 RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
                 RepositorioUsuarios.SalvarUsuarioTemp();
 
@@ -85,5 +86,9 @@ public partial class CadastroNivelDeAtividade : ContentPage
         {
             await DisplayAlert("Ops...", ex.Message, "Fechar");
         }
+    }
+    private async void BtnVoltar(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
     }
 }

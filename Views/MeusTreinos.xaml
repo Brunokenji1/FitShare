@@ -10,72 +10,102 @@
 
     <ScrollView>
         <VerticalStackLayout>
+            <VerticalStackLayout
+                x:Name="cadastro_saude"
+                Margin="25"
+                Spacing="10">
+                <Image
+                    Margin="0,100,0,30"
+                    HeightRequest="146"
+                    Source="logo.png"
+                    WidthRequest="118" />
+                <Label
+                    Margin="0,10,0,40"
+                    FontAttributes="Bold"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Queremos cuidar de você! Clique abaixo e nos conte um pouco sobre os seus dados físicos, nível de atividade, objetivo e possíveis restrições para continuarmos."
+                    TextColor="White" />
+                <Button
+                    Margin="0,25"
+                    BackgroundColor="#01C853"
+                    Clicked="BtnCadastroSaude"
+                    FontSize="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Text="Cadastro informações de saúde"
+                    TextColor="Black"
+                    WidthRequest="330" />
+            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="dados" IsVisible="False">
 
-            <HorizontalStackLayout>
-                <Border Stroke="#003918" StrokeShape="RoundRectangle 0,0,15,15">
+                <HorizontalStackLayout>
+                    <Border Stroke="#003918" StrokeShape="RoundRectangle 0,0,15,15">
 
-                    <Label
-                        Padding="30,15,322,20"
-                        BackgroundColor="#003918"
-                        FontFamily="Poppins"
-                        FontSize="20"
-                        Text="Treino"
-                        TextColor="White"
-                        VerticalOptions="Start" />
-                </Border>
-            </HorizontalStackLayout>
+                        <Label
+                            Padding="30,15,322,20"
+                            BackgroundColor="#003918"
+                            FontFamily="Poppins"
+                            FontSize="20"
+                            Text="Treino"
+                            TextColor="White"
+                            VerticalOptions="Start" />
+                    </Border>
+                </HorizontalStackLayout>
 
-            <Label
-                Padding="20,15,0,0"
-                FontSize="18"
-                Text="Treinos de hoje!"
-                TextColor="White" />
-            <Button
-                x:Name="BotaoAddTreino"
-                Margin="30,25,30,25"
-                BackgroundColor="Transparent"
-                BorderColor="White"
-                BorderWidth="1"
-                Clicked="BotaoIniciarTreinoClicked"
-                CornerRadius="20"
-                HeightRequest="80"
-                Text="Treino A"
-                TextColor="White" />
-            <Label
-                BackgroundColor="White"
-                FontSize="25"
-                HeightRequest="1.5"
-                TextColor="White"
-                WidthRequest="350" />
-            <Button
-                x:Name="AddBotaoAddTreino"
-                Margin="30,25,30,25"
-                BackgroundColor="Transparent"
-                BorderColor="White"
-                BorderWidth="1"
-                Clicked="BotaoIniciarTreinoClicked"
-                CornerRadius="20"
-                HeightRequest="80"
-                Text="Treino B"
-                TextColor="White" />
-            <Label
-                Background="White"
-                FontSize="25"
-                HeightRequest="1.5"
-                HorizontalOptions="Center"
-                TextColor="White"
-                WidthRequest="350" />
-            <ImageButton
-                Margin="30,30"
-                Padding="5"
-                BackgroundColor="#00b140"
-                Clicked="AddTreinoPersonalizado"
-                CornerRadius="100"
-                HeightRequest="32"
-                HorizontalOptions="End"
-                Source="vetor.png"
-                WidthRequest="32" />
+                <Label
+                    Padding="20,15,0,0"
+                    FontSize="18"
+                    Text="Treinos de hoje!"
+                    TextColor="White" />
+                <Button
+                    x:Name="BotaoAddTreino"
+                    Margin="30,25,30,25"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="BotaoIniciarTreinoClicked"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    Text="Treino A"
+                    TextColor="White" />
+                <Label
+                    BackgroundColor="White"
+                    FontSize="25"
+                    HeightRequest="1.5"
+                    TextColor="White"
+                    WidthRequest="350" />
+                <Button
+                    x:Name="AddBotaoAddTreino"
+                    Margin="30,25,30,25"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="BotaoIniciarTreinoClicked"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    Text="Treino B"
+                    TextColor="White" />
+                <Label
+                    Background="White"
+                    FontSize="25"
+                    HeightRequest="1.5"
+                    HorizontalOptions="Center"
+                    TextColor="White"
+                    WidthRequest="350" />
+                <ImageButton
+                    Margin="30,30"
+                    Padding="5"
+                    BackgroundColor="#00b140"
+                    Clicked="AddTreinoPersonalizado"
+                    CornerRadius="100"
+                    HeightRequest="32"
+                    HorizontalOptions="End"
+                    Source="vetor.png"
+                    WidthRequest="32" />
 
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

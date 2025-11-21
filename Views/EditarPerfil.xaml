@@ -139,6 +139,7 @@
                         Background="white"
                         FontAttributes="Bold"
                         FontSize="15"
+                        TextColor="Black"
                         Text="kg"
                         VerticalOptions="Center" />
                 </Grid>
@@ -154,17 +155,26 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
                 </Border.StrokeShape>
+                <Grid ColumnDefinitions="*,Auto">
 
-                <Entry
-                    x:Name="txt_altura"
-                    Background="White"
-                    ClearButtonVisibility="WhileEditing"
-                    FontSize="15"
-                    Keyboard="Numeric"
-                    MaxLength="3"
-                    Placeholder="Altura em cm"
-                    TextColor="Black" />
-
+                    <Entry
+                        x:Name="txt_altura"
+                        Background="White"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="15"
+                        Keyboard="Numeric"
+                        MaxLength="3"
+                        Placeholder="Altura em m"
+                        TextColor="Black" />
+                    <Label
+                        Grid.Column="1"
+                        Padding="5,13"
+                        FontAttributes="Bold"
+                        FontSize="15"
+                        Text="m"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+                </Grid>
 
 
             </Border>
