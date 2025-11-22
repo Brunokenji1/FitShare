@@ -4,38 +4,49 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:AppFitShare.Converters"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:models="clr-namespace:AppFitShare.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
     Title="Agenda"
     Background="#0c1420"
     IconImageSource="agenda.png"
     NavigationPage.HasNavigationBar="False">
-
-
     <ContentPage.BindingContext>
-        <viewmodels:LembretesViewModel />
+        <viewmodels:LembretesViewModel x:Name="vm" />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
         <converters:BoolToTextRecorrenteConverter x:Key="BoolToTextRecorrenteConverter" />
-
-        <Style x:Key="DiaButtonStyle" TargetType="Button">
-            <Setter Property="CornerRadius" Value="20" />
-            <Setter Property="HeightRequest" Value="40" />
-            <Setter Property="WidthRequest" Value="40" />
-            <Setter Property="Padding" Value="0" />
-            <Setter Property="FontSize" Value="12" />
-            <Setter Property="FontAttributes" Value="Bold" />
-            <Setter Property="TextColor" Value="White" />
-        </Style>
     </ContentPage.Resources>
 
-    <Grid Padding="10" RowDefinitions="*, Auto">
 
-        <CollectionView
+    <Grid RowDefinitions="Auto,*">
+        <Grid
             Grid.Row="0"
+            Background="#003918"
+            ColumnDefinitions="*,Auto">
+            <Label
+                Padding="30,15,100,20"
+                BackgroundColor="#003918"
+                FontSize="20"
+                VerticalOptions="Center"
+                Text="Lembretes"
+                TextColor="White" />
+
+            <ImageButton
+                Grid.Column="1"
+                Margin="4,4,10,4"
+                Padding="2"
+                Command="{Binding GoToAdicionarCommand}"
+                HeightRequest="32"
+                HorizontalOptions="Center"
+                Source="plus_green.png"
+                VerticalOptions="Center"
+                WidthRequest="32" />
+
+        </Grid>
+        <CollectionView
+            Grid.Row="1"
             EmptyView="Nenhuma tarefa para hoje!"
             ItemsSource="{Binding LembretesVisiveis}">
             <CollectionView.ItemTemplate>
@@ -46,14 +57,15 @@
                         BackgroundColor="White"
                         Stroke="Transparent"
                         StrokeShape="RoundRectangle 10">
-
                         <Grid ColumnDefinitions="Auto, *, Auto, Auto" ColumnSpacing="10">
+
                             <CheckBox Grid.Column="0" Color="#2196F3">
                                 <CheckBox.Behaviors>
                                     <toolkit:EventToCommandBehavior
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:LembretesViewModel}}, Path=ConcluirTarefaCommand}"
+                                        Command="{Binding Source={x:Reference vm}, Path=ConcluirCommand}"
                                         CommandParameter="{Binding .}"
                                         EventName="CheckedChanged" />
+
                                 </CheckBox.Behaviors>
                             </CheckBox>
 
@@ -61,7 +73,8 @@
                                 <Label
                                     FontAttributes="Bold"
                                     FontSize="16"
-                                    Text="{Binding Descricao}" />
+                                    Text="{Binding Descricao}"
+                                    TextColor="Black" />
                                 <HorizontalStackLayout Spacing="8">
                                     <Label Text="{Binding HoraAgendada, StringFormat='{0:hh\\:mm}'}" TextColor="Gray" />
                                     <Label
@@ -79,7 +92,7 @@
 
                             <ImageButton
                                 Grid.Column="3"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:LembretesViewModel}}, Path=ExcluirLembreteCommand}"
+                                Command="{Binding Source={x:Reference vm}, Path=ExcluirCommand}"
                                 CommandParameter="{Binding .}"
                                 HeightRequest="25"
                                 Source="trash_icon.png" />
@@ -88,81 +101,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
-        <Border
-            Grid.Row="1"
-            Margin="0,10,0,0"
-            Padding="15"
-            BackgroundColor="White"
-            Stroke="LightGray"
-            StrokeShape="RoundRectangle 20">
-            <VerticalStackLayout Spacing="10">
-
-                <Label
-                    FontSize="12"
-                    Text="Repetir nos dias:"
-                    TextColor="Gray" />
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[0], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="0"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="D" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[1], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="1"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="S" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[2], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="2"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="T" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[3], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="3"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="Q" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[4], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="4"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="Q" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[5], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="5"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="S" />
-                    <Button
-                        BackgroundColor="{Binding DiasSelecaoUI[6], Converter={StaticResource BoolToColorConverter}}"
-                        Command="{Binding ToggleDiaCommand}"
-                        CommandParameter="6"
-                        Style="{StaticResource DiaButtonStyle}"
-                        Text="S" />
-                </HorizontalStackLayout>
-
-                <Grid ColumnDefinitions="Auto, *, Auto" ColumnSpacing="10">
-                    <TimePicker TextColor="#2196F3" Time="{Binding HoraSelecionada}" />
-                    <Entry
-                        Grid.Column="1"
-                        Placeholder="Novo lembrete..."
-                        Text="{Binding NovoLembreteTexto}" />
-                    <Button
-                        Grid.Column="2"
-                        Command="{Binding AdicionarLembreteCommand}"
-                        CornerRadius="20"
-                        HeightRequest="40"
-                        Text="+"
-                        WidthRequest="40" />
-                </Grid>
-            </VerticalStackLayout>
-        </Border>
-
     </Grid>
 </ContentPage>

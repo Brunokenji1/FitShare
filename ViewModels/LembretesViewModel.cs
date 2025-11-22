@@ -1,20 +1,20 @@
-﻿using AppFitShare.Models;
-using AppFitShare.Repositories;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
+using Microsoft.Maui.Dispatching;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AppFitShare.Models;
+using AppFitShare.Repositories;
+using AppFitShare.Views; // Para achar a página de adicionar
 
 namespace AppFitShare.ViewModels
 {
     public partial class LembretesViewModel : ObservableObject
     {
         public ObservableCollection<Lembrete> LembretesVisiveis { get; set; } = new ObservableCollection<Lembrete>();
-        public ObservableCollection<bool> DiasSelecaoUI { get; set; } = new ObservableCollection<bool> { false, false, false, false, false, false, false };
+
+        // Botões de dias (D, S, T...)
+        public ObservableCollection<bool> DiasSelecaoUI { get; set; }
+            = new ObservableCollection<bool> { false, false, false, false, false, false, false };
 
         [ObservableProperty] private string novoLembreteTexto;
         [ObservableProperty] private TimeSpan horaSelecionada;
@@ -23,14 +23,30 @@ namespace AppFitShare.ViewModels
 
         public LembretesViewModel()
         {
-            horaSelecionada = DateTime.Now.TimeOfDay;
+            HoraSelecionada = DateTime.Now.TimeOfDay;
             AtualizarListaVisivel();
 
+            // Timer para o Alarme (Roda em primeiro plano)
             _timerVigia = Application.Current.Dispatcher.CreateTimer();
             _timerVigia.Interval = TimeSpan.FromSeconds(10);
             _timerVigia.Tick += VerificarHorarios;
             _timerVigia.Start();
         }
+
+        public void AtualizarListaVisivel()
+        {
+            LembretesVisiveis.Clear();
+            foreach (var item in RepositorioLembretes.ListaLembretes)
+            {
+                if (item.DeveAparecerHoje())
+                {
+                    // Reseta notificação se virou o dia
+                    if (item.DataUltimaConclusao?.Date != DateTime.Now.Date) item.JaNotificado = false;
+                    LembretesVisiveis.Add(item);
+                }
+            }
+        }
+
         private void VerificarHorarios(object sender, EventArgs e)
         {
             var agora = DateTime.Now;
@@ -43,75 +59,64 @@ namespace AppFitShare.ViewModels
                 }
             }
         }
+
         private void DispararAlarme(Lembrete item)
         {
-            try
-            {
-                Vibration.Default.Vibrate(TimeSpan.FromSeconds(1));
-            }
-            catch { }
-            Shell.Current.DisplayAlert("Lembrete", $"Hora de: {item.Descricao}", "OK");
+            try { Vibration.Default.Vibrate(TimeSpan.FromSeconds(1)); } catch { }
+            Application.Current.MainPage.DisplayAlert("Lembrete", $"Hora de: {item.Descricao}", "OK");
         }
 
-        public void AtualizarListaVisivel()
-        {
-            LembretesVisiveis.Clear();
-            foreach (var item in RepositorioLembretes.ListaLembretes)
-            {
-                if (item.DeveAparecerHoje())
-                {
-                    if (item.DataUltimaConclusao?.Date != DateTime.Now.Date) item.JaNotificado = false;
-                    LembretesVisiveis.Add(item);
-                }
-            }
-        }
+        // --- NAVEGAÇÃO ---
+
         [RelayCommand]
-        private void AdicionarLembrete()
+        private async Task GoToAdicionar()
+        {
+            NovoLembreteTexto = "";
+            // Navega para a tela de cadastro usando PushAsync (funciona com TabbedPage)
+            await Application.Current.MainPage.Navigation.PushAsync(new AdicionarLembretePage());
+        }
+
+        [RelayCommand]
+        private async Task SalvarLembrete()
         {
             if (string.IsNullOrWhiteSpace(NovoLembreteTexto)) return;
+
             var novoItem = new Lembrete
             {
                 Descricao = NovoLembreteTexto,
                 HoraAgendada = HoraSelecionada,
-                DiasDaSemana = ConverterBotoesParaDias(),
+                DiasDaSemana = ConverterBotoes(),
                 IsAtivo = true
             };
 
             RepositorioLembretes.Adicionar(novoItem);
 
-            if (novoItem.DeveAparecerHoje())
-            {
-                LembretesVisiveis.Add(novoItem);
-            }
-            NovoLembreteTexto = string.Empty;
+            // Volta para a lista
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
         [RelayCommand]
-        private void ConcluirTarefa(Lembrete item)
+        private void Concluir(Lembrete item)
         {
             item.DataUltimaConclusao = DateTime.Now;
             item.Concluido = false;
-
             LembretesVisiveis.Remove(item);
         }
 
         [RelayCommand]
-        private void ExcluirLembrete(Lembrete item)
+        private void Excluir(Lembrete item)
         {
-            RepositorioLembretes.Remover(item);
-            LembretesVisiveis.Remove(item);
+            if (RepositorioLembretes.ListaLembretes.Contains(item)) RepositorioLembretes.Remover(item);
+            if (LembretesVisiveis.Contains(item)) LembretesVisiveis.Remove(item);
         }
 
         [RelayCommand]
         private void ToggleDia(string indexStr)
         {
-            if (int.TryParse(indexStr, out int index))
-            {
-                DiasSelecaoUI[index] = !DiasSelecaoUI[index];
-            }
+            if (int.TryParse(indexStr, out int index)) DiasSelecaoUI[index] = !DiasSelecaoUI[index];
         }
 
-        private List<DayOfWeek> ConverterBotoesParaDias()
+        private List<DayOfWeek> ConverterBotoes()
         {
             var lista = new List<DayOfWeek>();
             if (DiasSelecaoUI[0]) lista.Add(DayOfWeek.Sunday);
@@ -123,6 +128,5 @@ namespace AppFitShare.ViewModels
             if (DiasSelecaoUI[6]) lista.Add(DayOfWeek.Saturday);
             return lista;
         }
-
     }
 }

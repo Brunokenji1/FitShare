@@ -126,6 +126,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\AdicionarLembretePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Agenda.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

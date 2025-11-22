@@ -49,7 +49,7 @@ public partial class CadastroEstiloAlimentacao : ContentPage
 
     }
 
-    private async void BtnContinuar(object sender, EventArgs e)
+    private async void BtnCadastrarAlimetacao(object sender, EventArgs e)
     {
         var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
 

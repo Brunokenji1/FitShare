@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.AdicionarLembretePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:AppFitShare.Converters"
+    xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
+    Title="AdicionarLembretePage">
+    <ContentPage.BindingContext>
+        <viewmodels:LembretesViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+        <Style x:Key="DiaButtonStyle" TargetType="Button">
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="WidthRequest" Value="40" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="O que você precisa lembrar?" />
+            <Entry Placeholder="Ex: Beber Água" Text="{Binding NovoLembreteTexto}" />
+
+            <Label
+                Margin="0,10,0,0"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Horário:" />
+            <TimePicker TextColor="#2196F3" Time="{Binding HoraSelecionada}" />
+
+            <Label
+                Margin="0,10,0,0"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Dias da Semana:" />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[0], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="0"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="D" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[1], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="1"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="S" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[2], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="2"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="T" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[3], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="3"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="Q" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[4], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="4"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="Q" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[5], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="5"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="S" />
+                <Button
+                    BackgroundColor="{Binding DiasSelecaoUI[6], Converter={StaticResource BoolToColorConverter}}"
+                    Command="{Binding ToggleDiaCommand}"
+                    CommandParameter="6"
+                    Style="{StaticResource DiaButtonStyle}"
+                    Text="S" />
+            </HorizontalStackLayout>
+
+            <Button
+                Margin="0,30,0,0"
+                BackgroundColor="#4CAF50"
+                Command="{Binding SalvarLembreteCommand}"
+                Text="Salvar"
+                TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
