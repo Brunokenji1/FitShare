@@ -35,9 +35,9 @@ namespace AppFitShare.ViewModels
             List<Exercicio> dadosDoTreino = new List<Exercicio>
             {
                 new Exercicio { Nome = "Agachamento", Calorias = 200, Dificuldade = 2, Duracao = 300, Imagem = "Images/agachamento.png", Series = 3 },
-                new Exercicio { Nome = "Leg Press", Calorias = 180, Dificuldade = 3, Duracao = 500, Imagem = "legpress.png", Series = 3 },
-                new Exercicio { Nome = "Extensora", Calorias = 100, Dificuldade = 1, Duracao = 240, Imagem = "extensora.png", Series = 4 },
-                new Exercicio { Nome = "Avanço", Calorias = 150, Dificuldade = 2, Duracao = 360, Imagem = "avanco.png", Series = 3 }
+                new Exercicio { Nome = "Leg Press", Calorias = 180, Dificuldade = 3, Duracao = 500, Imagem = "Images/legpress.png", Series = 3 },
+                new Exercicio { Nome = "Extensora", Calorias = 100, Dificuldade = 1, Duracao = 240, Imagem = "Images/extensora.png", Series = 4 },
+                new Exercicio { Nome = "Avanço", Calorias = 150, Dificuldade = 2, Duracao = 360, Imagem = "Images/avanco.png", Series = 3 }
             };
 
             if (dadosDoTreino.Any())
