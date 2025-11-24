@@ -11,12 +11,6 @@ namespace AppFitShare.Repositories
         
         private static List<string> RestricoesFisicasEscolhidasTemp = new List<string>();
         private static List<string> CondicaoMedicaTemp = new List<string>();
-        public static List<string> ObterTodasCondicoes()
-        {
-            var listaCompleta  = RestricoesFisicasEscolhidasTemp.Concat(CondicaoMedicaTemp).ToList();
-            return listaCompleta;
-        }
-
 
         // Condições medicas
         public static List<string> ObterCondicoesMedicasTemp()

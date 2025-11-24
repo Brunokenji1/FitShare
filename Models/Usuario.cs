@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -33,8 +34,18 @@ namespace AppFitShare.Models
         public bool CadastradoAlimentacao { get; set; } = false;
         public bool CadastroSaude { get; set; } = false;
 
+
+
+        //Lista de restrições fisicas e condição medica
         public List<string> RestricoesFisicas { get; set; } = new List<string>();
         public List<string> CondicoesMedicas { get; set; } = new List<string>();
+
+
+        //Lista de alergias e estilo alimentar
+        public List<string> AlergiasAlimentares { get; set; } = new List<string>();
+        public List<string> EstiloAlimentar {  get; set; } = new List<string>();
+
+        public List<Lembrete> Lembretes { get; set; }
 
         public Usuario(int id, string nome, string username, string telefone, string senha, DateTime DataCdastro)
         {

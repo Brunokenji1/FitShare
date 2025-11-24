@@ -46,7 +46,8 @@
                         BackgroundColor="#003918"
                         FontSize="20"
                         Text="Plano Alimentar"
-                        TextColor="White" />
+                        TextColor="White" 
+                        FontAttributes="Bold"/>
 
                     <ImageButton
                         Grid.Column="1"

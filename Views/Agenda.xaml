@@ -11,95 +11,72 @@
     Background="#0c1420"
     IconImageSource="agenda.png"
     NavigationPage.HasNavigationBar="False">
-    <ContentPage.BindingContext>
-        <viewmodels:LembretesViewModel x:Name="vm" />
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <converters:BoolToTextRecorrenteConverter x:Key="BoolToTextRecorrenteConverter" />
-    </ContentPage.Resources>
-
-
-    <Grid RowDefinitions="Auto,*">
-        <Grid
-            Grid.Row="0"
-            Background="#003918"
-            ColumnDefinitions="*,Auto">
+    <VerticalStackLayout>
+        <Grid Background="#003918" ColumnDefinitions="*,Auto">
             <Label
                 Padding="30,15,100,20"
                 BackgroundColor="#003918"
+                FontAttributes="Bold"
                 FontSize="20"
-                VerticalOptions="Center"
-                Text="Lembretes"
+                Text="Lembrete"
                 TextColor="White" />
 
             <ImageButton
                 Grid.Column="1"
                 Margin="4,4,10,4"
                 Padding="2"
-                Command="{Binding GoToAdicionarCommand}"
+                Clicked="BtnAdicionarLembrete"
                 HeightRequest="32"
                 HorizontalOptions="Center"
                 Source="plus_green.png"
                 VerticalOptions="Center"
                 WidthRequest="32" />
-
         </Grid>
-        <CollectionView
-            Grid.Row="1"
-            EmptyView="Nenhuma tarefa para hoje!"
-            ItemsSource="{Binding LembretesVisiveis}">
+        <CollectionView x:Name="CollectionViewLembretes">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Lembrete">
-                    <Border
-                        Margin="0,5"
-                        Padding="10"
-                        BackgroundColor="White"
-                        Stroke="Transparent"
-                        StrokeShape="RoundRectangle 10">
-                        <Grid ColumnDefinitions="Auto, *, Auto, Auto" ColumnSpacing="10">
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <Border
+                            Margin="10"
+                            Padding="10,20"
+                            BackgroundColor="Transparent"
+                            Stroke="#01b853"
+                            StrokeShape="RoundRectangle 10"
+                            StrokeThickness="2">
 
-                            <CheckBox Grid.Column="0" Color="#2196F3">
-                                <CheckBox.Behaviors>
-                                    <toolkit:EventToCommandBehavior
-                                        Command="{Binding Source={x:Reference vm}, Path=ConcluirCommand}"
-                                        CommandParameter="{Binding .}"
-                                        EventName="CheckedChanged" />
+                            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
 
-                                </CheckBox.Behaviors>
-                            </CheckBox>
-
-                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                                 <Label
+                                    Grid.Column="0"
                                     FontAttributes="Bold"
-                                    FontSize="16"
-                                    Text="{Binding Descricao}"
-                                    TextColor="Black" />
-                                <HorizontalStackLayout Spacing="8">
-                                    <Label Text="{Binding HoraAgendada, StringFormat='{0:hh\\:mm}'}" TextColor="Gray" />
+                                    FontSize="24"
+                                    Text="{Binding HorarioFormatado}"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        Text="{Binding Titulo}"
+                                        TextColor="White" />
+
                                     <Label
                                         FontSize="12"
-                                        Text="{Binding EhRecorrente, Converter={StaticResource BoolToTextRecorrenteConverter}}"
-                                        TextColor="#2196F3" />
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
+                                        Text="{Binding Descricao}"
+                                        TextColor="#cccccc" />
 
-                            <Switch
-                                Grid.Column="2"
-                                IsToggled="{Binding IsAtivo}"
-                                OnColor="#4CAF50"
-                                ThumbColor="White" />
-
-                            <ImageButton
-                                Grid.Column="3"
-                                Command="{Binding Source={x:Reference vm}, Path=ExcluirCommand}"
-                                CommandParameter="{Binding .}"
-                                HeightRequest="25"
-                                Source="trash_icon.png" />
-                        </Grid>
-                    </Border>
+                                    <Label
+                                        FontAttributes="Italic"
+                                        FontSize="10"
+                                        Text="{Binding DiasResumo}"
+                                        TextColor="#01b853" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                    </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

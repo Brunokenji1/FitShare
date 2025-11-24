@@ -127,14 +127,15 @@ public partial class CadastroSaudeCondicionamento : ContentPage
         try
         {
             var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
+            string condicaoMedica = string.Join(", ", RepositorioSaudeCondicionamento.ObterCondicoesMedicasTemp());
+            string restricaoFisica = string.Join(", ", RepositorioSaudeCondicionamento.ObterRestricoesFisicasTemp());
 
-            bool confirmacao = await DisplayAlert("Confirmação", "Cadastrar informações de saúde e condicionamento", "Sim", "Não");
+           
+            bool confirmacao = await DisplayAlert("Confirmação", $"Condição medica: {condicaoMedica} \nRestrição física: {restricaoFisica}", "Sim", "Não");
             if (confirmacao)
             {
                 RepositorioUsuarios.AtualizarRestricoesFisicasTemp(RepositorioSaudeCondicionamento.ObterCondicoesMedicasTemp());
                 RepositorioUsuarios.AtualizarCondicoesMedicas(RepositorioSaudeCondicionamento.ObterRestricoesFisicasTemp());
-                await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "Fechar");
-
                 await Navigation.PushAsync(new CadastroNivelDeAtividade());
             }
 

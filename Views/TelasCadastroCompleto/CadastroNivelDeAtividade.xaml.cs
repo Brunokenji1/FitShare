@@ -63,12 +63,15 @@ public partial class CadastroNivelDeAtividade : ContentPage
             }
 
             usuarioTemp.NivelAtividade = _objetivoSelecionado;
+            string condicaoMedica = string.Join(", ", usuarioTemp.CondicoesMedicas);
+            string restricaoFisica = string.Join(", ", usuarioTemp.RestricoesFisicas);
+
             RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
 
             await DisplayAlert("Nivel de Atividade Selecionado", $"Você selecionou: {_objetivoSelecionado}", "OK");
 
             bool confirmacao = await DisplayAlert("Confirma o cadastro com os seguintes dados?", $"  Altura : {usuarioTemp.Altura}\n  Peso : {usuarioTemp.Peso}\n" +
-                $"  Objetivo : {usuarioTemp.Objetivo1}\n  Nivel de Atividade : {usuarioTemp.NivelAtividade}  ", "Sim", "Não");
+                $"  Objetivo : {usuarioTemp.Objetivo1}\n  Nivel de Atividade : {usuarioTemp.NivelAtividade} \n Condição medica: {condicaoMedica} \n Restrição física: {restricaoFisica}  ", "Sim", "Não");
             if (confirmacao)
             {
                 usuarioTemp.Status = "Ativo";

@@ -6,9 +6,6 @@
     xmlns:converters="clr-namespace:AppFitShare.Converters"
     xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
     Title="AdicionarLembretePage">
-    <ContentPage.BindingContext>
-        <viewmodels:LembretesViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
