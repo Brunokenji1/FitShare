@@ -13,13 +13,13 @@ namespace AppFitShare.ViewModels
 
         //cabecalho
         [ObservableProperty]
-        private string nomeDoTreino = "Treino de Pernas"; 
+        private string nomeDoTreino = "Membros Inferiores"; 
 
         [ObservableProperty]
         private string totalDuracaoFormatada = "0min 0s";
 
         [ObservableProperty]
-        private int totalCalorias;
+        private int totalCalorias = 0;
 
         [ObservableProperty]
         private string dificuldadeNivel = "Intermediário";
@@ -34,10 +34,21 @@ namespace AppFitShare.ViewModels
         {
             List<Exercicio> dadosDoTreino = new List<Exercicio>
             {
-                new Exercicio { Nome = "Agachamento", Calorias = 200, Dificuldade = 2, Duracao = 300, Imagem = "Images/agachamento.png", Series = 3 },
-                new Exercicio { Nome = "Leg Press", Calorias = 180, Dificuldade = 3, Duracao = 500, Imagem = "Images/legpress.png", Series = 3 },
-                new Exercicio { Nome = "Extensora", Calorias = 100, Dificuldade = 1, Duracao = 240, Imagem = "Images/extensora.png", Series = 4 },
-                new Exercicio { Nome = "Avanço", Calorias = 150, Dificuldade = 2, Duracao = 360, Imagem = "Images/avanco.png", Series = 3 }
+                new Exercicio { Nome = "Alongamento coxa", Calorias = 50, Dificuldade = 1, Duracao = 120, Imagem = "", Series = 2, Repeticoes = 30 },
+                new Exercicio { Nome = "Alongamento posterior", Calorias = 50, Dificuldade = 1, Duracao = 120, Imagem = "", Series = 2 , Repeticoes = 30},
+                new Exercicio { Nome = "Alongamento panturrilha", Calorias = 50, Dificuldade = 1, Duracao = 120, Imagem = "", Series = 2 , Repeticoes = 30},
+                new Exercicio { Nome = "Agachamento livre", Calorias = 210, Dificuldade = 2, Duracao = 240, Imagem = "" , Series= 3, Repeticoes=15 }, 
+                new Exercicio { Nome = "Abdutor", Calorias = 180, Dificuldade = 1, Duracao = 180, Imagem = "" , Series= 3, Repeticoes=15 },
+                new Exercicio { Nome = "Panturrilha", Calorias = 150, Dificuldade = 1, Duracao = 180, Imagem = "" , Series= 3, Repeticoes=15 },
+                new Exercicio { Nome = "Afundo", Calorias = 200, Dificuldade = 2, Duracao = 300, Imagem = "" , Series= 3, Repeticoes=15 },
+                new Exercicio { Nome = "Panturrilha sentado", Calorias = 150, Dificuldade = 2, Duracao = 300, Imagem = "" , Series= 3, Repeticoes=15 },
+
+
+
+
+
+
+
             };
 
             if (dadosDoTreino.Any())

@@ -1,4 +1,7 @@
-﻿using AppFitShare.Repositories;
+﻿using AppFitShare.Models;
+using AppFitShare.Repositories;
+using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace AppFitShare.Views;
 
@@ -41,5 +44,5 @@ public partial class Home : ContentPage
             }
         }
     }
-
+    
 }

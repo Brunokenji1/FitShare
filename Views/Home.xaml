@@ -134,40 +134,41 @@
                 Stroke="Gray"
                 StrokeLineJoin="Round"
                 StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <HorizontalStackLayout>
-                        <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto,auto" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto">
-                            <Label
+                <HorizontalStackLayout>
+                    <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto" 
+                              RowDefinitions="auto,auto,auto,auto,auto,auto,auto">
+                        <Label
                                 Grid.Row="0"
-                                Margin="5,10,0,0"
-                                Padding="15,0,0,0"
+                                Margin="15,10,0,0"
                                 FontAttributes="Bold"
                                 FontFamily="Poppins"
                                 FontSize="20"
                                 Text="Progresso"
                                 TextColor="White" />
-                            <Label
+
+                        <!--barra cinza -->
+                        <Label
                                 Grid.Row="2"
                                 Margin="15,0,0,0"
                                 BackgroundColor="Gray"
                                 HeightRequest="15"
                                 HorizontalOptions="Center"
                                 WidthRequest="350" />
-                            <Label
+                        <Label
                                 Grid.Row="2"
                                 Margin="15,0"
                                 BackgroundColor="#01C853"
                                 HeightRequest="15"
                                 HorizontalOptions="Start"
                                 WidthRequest="115" />
-                            <Label
+                        <Label
                                 Grid.Row="2"
                                 Margin="125,0"
                                 BackgroundColor="white"
                                 HeightRequest="20"
                                 HorizontalOptions="Start"
                                 WidthRequest="5" />
-                            <Label
+                        <Label
                                 Grid.Row="3"
                                 Margin="90,0,0,0"
                                 FontAttributes="Bold"
@@ -175,7 +176,7 @@
                                 FontSize="25"
                                 Text="1.500"
                                 TextColor="#01c853" />
-                            <Label
+                        <Label
                                 Grid.Row="3"
                                 Grid.Column="0"
                                 Margin="155,8,0,0"
@@ -184,7 +185,7 @@
                                 FontSize="15"
                                 Text="kcal"
                                 TextColor="White" />
-                            <Label
+                        <Label
                                 Grid.Row="0"
                                 Margin="9,30,0,5"
                                 FontAttributes="Bold"
@@ -193,7 +194,7 @@
                                 HorizontalOptions="End"
                                 Text="2.500 kcal"
                                 TextColor="#01c853" />
-                            <Label
+                        <Label
                                 Grid.Row="5"
                                 Padding="10"
                                 FontAttributes="Bold"
@@ -201,68 +202,76 @@
                                 FontSize="16"
                                 Text="Nesta semana"
                                 TextColor="White" />
-                            <Label
+                        <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
                                 Padding="10,30,0,10"
                                 Text="Sequencia atual:"
                                 TextColor="White" />
-                            <Label
+                        <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
                                 Padding="120,30,0,10"
                                 FontAttributes="Bold"
                                 Text="3 dias!"
                                 TextColor="#01C853" />
-                            <Border
+                        <!-- DIAS DA SEMANA-->
+                        <Border
                                 Grid.Row="6"
                                 Margin="10,0,0,0"
                                 BackgroundColor="#1a2737"
-                                HeightRequest="120"
                                 Stroke="Gray"
-                                StrokeShape="RoundRectangle 15" />
-
-                            <HorizontalStackLayout>
-                                
-                            </HorizontalStackLayout>
-                            <HorizontalStackLayout
-                                Padding="22,0,0,0"
-                                Grid.Row="6"
-                                Spacing="20">
-                                <Image
+                                StrokeShape="RoundRectangle 15" >
+                            <Grid
+                                    ColumnDefinitions="*,*,*,*,*,*"
+                                    RowDefinitions="*,*,*,*,*,*">
+                                <HorizontalStackLayout
+                                Grid.Row="1"    
+                                Spacing="15">
+                                        
+                                    <Image
+                                    HeightRequest="100"
+                                    Grid.Column="0"
                                     Source="checkon.png"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     Source="checkon.png"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     HorizontalOptions="Start"
                                     Source="checkon.png"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
-                                <Image
+                                    <Image
+                                    HeightRequest="100"
                                     HorizontalOptions="Start"
                                     Source="checkoff.png"
                                     VerticalOptions="Center"
                                     WidthRequest="30" />
-                            </HorizontalStackLayout>
-                        </Grid>
-                    </HorizontalStackLayout>
-                </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>
     </ScrollView>

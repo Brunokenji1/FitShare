@@ -16,9 +16,17 @@ public class RepositorioUsuarios
 
     private static List<Usuario> listaUsuarios = new List<Usuario>()
     {
-        new Usuario(0, "Bruno", "bruno", "1", "12345678", DateTime.Now),
+        new Usuario(0, "Bruno", "bruno", "1", "12345678", DateTime.Now)
+        {
+            CadastradoAlimentacao = true,
+            CadastroSaude = true
+        },
 
         new Usuario(1, "Pedro Chaves", "Chaves", "2", "12345678", DateTime.Now)
+        {
+            CadastradoAlimentacao = true,
+            CadastroSaude = true
+        }
 
     };
 

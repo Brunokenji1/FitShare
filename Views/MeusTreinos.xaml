@@ -27,6 +27,7 @@
                     HorizontalTextAlignment="Center"
                     Text="Queremos cuidar de você! Clique abaixo e nos conte um pouco sobre os seus dados físicos, nível de atividade, objetivo e possíveis restrições para continuarmos."
                     TextColor="White" />
+
                 <Button
                     Margin="0,25"
                     BackgroundColor="#01C853"
@@ -38,20 +39,27 @@
                     TextColor="Black"
                     WidthRequest="330" />
             </VerticalStackLayout>
+
             <VerticalStackLayout x:Name="dados" IsVisible="False">
-
                 <HorizontalStackLayout>
-                    <Border Stroke="#003918" StrokeShape="RoundRectangle 0,0,15,15">
-
+                    <Grid BackgroundColor="#003918" ColumnDefinitions="*,auto">
                         <Label
-                            Padding="30,15,322,20"
-                            BackgroundColor="#003918"
+                            Padding="30,15,100,20"
                             FontFamily="Poppins"
                             FontSize="20"
                             Text="Treino"
                             TextColor="White"
                             VerticalOptions="Start" />
-                    </Border>
+                        <ImageButton
+                            Grid.Column="1"
+                            Margin="4,4,10,4"
+                            Padding="2"
+                            HeightRequest="32"
+                            HorizontalOptions="Center"
+                            Source="plus_green.png"
+                            VerticalOptions="Center"
+                            WidthRequest="375" />   
+                    </Grid>
                 </HorizontalStackLayout>
 
                 <Label
@@ -76,18 +84,6 @@
                     HeightRequest="1.5"
                     TextColor="White"
                     WidthRequest="350" />
-                
-                <ImageButton
-                    Margin="30,30"
-                    Padding="5"
-                    BackgroundColor="#00b140"
-                    Clicked="AddTreinoPersonalizado"
-                    CornerRadius="100"
-                    HeightRequest="32"
-                    HorizontalOptions="End"
-                    Source="vetor.png"
-                    WidthRequest="32" />
-
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
