@@ -113,6 +113,7 @@ public class RepositorioUsuarios
         return listaUsuarios.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
     }
 
+
     public static List<Usuario> ListarTodos()
     {
         return listaUsuarios;
@@ -126,6 +127,7 @@ public class RepositorioUsuarios
         {
             listaUsuarios[index] = usuarioAtualizar;
         }
+        usuario_logado = usuarioAtualizar;
     }
 
     public static void TrocarSenha(Usuario usuarioNovaSenha)
@@ -142,5 +144,10 @@ public class RepositorioUsuarios
     {
         var index = listaUsuarios.FindIndex(u => u.Telefone == telefone);
 
+    }
+
+    public static List<Lembrete> ObterLembretesUsuarioLogado()
+    {
+        return usuario_logado.Lembretes;
     }
 }

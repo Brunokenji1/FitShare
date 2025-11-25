@@ -5,91 +5,180 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:AppFitShare.Converters"
     xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
-    Title="AdicionarLembretePage">
-
-    <ContentPage.Resources>
-        <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
-        <Style x:Key="DiaButtonStyle" TargetType="Button">
-            <Setter Property="CornerRadius" Value="20" />
-            <Setter Property="HeightRequest" Value="40" />
-            <Setter Property="WidthRequest" Value="40" />
-            <Setter Property="FontSize" Value="12" />
-            <Setter Property="FontAttributes" Value="Bold" />
-            <Setter Property="TextColor" Value="White" />
-        </Style>
-    </ContentPage.Resources>
-
+    Title="AdicionarLembretePage"
+    Background="#0c1420"
+    NavigationPage.HasNavigationBar="False">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
-            <Label
-                FontAttributes="Bold"
-                FontSize="16"
-                Text="O que você precisa lembrar?" />
-            <Entry Placeholder="Ex: Beber Água" Text="{Binding NovoLembreteTexto}" />
+        <VerticalStackLayout
+            Margin="5"
+            Padding="15"
+            Spacing="35">
 
             <Label
-                Margin="0,10,0,0"
+                Margin="0,30,0,20"
                 FontAttributes="Bold"
-                FontSize="16"
-                Text="Horário:" />
-            <TimePicker TextColor="#2196F3" Time="{Binding HoraSelecionada}" />
+                FontSize="28"
+                HorizontalOptions="Center"
+                Text="Adicionar lembrete"
+                TextColor="White" />
 
-            <Label
-                Margin="0,10,0,0"
-                FontAttributes="Bold"
-                FontSize="16"
-                Text="Dias da Semana:" />
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[0], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="0"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="D" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[1], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="1"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="S" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[2], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="2"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="T" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[3], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="3"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="Q" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[4], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="4"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="Q" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[5], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="5"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="S" />
-                <Button
-                    BackgroundColor="{Binding DiasSelecaoUI[6], Converter={StaticResource BoolToColorConverter}}"
-                    Command="{Binding ToggleDiaCommand}"
-                    CommandParameter="6"
-                    Style="{StaticResource DiaButtonStyle}"
-                    Text="S" />
-            </HorizontalStackLayout>
+            <Entry
+                x:Name="txtTitulo"
+                BackgroundColor="#0c1420"
+                HeightRequest="50"
+                Placeholder="Título lembrete"
+                PlaceholderColor="#999"
+                TextColor="White" />
+
+            <Entry
+                x:Name="txtDescricao"
+                BackgroundColor="#0c1420"
+                HeightRequest="50"
+                Placeholder="Descrição/Observações"
+                PlaceholderColor="#999"
+                TextColor="White" />
+
+            <Border
+                Padding="15"
+                BackgroundColor="#0c1420"
+                Stroke="#01b853"
+                StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="⏰ Horário do Alarme"
+                        TextColor="#01b853" />
+
+                    <TimePicker
+                        x:Name="pickerHora"
+                        FontAttributes="Bold"
+                        FontSize="30"
+                        Format="HH:mm"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <VerticalStackLayout Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Repetir em quais dias?"
+                    TextColor="#01b853" />
+                <Border
+                    Padding="5,15"
+                    BackgroundColor="#0c1420"
+                    Stroke="#01b853"
+                    StrokeShape="RoundRectangle 10">
+
+                    <Grid ColumnDefinitions="*,*,*,*,*,*,*">
+
+                        <Button
+                            x:Name="btn_segunda"
+                            Grid.Column="0"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Monday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            StyleClass="DiaButton"
+                            Text="S"
+                            VerticalOptions="Center" />
+                        <Button
+                            x:Name="btn_terca"
+                            Grid.Column="1"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Tuesday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="T" />
+                        <Button
+                            x:Name="btn_quarta"
+                            Grid.Column="2"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Wednesday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="Q" />
+                        <Button
+                            x:Name="btn_quinta"
+                            Grid.Column="3"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Thursday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="Q" />
+                        <Button
+                            x:Name="btn_sexta"
+                            Grid.Column="4"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Friday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="S" />
+                        <Button
+                            x:Name="btn_sabado"
+                            Grid.Column="5"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Saturday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="S" />
+                        <Button
+                            x:Name="btn_domingo"
+                            Grid.Column="6"
+                            Padding="0"
+                            Background="Transparent"
+                            ClassId="Sunday"
+                            Clicked="Dia_Clicked"
+                            CornerRadius="90"
+                            FontAttributes="Bold"
+                            StyleClass="DiaButton"
+                            Text="D" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
 
             <Button
-                Margin="0,30,0,0"
-                BackgroundColor="#4CAF50"
-                Command="{Binding SalvarLembreteCommand}"
-                Text="Salvar"
-                TextColor="White" />
+                Grid.Row="1"
+                Margin="0,2,0,0"
+                BackgroundColor="#01C853"
+                Clicked="BtnSalvarLembrete"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Salvar Lembrete"
+                TextColor="Black"
+                WidthRequest="330" />
+
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="BtnCancelar"
+                FontAttributes="Bold"
+                FontSize="15"
+                Text="Cancelar"
+                TextColor="#cccccc" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

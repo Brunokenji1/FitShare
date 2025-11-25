@@ -57,6 +57,7 @@ namespace AppFitShare.Models
             Senha = senha;
             Status = "Incompleto";
             DataCadastro = DataCdastro;
+            Lembretes = new List<Lembrete>();
         }
 
     }

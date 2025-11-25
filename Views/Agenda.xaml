@@ -3,80 +3,88 @@
     x:Class="AppFitShare.Views.Agenda"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:converters="clr-namespace:AppFitShare.Converters"
-    xmlns:models="clr-namespace:AppFitShare.Models"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
-    Title="Agenda"
+    Title="Lembretes"
     Background="#0c1420"
+    BackgroundColor="White"
     IconImageSource="agenda.png"
     NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Grid Background="#003918" ColumnDefinitions="*,Auto">
-            <Label
-                Padding="30,15,100,20"
-                BackgroundColor="#003918"
-                FontAttributes="Bold"
-                FontSize="20"
-                Text="Lembrete"
-                TextColor="White" />
 
-            <ImageButton
-                Grid.Column="1"
-                Margin="4,4,10,4"
-                Padding="2"
-                Clicked="BtnAdicionarLembrete"
-                HeightRequest="32"
-                HorizontalOptions="Center"
-                Source="plus_green.png"
-                VerticalOptions="Center"
-                WidthRequest="32" />
-        </Grid>
-        <CollectionView x:Name="CollectionViewLembretes">
+    <Grid Padding="20" RowDefinitions="*, Auto">
+
+        <CollectionView x:Name="CollectionViewLembretes" Grid.Row="0">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <VerticalStackLayout>
+                    <StackLayout Padding="0,5">
+
                         <Border
-                            Margin="10"
-                            Padding="10,20"
-                            BackgroundColor="Transparent"
-                            Stroke="#01b853"
-                            StrokeShape="RoundRectangle 10"
-                            StrokeThickness="2">
+                            Padding="10"
+                            BackgroundColor="{Binding CorDeFundo}"
+                            StrokeShape="RoundRectangle 10">
 
-                            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
+                            <Grid ColumnDefinitions="*, Auto, Auto">
 
-                                <Label
-                                    Grid.Column="0"
-                                    FontAttributes="Bold"
-                                    FontSize="24"
-                                    Text="{Binding HorarioFormatado}"
-                                    TextColor="White"
-                                    VerticalOptions="Center" />
-
-                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                <VerticalStackLayout Grid.Column="0">
                                     <Label
                                         FontAttributes="Bold"
                                         FontSize="16"
-                                        Text="{Binding Titulo}"
-                                        TextColor="White" />
-
+                                        Text="{Binding Titulo}" />
                                     <Label
-                                        FontSize="12"
+                                        FontSize="14"
                                         Text="{Binding Descricao}"
-                                        TextColor="#cccccc" />
+                                        TextColor="Gray" />
 
-                                    <Label
+                                    <Label 
+                                        Text="{Binding DiasDaSemanaFormatado}" 
                                         FontAttributes="Italic"
-                                        FontSize="10"
-                                        Text="{Binding DiasResumo}"
-                                        TextColor="#01b853" />
+                                        FontSize="13" 
+                                        TextColor="#01b853"
+                                        Margin="0,3,0,0"/>
+
                                 </VerticalStackLayout>
+
+                                <Label
+                                    Grid.Column="1"
+                                    Margin="0,0,15,0"
+                                    FontAttributes="Bold"
+                                    Text="{Binding Horario, StringFormat='{0:hh\\:mm}'}"
+                                    TextColor="#01b853"
+                                    VerticalOptions="Center" />
+
+                                <Switch
+                                    Grid.Column="2"
+                                    IsToggled="{Binding Ativo}"
+                                    Toggled="OnLembreteToggled"
+                                    VerticalOptions="Center" />
+
                             </Grid>
                         </Border>
-                    </VerticalStackLayout>
+                    </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <Label
+                    Margin="0,50,0,0"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Nenhum lembrete agendado. Clique em Adicionar para começar!"
+                    TextColor="LightGray"
+                    VerticalOptions="Center" />
+            </CollectionView.EmptyView>
         </CollectionView>
-    </VerticalStackLayout>
+
+
+        <Button
+            Grid.Row="1"
+            Margin="0,25"
+            BackgroundColor="#01C853"
+            Clicked="BtnAdicionarLembrete"
+            FontSize="20"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Adicionar Lembrete"
+            TextColor="Black"
+            WidthRequest="330" />
+
+    </Grid>
 </ContentPage>
