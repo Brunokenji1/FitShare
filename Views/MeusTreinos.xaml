@@ -41,7 +41,6 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout x:Name="dados" IsVisible="False">
-                <HorizontalStackLayout>
                     <Grid BackgroundColor="#003918" ColumnDefinitions="*,auto">
                         <Label
                             Padding="30,15,100,20"
@@ -58,9 +57,9 @@
                             HorizontalOptions="Center"
                             Source="plus_green.png"
                             VerticalOptions="Center"
-                            WidthRequest="375" />   
+                            WidthRequest="32"
+                            Clicked="CriarNovoTreino"/>   
                     </Grid>
-                </HorizontalStackLayout>
 
                 <Label
                     Padding="20,15,0,0"

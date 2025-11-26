@@ -3,6 +3,7 @@ using AppFitShare.Repositories;
 using AppFitShare.Services;
 using AppFitShare.Views.TelasCadastroCompleto;
 using Microsoft.Maui.Controls.PlatformConfiguration;
+using System.Threading.Tasks;
 
 namespace AppFitShare.Views;
 
@@ -47,12 +48,9 @@ public partial class MeusTreinos : ContentPage
         await Navigation.PushAsync(new ExerciciosTreinos());
     }
 
-    private void AddTreinoPersonalizado(object sender, EventArgs e)
+    private async void CriarNovoTreino(object sender, EventArgs e)
     {
-    }
-
-    private void BotaoIniciarTreinoClicked2(object sender, EventArgs e)
-    {
+        await Navigation.PushAsync(new SelecionarGrupoMuscular());
     }
 
     private async void BtnCadastroSaude(object sender, EventArgs e)
