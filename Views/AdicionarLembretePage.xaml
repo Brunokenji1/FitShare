@@ -26,6 +26,8 @@
                 x:Name="txtTitulo"
                 BackgroundColor="#0c1420"
                 HeightRequest="50"
+                MaxLength="30"
+                ClearButtonVisibility="WhileEditing"
                 Placeholder="Título lembrete"
                 PlaceholderColor="#999"
                 TextColor="White" />
@@ -33,7 +35,10 @@
             <Entry
                 x:Name="txtDescricao"
                 BackgroundColor="#0c1420"
+                ClearButtonVisibility="WhileEditing"
+                
                 HeightRequest="50"
+                MaxLength="43"
                 Placeholder="Descrição/Observações"
                 PlaceholderColor="#999"
                 TextColor="White" />

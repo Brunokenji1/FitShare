@@ -7,7 +7,7 @@ namespace AppFitShare.Views
 {
     public partial class Agenda : ContentPage
     {
-        private readonly Color _corPadrao = Color.FromArgb("#f0f0f0");
+        private readonly Color _corPadrao = Color.FromArgb("#1a2737");
         private readonly Color _corAtrasada = Color.FromArgb("#ffcccc");
 
         public ObservableCollection<Lembrete> Lembretes { get; set; } = new ObservableCollection<Lembrete>();
@@ -84,8 +84,7 @@ namespace AppFitShare.Views
                     item.CorDeFundo = _corPadrao;
                 }
 
-                bool horaDeTocar = item.Horario.Hours == agora.Hour &&
-                                   item.Horario.Minutes == agora.Minute;
+                bool horaDeTocar = item.Horario.Hours == agora.Hour && item.Horario.Minutes == agora.Minute;
 
                 if (horaDeTocar && item.Ativo)
                 {

@@ -34,7 +34,7 @@
                     FontSize="20"
                     HeightRequest="50"
                     HorizontalOptions="Center"
-                    Text="Cadastro alimentação"
+                    Text="Informação alimentar"
                     TextColor="Black"
                     WidthRequest="330" />
             </VerticalStackLayout>

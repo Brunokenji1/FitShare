@@ -35,7 +35,7 @@
                     FontSize="20"
                     HeightRequest="50"
                     HorizontalOptions="Center"
-                    Text="Cadastro informações de saúde"
+                    Text="Informação física"
                     TextColor="Black"
                     WidthRequest="330" />
             </VerticalStackLayout>

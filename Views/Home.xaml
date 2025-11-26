@@ -6,8 +6,17 @@
     xmlns:views="clr-namespace:AppFitShare.Views"
     Title="Início"
     Background="#0c1420"
+    xmlns:converters="clr-namespace:AppFitShare.Converters"
+    xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
     IconImageSource="inicio.png"
     NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <viewmodels:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:StreakImageConverter x:Key="StreakImageConverter"/>
+    </ContentPage.Resources>
     <ScrollView>
 
         <VerticalStackLayout>
@@ -135,140 +144,116 @@
                 StrokeLineJoin="Round"
                 StrokeShape="RoundRectangle 10">
                 <HorizontalStackLayout>
-                    <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto" 
-                              RowDefinitions="auto,auto,auto,auto,auto,auto,auto">
+                    <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto" RowDefinitions="auto,auto,auto,auto,auto,auto,auto">
                         <Label
-                                Grid.Row="0"
-                                Margin="15,10,0,0"
-                                FontAttributes="Bold"
-                                FontFamily="Poppins"
-                                FontSize="20"
-                                Text="Progresso"
-                                TextColor="White" />
+                            Grid.Row="0"
+                            Margin="15,10,0,0"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="20"
+                            Text="Progresso"
+                            TextColor="White" />
 
-                        <!--barra cinza -->
+                        <!--  barra cinza  -->
                         <Label
-                                Grid.Row="2"
-                                Margin="15,0,0,0"
-                                BackgroundColor="Gray"
-                                HeightRequest="15"
-                                HorizontalOptions="Center"
-                                WidthRequest="350" />
+                            Grid.Row="2"
+                            Margin="15,0,0,0"
+                            BackgroundColor="Gray"
+                            HeightRequest="15"
+                            HorizontalOptions="Center"
+                            WidthRequest="350" />
                         <Label
-                                Grid.Row="2"
-                                Margin="15,0"
-                                BackgroundColor="#01C853"
-                                HeightRequest="15"
-                                HorizontalOptions="Start"
-                                WidthRequest="115" />
+                            Grid.Row="2"
+                            Margin="15,0"
+                            BackgroundColor="#01C853"
+                            HeightRequest="15"
+                            HorizontalOptions="Start"
+                            WidthRequest="115" />
                         <Label
-                                Grid.Row="2"
-                                Margin="125,0"
-                                BackgroundColor="white"
-                                HeightRequest="20"
-                                HorizontalOptions="Start"
-                                WidthRequest="5" />
+                            Grid.Row="2"
+                            Margin="125,0"
+                            BackgroundColor="white"
+                            HeightRequest="20"
+                            HorizontalOptions="Start"
+                            WidthRequest="5" />
                         <Label
-                                Grid.Row="3"
-                                Margin="90,0,0,0"
-                                FontAttributes="Bold"
-                                FontFamily="Poppins"
-                                FontSize="25"
-                                Text="1.500"
-                                TextColor="#01c853" />
+                            Grid.Row="3"
+                            Margin="90,0,0,0"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="25"
+                            Text="1.500"
+                            TextColor="#01c853" />
                         <Label
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                Margin="155,8,0,0"
-                                FontAttributes="Bold"
-                                FontFamily="Poppins"
-                                FontSize="15"
-                                Text="kcal"
-                                TextColor="White" />
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="155,8,0,0"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="15"
+                            Text="kcal"
+                            TextColor="White" />
                         <Label
-                                Grid.Row="0"
-                                Margin="9,30,0,5"
-                                FontAttributes="Bold"
-                                FontFamily="Poppins"
-                                FontSize="17"
-                                HorizontalOptions="End"
-                                Text="2.500 kcal"
-                                TextColor="#01c853" />
+                            Grid.Row="0"
+                            Margin="9,30,0,5"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="17"
+                            HorizontalOptions="End"
+                            Text="2.500 kcal"
+                            TextColor="#01c853" />
                         <Label
-                                Grid.Row="5"
-                                Padding="10"
-                                FontAttributes="Bold"
-                                FontFamily="Poppins"
-                                FontSize="16"
-                                Text="Nesta semana"
-                                TextColor="White" />
+                            Grid.Row="5"
+                            Padding="10"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="16"
+                            Text="Nesta semana"
+                            TextColor="White" />
                         <Label
-                                Grid.Row="5"
-                                Grid.Column="0"
-                                Padding="10,30,0,10"
-                                Text="Sequencia atual:"
-                                TextColor="White" />
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Padding="10,30,0,10"
+                            Text="Sequencia atual:"
+                            TextColor="White" />
                         <Label
-                                Grid.Row="5"
-                                Grid.Column="0"
-                                Padding="120,30,0,10"
-                                FontAttributes="Bold"
-                                Text="3 dias!"
-                                TextColor="#01C853" />
-                        <!-- DIAS DA SEMANA-->
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Padding="120,30,0,10"
+                            FontAttributes="Bold"
+                            Text="{Binding TextoSequencia}"
+                            TextColor="#01C853" />
+                        <!--  DIAS DA SEMANA  -->
+
                         <Border
-                                Grid.Row="6"
-                                Margin="10,0,0,0"
-                                BackgroundColor="#1a2737"
-                                Stroke="Gray"
-                                StrokeShape="RoundRectangle 15" >
-                            <Grid
-                                    ColumnDefinitions="*,*,*,*,*,*"
-                                    RowDefinitions="*,*,*,*,*,*">
-                                <HorizontalStackLayout
-                                Grid.Row="1"    
-                                Spacing="15">
-                                        
-                                    <Image
-                                    HeightRequest="100"
-                                    Grid.Column="0"
-                                    Source="checkon.png"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    Source="checkon.png"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    HorizontalOptions="Start"
-                                    Source="checkon.png"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    HorizontalOptions="Start"
-                                    Source="checkoff.png"
-                                    VerticalOptions="Center"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    HorizontalOptions="Start"
-                                    Source="checkoff.png"
-                                    VerticalOptions="Center"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    HorizontalOptions="Start"
-                                    Source="checkoff.png"
-                                    VerticalOptions="Center"
-                                    WidthRequest="30" />
-                                    <Image
-                                    HeightRequest="100"
-                                    HorizontalOptions="Start"
-                                    Source="checkoff.png"
-                                    VerticalOptions="Center"
-                                    WidthRequest="30" />
-                                </HorizontalStackLayout>
-                            </Grid>
+                            Grid.Row="6"
+                            Margin="10,0,0,0"
+                            Padding="5,15"
+                            BackgroundColor="#1a2737"
+                            Stroke="Gray"
+                            StrokeShape="RoundRectangle 15">
+                            <HorizontalStackLayout BindableLayout.ItemsSource="{Binding StreakSemanal}"
+                                                   HorizontalOptions="Center"
+                                                   Spacing="15">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <VerticalStackLayout Spacing="5">
+
+                                            <Image Source="{Binding Concluido, Converter={StaticResource StreakImageConverter}}"
+                                                   WidthRequest="30"
+                                                   HeightRequest="30"
+                                                   VerticalOptions="Center" />
+
+                                            <Label Text="{Binding LetraDia}" 
+                                                   TextColor="Gray" 
+                                                   FontSize="10" 
+                                                   HorizontalOptions="Center"
+                                                   FontFamily="Poppins"/>
+
+                                        </VerticalStackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </HorizontalStackLayout>
                         </Border>
                     </Grid>
                 </HorizontalStackLayout>

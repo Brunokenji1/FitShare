@@ -1,5 +1,6 @@
 ﻿using AppFitShare.Models;
 using AppFitShare.Repositories;
+using AppFitShare.ViewModels;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 
@@ -44,5 +45,14 @@ public partial class Home : ContentPage
             }
         }
     }
-    
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (BindingContext is HomeViewModel vm)
+        {
+            vm.CarregarDados();
+        }
+    }
+
 }

@@ -27,7 +27,8 @@
                                     <Label
                                         FontAttributes="Bold"
                                         FontSize="16"
-                                        Text="{Binding Titulo}" />
+                                        Text="{Binding Titulo}"
+                                        TextColor="White"/>
                                     <Label
                                         FontSize="14"
                                         Text="{Binding Descricao}"
