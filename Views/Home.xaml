@@ -77,7 +77,7 @@
                                 <Image
                                     Aspect="AspectFill"
                                     HeightRequest="180"
-                                    Source="gym1.png"
+                                    Source="gym.png"
                                     WidthRequest="180" />
 
                                 <Label
