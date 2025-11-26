@@ -19,10 +19,10 @@ public partial class MeusTreinos : ContentPage
             cadastro_saude.IsVisible = false;
             dados.IsVisible = true;
         }
-        _ = CarregarTreinosAsync();
+        //_ = CarregarTreinosAsync();
     }
-    private async Task CarregarTreinosAsync()
-    { }
+    //private async Task CarregarTreinosAsync()
+    //{ }
     private async void BotaoIniciarTreinoClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ExerciciosTreinos());
@@ -36,6 +36,7 @@ public partial class MeusTreinos : ContentPage
     private async void BtnCadastroSaude(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CadastrarDados());
-    } 
+    }
+    
 }
 

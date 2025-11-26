@@ -48,17 +48,6 @@
                         Text="Plano Alimentar"
                         TextColor="White" 
                         FontAttributes="Bold"/>
-
-                    <ImageButton
-                        Grid.Column="1"
-                        Margin="4,4,10,4"
-                        Padding="2"
-                        HeightRequest="32"
-                        HorizontalOptions="Center"
-                        Source="plus_green.png"
-                        VerticalOptions="Center"
-                        WidthRequest="32" />
-
                 </Grid>
 
                 <Label
