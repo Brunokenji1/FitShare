@@ -93,7 +93,9 @@
                             HorizontalOptions="Center"
                             StyleClass="DiaButton"
                             Text="S"
-                            VerticalOptions="Center" />
+                            VerticalOptions="Center" 
+                            FontSize="20"
+                            />
                         <Button
                             x:Name="btn_terca"
                             Grid.Column="1"
@@ -104,7 +106,9 @@
                             CornerRadius="90"
                             FontAttributes="Bold"
                             StyleClass="DiaButton"
-                            Text="T" />
+                            Text="T" 
+                            FontSize="20"
+                            />
                         <Button
                             x:Name="btn_quarta"
                             Grid.Column="2"
@@ -115,7 +119,9 @@
                             CornerRadius="90"
                             FontAttributes="Bold"
                             StyleClass="DiaButton"
-                            Text="Q" />
+                            Text="Q" 
+                            FontSize="20"
+                            />
                         <Button
                             x:Name="btn_quinta"
                             Grid.Column="3"
@@ -126,22 +132,28 @@
                             CornerRadius="90"
                             FontAttributes="Bold"
                             StyleClass="DiaButton"
-                            Text="Q" />
+                            Text="Q"
+                            FontSize="20"
+                            />
                         <Button
                             x:Name="btn_sexta"
                             Grid.Column="4"
                             Padding="0"
                             Background="Transparent"
+                            FontSize="20"
                             ClassId="Friday"
                             Clicked="Dia_Clicked"
                             CornerRadius="90"
                             FontAttributes="Bold"
                             StyleClass="DiaButton"
-                            Text="S" />
+                            Text="S"
+                            />
                         <Button
                             x:Name="btn_sabado"
                             Grid.Column="5"
                             Padding="0"
+                            FontSize="20"
+                            
                             Background="Transparent"
                             ClassId="Saturday"
                             Clicked="Dia_Clicked"
@@ -152,6 +164,7 @@
                         <Button
                             x:Name="btn_domingo"
                             Grid.Column="6"
+                            FontSize="20"
                             Padding="0"
                             Background="Transparent"
                             ClassId="Sunday"

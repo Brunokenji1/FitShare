@@ -246,7 +246,8 @@
 
                                             <Label Text="{Binding LetraDia}" 
                                                    TextColor="Gray" 
-                                                   FontSize="10" 
+                                                   FontSize="13"
+                                                   FontAttributes="Bold"
                                                    HorizontalOptions="Center"
                                                    FontFamily="Poppins"/>
 
