@@ -1,9 +1,16 @@
+using System.Threading.Tasks;
+
 namespace AppFitShare.Views;
 
 public partial class ExerciciosInferiores : ContentPage
 {
-	public ExerciciosInferiores()
+    public ExerciciosInferiores()
+    {
+        InitializeComponent();
+    }
+	private void Voltar(object Sender, EventArgs e)
 	{
-		InitializeComponent();
+		Navigation.PopAsync();
 	}
+
 }

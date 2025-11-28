@@ -7,10 +7,6 @@ public partial class SelecionarGrupoMuscular : ContentPage
 		InitializeComponent();
 	}
 	
-	private async void BtnSelecionarExercicio(object sender, EventArgs e)
-	{
-		await Navigation.PushAsync(new EscolherExercicio());
-	}
 	private async void BtnVoltar(object sender, EventArgs e)
     {
         await Navigation.PopAsync();
@@ -26,10 +22,5 @@ public partial class SelecionarGrupoMuscular : ContentPage
     private async void BtnTreinosPosturaColuna(object sender, TappedEventArgs e)
     {
         await Navigation.PushAsync(new ExerciciosPosturaColuna());
-    }
-
-    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
-    {
-
     }
 }

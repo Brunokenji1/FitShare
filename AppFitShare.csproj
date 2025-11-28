@@ -135,9 +135,6 @@
 	  <MauiXaml Update="Views\EditarPerfil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\EscolherExercicio.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\ExerciciosInferiores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

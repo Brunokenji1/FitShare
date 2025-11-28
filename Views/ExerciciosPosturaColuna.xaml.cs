@@ -6,4 +6,8 @@ public partial class ExerciciosPosturaColuna : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void Voltar(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
 }
