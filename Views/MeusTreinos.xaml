@@ -75,7 +75,7 @@
                     Clicked="BotaoIniciarTreinoClicked"
                     CornerRadius="20"
                     HeightRequest="80"
-                    Text="Treino A"
+                    Text="Membros Inferiores"
                     TextColor="White" />
                 <Label
                     BackgroundColor="White"

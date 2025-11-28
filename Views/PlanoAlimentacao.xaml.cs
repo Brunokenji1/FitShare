@@ -17,9 +17,13 @@ public partial class PlanoAlimentacao : ContentPage
         }
 	}
 
-    private async void BotaoPlanoAlimentar(object sender, EventArgs e)
+    private async void  BtnAcessarPlanoA(object sender, EventArgs e)
     {
-		await Navigation.PushAsync(new MinhasDietas());
+		await Navigation.PushAsync(new PlanoAlimentarA());
+    }
+    private async void BtnAcessarPlanoB(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PlanoAlimentarB());
     }
 
     private async void BtnCadastrarAlimentacao(object sender, EventArgs e)
