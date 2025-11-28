@@ -75,7 +75,8 @@
                         HorizontalOptions="Center"
                         Text="Iniciar treino"
                         TextColor="Black"
-                        WidthRequest="200" />
+                        WidthRequest="200" 
+                        Clicked="IniciarTreino"/>
 
                 </VerticalStackLayout>
             </Border>
