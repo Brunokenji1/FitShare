@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace AppFitShare.ViewModels
 {
-    public partial class PlanoAlimentarAViewModel : ObservableObject
+    public partial class PlanoAlimentarBViewModel : ObservableObject
     {
         [ObservableProperty]
         private ObservableCollection<PlanoAlimentarCafeManha> cafeManha = new ObservableCollection<PlanoAlimentarCafeManha>();
@@ -21,7 +21,7 @@ namespace AppFitShare.ViewModels
         [ObservableProperty]
         private ObservableCollection<PlanoAlimentarJantar> jantar = new ObservableCollection<PlanoAlimentarJantar>();
 
-        public PlanoAlimentarAViewModel()
+        public PlanoAlimentarBViewModel()
         {
             CarregarPlanoCafeManhaEmMemoria();
             CarregarPlanoAlmocoEmMemoria();
@@ -32,18 +32,17 @@ namespace AppFitShare.ViewModels
         {
             List<PlanoAlimentarCafeManha> dadosCafeDaManha = new List<PlanoAlimentarCafeManha>
             {
-                new PlanoAlimentarCafeManha { Nome = "Omelete", Imagem="Omelete.png",Quantidade=1 , Calorias = 180, Descricao="2 Ovos médios, temperos a gosto e 1 colher de azeite para untar"},
-                new PlanoAlimentarCafeManha { Nome = "Pão Integral", Imagem="paointegral.png",Quantidade=2 , Calorias = 130, Descricao="2 fatias"},
-                new PlanoAlimentarCafeManha { Nome = "Banana", Imagem="banana.png", Quantidade= 1, Calorias = 100, Descricao="(média 100g)"},
+                new PlanoAlimentarCafeManha { Nome = "Mingau de Aveia", Imagem="mingaudeaveia.png",Quantidade=50 , Calorias = 250, Descricao="50g aveia em flocos, 150ml leite integral/semidesnatado"},
+                new PlanoAlimentarCafeManha { Nome = "Topping", Imagem="topping.png",Quantidade=1 , Calorias = 80, Descricao="1 colher de chá de açúcar e 1 fruta da estação picada"},
             };
 
             if (dadosCafeDaManha.Any())
             {
-                CafeManha.Clear();
+                cafeManha.Clear();
 
                 foreach (var alimento in dadosCafeDaManha)
                 {
-                    CafeManha.Add(alimento);
+                    cafeManha.Add(alimento);
                 }
             }
         }
@@ -51,10 +50,10 @@ namespace AppFitShare.ViewModels
         {
             List<PlanoAlimentarAlmoco> dadosAlmoco = new List<PlanoAlimentarAlmoco>
             {
-                new PlanoAlimentarAlmoco { Nome = "Arroz Integral",Imagem="arrozintegral.png", Quantidade=150 , Calorias = 120, Descricao="150g de arroz integral cozido"},
-                new PlanoAlimentarAlmoco { Nome = "Feijão",Imagem="feijao.png", Quantidade=100 , Calorias = 80, Descricao="100g de feijão cozido"},
-                new PlanoAlimentarAlmoco { Nome = "Peito de Frango",Imagem="peitodefrango.png", Quantidade=100 , Calorias = 165, Descricao="100g de frango cozido ou grelhado"},
-                new PlanoAlimentarAlmoco { Nome = "Legumes Cozidos",Imagem="legumescozidos.png", Quantidade=50 , Calorias = 40, Descricao="50g cenoura ou abobrinha refogada"},
+                new PlanoAlimentarAlmoco { Nome = "Batata Doce Cozida",Imagem="batatadocecozida.png", Quantidade=200 , Calorias = 175, Descricao="200g cozida"},
+                new PlanoAlimentarAlmoco { Nome = "Lentilha Cozida",Imagem="lentilhacozida.png", Quantidade=170 , Calorias = 170, Descricao="150g cozida"},
+                new PlanoAlimentarAlmoco { Nome = "Carne Bovina",Imagem="carnebovina.png", Quantidade=100 , Calorias = 180, Descricao="180g patinho/acém cozido ou moído"},
+                new PlanoAlimentarAlmoco { Nome = "Salada",Imagem="salada.png", Quantidade=70 , Calorias = 70, Descricao="Salada de beterraba e cenoura ralada"},
             };
 
             if (dadosAlmoco.Any())
@@ -71,9 +70,8 @@ namespace AppFitShare.ViewModels
         {
             List<PlanoAlimentarCafeTarde> dadosCafeTarde = new List<PlanoAlimentarCafeTarde>
             {
-                new PlanoAlimentarCafeTarde { Nome = "Iogurte Natural",Imagem="iogurtenatural.png", Quantidade=1 , Calorias = 100, Descricao="1 copo (170g)"},
-                new PlanoAlimentarCafeTarde { Nome = "Aveia em Flocos",Imagem="aveiaemflocos.png", Quantidade=1 , Calorias = 110, Descricao="3 colheres de sopa (30g)"},
-                new PlanoAlimentarCafeTarde { Nome = "Fruta",Imagem="frutas.png", Quantidade=1 , Calorias = 80, Descricao="Maça, banana, laranja, etc"},
+                new PlanoAlimentarCafeTarde { Nome = "Crepioca Salgada",Imagem="crepiocasalgada.png", Quantidade=1 , Calorias = 130, Descricao="1 ovo + 2 colheres de sopa de goma de tapioca"},
+                new PlanoAlimentarCafeTarde { Nome = "Recheio",Imagem="pastadeamendoim.png", Quantidade=1 , Calorias = 100, Descricao="1 colher de sopa de pasta de amendoim ou 1 fatia de queijo mussarela"},
 
             };
 
@@ -92,10 +90,7 @@ namespace AppFitShare.ViewModels
         {
             List<PlanoAlimentarJantar> dadosJantar = new List<PlanoAlimentarJantar>
             {
-                new PlanoAlimentarJantar { Nome = "Arroz Integral", Imagem="arrozintegral.png",Quantidade=150 , Calorias = 80, Descricao="80g de arroz integral cozido"},
-                new PlanoAlimentarJantar { Nome = "Feijão", Imagem="feijao.png",Quantidade=100 , Calorias = 80, Descricao="80g de feijão cozido"},
-                new PlanoAlimentarJantar { Nome = "Ovo Cozido", Imagem="ovocozido.png",Quantidade=2 , Calorias = 150, Descricao="2 ovos cozidos"},
-                new PlanoAlimentarJantar { Nome = "Legumes", Imagem="legumescozidos.png",Quantidade=2 , Calorias = 90, Descricao="Grande porção de legumes e verduras a gosto"},
+                new PlanoAlimentarJantar { Nome = "Salada de Grão-de-Bico e Atum", Imagem="saladagraodebicoatum.png",Quantidade=150 , Calorias = 320, Descricao="1 lata de atum, 100g grão-de-bico cozido"},
             };
 
             if (dadosJantar.Any())
