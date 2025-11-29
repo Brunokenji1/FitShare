@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,7 @@ namespace AppFitShare.Models
         public int MetaCalorias { get; set; }
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
+        public string Imagem { get; set; }
     }
     public class PlanoAlimentarAlmoco
     {
@@ -23,6 +25,7 @@ namespace AppFitShare.Models
         public int MetaCalorias { get; set; }
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
+        public string Imagem { get; set; }
     }
 
     public class PlanoAlimentarCafeTarde
@@ -33,6 +36,7 @@ namespace AppFitShare.Models
         public int MetaCalorias { get; set; }
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
+        public string Imagem { get; set; }
     }
     public class PlanoAlimentarJantar
     {
@@ -42,5 +46,6 @@ namespace AppFitShare.Models
         public int MetaCalorias { get; set; }
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
+        public string Imagem { get; set; }
     }
 }

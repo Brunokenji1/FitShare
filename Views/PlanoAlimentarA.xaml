@@ -156,7 +156,7 @@
                 FontSize="18"
                 Text="Jantar: "
                 TextColor="White" />
-            <CollectionView ItemsSource="{Binding CafeTarde}" Margin="15,0">
+            <CollectionView ItemsSource="{Binding Jantar}" Margin="15,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Margin="0,0,0,10">

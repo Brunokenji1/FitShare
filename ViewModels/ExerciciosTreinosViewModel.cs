@@ -91,7 +91,6 @@ namespace AppFitShare.ViewModels
                     Series= 3, 
                     Repeticoes=15 },
             };
-
             if (dadosDoTreino.Any())
             {
                 ListaDeExercicios.Clear();
