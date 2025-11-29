@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.MeusTreinos2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Treinos2"
+    BackgroundColor="#0c1420"
+    IconImageSource="treino.png"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="dados" IsVisible="True">
+                <Grid BackgroundColor="#003918" ColumnDefinitions="*,auto">
+                    <Label
+                            Padding="30,15,100,20"
+                            FontFamily="Poppins"
+                            FontSize="20"
+                            Text="Treino"
+                            TextColor="White"
+                            VerticalOptions="Start" />
+                    <ImageButton
+                            Grid.Column="1"
+                            Margin="4,4,10,4"
+                            Padding="2"
+                            HeightRequest="32"
+                            HorizontalOptions="Center"
+                            Source="plus_green.png"
+                            VerticalOptions="Center"
+                            WidthRequest="32"
+                            />
+                </Grid>
+
+                <Label
+                    Padding="20,15,0,0"
+                    FontSize="18"
+                    Text="Treinos de hoje!"
+                    TextColor="White" />
+                <Button
+                    Margin="30,25,30,25"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="BotaoIniciarTreinoClicked2"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    Text="Membros Inferiores"
+                    TextColor="White" />
+                <Label
+                    BackgroundColor="White"
+                    FontSize="25"
+                    HeightRequest="1.5"
+                    TextColor="White"
+                    WidthRequest="350" />
+                <Button
+                    x:Name="BotaoAddTreino"
+                    Margin="30,25,30,25"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="BotaoIniciarTreinoClicked2"
+                    CornerRadius="20"
+                    HeightRequest="80"
+                    Text="Postura e Coluna"
+                    TextColor="White" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

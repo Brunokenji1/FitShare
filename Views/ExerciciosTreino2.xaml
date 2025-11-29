@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppFitShare.Views.ExerciciosTreino2"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
+    Title="ExerciciosTreinos2"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ExerciciosTreinosViewModels2 />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#0C1420" Spacing="0">
+
+            <Border
+                Padding="0"
+                BackgroundColor="#003918"
+                Stroke="#003918"
+                StrokeShape="RoundRectangle 0,0,20,20"
+                HorizontalOptions="Fill">
+
+                <VerticalStackLayout Padding="10,10,10,20" Spacing="10">
+
+                    <Grid ColumnDefinitions="Auto, *, Auto" VerticalOptions="Start">
+                        <ImageButton
+                            Grid.Column="0"
+                            Clicked="Voltar"
+                            Source="back.png"
+                            HeightRequest="30"
+                            WidthRequest="30"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Grid.Column="1"
+                            Margin="10,0"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="{Binding NomeDoTreino}"
+                            TextColor="White"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center" />
+
+                    </Grid>
+
+                    <Grid
+                        Margin="0,15,0,0"
+                        ColumnDefinitions="*, *, *"
+                        ColumnSpacing="10"
+                        HorizontalOptions="Fill">
+
+                        <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" Spacing="1">
+                            <Image HeightRequest="30" Source="timer.png" WidthRequest="30" />
+                            <Label FontAttributes="Bold" HorizontalOptions="Center" Text="Duração:" TextColor="White" />
+                            <Label HorizontalOptions="Center" Text="{Binding TotalDuracaoFormatada}" TextColor="White" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="1">
+                            <Image HeightRequest="30" Source="fire.png" WidthRequest="30" />
+                            <Label FontAttributes="Bold" HorizontalOptions="Center" Text="Calorias:" TextColor="White" />
+                            <Label HorizontalOptions="Center" Text="{Binding TotalCalorias, StringFormat='{0} kcal'}" TextColor="White" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center" Spacing="1">
+                            <Image HeightRequest="30" Source="kilogram.png" WidthRequest="30" />
+                            <Label FontAttributes="Bold" HorizontalOptions="Center" Text="Dificuldade:" TextColor="White" />
+                            <Label HorizontalOptions="Center" Text="{Binding DificuldadeNivel}" TextColor="White" />
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <Button
+                        Margin="0,10,0,0"
+                        BackgroundColor="White"
+                        HorizontalOptions="Center"
+                        Text="Iniciar treino"
+                        TextColor="Black"
+                        WidthRequest="200" 
+                        Clicked="IniciarTreino"/>
+
+                </VerticalStackLayout>
+            </Border>
+            <Label
+                Padding="15,20"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Lista de exercícios"
+                TextColor="White" />
+
+            <CollectionView ItemsSource="{Binding ListaDeExercicios}" Margin="15,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,0,0,10">
+
+                            <HorizontalStackLayout Spacing="10">
+
+                                <Border
+                                    HeightRequest="100"
+                                    WidthRequest="110"
+                                    Stroke="Transparent"
+                                    StrokeShape="RoundRectangle 15">
+                                    <Image 
+                                        Source="{Binding Imagem}" 
+                                        Aspect="AspectFill" />
+                                </Border>
+
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label 
+                                        Text="{Binding Nome}" 
+                                        FontAttributes="Bold" 
+                                        FontSize="16" 
+                                        TextColor="White" />
+
+                                    <Label 
+                                        Text="{Binding Series, StringFormat='{0} séries'}" 
+                                        FontSize="14" 
+                                        TextColor="LightGray" />
+                                    <Label
+                                        Text="{Binding Repeticoes, StringFormat='{0} repetições'}"
+                                        FontSize="14"
+                                        TextColor="LightGray"/>
+                                </VerticalStackLayout>
+
+                            </HorizontalStackLayout>
+
+                            <BoxView HeightRequest="1" Color="#253A51" Margin="0,5,0,0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

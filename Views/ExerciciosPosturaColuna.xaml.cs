@@ -6,8 +6,12 @@ public partial class ExerciciosPosturaColuna : ContentPage
 	{
 		InitializeComponent();
 	}
-    private void Voltar(object sender, EventArgs e)
+    private async void Voltar(object sender, EventArgs e)
     {
-        Navigation.PopAsync();
+        await Navigation.PopAsync();
+    }
+    private async void CriarLista(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MeusTreinos2());
     }
 }

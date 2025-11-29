@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 
 namespace AppFitShare.ViewModels
 {
@@ -13,6 +14,7 @@ namespace AppFitShare.ViewModels
 
         public ExerciciosInferioresViewModel()
         {
+            ToggleSelecaoCommand = new Command<Exercicio>(ToggleSelecao);
             CarregarExerciciosEmMemoria();
         }
 
@@ -48,6 +50,14 @@ namespace AppFitShare.ViewModels
             int totalSegundos = exercicios.Sum(e => e.Duracao);
             int minutos = totalSegundos / 60;
             int segundos = totalSegundos % 60;
+        }
+        public ICommand ToggleSelecaoCommand { get; private set; }
+        private void ToggleSelecao(Exercicio exercicio)
+        {
+            if (exercicio != null)
+            {
+                exercicio.EstaSelecionado = !exercicio.EstaSelecionado;
+            }
         }
     }
 }

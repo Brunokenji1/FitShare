@@ -144,10 +144,10 @@
 	  <MauiXaml Update="Views\ExerciciosSuperiores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ExerciciosTreinos.xaml">
+	  <MauiXaml Update="Views\ExerciciosTreino2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="FlyoutPageMenu.xaml">
+	  <MauiXaml Update="Views\ExerciciosTreinos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TabbedPageMenu.xaml">
@@ -169,6 +169,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MeusTreinos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MeusTreinos2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Perfil.xaml">
