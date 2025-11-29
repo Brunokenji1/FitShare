@@ -1,21 +1,192 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppFitShare.Views.PlanoAlimentarA"
+             xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
+             x:Class="AppFitShare.Views.PlanoAlimentarAPage"
              Title="PlanoAlimentarA"
              NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <viewmodels:PlanoAlimentarAViewModel />
+    </ContentPage.BindingContext>
     <ScrollView>
-            <VerticalStackLayout BackgroundColor="#0c1420">
-                <Border
-            BackgroundColor="#003918"
-            Stroke="#003918">
+        <VerticalStackLayout BackgroundColor="#0c1420">
+            <Border
+                    BackgroundColor="#003918"
+                    Stroke="#003918"
+                    StrokeLineCap="Round"
+                    StrokeLineJoin="Round"
+                    StrokeShape="RoundRectangle 0,0,15,15"
+                    StrokeThickness="10">
+                <Grid ColumnDefinitions="Auto, *, Auto" VerticalOptions="Start">
                     <ImageButton
-            Clicked="Voltar"
-            Margin="10"
-            HorizontalOptions="Start"
-            Source="back.png"/>
-                </Border>
+                        Grid.Column="0"
+                        Clicked="Voltar"
+                        Source="back.png"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        VerticalOptions="Center" />
+                    <Label
+                        Grid.Column="1"
+                        Margin="10,0"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Plano A"
+                        TextColor="White"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center" />
 
-            </VerticalStackLayout>
+                </Grid>
+            </Border>
+            <Label
+                Padding="15,20"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Café da manhã:"
+                TextColor="White" />
+            <CollectionView ItemsSource="{Binding CafeManha}" Margin="15,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,0,0,10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Border
+                        HeightRequest="100"
+                        WidthRequest="110"
+                        Stroke="Transparent"
+                        StrokeShape="RoundRectangle 15">
+                                    <Image 
+                            Source="{Binding Imagem}" 
+                            Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label 
+                            Text="{Binding Nome}" 
+                            FontAttributes="Bold" 
+                            FontSize="16" 
+                            TextColor="White" />
+
+                                    <Label 
+                            Text="{Binding Calorias, StringFormat='{0} kcal'}" 
+                            FontSize="14" 
+                            TextColor="LightGray" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <BoxView HeightRequest="1" Color="#253A51" Margin="0,5,0,0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label
+                Padding="15,20"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Almoço: "
+                TextColor="White" />
+            <CollectionView ItemsSource="{Binding Almoco}" Margin="15,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,0,0,10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Border
+                                    HeightRequest="100"
+                                    WidthRequest="110"
+                                    Stroke="Transparent"
+                                    StrokeShape="RoundRectangle 15">
+                                    <Image 
+                                        Source="{Binding Imagem}" 
+                                        Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label 
+                                        Text="{Binding Nome}" 
+                                        FontAttributes="Bold" 
+                                        FontSize="16" 
+                                        TextColor="White" />
+
+                                    <Label 
+                                        Text="{Binding Calorias, StringFormat='{0} kcal'}" 
+                                        FontSize="14" 
+                                        TextColor="LightGray" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <BoxView HeightRequest="1" Color="#253A51" Margin="0,5,0,0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label
+                Padding="15,20"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Café da tarde: "
+                TextColor="White" />
+            <CollectionView ItemsSource="{Binding CafeTarde}" Margin="15,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,0,0,10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Border
+                                    HeightRequest="100"
+                                    WidthRequest="110"
+                                    Stroke="Transparent"
+                                    StrokeShape="RoundRectangle 15">
+                                    <Image 
+                                        Source="{Binding Imagem}" 
+                                        Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label 
+                                        Text="{Binding Nome}" 
+                                        FontAttributes="Bold" 
+                                        FontSize="16" 
+                                        TextColor="White" />
+                                    <Label 
+                                        Text="{Binding Calorias, StringFormat='{0} kcal'}" 
+                                        FontSize="14" 
+                                        TextColor="LightGray" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <BoxView HeightRequest="1" Color="#253A51" Margin="0,5,0,0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label
+                Padding="15,20"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Jantar: "
+                TextColor="White" />
+            <CollectionView ItemsSource="{Binding CafeTarde}" Margin="15,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,0,0,10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Border
+                                    HeightRequest="100"
+                                    WidthRequest="110"
+                                    Stroke="Transparent"
+                                    StrokeShape="RoundRectangle 15">
+                                    <Image 
+                                        Source="{Binding Imagem}" 
+                                        Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label 
+                                        Text="{Binding Nome}" 
+                                        FontAttributes="Bold" 
+                                        FontSize="16" 
+                                        TextColor="White" />
+                                    <Label 
+                                        Text="{Binding Calorias, StringFormat='{0} kcal'}" 
+                                        FontSize="14" 
+                                        TextColor="LightGray" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <BoxView HeightRequest="1" Color="#253A51" Margin="0,5,0,0"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

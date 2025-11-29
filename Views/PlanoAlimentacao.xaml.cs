@@ -19,7 +19,7 @@ public partial class PlanoAlimentacao : ContentPage
 
     private async void  BtnAcessarPlanoA(object sender, EventArgs e)
     {
-		await Navigation.PushAsync(new PlanoAlimentarA());
+		await Navigation.PushAsync(new PlanoAlimentarAPage());
     }
     private async void BtnAcessarPlanoB(object sender, EventArgs e)
     {

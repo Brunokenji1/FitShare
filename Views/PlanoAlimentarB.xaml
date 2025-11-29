@@ -7,8 +7,12 @@
     <ScrollView>
         <VerticalStackLayout BackgroundColor="#0c1420">
             <Border
-        BackgroundColor="#003918"
-        Stroke="#003918">
+                BackgroundColor="#003918"
+                Stroke="#003918"
+                StrokeLineCap="Round"
+                StrokeLineJoin="Round"
+                StrokeShape="RoundRectangle 0,0,15,15"
+                StrokeThickness="10">
                 <ImageButton
         Clicked="Voltar"
         Margin="10"

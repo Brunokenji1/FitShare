@@ -1,8 +1,8 @@
 namespace AppFitShare.Views;
 
-public partial class PlanoAlimentarA : ContentPage
+public partial class PlanoAlimentarAPage : ContentPage
 {
-	public PlanoAlimentarA()
+	public PlanoAlimentarAPage()
 	{
 		InitializeComponent();
 	}
