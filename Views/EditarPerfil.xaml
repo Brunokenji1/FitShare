@@ -3,6 +3,7 @@
     x:Class="AppFitShare.Views.EditarPerfil"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="EditarPerfil"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
@@ -129,7 +130,7 @@
                         ClearButtonVisibility="WhileEditing"
                         FontSize="15"
                         Keyboard="Numeric"
-                        MaxLength="3"
+                        MaxLength="6"
                         Placeholder="Peso em Kg"
                         TextColor="Black" />
 
@@ -165,7 +166,11 @@
                         Keyboard="Numeric"
                         MaxLength="3"
                         Placeholder="Altura em m"
-                        TextColor="Black" />
+                        TextColor="Black" >
+                        <Entry.Behaviors>
+                            <toolkit:MaskedBehavior Mask="X,XX" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Label
                         Grid.Column="1"
                         Padding="5,13"
@@ -182,12 +187,12 @@
             <Button
                 Margin="0,25,0,0"
                 BackgroundColor="#01C853"
-                Clicked="BtnContinuar"
+                Clicked="BtnEditarDados"
                 FontFamily="OpenSansSemibold"
                 FontSize="20"
                 HeightRequest="50"
                 HorizontalOptions="Center"
-                Text="Continuar"
+                Text="Editar dados"
                 TextColor="Black"
                 WidthRequest="330" />
 

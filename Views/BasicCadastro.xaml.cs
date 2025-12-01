@@ -90,7 +90,7 @@ public partial class BasicCadastro : ContentPage
             }
             
             
-            bool confirmacao = await DisplayAlert("Confirmação", $"Criar Conta com esses dados?", "Sim", "Não");
+            bool confirmacao = await DisplayAlert("Confirmação", $"Criar conta com esses dados?", "Sim", "Não");
             if (confirmacao)
             {
                 var novoUsuario = new Usuario(RepositorioUsuarios.ListarTodos().Count + 1, txt_nome.Text, txt_username.Text, telefone, txt_senha.Text, DateTime.Now);

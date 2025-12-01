@@ -21,6 +21,8 @@ namespace AppFitShare.Models
 
         //Dados cadastro completo usuario
         public ImageSource FotoPerfil { get; set; }
+        public string CaminhoFoto { get; set; }
+
 
         public int Idade { get; set; }
         public double Peso { get; set; }
@@ -58,6 +60,7 @@ namespace AppFitShare.Models
             Status = "Incompleto";
             DataCadastro = DataCdastro;
             Lembretes = new List<Lembrete>();
+            CaminhoFoto = "user.png";
         }
 
     }

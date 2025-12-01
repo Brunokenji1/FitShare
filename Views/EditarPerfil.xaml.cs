@@ -14,7 +14,10 @@ public partial class EditarPerfil : ContentPage
         base.OnAppearing();
         var usuario = RepositorioUsuarios.ObterUsuarioTemp();
 
-        
+        if (usuario.Username != null)
+        {
+            txt_username.Text = $"{usuario.Username}";
+        }
         if (usuario.Idade != null && usuario.Idade != 0)
         {
             txt_idade.Text = $"{usuario.Idade}";
@@ -30,7 +33,7 @@ public partial class EditarPerfil : ContentPage
 
         imgPerfil.Source = usuario.FotoPerfil;
     }
-    private async void BtnContinuar(object sender, EventArgs e)
+    private async void BtnEditarDados(object sender, EventArgs e)
     {
         try
         {
@@ -54,7 +57,16 @@ public partial class EditarPerfil : ContentPage
             }
             if(txt_peso.Text != null)
             {
-                usuarioTemp.Peso = double.Parse(txt_peso.Text);
+                if (txt_peso.Text.Contains(",") || txt_peso.Text.Contains("."))
+                {
+                    usuarioTemp.Peso = double.Parse(txt_peso.Text);
+
+                }
+                else
+                {
+                    throw new Exception("Preencha o seu peso usando Quilogramas nesse formato 000,00");
+                }
+            
 
             }
             RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);

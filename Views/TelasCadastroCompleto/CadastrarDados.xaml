@@ -38,6 +38,7 @@
             <Image
                 x:Name="imgPerfil"
                 Aspect="AspectFill"
+                Source="user.png"
                 HeightRequest="100"
                 IsVisible="False"
                 WidthRequest="100" />
@@ -45,7 +46,7 @@
             <Button
                 Margin="0,15,0,0"
                 BackgroundColor="White"
-                Clicked="btnSelecionarFoto"
+                Clicked="BtnSelecionarFoto"
                 FontAttributes="Bold"
                 FontFamily="OpenSansSemibold"
                 FontSize="16"

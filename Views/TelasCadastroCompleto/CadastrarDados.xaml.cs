@@ -12,13 +12,15 @@ public partial class CadastrarDados : ContentPage
 	public CadastrarDados()
 	{
 		InitializeComponent();
-	}
+        RepositorioUsuarios.IniciarUsuarioTemp();
+
+    }
 	private async void btnContinuar(object sender, EventArgs e)
 	{
 		try
 		{
 
-			RepositorioUsuarios.IniciarUsuarioTemp();
+			
             var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
 			
 
@@ -54,22 +56,26 @@ public partial class CadastrarDados : ContentPage
         }
 
     }
+                
 
-    private async void btnSelecionarFoto(object sender, EventArgs e)
+        
+    
+    private async void BtnSelecionarFoto(object sender, EventArgs e)
     {
 		try
 		{
 			var foto = await MediaPicker.PickPhotoAsync();
 
 			if (foto == null) return;
-			
+
 			var stream = await foto.OpenReadAsync();
 			var imgSource = ImageSource.FromStream(() => stream);
 
             imgPerfil.Source = imgSource;
 			imgPerfil.IsVisible = true;
-            var usuario = RepositorioUsuarios.ObterUsuarioLogado();
+            var usuario = RepositorioUsuarios.ObterUsuarioTemp();
 			usuario.FotoPerfil = imgSource;
+            RepositorioUsuarios.AtualizarUsuarioTemp(usuario);
         }
 		catch (Exception ex)
 		{
