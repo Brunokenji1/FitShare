@@ -143,7 +143,7 @@
                         ClearButtonVisibility="WhileEditing"
                         FontSize="15"
                         Keyboard="Numeric"
-                        MaxLength="3"
+                        MaxLength="4"
                         Placeholder="Altura em m"
                         TextColor="Black" >
                         <Entry.Behaviors>
