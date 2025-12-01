@@ -34,6 +34,28 @@
                 TextColor="White" />
 
             <Label
+                FontSize="16"
+                Text="Nome completo"
+                TextColor="White" />
+            <Border
+                Padding="8"
+                Background="White"
+                StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+
+
+                <Entry
+                    x:Name="txt_nome"
+                    Background="White"
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="15"
+                    Placeholder="Nome completo"
+                    TextColor="Black" />
+            </Border>
+
+            <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"
                 Text="Nome de usuário*"
@@ -119,8 +141,8 @@
                         Background="white"
                         FontAttributes="Bold"
                         FontSize="15"
-                        TextColor="Black"
                         Text="kg"
+                        TextColor="Black"
                         VerticalOptions="Center" />
                 </Grid>
             </Border>
@@ -145,7 +167,7 @@
                         Keyboard="Numeric"
                         MaxLength="4"
                         Placeholder="Altura em m"
-                        TextColor="Black" >
+                        TextColor="Black">
                         <Entry.Behaviors>
                             <toolkit:MaskedBehavior Mask="X,XX" />
                         </Entry.Behaviors>

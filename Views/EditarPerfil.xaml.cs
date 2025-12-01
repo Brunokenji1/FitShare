@@ -13,7 +13,10 @@ public partial class EditarPerfil : ContentPage
     {
         base.OnAppearing();
         var usuario = RepositorioUsuarios.ObterUsuarioTemp();
-
+        if (usuario.Username != null)
+        {
+            txt_nome.Text = $"{usuario.Nome}";
+        }
         if (usuario.Username != null)
         {
             txt_username.Text = $"{usuario.Username}";
@@ -38,6 +41,10 @@ public partial class EditarPerfil : ContentPage
         try
         {
             var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
+            if (txt_nome.Text != null)
+            {
+                usuarioTemp.Nome = txt_nome.Text;
+            }
             if (lblAviso.Text != "Nome de usuário válido")
             {
                 throw new Exception("Digite um username válido!");
@@ -70,8 +77,9 @@ public partial class EditarPerfil : ContentPage
 
             }
             RepositorioUsuarios.AtualizarUsuarioTemp(usuarioTemp);
-            bool confirmacao = await DisplayAlert("Confirma a edição dos seguintes dados?", $"  Altura : {usuarioTemp.Altura}\n  Idade : {usuarioTemp.Idade} \n" +
-    $"Peso : {usuarioTemp.Peso}   ", "Sim", "Não");
+
+            bool confirmacao = await DisplayAlert("Confirma a edição dos seguintes dados?", $"  Nome completo : {usuarioTemp.Nome}\n  Nome de usuário : {usuarioTemp.Username}\n  Altura : {usuarioTemp.Altura}\n  Idade : {usuarioTemp.Idade} \n" +
+    $"  Peso : {usuarioTemp.Peso}   ", "Sim", "Não");
             if (confirmacao)
             {
                 usuarioTemp.Status = "Ativo";
