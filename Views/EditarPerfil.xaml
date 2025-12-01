@@ -33,27 +33,6 @@
                 Text="Editar pefil"
                 TextColor="White" />
 
-
-            <Image
-                x:Name="imgPerfil"
-                Aspect="AspectFill"
-                HeightRequest="100"
-                IsVisible="False"
-                WidthRequest="100" />
-
-            <Button
-                Margin="0,15,0,0"
-                BackgroundColor="White"
-                Clicked="BtnSelecionarFoto"
-                FontAttributes="Bold"
-                FontFamily="OpenSansSemibold"
-                FontSize="16"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Selecionar foto de perfil"
-                TextColor="Black"
-                WidthRequest="330" />
-
             <Label
                 FontFamily="OpenSansSemibold"
                 FontSize="16"

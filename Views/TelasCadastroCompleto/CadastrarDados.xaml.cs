@@ -17,8 +17,7 @@ public partial class CadastrarDados : ContentPage
     }
 	private async void btnContinuar(object sender, EventArgs e)
 	{
-		try
-		{
+        try { 
 
 			
             var usuarioTemp = RepositorioUsuarios.ObterUsuarioTemp();
@@ -60,28 +59,28 @@ public partial class CadastrarDados : ContentPage
 
         
     
-    private async void BtnSelecionarFoto(object sender, EventArgs e)
-    {
-		try
-		{
-			var foto = await MediaPicker.PickPhotoAsync();
+  //  private async void BtnSelecionarFoto(object sender, EventArgs e)
+  //  {
+		//try
+		//{
+		//	var foto = await MediaPicker.PickPhotoAsync();
 
-			if (foto == null) return;
+		//	if (foto == null) return;
 
-			var stream = await foto.OpenReadAsync();
-			var imgSource = ImageSource.FromStream(() => stream);
+		//	var stream = await foto.OpenReadAsync();
+		//	var imgSource = ImageSource.FromStream(() => stream);
 
-            imgPerfil.Source = imgSource;
-			imgPerfil.IsVisible = true;
-            var usuario = RepositorioUsuarios.ObterUsuarioTemp();
-			usuario.FotoPerfil = imgSource;
-            RepositorioUsuarios.AtualizarUsuarioTemp(usuario);
-        }
-		catch (Exception ex)
-		{
-			await DisplayAlert("Erro", ex.Message, "OK");
-		}
-    }
+  //          imgPerfil.Source = imgSource;
+		//	imgPerfil.IsVisible = true;
+  //          var usuario = RepositorioUsuarios.ObterUsuarioTemp();
+		//	usuario.FotoPerfil = imgSource;
+  //          RepositorioUsuarios.AtualizarUsuarioTemp(usuario);
+  //      }
+		//catch (Exception ex)
+		//{
+		//	await DisplayAlert("Erro", ex.Message, "OK");
+		//}
+  //  }
 
 
     private void PickerSexo_SelectedIndexChanged(object sender, EventArgs e)

@@ -35,27 +35,6 @@
                 TextColor="White" />
 
 
-            <Image
-                x:Name="imgPerfil"
-                Aspect="AspectFill"
-                Source="user.png"
-                HeightRequest="100"
-                IsVisible="False"
-                WidthRequest="100" />
-
-            <Button
-                Margin="0,15,0,0"
-                BackgroundColor="White"
-                Clicked="BtnSelecionarFoto"
-                FontAttributes="Bold"
-                FontFamily="OpenSansSemibold"
-                FontSize="16"
-                HeightRequest="50"
-                HorizontalOptions="Center"
-                Text="Selecionar foto de perfil"
-                TextColor="Black"
-                WidthRequest="330" />
-
             <Label
                 FontSize="16"
                 Text="Idade*"
@@ -185,7 +164,7 @@
             </Border>
 
             <Button
-                Margin="0,25,0,0"
+                Margin="0,85,0,0"
                 BackgroundColor="#01C853"
                 Clicked="btnContinuar"
                 FontFamily="OpenSansSemibold"

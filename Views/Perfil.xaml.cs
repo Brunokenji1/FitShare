@@ -1,4 +1,6 @@
 using AppFitShare.Repositories;
+using AppFitShare.Repositories;
+using AppFitShare.ViewModels;
 using AppFitShare.Views.TelasCadastroCompleto;
 using System.Threading.Tasks;
 
@@ -13,6 +15,7 @@ public partial class Perfil : ContentPage
 
     private async void BtnCadastrarDados(object sender, EventArgs e)
     {
+        RepositorioHistorico.MarcarTreinoHoje();
         await Navigation.PushAsync(new CadastrarDados());
     }
 
@@ -43,10 +46,13 @@ public partial class Perfil : ContentPage
             lbl_peso.Text = $"Peso: {usuario.Peso}kg";
             lbl_peso.IsVisible = true;
         }
-        
-        imgPerfil.Source = usuario.FotoPerfil;
+        if (BindingContext is HomeViewModel vm)
+        {
+            vm.CarregarDados();
+        }
+        //imgPerfil.Source = usuario.FotoPerfil;
     }
-
+ 
     private async void BtnEditarPerfil(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EditarPerfil());

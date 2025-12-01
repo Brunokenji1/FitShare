@@ -154,7 +154,6 @@
                             Text="Progresso"
                             TextColor="White" />
 
-                        <!--  barra cinza  -->
                         <Label
                             Grid.Row="2"
                             Margin="15,0,0,0"

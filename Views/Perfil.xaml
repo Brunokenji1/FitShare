@@ -4,9 +4,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Perfil"
+        xmlns:converters="clr-namespace:AppFitShare.Converters"
+    xmlns:viewmodels="clr-namespace:AppFitShare.ViewModels"
     Background="#0c1420"
     IconImageSource="perfil.png"
     NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <viewmodels:HomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:StreakImageConverter x:Key="StreakImageConverter"/>
+    </ContentPage.Resources>
     <VerticalStackLayout Margin="10" Spacing="20">
 
         <Label
@@ -18,16 +27,72 @@
             TextColor="White" />
 
         <Border
-            HeightRequest="100"
-            HorizontalOptions="Center"
-            Stroke="Green"
-            StrokeShape="RoundRectangle 60"
-            StrokeLineJoin="Round"
-            StrokeThickness="1"
-            VerticalOptions="Center"
-            WidthRequest="100">
-            <Image x:Name="imgPerfil" Source="perfil.png" Aspect="AspectFill" />
+                Margin="15,20"
+                Padding="0,10,0,20"
+                Stroke="Gray"
+                StrokeLineJoin="Round"
+                StrokeShape="RoundRectangle 10">
+            <HorizontalStackLayout>
+                <Grid ColumnDefinitions="auto,auto,auto,auto,auto,auto" RowDefinitions="auto,auto,auto,auto,auto,auto,auto">
+
+                    <Label
+                            Grid.Row="5"
+                            Padding="10"
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="16"
+                            Text="Nesta semana"
+                            TextColor="White" />
+                    <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Padding="10,30,0,10"
+                            Text="Sequencia atual:"
+                            TextColor="White" />
+                    <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Padding="120,30,0,10"
+                            FontAttributes="Bold"
+                            Text="{Binding TextoSequencia}"
+                            TextColor="#01C853" />
+                    <!--  DIAS DA SEMANA  -->
+
+                    <Border
+                            Grid.Row="6"
+                            Margin="22,0,0,0"
+                            Padding="5,15"
+                            BackgroundColor="#1a2737"
+                            Stroke="Gray"
+                            StrokeShape="RoundRectangle 15">
+                        <HorizontalStackLayout BindableLayout.ItemsSource="{Binding StreakSemanal}"
+                                                   HorizontalOptions="Center"
+                                                   Spacing="15">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <VerticalStackLayout Spacing="5">
+
+                                        <Image Source="{Binding Concluido, Converter={StaticResource StreakImageConverter}}"
+                                                   WidthRequest="30"
+                                                   HeightRequest="30"
+                                                   VerticalOptions="Center" />
+
+                                        <Label Text="{Binding LetraDia}" 
+                                                   TextColor="Gray" 
+                                                   FontSize="13"
+                                                   FontAttributes="Bold"
+                                                   HorizontalOptions="Center"
+                                                   FontFamily="Poppins"/>
+
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </HorizontalStackLayout>
+                    </Border>
+                </Grid>
+            </HorizontalStackLayout>
         </Border>
+
 
         <Grid
             Margin="10"
@@ -96,12 +161,6 @@
                 Text="Sair"
                 TextColor="Black" />
         </Grid>
-
-
-
-
-
-
 
         <Button
             Padding="20,10"
